@@ -1,0 +1,87 @@
+{
+  "s01": [
+    {"shot": "a", "line": "L01", "visual": "Paper card: “TRY THIS.” slams in word by word, orange underline draws on, pointing finger wiggles in. Slow push-in.", "sound": "double impact, swish"},
+    {"shot": "b", "line": "L01", "visual": "Close-up: your finger (yellow sleeve) whips in and tickles a giant cartoon foot; tickle marks pop; label “YOUR FINGER”.", "sound": "whoosh, tickle flutter, pop"},
+    {"shot": "c", "line": "L02", "visual": "Rando stands bored (half-lidded), “…” bubble, “*itch*” scratch, then a tumbleweed rolls through the room.", "sound": "pop, blip, wind"},
+    {"shot": "d1", "line": "L03", "visual": "Whip-pan to the same foot on teal — now it's your FRIEND's finger; foot starts squirming.", "sound": "whoosh, tickle"},
+    {"shot": "d2", "line": "L03", "visual": "Pattern interrupt: Rando in full meltdown — flailing limbs, burst background, bouncing “HA! HAHA” letters, screen shake.", "sound": "impact, boing"},
+    {"shot": "e", "line": "L04", "visual": "Split screen YOU vs YOUR FRIEND; checklist pops “SAME SKIN ✓ · SAME TOUCH ✓ · DIFFERENT REACTION”.", "sound": "ding, ding, buzz"},
+    {"shot": "f", "line": "L05", "visual": "Two fingers on paper, magnifying glass sweeps across, big red “?” floats — the open loop.", "sound": "whoosh, pop, riser"}
+  ],
+  "s02": [
+    {"shot": "a", "line": "L06", "visual": "Navy glitch card “A glitch in the human body”: Rando with RGB-split jitter and scanline bars.", "sound": "glitch ×2"},
+    {"shot": "b", "line": "L06", "visual": "Crowd of 7 diverse randos under falling feathers all burst out laughing — then all try tickling themselves, flat faces. “CAN TICKLE THEMSELVES ✗”.", "sound": "tickle, ding, buzz"},
+    {"shot": "c", "line": "L07", "visual": "Skin / foot / fingers icons pop in and get crossed out one by one on each word.", "sound": "pop + buzz ×3"},
+    {"shot": "d", "line": "L08", "visual": "Huge Rando head; X-ray circle reveals the brain inside, sparkles, title “It’s in your brain”.", "sound": "swell, sparkle"},
+    {"shot": "e", "line": "L08", "visual": "Brain at a desk with a red pen striking lines out of a document titled REALITY; wall clock ticks.", "sound": "swish ×4, ticks"},
+    {"shot": "f", "line": "L09", "visual": "TITLE CARD: “Why can’t you / tickle yourself?” kinetic type, feather swoops in and tickles the title.", "sound": "riser → whoosh → impact"}
+  ],
+  "s03": [
+    {"shot": "a", "line": "L10", "visual": "REWIND: calendar flips 2026 → 1971, clock spins backwards, stamp lands.", "sound": "rewind, stamp"},
+    {"shot": "b", "line": "L10", "visual": "1971 retro lab: Lawrence Weiskrantz tickles a bare foot poking out of a curtain with a feather; name tag; “HAHA!” from behind.", "sound": "whoosh, tickle, boing"},
+    {"shot": "c", "line": "L11", "visual": "Hand-drawn bar chart: TICKLINESS — someone else (tall) vs yourself (short).", "sound": "up, down"},
+    {"shot": "d", "line": "L11a", "visual": "KNISMESIS: feather glides along a forearm, goosebumps, itchy squiggles.", "sound": "pop, light tickle"},
+    {"shot": "e", "line": "L11a", "visual": "GARGALESIS: friend pokes Rando's ribs; full laugh, HA letters, shake.", "sound": "impact, tickle, boing"},
+    {"shot": "f", "line": "L11b", "visual": "Rando pokes his own ribs, deadpan; “…nope.” bubble; “SELF-GARGALESIS ✗”.", "sound": "pop, buzz"},
+    {"shot": "g", "line": "L12", "visual": "Three puzzled scientists shrug as question marks pop.", "sound": "pops"},
+    {"shot": "h", "line": "L12", "visual": "London skyline rises in, tag “LONDON, 1998”.", "sound": "big whoosh, stamp"},
+    {"shot": "i", "line": "L12", "visual": "Sarah-Jayne Blakemore presents the MRI brain scanner sliding in.", "sound": "whoosh, ding"},
+    {"shot": "j", "line": "L13", "visual": "Close-up of a palm while a foam-tipped stick brushes back and forth.", "sound": "soft swishes"},
+    {"shot": "k", "line": "L14", "visual": "Two panels — EXPERIMENTER MOVES IT / VOLUNTEER MOVES IT — orange highlight slides between them.", "sound": "swish"},
+    {"shot": "l", "line": "L15", "visual": "Scanner monitor: the brain's touch strip glows orange (someone else) … then fades grey (yourself).", "sound": "sparkle/up → down"},
+    {"shot": "m", "line": "L17", "visual": "Brain drops on earmuffs and ignores a waving hand saying “hellooo?”.", "sound": "thud, pop"},
+    {"shot": "n", "line": "L18", "visual": "Side-view brain; the cerebellum pulses orange, circled and labelled (“latin for ‘little brain’”); camera dives in.", "sound": "ding, pop"},
+    {"shot": "p1–p3", "line": "L19", "visual": "Quick-fire vignettes: WALK (walk cycle), TYPE (laptop), CATCH (ball arc into hand).", "sound": "typing, whoosh, thud"},
+    {"shot": "q", "line": "L20", "visual": "Spotlight noir: the cerebellum in a detective hat tiptoes across, shifty eyes.", "sound": "tiptoe ticks"},
+    {"shot": "r", "line": "L21", "visual": "Crystal ball with the cerebellum inside, glowing; “predicting the future”.", "sound": "riser → impact, sparkle"}
+  ],
+  "s04": [
+    {"shot": "a", "line": "L22", "visual": "Brain fires an envelope down a dotted nerve to Rando; LIFT / MOVE LEFT / PRESS DOWN commands pop as his arm obeys.", "sound": "whoosh, clicks"},
+    {"shot": "b", "line": "L23", "visual": "Email window To: MUSCLES, CC: BRAIN (ME); the envelope splits in two; red stamp “EFFERENCE COPY”.", "sound": "swish, stamp"},
+    {"shot": "c", "line": "L24", "visual": "Brain's thought bubble shows the predicted feeling with a “simulating…” progress bar.", "sound": "pop, beep"},
+    {"shot": "d", "line": "L25", "visual": "PREDICTION vs REALITY cards slide in, VS badge, then they slide together and overlap.", "sound": "whoosh ×2, impact"},
+    {"shot": "e", "line": "L26", "visual": "Match: green check, “that was just me”, volume knob turns down, speaker waves vanish.", "sound": "ding, pop, down"},
+    {"shot": "f", "line": "L27", "visual": "Mismatch: red siren flashes, brain gasps, knob cranks up, waves return, shake.", "sound": "alarm, up"},
+    {"shot": "g", "line": "L28", "visual": "Friend's hand follows a chaotic dotted path; Rando's eyes chase it; WHERE? HOW HARD? HOW FAST? → laughter.", "sound": "pops"},
+    {"shot": "h", "line": "L29", "visual": "Rando's thought bubble holds THE PLAN; his own hand traces the exact dotted path. “NO SURPRISE”.", "sound": "pop, buzz"},
+    {"shot": "i", "line": "L30", "visual": "“robots!” — two cute robots bounce in waving, stars burst.", "sound": "robot chirps, sparkle"},
+    {"shot": "j", "line": "L31", "visual": "Two-robot setup: left hand drives robot A, signal pulse travels the cable to robot B whose foam tip brushes the right palm. Stopwatch adds +0.1 s, +0.2 s and the pulse visibly lags.", "sound": "beep, tick, pops"},
+    {"shot": "l", "line": "L33", "visual": "TICKLY-O-METER shoots up; Rando goes from deadpan to giggling.", "sound": "up, tickle"},
+    {"shot": "m", "line": "L34", "visual": "Direction mismatch: robot arrow rotates away from the hand's arrow; graph draws MISMATCH → TICKLE curve.", "sound": "swishes, up"},
+    {"shot": "n", "line": "L35", "visual": "Kinetic type: “it’s not about who” (who struck out) → “it’s whether your brain saw it coming”; a big eye glances left-right.", "sound": "swish, impact"}
+  ],
+  "s05": [
+    {"shot": "a1", "line": "L36", "visual": "Purple spinning spiral, “it gets weird”, Rando's head wobbles.", "sound": "glitch, boing"},
+    {"shot": "a2", "line": "L36", "visual": "Brain at the centre of orbiting senses (eye, speaker, hand, speech): “ALWAYS ON”.", "sound": "ding"},
+    {"shot": "b", "line": "L37", "visual": "Giant eye makes saccades; a little world panel lurches with every jump (WITHOUT PREDICTION) then stays rock-steady (WHAT YOU SEE).", "sound": "clicks, buzz, ding"},
+    {"shot": "c", "line": "L38", "visual": "Equation: EYE MOVES + BRAIN CANCELS IT = STEADY WORLD ✓ (each term pops in).", "sound": "pops, ding"},
+    {"shot": "d", "line": "L39", "visual": "Night meadow: a cricket chirps huge sound waves, “CHIRP!”, fun fact arrow: “its ears are on its legs!”.", "sound": "cricket chirps"},
+    {"shot": "e", "line": "L40", "visual": "One nerve cell fires; a playhead sweeps a timeline showing hearing dipping exactly on every chirp.", "sound": "chirps"},
+    {"shot": "f", "line": "L41", "visual": "Rando talks (lip flaps + voice waves); thought bubble: brain turning a knob — “YOUR VOICE: TURNED DOWN”.", "sound": "pop, down"},
+    {"shot": "g", "line": "L41a", "visual": "“why are we ticklish?” — Rando shrugs among question marks; “nobody knows for sure”.", "sound": "pops"},
+    {"shot": "h", "line": "L41b", "visual": "Body map: neck, ribs, feet glow red; a spider drops in and creeps closer; alarm siren; Rando sweats.", "sound": "pops, alarm"},
+    {"shot": "i", "line": "L41c", "visual": "Parent tickles a giggling baby; hearts float up.", "sound": "tickle, sparkle"},
+    {"shot": "j", "line": "L41d", "visual": "Rat gets tickled, ultrasonic chirp squiggles (TOO HIGH-PITCHED FOR HUMANS), then chases the hand: “more!”.", "sound": "squeaks"},
+    {"shot": "k", "line": "L41e", "visual": "Circle of YOU: red arrows from the outside punch in (OUTSIDE = LOUD); an inside arrow gets muted (INSIDE = QUIET).", "sound": "whoosh, down"},
+    {"shot": "l", "line": "L42", "visual": "Swinging “HIDDEN COST” price tag, calendar stamps 2003.", "sound": "swish, stamp"},
+    {"shot": "m", "line": "L43", "visual": "Two volunteers at a table take turns pressing; a balance scale tips each turn; “FAIR?”.", "sound": "thuds (growing), ding"},
+    {"shot": "o", "line": "L45", "visual": "Escalation bar chart grows turn by turn; “≈ +38% EVERY TURN”.", "sound": "rising pops, impact"},
+    {"shot": "p", "line": "L46", "visual": "Arrow diagram: WHAT YOU PUSH (big) → WHAT YOU FEEL (small, muted brain) → WHAT THEY FEEL (big).", "sound": "whooshes"},
+    {"shot": "q", "line": "L47", "visual": "Back seat of a car: “YOU HIT ME HARDER!”; the sibling gets a halo — “…they might be right”.", "sound": "impact, sparkle"}
+  ],
+  "s06": [
+    {"shot": "a", "line": "L48", "visual": "Dark room: a neon “THAT WAS ME” sign flickers above a worried brain.", "sound": "glitch buzz"},
+    {"shot": "b", "line": "L49", "visual": "Gentle, respectful illustration (2000): faint wordless voice bubbles drift; puppet strings lower — HEARING VOICES / FEELING CONTROLLED.", "sound": "page"},
+    {"shot": "c", "line": "L50", "visual": "Grouped bars: MOST PEOPLE (self much lower) vs THESE PATIENTS (self ≈ someone else).", "sound": "up ×2"},
+    {"shot": "d", "line": "L51", "visual": "The “ME” tag on his hand fades and droops; his inner-voice bubble drifts outside his head; “?”.", "sound": "down, pop"},
+    {"shot": "e", "line": "L52", "visual": "Rotating sunburst: “the real answer”.", "sound": "drumroll → impact, swell"},
+    {"shot": "f", "line": "L53", "visual": "Two bins: THINGS I DID / THINGS THAT HAPPENED TO ME; objects drop in. Then I DID gets a mute icon and greys out, HAPPENED gets a flag and a spotlight.", "sound": "whooshes, thuds, down, ding"},
+    {"shot": "h", "line": "L55", "visual": "Rando in a warm glow: A BODY ✓ · ACTIONS ✓ · A VOICE ✓ — “…that’s yours”.", "sound": "pops"},
+    {"shot": "i", "line": "L56", "visual": "A feather tickles a theatre curtain open, revealing the brain's hidden gears turning.", "sound": "tickle, big whoosh, sparkle"},
+    {"shot": "j", "line": "L57", "visual": "Rando jumps out of a box yelling “BOO!” at his mirror reflection, which replies “meh.”", "sound": "impact, boing, pop"}
+  ],
+  "s07": [
+    {"shot": "a", "line": "L58", "visual": "Friend tickles Rando in the sunshine; thought bubble: brain thumbs-up “JUST DOING MY JOB”.", "sound": "tickle, pop, ding"},
+    {"shot": "b", "line": "L59", "visual": "End card: “Randos in 60s” logo writes in, Rando waves, cursor clicks SUBSCRIBE → SUBSCRIBED, bell rings, “see you in the next one”.", "sound": "impact, click, ding, music ring-out"}
+  ]
+}

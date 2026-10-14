@@ -1,0 +1,362 @@
+{
+  "title": "Why Can't You Tickle Yourself?",
+  "channel": "Randos in 60s",
+  "voice": "af_heart",
+  "speed": 0.93,
+  "default_gap": 0.38,
+  "sections": [
+    {
+      "id": "s01",
+      "name": "Hook",
+      "lead_in": 0.5,
+      "lines": [
+        {
+          "id": "L01",
+          "text": "Try this. Take one finger and tickle the bottom of your own foot."
+        },
+        {
+          "id": "L02",
+          "text": "Nothing. Maybe a little itch. Honestly? Kind of boring.",
+          "gap": 0.45
+        },
+        {
+          "id": "L03",
+          "text": "But if your friend did the exact same thing, same spot, same pressure, you'd be kicking and screaming.",
+          "gap": 0.5
+        },
+        {
+          "id": "L04",
+          "text": "Same skin. Same touch. Completely different reaction."
+        },
+        {
+          "id": "L05",
+          "text": "So what does your friend's finger have that yours doesn't?",
+          "gap": 0.8
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "name": "The Mystery",
+      "lines": [
+        {
+          "id": "L06",
+          "text": "It's one of the strangest little glitches of the human body. Almost everyone can be tickled. And almost no one can tickle themselves.",
+          "gap": 0.45
+        },
+        {
+          "id": "L07",
+          "text": "And the answer isn't in your skin. Or your foot. Or your fingers."
+        },
+        {
+          "id": "L08",
+          "text": "It's in your brain. And it turns out your brain has been quietly editing your reality, every second of your life.",
+          "gap": 0.6
+        },
+        {
+          "id": "L09",
+          "text": "So, why can't you tickle yourself?",
+          "gap": 1.1
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "name": "The First Big Discovery",
+      "lines": [
+        {
+          "id": "L10",
+          "text": "Scientists started poking at this question back in 1971. A team led by Lawrence Weiskrantz tickled people on the soles of their feet, and confirmed what we all suspected.",
+          "say": "Scientists started poking at this question back in nineteen seventy-one. A team led by Lawrence Vice-krantz tickled people on the soles of their feet, and confirmed what we all suspected."
+        },
+        {
+          "id": "L11",
+          "text": "It really is less ticklish when you do it yourself.",
+          "gap": 0.5
+        },
+        {
+          "id": "L11a",
+          "text": "Scientists even have two words for it. Knismesis is the light, feathery, itchy kind. Gargalesis is the heavy, poke-in-the-ribs kind that makes you howl with laughter.",
+          "say": "Scientists even have two words for it. Niz-mee-sis is the light, feathery, itchy kind. Gar-ga-lee-sis is the heavy, poke-in-the-ribs kind that makes you howl with laughter."
+        },
+        {
+          "id": "L11b",
+          "text": "And it's that laughing kind that's nearly impossible to give yourself.",
+          "gap": 0.5
+        },
+        {
+          "id": "L12",
+          "text": "But nobody could explain why. Not until 1998, when Sarah-Jayne Blakemore and her colleagues in London took the question inside a brain scanner.",
+          "say": "But nobody could explain why. Not until nineteen ninety-eight, when Sarah-Jayne Blakemore and her colleagues in London took the question inside a brain scanner."
+        },
+        {
+          "id": "L13",
+          "text": "Volunteers lay in the scanner while a soft tickling device brushed across the palm of their hand."
+        },
+        {
+          "id": "L14",
+          "text": "Sometimes the experimenter moved it. Sometimes the volunteers moved it themselves.",
+          "gap": 0.45
+        },
+        {
+          "id": "L15",
+          "text": "When someone else did the tickling, the parts of the brain that process touch lit up."
+        },
+        {
+          "id": "L16",
+          "text": "But when the volunteers tickled themselves, those same areas were much quieter.",
+          "gap": 0.45
+        },
+        {
+          "id": "L17",
+          "text": "Same touch on the skin. But the brain was barely listening.",
+          "gap": 0.6
+        },
+        {
+          "id": "L18",
+          "text": "And there was another clue. A region at the back of the brain, called the cerebellum, behaved differently when people tickled themselves."
+        },
+        {
+          "id": "L19",
+          "text": "The cerebellum is famous for coordinating movement. It's the reason you can walk, type, and catch a ball without thinking about it."
+        },
+        {
+          "id": "L20",
+          "text": "But the scientists suspected it was doing something else too. Something sneaky.",
+          "gap": 0.7
+        },
+        {
+          "id": "L21",
+          "text": "It was predicting the future.",
+          "gap": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "name": "Go Deeper",
+      "lines": [
+        {
+          "id": "L22",
+          "text": "Here's how it works. Every time you decide to move, your brain sends a command to your muscles. Lift. Move left. Press down."
+        },
+        {
+          "id": "L23",
+          "text": "But it also keeps a copy of that command. Scientists call it an efference copy. Think of it like the carbon copy of an email you just sent.",
+          "say": "But it also keeps a copy of that command. Scientists call it an efference copy. Think of it like the carbon copy of an email you just sent."
+        },
+        {
+          "id": "L24",
+          "text": "Your brain uses that copy to run a quick simulation. If I do this, here's exactly what I should feel.",
+          "gap": 0.45
+        },
+        {
+          "id": "L25",
+          "text": "Then the real sensation arrives, and the brain compares the two. Prediction, versus reality.",
+          "gap": 0.5
+        },
+        {
+          "id": "L26",
+          "text": "If they match, the brain basically says, that was just me, nothing to see here. And it turns the volume down."
+        },
+        {
+          "id": "L27",
+          "text": "If they don't match, that's a surprise. And surprises get the brain's full attention.",
+          "gap": 0.5
+        },
+        {
+          "id": "L28",
+          "text": "A tickle from someone else is pure surprise. You can't predict exactly where their fingers will go next, how hard, or how fast."
+        },
+        {
+          "id": "L29",
+          "text": "But your own fingers? Your brain knows the plan before your hand even moves. There's no surprise left to feel.",
+          "gap": 0.7
+        },
+        {
+          "id": "L30",
+          "text": "And the researchers proved it, with robots."
+        },
+        {
+          "id": "L31",
+          "text": "Volunteers moved a robot arm with one hand, and a second robot brushed the palm of their other hand. Normally, this felt pretty dull."
+        },
+        {
+          "id": "L32",
+          "text": "But then the scientists secretly added a delay. Just a tenth of a second. Then two tenths."
+        },
+        {
+          "id": "L33",
+          "text": "And suddenly, the volunteers' own touch started feeling tickly.",
+          "gap": 0.5
+        },
+        {
+          "id": "L34",
+          "text": "They also twisted the direction, so the robot moved a little differently from the hand. Same result. The bigger the mismatch, the more ticklish it felt.",
+          "gap": 0.5
+        },
+        {
+          "id": "L35",
+          "text": "So it's not about who is touching you. It's about whether your brain saw it coming.",
+          "gap": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "name": "The Unexpected Twist",
+      "lines": [
+        {
+          "id": "L36",
+          "text": "Now here's where it gets weird. This prediction system isn't just for tickling. It's running all the time, on almost everything you do."
+        },
+        {
+          "id": "L37",
+          "text": "Right now, your eyes are jumping around this screen several times a second. Every jump should make the whole world lurch. But it doesn't.",
+          "gap": 0.4
+        },
+        {
+          "id": "L38",
+          "text": "Your brain predicts each eye movement, and cancels out the motion before you ever notice it."
+        },
+        {
+          "id": "L39",
+          "text": "It's not just humans, either. A cricket's chirp is incredibly loud. Loud enough to overwhelm its own sensitive ears."
+        },
+        {
+          "id": "L40",
+          "text": "So every time it chirps, a single nerve cell sends a signal that dials down its own hearing, perfectly timed to each chirp.",
+          "gap": 0.5
+        },
+        {
+          "id": "L41",
+          "text": "Even your own voice gets this treatment. When you talk, your brain turns down its response to the sound of you.",
+          "gap": 0.6
+        },
+        {
+          "id": "L41a",
+          "text": "Which raises a fun question. Why are we ticklish in the first place? Honestly, nobody knows for sure.",
+          "gap": 0.45
+        },
+        {
+          "id": "L41b",
+          "text": "Some of the most ticklish spots, like your neck, your ribs, and the soles of your feet, are also some of the most vulnerable. So one idea is that tickling is an alarm, tuned to anything crawling or poking where it shouldn't."
+        },
+        {
+          "id": "L41c",
+          "text": "Another idea is that it's social. Tickling is one of the very first games parents play with babies."
+        },
+        {
+          "id": "L41d",
+          "text": "And it's not just us. When scientists tickle rats, they let out chirps too high-pitched for us to hear. Some researchers think it's a kind of laughter. The rats even chase the hand, asking for more.",
+          "gap": 0.5
+        },
+        {
+          "id": "L41e",
+          "text": "Alarm or game, a tickle only works when it comes from the outside world. Which is exactly why your brain filters out the inside.",
+          "gap": 0.7
+        },
+        {
+          "id": "L42",
+          "text": "But all this cancelling has a hidden cost. And a 2003 experiment revealed it in a very relatable way.",
+          "say": "But all this cancelling has a hidden cost. And a two thousand three experiment revealed it in a very relatable way.",
+          "gap": 0.5
+        },
+        {
+          "id": "L43",
+          "text": "Researchers sat pairs of people across from each other. One person pressed down on the other's finger. Then the second person had to press back with exactly the same force."
+        },
+        {
+          "id": "L44",
+          "text": "Back and forth they went. Everyone was trying to be fair.",
+          "gap": 0.4
+        },
+        {
+          "id": "L45",
+          "text": "But the force kept climbing. On average, about thirty-eight percent harder, every single turn.",
+          "gap": 0.6
+        },
+        {
+          "id": "L46",
+          "text": "Nobody was cheating. Your brain dampens the feeling of your own push, so it always feels weaker than it really is. To match what you felt, you push harder. And so does the other person."
+        },
+        {
+          "id": "L47",
+          "text": "Which means the next time someone says, you hit me harder! They might actually be telling the truth.",
+          "gap": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "name": "The Big Payoff",
+      "lines": [
+        {
+          "id": "L48",
+          "text": "So what happens when this prediction system doesn't work the way it should?",
+          "gap": 0.5
+        },
+        {
+          "id": "L49",
+          "text": "In 2000, Blakemore's team worked with people with schizophrenia who hear voices, or feel like their actions are being controlled by someone else.",
+          "say": "In two thousand, Blakemore's team worked with people with schizophrenia who hear voices, or feel like their actions are being controlled by someone else."
+        },
+        {
+          "id": "L50",
+          "text": "For these patients, their own touch didn't get turned down. It felt just as intense, and just as ticklish, as someone else's.",
+          "gap": 0.5
+        },
+        {
+          "id": "L51",
+          "text": "One leading idea is that when the brain's that-was-me signal gets weaker, your own actions, and even your own inner voice, can start to feel like they're coming from somewhere else.",
+          "gap": 0.8
+        },
+        {
+          "id": "L52",
+          "text": "And that reveals the real answer to our mystery.",
+          "gap": 0.6
+        },
+        {
+          "id": "L53",
+          "text": "You can't tickle yourself because your brain is constantly sorting the world into two piles. Things I did. And things that happened to me."
+        },
+        {
+          "id": "L54",
+          "text": "Everything you cause gets predicted, and quietly muted. Everything you didn't cause gets flagged as important."
+        },
+        {
+          "id": "L55",
+          "text": "It's a big part of why you feel like you. A body that's yours. Actions that are yours. A voice in your head that's yours.",
+          "gap": 0.6
+        },
+        {
+          "id": "L56",
+          "text": "Tickling is just the moment this hidden system shows itself. Because a tickle only works when it's a surprise.",
+          "gap": 0.45
+        },
+        {
+          "id": "L57",
+          "text": "And you can never truly surprise yourself.",
+          "gap": 1.2
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "name": "Memorable Ending",
+      "lines": [
+        {
+          "id": "L58",
+          "text": "So the next time someone tickles you and you can't stop laughing, that's not a weakness. That's your brain doing its job, catching the one thing it couldn't see coming.",
+          "gap": 0.6
+        },
+        {
+          "id": "L59",
+          "text": "If this rewired your brain a little, subscribe to Randos in 60s for more weird stuff about being you. See you in the next one.",
+          "say": "If this rewired your brain a little, subscribe to Randos in sixty seconds for more weird stuff about being you. See you in the next one.",
+          "gap": 2.6
+        }
+      ]
+    }
+  ]
+}

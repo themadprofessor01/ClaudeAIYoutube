@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "HandSC"; src: url("assets/fonts/PatrickHandSC.woff2") format("woff2"); }
+        #s01-cam { position: absolute; inset: 0; overflow: hidden; background: #FBF8F1; }
+        #s01-cam .shot { position: absolute; inset: 0; visibility: hidden; }
+        #s01-cam .shot > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+        #s01-cam .big { position: absolute; left: 0; right: 0; top: 380px; text-align: center; font-family: "HandSC", cursive; font-size: 230px; color: #272320; letter-spacing: 4px; }
+        #s01-cam .lbl { position: absolute; font-family: "HandSC", cursive; color: #272320; }
+      </style>
+      <div id="s01" data-composition-id="s01" data-width="1920" data-height="1080"></div>
+      <script>
+        (function () {
+          /*CUES*/ const CUES = {"L01":[0.5,4.343,"Try this. Take one finger and tickle the bottom of your own foot."],"L02":[4.723,7.911,"Nothing. Maybe a little itch. Honestly? Kind of boring."],"L03":[8.361,14.177,"But if your friend did the exact same thing, same spot, same pressure, you'd be kicking and screaming."],"L04":[14.677,18.195,"Same skin. Same touch. Completely different reaction."],"L05":[18.575,21.345,"So what does your friend's finger have that yours doesn't?"]}; const DUR = 22.145; /*ENDCUES*/
+          const { C, P, BG, person, text, path, rect, line, circ, g, at } = R;
+          const q = R.cue(CUES);
+          const S = R.scene("s01");
+          const sfx = (n, t, gn) => R.sfx("s01", n, t, gn);
+
+          // sleeves for hands (drawn behind the hand, at the wrist)
+          const sleeve = (col) => rect(-260, -70, 160, 140, col, 18, 7);
+          const handWith = (id, x, y, s, r, col) =>
+            g(null, g(id, sleeve(col) + g(null, P.hand(`${id}-h`, 0, 0, 1))), at(x, y, s, r));
+
+          // a — cold open title
+          S.add("a",
+            R.BG.paper() +
+            g("s01-a-fing", P.hand("s01-a-h", 0, 0, 0.9), at(1500, 260, 1, -20)) +
+            g("s01-a-under", path("M560,760 Q960,720 1360,760", "none", 12, C.orange)),
+            `<div class="big" id="s01-a-t">TRY THIS.</div>`);
+
+          // b — your finger vs your foot (close-up)
+          S.add("b",
+            R.BG.flat("#FCE9B8") +
+            Array.from({ length: 7 }, (_, i) => circ(200 + i * 260, 180 + (i % 2) * 640, 30, "#F8DA92", 0)).join("") +
+            P.foot("s01-b-foot", 1390, 470, 1.55, -78) +
+            handWith("s01-b-hand", 640, 540, 1.3, 0, C.yellow) +
+            g("s01-b-lbl", text(420, 820, "YOUR FINGER", 70) + R.P.arrow("s01-b-ar", 470, 780, 560, 650, 6)) +
+            g("s01-b-tk", path("M1080,380 l20,-30 l20,30 M1100,600 l20,-30 l20,30 M1060,500 l26,-20 l12,30", "none", 6, C.ink)));
+
+          // c — bored Rando
+          S.add("c",
+            R.BG.room() + R.P.window("s01-c-win", 1480, 330) + R.P.plant("s01-c-pl", 1720, 710, 1.1) +
+            person("s01r", { x: 900, y: 610, s: 1.25, mouth: "flat" }) +
+            g("s01-c-dots", circ(1110, 240, 12, C.ink, 0) + circ(1150, 240, 12, C.ink, 0) + circ(1190, 240, 12, C.ink, 0)) +
+            g("s01-c-itch", text(560, 260, "*itch*", 64, C.ink, "middle", "", R.FONT2)) +
+            P.tumbleweed("s01-c-tw", 0, 860, 1));
+
+          // d1 — friend's finger, same foot
+          S.add("d1",
+            R.BG.flat("#CDEFEA") +
+            P.foot("s01-d-foot", 1390, 470, 1.55, -78) +
+            handWith("s01-d-hand", 640, 540, 1.3, 0, C.teal) +
+            g("s01-d-lbl", text(430, 820, "YOUR FRIEND’S FINGER", 64) + R.P.arrow("s01-d-ar", 470, 780, 560, 650, 6)));
+
+          // d2 — total meltdown
+          S.add("d2",
+            R.BG.room({ wall: "#F9D3C2" }) +
+            g("s01-d2-burst", path("M960,520 L1140,300 L1080,500 L1380,420 L1120,580 L1360,760 L1060,660 L1020,900 L940,680 L700,860 L840,620 L560,560 L860,520 L700,300 Z", "#FFE27A", 0)) +
+            person("s01r2", { x: 960, y: 640, s: 1.2, mouth: "laugh" }) +
+            g("s01-d2-ha", text(520, 300, "HA", 120, C.red) + text(1420, 260, "HA!", 130, C.red) + text(1500, 560, "HAHA", 96, C.orange) + text(420, 600, "HEE", 96, C.orange)) +
+            path("M700,420 q-30,-20 -60,0 M700,460 q-30,-20 -60,0 M1220,420 q30,-20 60,0 M1220,460 q30,-20 60,0", "none", 6));
+
+          // e — split comparison
+          S.add("e",
+            R.BG.paper() +
+            line(960, 120, 960, 1000, 6, "#B9B4AA") +
+            text(480, 160, "YOU", 80) + text(1440, 160, "YOUR FRIEND", 80) +
+            person("s01y", { x: 480, y: 700, s: 1.05, mouth: "flat" }) +
+            person("s01f", { x: 1440, y: 700, s: 1.05, mouth: "laugh" }) +
+            g("s01-e-c1", rect(660, 300, 600, 90, C.white, 20, 6) + text(930, 347, "SAME SKIN", 60) + R.P.check(null, 1200, 345, 0.7)) +
+            g("s01-e-c2", rect(660, 410, 600, 90, C.white, 20, 6) + text(930, 457, "SAME TOUCH", 60) + R.P.check(null, 1200, 455, 0.7)) +
+            g("s01-e-c3", rect(610, 520, 700, 100, "#FFE1DC", 20, 6) + text(960, 572, "DIFFERENT REACTION", 64, C.red)));
+
+          // f — the finger lineup
+          S.add("f",
+            R.BG.paper() +
+            handWith("s01-f-h1", 520, 640, 1.0, -90, C.yellow) +
+            handWith("s01-f-h2", 1400, 640, 1.0, -90, C.teal) +
+            text(520, 960, "YOURS", 72) + text(1400, 960, "YOUR FRIEND’S", 72) +
+            P.magnifier("s01-f-mag", 520, 420, 1.1) +
+            P.question("s01-f-q", 960, 470, 1.4, C.red));
+
+          S.mount();
+
+          const tl = gsap.timeline({ paused: true });
+          const t = {
+            b: q("L01", "Take"), c: q("L02"), d1: q("L03"), d2: q("L03", "you'd be"), e: q("L04"), f: q("L05"),
+          };
+          R.shots(tl, [["#s01-a", 0], ["#s01-b", t.b], ["#s01-c", t.c], ["#s01-d1", t.d1, "whipL"], ["#s01-d2", t.d2], ["#s01-e", t.e, "pop"], ["#s01-f", t.f]], DUR);
+          R.boil(tl, "#s01-cam .boil", "s01", 0, DUR);
+
+          // a
+          R.words(tl, "#s01-a-t", 0.45, 0.12, { y: 120, rot: -10 });
+          sfx("impact", 0.45); sfx("impact", 0.6, 0.6);
+          R.draw(tl, "#s01-a-under path", 0.9, 0.4); sfx("swish", 0.9, 0.5);
+          R.slideIn(tl, "#s01-a-fing", 0.75, 300, -100, 0.5); R.wiggle(tl, "#s01-a-fing", 1.2, t.b - 1.2, 10, 0.12);
+          R.push(tl, "#s01-a", 0, t.b, 1, 1.06);
+
+          // b
+          R.slideIn(tl, "#s01-b-hand", t.b, -700, 0, 0.6, "power3.out"); sfx("whoosh", t.b);
+          R.slideIn(tl, "#s01-b-foot", t.b, 500, 0, 0.6, "power3.out");
+          const tk = q("L01", "tickle");
+          for (let i = 0; i < 10; i++) tl.to("#s01-b-hand", { x: i % 2 ? 40 : 90, y: i % 2 ? -30 : 30, duration: 0.14, ease: "sine.inOut" }, tk + i * 0.15);
+          R.pop(tl, "#s01-b-tk", tk); sfx("tickle", tk);
+          R.pop(tl, "#s01-b-lbl", q("L01", "Take") + 0.4); sfx("pop", q("L01", "Take") + 0.4, 0.6);
+          R.push(tl, "#s01-b", t.b, t.c - t.b, 1, 1.08);
+
+          // c
+          R.expr(tl, "s01r", { lids: 0.55, look: [6, 0] }, t.c);
+          R.idle(tl, "s01r", t.c, t.d1, 2);
+          R.pose(tl, "s01r", { armL: 8, armR: 8 }, t.c, 0);
+          R.pop(tl, "#s01-c-dots", q("L02", "Nothing") + 0.1); sfx("pop", q("L02", "Nothing") + 0.1, 0.5);
+          R.fadeOut(tl, "#s01-c-dots", q("L02", "Maybe"));
+          R.pop(tl, "#s01-c-itch", q("L02", "itch") - 0.1); sfx("blip", q("L02", "itch"), 0.6);
+          R.pose(tl, "s01r", { armR: 150, foreR: 40 }, q("L02", "itch"), 0.3);
+          R.flutter(tl, "s01r", "foreR", 40, q("L02", "itch") + 0.3, 0.6, 10, 0.1);
+          R.pose(tl, "s01r", { armR: 8, foreR: 0 }, q("L02", "Honestly"), 0.3);
+          R.fadeOut(tl, "#s01-c-itch", q("L02", "Honestly"));
+          R.expr(tl, "s01r", { brows: "sly", look: [-8, 0] }, q("L02", "Honestly"));
+          tl.fromTo("#s01-c-tw", { x: -150, rotation: 0 }, { x: 2100, rotation: 720, svgOrigin: "0 860", duration: 2.6, ease: "none" }, q("L02", "Kind"));
+          sfx("wind", q("L02", "Kind") - 0.2, 0.7);
+          R.push(tl, "#s01-c", t.c, t.d1 - t.c, 1.05, 1.12, 0, -40, 0, 20);
+
+          // d1
+          R.slideIn(tl, "#s01-d-hand", t.d1 + 0.1, -700, 0, 0.55, "power3.out");
+          R.pop(tl, "#s01-d-lbl", t.d1 + 0.5);
+          const tk2 = q("L03", "same spot");
+          for (let i = 0; i < 14; i++) tl.to("#s01-d-hand", { x: i % 2 ? 50 : 100, y: i % 2 ? -40 : 40, duration: 0.12, ease: "sine.inOut" }, tk2 + i * 0.13);
+          R.wiggle(tl, "#s01-d-foot", tk2 + 0.4, t.d2 - tk2 - 0.4, 4, 0.08);
+          sfx("tickle", tk2);
+          R.push(tl, "#s01-d1", t.d1, t.d2 - t.d1, 1, 1.1);
+
+          // d2
+          sfx("impact", t.d2); sfx("boing", t.d2 + 0.1, 0.7);
+          R.laugh(tl, "s01r2", t.d2, t.e - t.d2 - 0.1, 1.3);
+          for (let i = 0; i < Math.floor((t.e - t.d2) / 0.2); i++) {
+            const a = i % 2 ? 1 : -1;
+            R.pose(tl, "s01r2", { armL: 120 + 40 * a, foreL: 40 * a, armR: 120 - 40 * a, foreR: -40 * a, legL: 30 + 20 * a, legR: 30 - 20 * a, shinL: 40, shinR: 40 }, t.d2 + i * 0.2, 0.18);
+          }
+          tl.fromTo("#s01-d2-burst", { scale: 0.6, transformOrigin: "50% 50%" }, { scale: 1.1, rotation: 8, duration: t.e - t.d2, ease: "sine.inOut" }, t.d2);
+          tl.fromTo("#s01-d2-ha text", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(3)", stagger: 0.25 }, t.d2 + 0.2);
+          R.shake(tl, "#s01-d2-art", t.d2, 0.5, 18);
+          R.push(tl, "#s01-d2", t.d2, t.e - t.d2, 1.05, 1.15);
+
+          // e
+          R.idle(tl, "s01y", t.e, t.f, 3); R.expr(tl, "s01y", { lids: 0.55 }, t.e);
+          R.laugh(tl, "s01f", t.e, t.f - t.e - 0.2, 0.8);
+          gsap.set(["#s01-e-c1", "#s01-e-c2", "#s01-e-c3", "#s01-f-q"], { opacity: 0 });
+          const ce = [q("L04", "Same skin"), q("L04", "Same touch"), q("L04", "Completely")];
+          ce.forEach((tt, i) => { R.pop(tl, `#s01-e-c${i + 1}`, tt); sfx(i < 2 ? "ding" : "buzz", tt, 0.6); });
+          R.shake(tl, "#s01-e-c3", ce[2] + 0.4, 0.3, 8);
+
+          // f
+          R.slideIn(tl, "#s01-f-h1", t.f, 0, 500, 0.5, "power3.out");
+          R.slideIn(tl, "#s01-f-h2", t.f + 0.15, 0, 500, 0.5, "power3.out"); sfx("whoosh", t.f);
+          tl.fromTo("#s01-f-mag", { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4 }, t.f + 0.5);
+          tl.to("#s01-f-mag", { x: 880, duration: 1.4, ease: "power2.inOut" }, t.f + 1.0);
+          R.pop(tl, "#s01-f-q", q("L05", "doesn't"), 0.5); sfx("pop", q("L05", "doesn't"));
+          R.float(tl, "#s01-f-q", q("L05", "doesn't") + 0.5, DUR - q("L05", "doesn't") - 0.5, 18, 0.9);
+          R.push(tl, "#s01-f", t.f, DUR - t.f, 1, 1.1);
+          sfx("riser", DUR - 2.2, 0.6);
+
+          window.__timelines["s01"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

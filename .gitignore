@@ -1,0 +1,10 @@
+node_modules/
+.hyperframes/
+renders/
+preview-*.html
+out/*.part*
+out/test-*
+assets/audio/*.wav
+out/render_raw.mp4
+out/render.log
+AGENTS.md

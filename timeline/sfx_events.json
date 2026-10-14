@@ -1,0 +1,1577 @@
+[
+ {
+  "scene": "s01",
+  "name": "impact",
+  "t": 0.45,
+  "gain": 1,
+  "abs": 0.45
+ },
+ {
+  "scene": "s01",
+  "name": "impact",
+  "t": 0.6,
+  "gain": 0.6,
+  "abs": 0.6
+ },
+ {
+  "scene": "s01",
+  "name": "swish",
+  "t": 0.9,
+  "gain": 0.5,
+  "abs": 0.9
+ },
+ {
+  "scene": "s01",
+  "name": "whoosh",
+  "t": 1.288,
+  "gain": 1,
+  "abs": 1.288
+ },
+ {
+  "scene": "s01",
+  "name": "pop",
+  "t": 1.688,
+  "gain": 0.6,
+  "abs": 1.688
+ },
+ {
+  "scene": "s01",
+  "name": "tickle",
+  "t": 2.274,
+  "gain": 1,
+  "abs": 2.274
+ },
+ {
+  "scene": "s01",
+  "name": "pop",
+  "t": 4.823,
+  "gain": 0.5,
+  "abs": 4.823
+ },
+ {
+  "scene": "s01",
+  "name": "blip",
+  "t": 5.918,
+  "gain": 0.6,
+  "abs": 5.918
+ },
+ {
+  "scene": "s01",
+  "name": "wind",
+  "t": 6.834,
+  "gain": 0.7,
+  "abs": 6.834
+ },
+ {
+  "scene": "s01",
+  "name": "tickle",
+  "t": 10.738,
+  "gain": 1,
+  "abs": 10.738
+ },
+ {
+  "scene": "s01",
+  "name": "impact",
+  "t": 12.255,
+  "gain": 1,
+  "abs": 12.255
+ },
+ {
+  "scene": "s01",
+  "name": "boing",
+  "t": 12.355,
+  "gain": 0.7,
+  "abs": 12.355
+ },
+ {
+  "scene": "s01",
+  "name": "ding",
+  "t": 14.677,
+  "gain": 0.6,
+  "abs": 14.677
+ },
+ {
+  "scene": "s01",
+  "name": "ding",
+  "t": 15.508,
+  "gain": 0.6,
+  "abs": 15.508
+ },
+ {
+  "scene": "s01",
+  "name": "buzz",
+  "t": 16.387,
+  "gain": 0.6,
+  "abs": 16.387
+ },
+ {
+  "scene": "s01",
+  "name": "whoosh",
+  "t": 18.575,
+  "gain": 1,
+  "abs": 18.575
+ },
+ {
+  "scene": "s01",
+  "name": "riser",
+  "t": 19.945,
+  "gain": 0.6,
+  "abs": 19.945
+ },
+ {
+  "scene": "s01",
+  "name": "pop",
+  "t": 20.706,
+  "gain": 1,
+  "abs": 20.706
+ },
+ {
+  "scene": "s02",
+  "name": "glitch",
+  "t": 0,
+  "gain": 1,
+  "abs": 22.145
+ },
+ {
+  "scene": "s02",
+  "name": "glitch",
+  "t": 1.648,
+  "gain": 1,
+  "abs": 23.793
+ },
+ {
+  "scene": "s02",
+  "name": "tickle",
+  "t": 4.396,
+  "gain": 1,
+  "abs": 26.541
+ },
+ {
+  "scene": "s02",
+  "name": "ding",
+  "t": 4.496,
+  "gain": 0.5,
+  "abs": 26.641
+ },
+ {
+  "scene": "s02",
+  "name": "buzz",
+  "t": 6.726,
+  "gain": 0.6,
+  "abs": 28.871
+ },
+ {
+  "scene": "s02",
+  "name": "pop",
+  "t": 9.455,
+  "gain": 0.6,
+  "abs": 31.6
+ },
+ {
+  "scene": "s02",
+  "name": "buzz",
+  "t": 10.055,
+  "gain": 0.4,
+  "abs": 32.2
+ },
+ {
+  "scene": "s02",
+  "name": "pop",
+  "t": 10.356,
+  "gain": 0.6,
+  "abs": 32.501
+ },
+ {
+  "scene": "s02",
+  "name": "buzz",
+  "t": 10.956,
+  "gain": 0.4,
+  "abs": 33.101
+ },
+ {
+  "scene": "s02",
+  "name": "pop",
+  "t": 11.256,
+  "gain": 0.6,
+  "abs": 33.401
+ },
+ {
+  "scene": "s02",
+  "name": "buzz",
+  "t": 11.856,
+  "gain": 0.4,
+  "abs": 34.001
+ },
+ {
+  "scene": "s02",
+  "name": "swell",
+  "t": 12.661,
+  "gain": 0.6,
+  "abs": 34.806
+ },
+ {
+  "scene": "s02",
+  "name": "sparkle",
+  "t": 13.108,
+  "gain": 1,
+  "abs": 35.253
+ },
+ {
+  "scene": "s02",
+  "name": "swish",
+  "t": 15.797,
+  "gain": 0.4,
+  "abs": 37.942
+ },
+ {
+  "scene": "s02",
+  "name": "swish",
+  "t": 16.347,
+  "gain": 0.4,
+  "abs": 38.492
+ },
+ {
+  "scene": "s02",
+  "name": "swish",
+  "t": 16.897,
+  "gain": 0.4,
+  "abs": 39.042
+ },
+ {
+  "scene": "s02",
+  "name": "tick",
+  "t": 17.39,
+  "gain": 1,
+  "abs": 39.535
+ },
+ {
+  "scene": "s02",
+  "name": "swish",
+  "t": 17.447,
+  "gain": 0.4,
+  "abs": 39.592
+ },
+ {
+  "scene": "s02",
+  "name": "riser",
+  "t": 17.633,
+  "gain": 0.5,
+  "abs": 39.778
+ },
+ {
+  "scene": "s02",
+  "name": "tick",
+  "t": 17.79,
+  "gain": 1,
+  "abs": 39.935
+ },
+ {
+  "scene": "s02",
+  "name": "tick",
+  "t": 18.19,
+  "gain": 1,
+  "abs": 40.335
+ },
+ {
+  "scene": "s02",
+  "name": "whoosh",
+  "t": 19.633,
+  "gain": 1,
+  "abs": 41.778
+ },
+ {
+  "scene": "s02",
+  "name": "impact",
+  "t": 20.501,
+  "gain": 1,
+  "abs": 42.646
+ },
+ {
+  "scene": "s03",
+  "name": "rewind",
+  "t": 0.1,
+  "gain": 1,
+  "abs": 44.845
+ },
+ {
+  "scene": "s03",
+  "name": "stamp",
+  "t": 1.48,
+  "gain": 1,
+  "abs": 46.225
+ },
+ {
+  "scene": "s03",
+  "name": "whoosh",
+  "t": 4.263,
+  "gain": 0.6,
+  "abs": 49.008
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 4.843,
+  "gain": 0.5,
+  "abs": 49.588
+ },
+ {
+  "scene": "s03",
+  "name": "tickle",
+  "t": 6.101,
+  "gain": 1,
+  "abs": 50.846
+ },
+ {
+  "scene": "s03",
+  "name": "boing",
+  "t": 9.183,
+  "gain": 0.6,
+  "abs": 53.928
+ },
+ {
+  "scene": "s03",
+  "name": "up",
+  "t": 12.216,
+  "gain": 0.6,
+  "abs": 56.961
+ },
+ {
+  "scene": "s03",
+  "name": "down",
+  "t": 13.479,
+  "gain": 0.6,
+  "abs": 58.224
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 15.151,
+  "gain": 0.5,
+  "abs": 59.896
+ },
+ {
+  "scene": "s03",
+  "name": "tickle",
+  "t": 18.708,
+  "gain": 0.4,
+  "abs": 63.453
+ },
+ {
+  "scene": "s03",
+  "name": "impact",
+  "t": 21.172,
+  "gain": 0.5,
+  "abs": 65.917
+ },
+ {
+  "scene": "s03",
+  "name": "tickle",
+  "t": 21.372,
+  "gain": 1,
+  "abs": 66.117
+ },
+ {
+  "scene": "s03",
+  "name": "boing",
+  "t": 21.572,
+  "gain": 0.6,
+  "abs": 66.317
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 28.106,
+  "gain": 0.5,
+  "abs": 72.851
+ },
+ {
+  "scene": "s03",
+  "name": "buzz",
+  "t": 29.089,
+  "gain": 0.5,
+  "abs": 73.834
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 31.908,
+  "gain": 0.4,
+  "abs": 76.653
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 32.158,
+  "gain": 0.4,
+  "abs": 76.903
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 32.408,
+  "gain": 0.4,
+  "abs": 77.153
+ },
+ {
+  "scene": "s03",
+  "name": "whoosh_big",
+  "t": 33.516,
+  "gain": 0.7,
+  "abs": 78.261
+ },
+ {
+  "scene": "s03",
+  "name": "stamp",
+  "t": 34.229,
+  "gain": 1,
+  "abs": 78.974
+ },
+ {
+  "scene": "s03",
+  "name": "whoosh",
+  "t": 38.155,
+  "gain": 0.6,
+  "abs": 82.9
+ },
+ {
+  "scene": "s03",
+  "name": "ding",
+  "t": 39.811,
+  "gain": 0.5,
+  "abs": 84.556
+ },
+ {
+  "scene": "s03",
+  "name": "swish",
+  "t": 42.279,
+  "gain": 0.3,
+  "abs": 87.024
+ },
+ {
+  "scene": "s03",
+  "name": "swish",
+  "t": 43.179,
+  "gain": 0.3,
+  "abs": 87.924
+ },
+ {
+  "scene": "s03",
+  "name": "swish",
+  "t": 44.079,
+  "gain": 0.3,
+  "abs": 88.824
+ },
+ {
+  "scene": "s03",
+  "name": "swish",
+  "t": 49.698,
+  "gain": 0.5,
+  "abs": 94.443
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 53.311,
+  "gain": 0.5,
+  "abs": 98.056
+ },
+ {
+  "scene": "s03",
+  "name": "sparkle",
+  "t": 56.285,
+  "gain": 0.6,
+  "abs": 101.03
+ },
+ {
+  "scene": "s03",
+  "name": "up",
+  "t": 56.285,
+  "gain": 0.5,
+  "abs": 101.03
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 58.353,
+  "gain": 0.5,
+  "abs": 103.098
+ },
+ {
+  "scene": "s03",
+  "name": "down",
+  "t": 60.777,
+  "gain": 0.7,
+  "abs": 105.522
+ },
+ {
+  "scene": "s03",
+  "name": "thud",
+  "t": 63.017,
+  "gain": 0.6,
+  "abs": 107.762
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 64.812,
+  "gain": 0.5,
+  "abs": 109.557
+ },
+ {
+  "scene": "s03",
+  "name": "ding",
+  "t": 69.025,
+  "gain": 0.5,
+  "abs": 113.77
+ },
+ {
+  "scene": "s03",
+  "name": "pop",
+  "t": 70.403,
+  "gain": 1,
+  "abs": 115.148
+ },
+ {
+  "scene": "s03",
+  "name": "typing",
+  "t": 79.507,
+  "gain": 0.7,
+  "abs": 124.252
+ },
+ {
+  "scene": "s03",
+  "name": "whoosh",
+  "t": 80.207,
+  "gain": 0.5,
+  "abs": 124.952
+ },
+ {
+  "scene": "s03",
+  "name": "thud",
+  "t": 81.207,
+  "gain": 0.6,
+  "abs": 125.952
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 83.328,
+  "gain": 0.4,
+  "abs": 128.073
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 83.728,
+  "gain": 0.4,
+  "abs": 128.473
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 84.128,
+  "gain": 0.4,
+  "abs": 128.873
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 84.528,
+  "gain": 0.4,
+  "abs": 129.273
+ },
+ {
+  "scene": "s03",
+  "name": "riser",
+  "t": 85.921,
+  "gain": 0.6,
+  "abs": 130.666
+ },
+ {
+  "scene": "s03",
+  "name": "impact",
+  "t": 87.921,
+  "gain": 1,
+  "abs": 132.666
+ },
+ {
+  "scene": "s03",
+  "name": "sparkle",
+  "t": 88.021,
+  "gain": 0.7,
+  "abs": 132.766
+ },
+ {
+  "scene": "s04",
+  "name": "whoosh",
+  "t": 3.595,
+  "gain": 0.6,
+  "abs": 138.782
+ },
+ {
+  "scene": "s04",
+  "name": "pop",
+  "t": 5.095,
+  "gain": 0.5,
+  "abs": 140.282
+ },
+ {
+  "scene": "s04",
+  "name": "click",
+  "t": 5.47,
+  "gain": 0.8,
+  "abs": 140.657
+ },
+ {
+  "scene": "s04",
+  "name": "click",
+  "t": 6.078,
+  "gain": 0.8,
+  "abs": 141.265
+ },
+ {
+  "scene": "s04",
+  "name": "click",
+  "t": 6.939,
+  "gain": 0.8,
+  "abs": 142.126
+ },
+ {
+  "scene": "s04",
+  "name": "swish",
+  "t": 9.441,
+  "gain": 0.6,
+  "abs": 144.628
+ },
+ {
+  "scene": "s04",
+  "name": "stamp",
+  "t": 12.268,
+  "gain": 1,
+  "abs": 147.455
+ },
+ {
+  "scene": "s04",
+  "name": "pop",
+  "t": 17.786,
+  "gain": 0.6,
+  "abs": 152.973
+ },
+ {
+  "scene": "s04",
+  "name": "beep",
+  "t": 22.386,
+  "gain": 0.6,
+  "abs": 157.573
+ },
+ {
+  "scene": "s04",
+  "name": "whoosh",
+  "t": 24.292,
+  "gain": 0.5,
+  "abs": 159.479
+ },
+ {
+  "scene": "s04",
+  "name": "whoosh",
+  "t": 24.782,
+  "gain": 0.5,
+  "abs": 159.969
+ },
+ {
+  "scene": "s04",
+  "name": "impact",
+  "t": 26.958,
+  "gain": 0.5,
+  "abs": 162.145
+ },
+ {
+  "scene": "s04",
+  "name": "ding",
+  "t": 31.023,
+  "gain": 0.6,
+  "abs": 166.21
+ },
+ {
+  "scene": "s04",
+  "name": "pop",
+  "t": 33.031,
+  "gain": 0.5,
+  "abs": 168.218
+ },
+ {
+  "scene": "s04",
+  "name": "down",
+  "t": 35.801,
+  "gain": 0.8,
+  "abs": 170.988
+ },
+ {
+  "scene": "s04",
+  "name": "alarm",
+  "t": 38.813,
+  "gain": 0.5,
+  "abs": 174
+ },
+ {
+  "scene": "s04",
+  "name": "up",
+  "t": 41.249,
+  "gain": 0.7,
+  "abs": 176.436
+ },
+ {
+  "scene": "s04",
+  "name": "pop",
+  "t": 47.335,
+  "gain": 0.5,
+  "abs": 182.522
+ },
+ {
+  "scene": "s04",
+  "name": "pop",
+  "t": 49.294,
+  "gain": 0.5,
+  "abs": 184.481
+ },
+ {
+  "scene": "s04",
+  "name": "pop",
+  "t": 50.111,
+  "gain": 0.5,
+  "abs": 185.298
+ },
+ {
+  "scene": "s04",
+  "name": "pop",
+  "t": 51.762,
+  "gain": 0.5,
+  "abs": 186.949
+ },
+ {
+  "scene": "s04",
+  "name": "buzz",
+  "t": 56.368,
+  "gain": 0.4,
+  "abs": 191.555
+ },
+ {
+  "scene": "s04",
+  "name": "robot",
+  "t": 59.02,
+  "gain": 0.7,
+  "abs": 194.207
+ },
+ {
+  "scene": "s04",
+  "name": "sparkle",
+  "t": 59.22,
+  "gain": 0.5,
+  "abs": 194.407
+ },
+ {
+  "scene": "s04",
+  "name": "beep",
+  "t": 62.556,
+  "gain": 0.4,
+  "abs": 197.743
+ },
+ {
+  "scene": "s04",
+  "name": "tick",
+  "t": 70.165,
+  "gain": 0.6,
+  "abs": 205.352
+ },
+ {
+  "scene": "s04",
+  "name": "pop",
+  "t": 73.079,
+  "gain": 0.5,
+  "abs": 208.266
+ },
+ {
+  "scene": "s04",
+  "name": "pop",
+  "t": 74.355,
+  "gain": 0.5,
+  "abs": 209.542
+ },
+ {
+  "scene": "s04",
+  "name": "up",
+  "t": 76.309,
+  "gain": 0.6,
+  "abs": 211.496
+ },
+ {
+  "scene": "s04",
+  "name": "tickle",
+  "t": 78.545,
+  "gain": 0.7,
+  "abs": 213.732
+ },
+ {
+  "scene": "s04",
+  "name": "swish",
+  "t": 80.651,
+  "gain": 0.5,
+  "abs": 215.838
+ },
+ {
+  "scene": "s04",
+  "name": "swish",
+  "t": 82.051,
+  "gain": 0.5,
+  "abs": 217.238
+ },
+ {
+  "scene": "s04",
+  "name": "up",
+  "t": 85.73,
+  "gain": 0.6,
+  "abs": 220.917
+ },
+ {
+  "scene": "s04",
+  "name": "swish",
+  "t": 91.195,
+  "gain": 0.5,
+  "abs": 226.382
+ },
+ {
+  "scene": "s04",
+  "name": "impact",
+  "t": 92.952,
+  "gain": 0.7,
+  "abs": 228.139
+ },
+ {
+  "scene": "s05",
+  "name": "glitch",
+  "t": 0,
+  "gain": 1,
+  "abs": 230.088
+ },
+ {
+  "scene": "s05",
+  "name": "boing",
+  "t": 0.3,
+  "gain": 0.6,
+  "abs": 230.388
+ },
+ {
+  "scene": "s05",
+  "name": "ding",
+  "t": 5.515,
+  "gain": 0.5,
+  "abs": 235.603
+ },
+ {
+  "scene": "s05",
+  "name": "buzz",
+  "t": 12.687,
+  "gain": 0.3,
+  "abs": 242.775
+ },
+ {
+  "scene": "s05",
+  "name": "click",
+  "t": 13.074,
+  "gain": 0.4,
+  "abs": 243.162
+ },
+ {
+  "scene": "s05",
+  "name": "click",
+  "t": 13.494,
+  "gain": 0.4,
+  "abs": 243.582
+ },
+ {
+  "scene": "s05",
+  "name": "click",
+  "t": 13.914,
+  "gain": 0.4,
+  "abs": 244.002
+ },
+ {
+  "scene": "s05",
+  "name": "click",
+  "t": 14.334,
+  "gain": 0.4,
+  "abs": 244.422
+ },
+ {
+  "scene": "s05",
+  "name": "click",
+  "t": 14.754,
+  "gain": 0.4,
+  "abs": 244.842
+ },
+ {
+  "scene": "s05",
+  "name": "click",
+  "t": 15.174,
+  "gain": 0.4,
+  "abs": 245.262
+ },
+ {
+  "scene": "s05",
+  "name": "ding",
+  "t": 15.234,
+  "gain": 0.5,
+  "abs": 245.322
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 16.911,
+  "gain": 0.4,
+  "abs": 246.999
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 17.461,
+  "gain": 0.4,
+  "abs": 247.549
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 18.011,
+  "gain": 0.4,
+  "abs": 248.099
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 18.561,
+  "gain": 0.4,
+  "abs": 248.649
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 19.111,
+  "gain": 0.4,
+  "abs": 249.199
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 19.661,
+  "gain": 0.4,
+  "abs": 249.749
+ },
+ {
+  "scene": "s05",
+  "name": "ding",
+  "t": 19.661,
+  "gain": 0.5,
+  "abs": 249.749
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 24.177,
+  "gain": 0.8,
+  "abs": 254.265
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 25.077,
+  "gain": 0.8,
+  "abs": 255.165
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 25.977,
+  "gain": 0.8,
+  "abs": 256.065
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 26.877,
+  "gain": 0.8,
+  "abs": 256.965
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 27.777,
+  "gain": 0.8,
+  "abs": 257.865
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 28.677,
+  "gain": 0.8,
+  "abs": 258.765
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 30.747,
+  "gain": 0.4,
+  "abs": 260.835
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 32.11,
+  "gain": 0.4,
+  "abs": 262.198
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 33.473,
+  "gain": 0.4,
+  "abs": 263.561
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 34.836,
+  "gain": 0.4,
+  "abs": 264.924
+ },
+ {
+  "scene": "s05",
+  "name": "chirp",
+  "t": 36.199,
+  "gain": 0.4,
+  "abs": 266.287
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 40.313,
+  "gain": 0.5,
+  "abs": 270.401
+ },
+ {
+  "scene": "s05",
+  "name": "down",
+  "t": 41.729,
+  "gain": 0.6,
+  "abs": 271.817
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 45.509,
+  "gain": 0.4,
+  "abs": 275.597
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 45.809,
+  "gain": 0.4,
+  "abs": 275.897
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 46.109,
+  "gain": 0.4,
+  "abs": 276.197
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 54.133,
+  "gain": 0.5,
+  "abs": 284.221
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 54.839,
+  "gain": 0.5,
+  "abs": 284.927
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 55.707,
+  "gain": 0.5,
+  "abs": 285.795
+ },
+ {
+  "scene": "s05",
+  "name": "alarm",
+  "t": 61.186,
+  "gain": 0.4,
+  "abs": 291.274
+ },
+ {
+  "scene": "s05",
+  "name": "tickle",
+  "t": 65.972,
+  "gain": 0.6,
+  "abs": 296.06
+ },
+ {
+  "scene": "s05",
+  "name": "sparkle",
+  "t": 66.372,
+  "gain": 0.4,
+  "abs": 296.46
+ },
+ {
+  "scene": "s05",
+  "name": "squeak",
+  "t": 75.974,
+  "gain": 0.5,
+  "abs": 306.062
+ },
+ {
+  "scene": "s05",
+  "name": "squeak",
+  "t": 76.274,
+  "gain": 0.4,
+  "abs": 306.362
+ },
+ {
+  "scene": "s05",
+  "name": "squeak",
+  "t": 83.128,
+  "gain": 0.6,
+  "abs": 313.216
+ },
+ {
+  "scene": "s05",
+  "name": "whoosh",
+  "t": 88.16,
+  "gain": 0.5,
+  "abs": 318.248
+ },
+ {
+  "scene": "s05",
+  "name": "down",
+  "t": 91.438,
+  "gain": 0.6,
+  "abs": 321.526
+ },
+ {
+  "scene": "s05",
+  "name": "swish",
+  "t": 93.981,
+  "gain": 0.5,
+  "abs": 324.069
+ },
+ {
+  "scene": "s05",
+  "name": "stamp",
+  "t": 97.285,
+  "gain": 1,
+  "abs": 327.373
+ },
+ {
+  "scene": "s05",
+  "name": "thud",
+  "t": 104.84,
+  "gain": 0.44,
+  "abs": 334.928
+ },
+ {
+  "scene": "s05",
+  "name": "thud",
+  "t": 107.75,
+  "gain": 0.44,
+  "abs": 337.838
+ },
+ {
+  "scene": "s05",
+  "name": "thud",
+  "t": 112.302,
+  "gain": 0.448,
+  "abs": 342.39
+ },
+ {
+  "scene": "s05",
+  "name": "thud",
+  "t": 113.002,
+  "gain": 0.448,
+  "abs": 343.09
+ },
+ {
+  "scene": "s05",
+  "name": "thud",
+  "t": 113.702,
+  "gain": 0.448,
+  "abs": 343.79
+ },
+ {
+  "scene": "s05",
+  "name": "thud",
+  "t": 114.402,
+  "gain": 0.448,
+  "abs": 344.49
+ },
+ {
+  "scene": "s05",
+  "name": "ding",
+  "t": 114.861,
+  "gain": 0.4,
+  "abs": 344.949
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 116.091,
+  "gain": 0.3,
+  "abs": 346.179
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 116.711,
+  "gain": 0.37,
+  "abs": 346.799
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 117.331,
+  "gain": 0.44,
+  "abs": 347.419
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 117.951,
+  "gain": 0.51,
+  "abs": 348.039
+ },
+ {
+  "scene": "s05",
+  "name": "impact",
+  "t": 118.546,
+  "gain": 0.6,
+  "abs": 348.634
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 118.571,
+  "gain": 0.5800000000000001,
+  "abs": 348.659
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 119.191,
+  "gain": 0.65,
+  "abs": 349.279
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 119.811,
+  "gain": 0.72,
+  "abs": 349.899
+ },
+ {
+  "scene": "s05",
+  "name": "pop",
+  "t": 120.431,
+  "gain": 0.79,
+  "abs": 350.519
+ },
+ {
+  "scene": "s05",
+  "name": "whoosh",
+  "t": 123.392,
+  "gain": 0.4,
+  "abs": 353.48
+ },
+ {
+  "scene": "s05",
+  "name": "whoosh",
+  "t": 126.438,
+  "gain": 0.3,
+  "abs": 356.526
+ },
+ {
+  "scene": "s05",
+  "name": "whoosh",
+  "t": 130.91,
+  "gain": 0.5,
+  "abs": 360.998
+ },
+ {
+  "scene": "s05",
+  "name": "impact",
+  "t": 135.755,
+  "gain": 0.5,
+  "abs": 365.843
+ },
+ {
+  "scene": "s05",
+  "name": "sparkle",
+  "t": 136.905,
+  "gain": 0.5,
+  "abs": 366.993
+ },
+ {
+  "scene": "s06",
+  "name": "glitch",
+  "t": 0.2,
+  "gain": 0.5,
+  "abs": 370.401
+ },
+ {
+  "scene": "s06",
+  "name": "glitch",
+  "t": 1.6,
+  "gain": 0.4,
+  "abs": 371.801
+ },
+ {
+  "scene": "s06",
+  "name": "page",
+  "t": 4.603,
+  "gain": 0.6,
+  "abs": 374.804
+ },
+ {
+  "scene": "s06",
+  "name": "up",
+  "t": 14.417,
+  "gain": 0.4,
+  "abs": 384.618
+ },
+ {
+  "scene": "s06",
+  "name": "up",
+  "t": 17.482,
+  "gain": 0.5,
+  "abs": 387.683
+ },
+ {
+  "scene": "s06",
+  "name": "down",
+  "t": 25.175,
+  "gain": 0.5,
+  "abs": 395.376
+ },
+ {
+  "scene": "s06",
+  "name": "pop",
+  "t": 31.493,
+  "gain": 0.4,
+  "abs": 401.694
+ },
+ {
+  "scene": "s06",
+  "name": "drumroll",
+  "t": 32.286,
+  "gain": 0.6,
+  "abs": 402.487
+ },
+ {
+  "scene": "s06",
+  "name": "swell",
+  "t": 33.486,
+  "gain": 0.5,
+  "abs": 403.687
+ },
+ {
+  "scene": "s06",
+  "name": "impact",
+  "t": 33.586,
+  "gain": 1,
+  "abs": 403.787
+ },
+ {
+  "scene": "s06",
+  "name": "whoosh",
+  "t": 42.066,
+  "gain": 0.4,
+  "abs": 412.267
+ },
+ {
+  "scene": "s06",
+  "name": "thud",
+  "t": 42.516,
+  "gain": 0.4,
+  "abs": 412.717
+ },
+ {
+  "scene": "s06",
+  "name": "whoosh",
+  "t": 43.476,
+  "gain": 0.4,
+  "abs": 413.677
+ },
+ {
+  "scene": "s06",
+  "name": "thud",
+  "t": 43.926,
+  "gain": 0.4,
+  "abs": 414.127
+ },
+ {
+  "scene": "s06",
+  "name": "whoosh",
+  "t": 44.076,
+  "gain": 0.4,
+  "abs": 414.277
+ },
+ {
+  "scene": "s06",
+  "name": "thud",
+  "t": 44.526,
+  "gain": 0.4,
+  "abs": 414.727
+ },
+ {
+  "scene": "s06",
+  "name": "whoosh",
+  "t": 44.676,
+  "gain": 0.4,
+  "abs": 414.877
+ },
+ {
+  "scene": "s06",
+  "name": "thud",
+  "t": 45.126,
+  "gain": 0.4,
+  "abs": 415.327
+ },
+ {
+  "scene": "s06",
+  "name": "down",
+  "t": 47.351,
+  "gain": 0.6,
+  "abs": 417.552
+ },
+ {
+  "scene": "s06",
+  "name": "ding",
+  "t": 50.214,
+  "gain": 0.6,
+  "abs": 420.415
+ },
+ {
+  "scene": "s06",
+  "name": "pop",
+  "t": 54.469,
+  "gain": 0.5,
+  "abs": 424.67
+ },
+ {
+  "scene": "s06",
+  "name": "pop",
+  "t": 55.814,
+  "gain": 0.5,
+  "abs": 426.015
+ },
+ {
+  "scene": "s06",
+  "name": "pop",
+  "t": 57.308,
+  "gain": 0.5,
+  "abs": 427.509
+ },
+ {
+  "scene": "s06",
+  "name": "tickle",
+  "t": 60.85,
+  "gain": 0.5,
+  "abs": 431.051
+ },
+ {
+  "scene": "s06",
+  "name": "whoosh_big",
+  "t": 62.036,
+  "gain": 0.6,
+  "abs": 432.237
+ },
+ {
+  "scene": "s06",
+  "name": "sparkle",
+  "t": 62.836,
+  "gain": 0.5,
+  "abs": 433.037
+ },
+ {
+  "scene": "s06",
+  "name": "impact",
+  "t": 67.107,
+  "gain": 0.6,
+  "abs": 437.308
+ },
+ {
+  "scene": "s06",
+  "name": "boing",
+  "t": 67.157,
+  "gain": 0.5,
+  "abs": 437.358
+ },
+ {
+  "scene": "s06",
+  "name": "pop",
+  "t": 68.007,
+  "gain": 0.4,
+  "abs": 438.208
+ },
+ {
+  "scene": "s07",
+  "name": "tickle",
+  "t": 0.3,
+  "gain": 0.6,
+  "abs": 440.893
+ },
+ {
+  "scene": "s07",
+  "name": "boing",
+  "t": 0.6,
+  "gain": 0.4,
+  "abs": 441.193
+ },
+ {
+  "scene": "s07",
+  "name": "pop",
+  "t": 5.261,
+  "gain": 0.5,
+  "abs": 445.854
+ },
+ {
+  "scene": "s07",
+  "name": "ding",
+  "t": 6.498,
+  "gain": 0.4,
+  "abs": 447.091
+ },
+ {
+  "scene": "s07",
+  "name": "impact",
+  "t": 9.807,
+  "gain": 0.5,
+  "abs": 450.4
+ },
+ {
+  "scene": "s07",
+  "name": "click",
+  "t": 12.682,
+  "gain": 0.9,
+  "abs": 453.275
+ },
+ {
+  "scene": "s07",
+  "name": "ding",
+  "t": 13.082,
+  "gain": 0.5,
+  "abs": 453.675
+ }
+]

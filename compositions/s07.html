@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "HandSC"; src: url("assets/fonts/PatrickHandSC.woff2") format("woff2"); }
+        #s07-cam { position: absolute; inset: 0; overflow: hidden; background: #FBF8F1; }
+        #s07-cam .shot { position: absolute; inset: 0; visibility: hidden; }
+        #s07-cam .shot > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+        #s07-cam .ttl { position: absolute; left: 0; right: 0; text-align: center; font-family: "HandSC", cursive; color: #272320; }
+      </style>
+      <div id="s07" data-composition-id="s07" data-width="1920" data-height="1080"></div>
+      <script>
+        (function () {
+          /*CUES*/ const CUES = {"L58":[0,9.107,"So the next time someone tickles you and you can't stop laughing, that's not a weakness. That's your brain doing its job, catching the one thing it couldn't see coming."],"L59":[9.707,17.752,"If this rewired your brain a little, subscribe to Randos in 60s for more weird stuff about being you. See you in the next one."]}; const DUR = 20.352; /*ENDCUES*/
+          const { C, P, BG, person, text, path, rect, line, circ, ell, g, at } = R;
+          const q = R.cue(CUES);
+          const S = R.scene("s07");
+          const sfx = (n, t, gn) => R.sfx("s07", n, t, gn);
+          const W = (id, inner, tr) => g(null, g(id, inner), tr);
+
+          // a — getting tickled is your brain doing its job
+          S.add("a",
+            BG.outdoor({ sky: "#BFE3F1" }) + P.sun(null, 1720, 160, 0.9) + P.cloud(null, 380, 170) +
+            person("s07r", { x: 700, y: 720, s: 1.35, mouth: "laugh" }) +
+            person("s07f", { x: 1010, y: 720, s: 1.35, shirt: C.teal, hair: "messy", hairColor: C.brown, mouth: "grin", flip: -1 }) +
+            P.thought("s07-a-th", 1460, 380, 620, 380,
+              P.brain(null, -150, 30, 0.5, { face: true }) +
+              W(null, path("M40,40 L40,-30 Q40,-60 70,-60 L74,-110 Q80,-140 104,-120 L110,-60 L170,-60 Q196,-56 186,-30 L180,40 Z", C.yellow, 6), at(30, 30)) +
+              text(40, -130, "JUST DOING", 46) + text(40, -84, "MY JOB", 46)) +
+            g("s07-a-ha", text(420, 300, "HA", 100, C.red) + text(960, 220, "HAHA", 90, C.orange)));
+
+          // b — end card
+          S.add("b",
+            BG.flat("#FCE9B8") +
+            Array.from({ length: 14 }, (_, i) => circ(80 + i * 140, i % 2 ? 1010 : 70, 14, "#F8DA92", 0)).join("") +
+            person("s07e", { x: 420, y: 760, s: 1.5, mouth: "grin" }) +
+            W("s07-b-btn", rect(-260, -70, 520, 140, C.red, 70, 8) + `<g id="s07-b-t1">${text(0, 6, "SUBSCRIBE", 80, C.white)}</g><g id="s07-b-t2" opacity="0">${text(0, 6, "SUBSCRIBED", 74, C.white)}</g>`, at(1200, 620)) +
+            W("s07-b-bell", path("M-40,30 Q-44,-50 0,-56 Q44,-50 40,30 L52,44 L-52,44 Z", C.yellow, 7) + circ(0, 56, 10, C.ink, 0) + line(0, -56, 0, -70, 7), at(1560, 620)) +
+            W("s07-b-cur", path("M0,0 L0,90 L24,68 L42,108 L60,100 L42,62 L74,60 Z", C.white, 6), at(1500, 900)),
+            `<div class="ttl" id="s07-b-logo" style="top:150px;font-size:150px;left:560px;right:0;text-align:center">Randos in 60s</div>` +
+            `<div class="ttl" id="s07-b-sub" style="top:330px;font-size:56px;left:560px;right:0;text-align:center;color:#6b665d">more weird stuff about being you</div>` +
+            `<div class="ttl" id="s07-b-bye" style="top:840px;font-size:64px;left:560px;right:0;text-align:center">see you in the next one</div>`);
+
+          S.mount();
+          const tl = gsap.timeline({ paused: true });
+          const t = { a: 0, b: q("L59") };
+          R.shots(tl, [["#s07-a", 0], ["#s07-b", t.b, "pop"]], DUR);
+          R.boil(tl, "#s07-cam .boil", "s07", 0, DUR);
+
+          // a
+          R.pose(tl, "s07f", { armR: 85, foreR: 15, armL: 30, foreL: 60 }, 0.1, 0.2);
+          for (let i = 0; i < 20; i++) R.pose(tl, "s07f", { armR: i % 2 ? 78 : 92, foreR: i % 2 ? 0 : 25 }, 0.4 + i * 0.16, 0.14);
+          R.laugh(tl, "s07r", 0.3, t.b - 0.8, 1.1);
+          for (let i = 0; i < Math.floor((t.b - 0.8) / 0.24); i++) R.pose(tl, "s07r", { armL: 140 + (i % 2) * 30, armR: 130 - (i % 2) * 30 }, 0.3 + i * 0.24, 0.22);
+          tl.fromTo("#s07-a-ha text", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(3)", stagger: 0.3 }, 0.5);
+          sfx("tickle", 0.3, 0.6); sfx("boing", 0.6, 0.4);
+          gsap.set("#s07-a-th", { opacity: 0 });
+          R.pop(tl, "#s07-a-th", q("L58", "doing its job") - 0.4); sfx("pop", q("L58", "doing its job") - 0.4, 0.5); sfx("ding", q("L58", "catching"), 0.4);
+          R.push(tl, "#s07-a", 0, t.b, 1, 1.08);
+
+          // b — end card
+          R.words(tl, "#s07-b-logo", t.b + 0.1, 0.12); sfx("impact", t.b + 0.1, 0.5);
+          gsap.set(["#s07-b-sub", "#s07-b-bye", "#s07-b-btn", "#s07-b-bell", "#s07-b-cur"], { opacity: 0 });
+          R.fadeIn(tl, "#s07-b-sub", t.b + 0.9);
+          R.pop(tl, "#s07-b-btn", q("L59", "subscribe") - 0.3); R.pop(tl, "#s07-b-bell", q("L59", "subscribe") - 0.1);
+          tl.fromTo("#s07-b-cur", { opacity: 0, x: 300, y: 200 }, { opacity: 1, x: -260, y: -230, duration: 0.7, ease: "power2.out" }, q("L59", "subscribe"));
+          const ck = q("L59", "subscribe") + 0.75;
+          tl.to("#s07-b-btn", { scale: 0.92, transformOrigin: "50% 50%", duration: 0.08, yoyo: true, repeat: 1 }, ck);
+          sfx("click", ck, 0.9);
+          tl.set("#s07-b-btn rect", { attr: { fill: "#8C8577" } }, ck + 0.1);
+          tl.set("#s07-b-t1", { opacity: 0 }, ck + 0.1).set("#s07-b-t2", { opacity: 1 }, ck + 0.1);
+          R.wiggle(tl, "#s07-b-bell", ck + 0.4, 0.8, 18, 0.08); sfx("ding", ck + 0.4, 0.5);
+          R.pose(tl, "s07e", { armR: 150, foreR: 30 }, t.b + 0.3, 0.3);
+          R.flutter(tl, "s07e", "foreR", 30, t.b + 0.6, 2.4, 20, 0.2);
+          R.idle(tl, "s07e", t.b, DUR, 71);
+          R.pop(tl, "#s07-b-bye", q("L59", "See you"));
+          R.push(tl, "#s07-b", t.b, DUR - t.b, 1, 1.05);
+
+          window.__timelines["s07"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
