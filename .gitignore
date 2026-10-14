@@ -8,3 +8,4 @@ assets/audio/*.wav
 out/render_raw.mp4
 out/render.log
 AGENTS.md
+out/work-*/
