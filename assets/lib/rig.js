@@ -618,15 +618,15 @@
       window.__SHOTLOG.push({ sel, t: +t0.toFixed(3), tr });
       const next = list[i + 1];
       const t1 = next ? next[1] : end;
-      if (t0 <= 0) gsap.set(sel, { visibility: "visible" });
-      else tl.set(sel, { visibility: "visible" }, t0);
+      if (t0 <= 0) gsap.set(sel, { visibility: "inherit" });
+      else tl.set(sel, { visibility: "inherit" }, t0);
       if (next) tl.set(sel, { visibility: "hidden" }, t1);
       if (tr === "whipL" || tr === "whipR") {
         const dx = tr === "whipL" ? 1920 : -1920;
         tl.fromTo(sel, { x: dx, filter: "blur(18px)" }, { x: 0, filter: "blur(0px)", duration: 0.32, ease: "power3.out" }, t0);
         if (i > 0) {
           const prev = list[i - 1][0];
-          tl.set(prev, { visibility: "visible" }, t0);
+          tl.set(prev, { visibility: "inherit" }, t0);
           tl.to(prev, { x: -dx, filter: "blur(18px)", duration: 0.32, ease: "power3.in" }, t0 - 0.0);
           tl.set(prev, { visibility: "hidden", x: 0, filter: "blur(0px)" }, t0 + 0.33);
         }
