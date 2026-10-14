@@ -1,515 +1,439 @@
 1
-00:00:00,500 --> 00:00:04,047
-Try this. Take one finger and tickle the bottom of your own
+00:00:00,500 --> 00:00:03,465
+You walk into a supermarket for one thing. Milk.
 
 2
-00:00:04,047 --> 00:00:04,343
-foot.
+00:00:03,965 --> 00:00:07,755
+Twenty minutes later, you're at the checkout with snacks, a scented candle,
 
 3
-00:00:04,723 --> 00:00:07,911
-Nothing. Maybe a little itch. Honestly? Kind of boring.
+00:00:07,755 --> 00:00:10,282
+two bags of chips, and somehow, no milk.
 
 4
-00:00:08,361 --> 00:00:12,238
-But if your friend did the exact same thing, same spot, same
+00:00:10,882 --> 00:00:13,896
+That's not bad luck. And it's not a lack of willpower.
 
 5
-00:00:12,238 --> 00:00:14,177
-pressure, you'd be kicking and screaming.
+00:00:14,276 --> 00:00:18,188
+From the moment you walk in, almost everything around you has been
 
 6
-00:00:14,677 --> 00:00:18,195
-Same skin. Same touch. Completely different reaction.
+00:00:18,188 --> 00:00:22,100
+designed to get you to spend more. The music. The smells. Even
 
 7
-00:00:18,575 --> 00:00:21,345
-So what does your friend's finger have that yours doesn't?
+00:00:22,100 --> 00:00:24,056
+the numbers on the price tags.
 
 8
-00:00:22,145 --> 00:00:26,345
-It's one of the strangest little glitches of the human body. Almost
+00:00:24,506 --> 00:00:27,300
+And most of it works on a part of your brain you
 
 9
-00:00:26,345 --> 00:00:30,195
-everyone can be tickled. And almost no one can tickle themselves.
+00:00:27,300 --> 00:00:27,998
+don't even notice.
 
 10
-00:00:30,645 --> 00:00:34,135
-And the answer isn't in your skin. Or your foot. Or your
+00:00:28,798 --> 00:00:34,396
+The average American supermarket carries more than thirty thousand different products. Thirty
 
 11
-00:00:34,135 --> 00:00:34,426
-fingers.
+00:00:34,396 --> 00:00:34,863
+thousand.
 
 12
-00:00:34,806 --> 00:00:38,447
-It's in your brain. And it turns out your brain has been
+00:00:35,363 --> 00:00:39,917
+No brain can carefully think through that many choices. So it doesn't.
 
 13
-00:00:38,447 --> 00:00:41,178
-quietly editing your reality, every second of your life.
+00:00:39,917 --> 00:00:41,435
+It switches to autopilot.
 
 14
-00:00:41,778 --> 00:00:43,645
-So, why can't you tickle yourself?
+00:00:41,815 --> 00:00:46,924
+And supermarkets have spent decades learning exactly how to steer that autopilot.
 
 15
-00:00:44,745 --> 00:00:49,560
-Scientists started poking at this question back in 1971. A team led
+00:00:47,524 --> 00:00:50,850
+So, how do supermarkets trick your brain into spending more?
 
 16
-00:00:49,560 --> 00:00:54,375
-by Lawrence Weiskrantz tickled people on the soles of their feet, and
+00:00:51,950 --> 00:00:57,108
+Let's start with the thing you're pushing. In 1937, an Oklahoma grocery
 
 17
-00:00:54,375 --> 00:00:56,381
-confirmed what we all suspected.
+00:00:57,108 --> 00:01:02,265
+store owner named Sylvan Goldman introduced one of the first shopping carts.
 
 18
-00:00:56,761 --> 00:00:59,196
-It really is less ticklish when you do it yourself.
+00:01:02,645 --> 00:01:06,529
+And at first, nobody wanted to use it. Women said it felt
 
 19
-00:00:59,696 --> 00:01:05,038
-Scientists even have two words for it. Knismesis is the light, feathery,
+00:01:06,529 --> 00:01:09,766
+like pushing a baby carriage. Men thought it looked unmanly.
 
 20
-00:01:05,038 --> 00:01:10,381
-itchy kind. Gargalesis is the heavy, poke-in-the-ribs kind that makes you howl
+00:01:10,216 --> 00:01:14,431
+So Goldman hired people to pretend to shop with the carts, until
 
 21
-00:01:10,381 --> 00:01:11,271
-with laughter.
+00:01:14,431 --> 00:01:16,187
+real customers started copying them.
 
 22
-00:01:11,651 --> 00:01:15,653
-And it's that laughing kind that's nearly impossible to give yourself.
+00:01:16,636 --> 00:01:20,304
+It worked. And it showed something stores have used ever since. When
 
 23
-00:01:16,153 --> 00:01:21,209
-But nobody could explain why. Not until 1998, when Sarah-Jayne Blakemore and
+00:01:20,304 --> 00:01:23,973
+your hands are free and your basket is bigger, you tend to
 
 24
-00:01:21,209 --> 00:01:25,844
-her colleagues in London took the question inside a brain scanner.
+00:01:23,973 --> 00:01:24,584
+buy more.
 
 25
-00:01:26,224 --> 00:01:30,086
-Volunteers lay in the scanner while a soft tickling device brushed across
+00:01:25,184 --> 00:01:29,005
+Now look at where things are. Milk, eggs, and bread, the stuff
 
 26
-00:01:30,086 --> 00:01:31,695
-the palm of their hand.
+00:01:29,005 --> 00:01:32,507
+almost everyone needs, are usually at the back of the store.
 
 27
-00:01:32,075 --> 00:01:37,306
-Sometimes the experimenter moved it. Sometimes the volunteers moved it themselves.
+00:01:32,887 --> 00:01:36,671
+Part of that is practical, since the fridges and deliveries are in
 
 28
-00:01:37,756 --> 00:01:40,994
-When someone else did the tickling, the parts of the brain that
+00:01:36,671 --> 00:01:40,454
+the back. But it also means that to grab one carton of
 
 29
-00:01:40,994 --> 00:01:42,073
-process touch lit up.
+00:01:40,454 --> 00:01:42,977
+milk, you walk past thousands of other things.
 
 30
-00:01:42,454 --> 00:01:46,812
-But when the volunteers tickled themselves, those same areas were much quieter.
+00:01:43,477 --> 00:01:48,363
+Then there's the entrance. Shoppers barely register the first few steps inside
 
 31
-00:01:47,262 --> 00:01:50,704
-Same touch on the skin. But the brain was barely listening.
+00:01:48,363 --> 00:01:51,620
+the door. Retailers call it the decompression zone.
 
 32
-00:01:51,304 --> 00:01:55,447
-And there was another clue. A region at the back of the
+00:01:52,000 --> 00:01:56,069
+So that's often where stores put something beautiful. Bright fruit, fresh flowers,
 
 33
-00:01:55,447 --> 00:01:58,899
-brain, called the cerebellum, behaved differently when people tickled themselves.
+00:01:56,069 --> 00:02:00,139
+the smell of baking bread. It's meant to slow you down and
 
 34
-00:01:59,279 --> 00:02:03,650
-The cerebellum is famous for coordinating movement. It's the reason you can
+00:02:00,139 --> 00:02:04,208
+put you in a good mood, before you've even grabbed a basket.
 
 35
-00:02:03,650 --> 00:02:07,293
-walk, type, and catch a ball without thinking about it.
+00:02:05,108 --> 00:02:08,524
+Once you've slowed down, the store goes to work on your senses.
 
 36
-00:02:07,673 --> 00:02:11,966
-But the scientists suspected it was doing something else too. Something sneaky.
+00:02:08,974 --> 00:02:14,150
+In a classic 1982 study, researcher Ronald Milliman played slow or fast
 
 37
-00:02:12,666 --> 00:02:14,187
-It was predicting the future.
+00:02:14,150 --> 00:02:15,875
+music in a supermarket.
 
 38
-00:02:15,187 --> 00:02:19,335
-Here's how it works. Every time you decide to move, your brain
+00:02:16,255 --> 00:02:20,577
+With slow music, shoppers walked more slowly, and the store sold about
 
 39
-00:02:19,335 --> 00:02:23,137
-sends a command to your muscles. Lift. Move left. Press down.
+00:02:20,577 --> 00:02:23,459
+thirty-eight percent more than on fast music days.
 
 40
-00:02:23,517 --> 00:02:27,278
-But it also keeps a copy of that command. Scientists call it
+00:02:23,959 --> 00:02:29,131
+Even the style of music matters. In 1997, British psychologists played French
 
 41
-00:02:27,278 --> 00:02:31,039
-an efference copy. Think of it like the carbon copy of an
+00:02:29,131 --> 00:02:32,579
+or German music next to a wine display.
 
 42
-00:02:31,039 --> 00:02:32,293
-email you just sent.
+00:02:32,959 --> 00:02:37,579
+On French music days, French wine outsold German wine by about five
 
 43
-00:02:32,673 --> 00:02:36,487
-Your brain uses that copy to run a quick simulation. If I
+00:02:37,579 --> 00:02:41,044
+to one. On German music days, German wine won.
 
 44
-00:02:36,487 --> 00:02:39,029
-do this, here's exactly what I should feel.
+00:02:41,494 --> 00:02:44,784
+And when shoppers were asked, they seemed to have no idea the
 
 45
-00:02:39,479 --> 00:02:44,563
-Then the real sensation arrives, and the brain compares the two. Prediction,
+00:02:44,784 --> 00:02:46,977
+music had anything to do with their choice.
 
 46
-00:02:44,563 --> 00:02:45,410
-versus reality.
+00:02:47,677 --> 00:02:51,280
+Then come the shelves. The products at eye level are often the
 
 47
-00:02:45,910 --> 00:02:49,662
-If they match, the brain basically says, that was just me, nothing
+00:02:51,280 --> 00:02:54,883
+ones the store most wants you to buy, and brands can pay
 
 48
-00:02:49,662 --> 00:02:52,476
-to see here. And it turns the volume down.
+00:02:54,883 --> 00:02:55,784
+for that space.
 
 49
-00:02:52,856 --> 00:02:57,119
-If they don't match, that's a surprise. And surprises get the brain's
+00:02:56,164 --> 00:03:00,366
+Cheaper store brands are often hiding up high, or down near the
 
 50
-00:02:57,119 --> 00:02:57,830
-full attention.
+00:03:00,366 --> 00:03:04,568
+floor. Meanwhile, the sugary cereals sit right where a kid's eyes are.
 
 51
-00:02:58,330 --> 00:03:02,420
-A tickle from someone else is pure surprise. You can't predict exactly
+00:03:05,068 --> 00:03:09,050
+And the ends of the aisles, called end caps, are prime real
 
 52
-00:03:02,420 --> 00:03:06,169
-where their fingers will go next, how hard, or how fast.
+00:03:09,050 --> 00:03:13,031
+estate. Products there tend to sell much more, even when the price
 
 53
-00:03:06,549 --> 00:03:10,544
-But your own fingers? Your brain knows the plan before your hand
+00:03:13,031 --> 00:03:16,681
+isn't any lower, because a big display feels like a deal.
 
 54
-00:03:10,544 --> 00:03:13,207
-even moves. There's no surprise left to feel.
+00:03:17,681 --> 00:03:20,938
+But some of the sneakiest tricks aren't on the shelves. They're in
 
 55
-00:03:13,907 --> 00:03:16,343
-And the researchers proved it, with robots.
+00:03:20,938 --> 00:03:21,481
+the numbers.
 
 56
-00:03:16,723 --> 00:03:20,748
-Volunteers moved a robot arm with one hand, and a second robot
+00:03:21,981 --> 00:03:26,203
+Why does everything cost two ninety-nine instead of three dollars? Because your
 
 57
-00:03:20,748 --> 00:03:24,772
-brushed the palm of their other hand. Normally, this felt pretty dull.
+00:03:26,203 --> 00:03:30,424
+brain reads prices from left to right, and it latches onto that
 
 58
-00:03:25,152 --> 00:03:29,080
-But then the scientists secretly added a delay. Just a tenth of
+00:03:30,424 --> 00:03:31,128
+first digit.
 
 59
-00:03:29,080 --> 00:03:30,716
-a second. Then two tenths.
+00:03:31,508 --> 00:03:34,538
+Two ninety-nine just feels closer to two than to three.
 
 60
-00:03:31,096 --> 00:03:34,616
-And suddenly, the volunteers' own touch started feeling tickly.
+00:03:35,038 --> 00:03:39,764
+In one famous experiment, researchers changed the price of a dress in
 
 61
-00:03:35,116 --> 00:03:39,331
-They also twisted the direction, so the robot moved a little differently
+00:03:39,764 --> 00:03:44,489
+a clothing catalog. At thirty-four dollars, it sold. At thirty-nine dollars, it
 
 62
-00:03:39,331 --> 00:03:43,546
-from the hand. Same result. The bigger the mismatch, the more ticklish
+00:03:44,489 --> 00:03:46,458
+sold about a third more.
 
 63
-00:03:43,546 --> 00:03:44,248
-it felt.
+00:03:46,858 --> 00:03:49,652
+A higher price, ending in nine, beat a lower one.
 
 64
-00:03:44,748 --> 00:03:48,003
-So it's not about who is touching you. It's about whether your
+00:03:50,252 --> 00:03:54,539
+Then there's the crossed-out price. Was ten dollars, now six. That first
 
 65
-00:03:48,003 --> 00:03:49,088
-brain saw it coming.
+00:03:54,539 --> 00:03:58,826
+number works like an anchor. Once your brain has seen ten, six
 
 66
-00:03:50,088 --> 00:03:54,363
-Now here's where it gets weird. This prediction system isn't just for
+00:03:58,826 --> 00:04:02,756
+feels like a win, whether or not anyone ever paid ten.
 
 67
-00:03:54,363 --> 00:03:58,282
-tickling. It's running all the time, on almost everything you do.
+00:04:03,136 --> 00:04:07,240
+The same researchers found that a simple sale sign can boost sales,
 
 68
-00:03:58,662 --> 00:04:02,531
-Right now, your eyes are jumping around this screen several times a
+00:04:07,240 --> 00:04:11,345
+sometimes even without much of a price cut, because most of us
 
 69
-00:04:02,531 --> 00:04:06,399
-second. Every jump should make the whole world lurch. But it doesn't.
+00:04:11,345 --> 00:04:13,739
+don't actually know what things should cost.
 
 70
-00:04:06,799 --> 00:04:10,591
-Your brain predicts each eye movement, and cancels out the motion before
+00:04:14,339 --> 00:04:18,351
+Then there are deals like two for five dollars. Lots of people
 
 71
-00:04:10,591 --> 00:04:11,855
-you ever notice it.
+00:04:18,351 --> 00:04:22,364
+automatically grab two, even when one would cost the same per item.
 
 72
-00:04:12,235 --> 00:04:16,858
-It's not just humans, either. A cricket's chirp is incredibly loud. Loud
+00:04:22,964 --> 00:04:27,551
+And then there's shrinkflation. Instead of raising the price, a company makes
 
 73
-00:04:16,858 --> 00:04:19,555
-enough to overwhelm its own sensitive ears.
+00:04:27,551 --> 00:04:31,756
+the package a little smaller. Same price. Same bag. Less inside.
 
 74
-00:04:19,935 --> 00:04:23,894
-So every time it chirps, a single nerve cell sends a signal
+00:04:32,136 --> 00:04:35,387
+Your brain checks the price. It rarely checks the grams.
 
 75
-00:04:23,894 --> 00:04:27,523
-that dials down its own hearing, perfectly timed to each chirp.
+00:04:36,087 --> 00:04:39,516
+And then there's you. Your own body can work against your wallet.
 
 76
-00:04:28,023 --> 00:04:31,665
-Even your own voice gets this treatment. When you talk, your brain
+00:04:39,916 --> 00:04:44,271
+A 2015 study found that hungry people didn't just want more food.
 
 77
-00:04:31,665 --> 00:04:34,397
-turns down its response to the sound of you.
+00:04:44,271 --> 00:04:48,625
+They grabbed more non-food things too, and hungry shoppers in a department
 
 78
-00:04:34,997 --> 00:04:39,219
-Which raises a fun question. Why are we ticklish in the first
+00:04:48,625 --> 00:04:51,891
+store spent more than shoppers who had just eaten.
 
 79
-00:04:39,219 --> 00:04:41,330
-place? Honestly, nobody knows for sure.
+00:04:52,271 --> 00:04:56,282
+Hunger seems to flip your brain into a general get-more-stuff mode.
 
 80
-00:04:41,780 --> 00:04:45,609
-Some of the most ticklish spots, like your neck, your ribs, and
+00:04:56,882 --> 00:05:02,036
+Meanwhile, your loyalty card is quietly taking notes. In 2012, the New
 
 81
-00:04:45,609 --> 00:04:49,437
-the soles of your feet, are also some of the most vulnerable.
+00:05:02,036 --> 00:05:07,190
+York Times reported that Target had built a pregnancy prediction score, using
 
 82
-00:04:49,437 --> 00:04:53,266
-So one idea is that tickling is an alarm, tuned to anything
+00:05:07,190 --> 00:05:12,344
+purchases like unscented lotion and vitamin supplements to guess which shoppers were
 
 83
-00:04:53,266 --> 00:04:55,180
-crawling or poking where it shouldn't.
+00:05:12,344 --> 00:05:13,633
+expecting a baby.
 
 84
-00:04:55,560 --> 00:04:59,706
-Another idea is that it's social. Tickling is one of the very
+00:05:14,013 --> 00:05:17,163
+So the store isn't just reading the room. It's reading you.
 
 85
-00:04:59,706 --> 00:05:01,779
-first games parents play with babies.
+00:05:18,163 --> 00:05:22,863
+And finally, after all that walking, deciding, and resisting, you reach the
 
 86
-00:05:02,159 --> 00:05:06,260
-And it's not just us. When scientists tickle rats, they let out
+00:05:22,863 --> 00:05:23,255
+checkout.
 
 87
-00:05:06,260 --> 00:05:10,362
-chirps too high-pitched for us to hear. Some researchers think it's a
+00:05:23,655 --> 00:05:27,721
+You're tired. You're waiting in line. And right at hand height are
 
 88
-00:05:10,362 --> 00:05:14,463
-kind of laughter. The rats even chase the hand, asking for more.
+00:05:27,721 --> 00:05:29,754
+candy bars, gum, and cold drinks.
 
 89
-00:05:14,963 --> 00:05:19,116
-Alarm or game, a tickle only works when it comes from the
+00:05:30,254 --> 00:05:34,403
+That's no accident. After dozens of small decisions, a quick, easy treat
 
 90
-00:05:19,116 --> 00:05:23,269
-outside world. Which is exactly why your brain filters out the inside.
+00:05:34,403 --> 00:05:37,169
+is a lot harder to say no to.
 
 91
-00:05:23,969 --> 00:05:28,425
-But all this cancelling has a hidden cost. And a 2003 experiment
+00:05:37,549 --> 00:05:41,876
+In fact, this spot works so well that in 2022, England made
 
 92
-00:05:28,425 --> 00:05:31,024
-revealed it in a very relatable way.
+00:05:41,876 --> 00:05:46,203
+it illegal for larger stores to put junk food at checkouts, entrances,
 
 93
-00:05:31,524 --> 00:05:35,718
-Researchers sat pairs of people across from each other. One person pressed
+00:05:46,203 --> 00:05:48,006
+and the ends of aisles.
 
 94
-00:05:35,718 --> 00:05:39,913
-down on the other's finger. Then the second person had to press
+00:05:48,806 --> 00:05:50,409
+So here's the real secret.
 
 95
-00:05:39,913 --> 00:05:42,010
-back with exactly the same force.
+00:05:50,909 --> 00:05:55,059
+Supermarkets don't force you to buy things you don't want. They make
 
 96
-00:05:42,390 --> 00:05:45,479
-Back and forth they went. Everyone was trying to be fair.
+00:05:55,059 --> 00:05:56,097
+buying feel automatic.
 
 97
-00:05:45,879 --> 00:05:50,645
-But the force kept climbing. On average, about thirty-eight percent harder, every
+00:05:56,477 --> 00:06:00,686
+The long walk, the slow music, the eye-level shelf, the price ending
 
 98
-00:05:50,645 --> 00:05:51,439
-single turn.
+00:06:00,686 --> 00:06:04,894
+in nine. Every trick is designed to keep your brain on autopilot,
 
 99
-00:05:52,039 --> 00:05:55,979
-Nobody was cheating. Your brain dampens the feeling of your own push,
+00:06:04,894 --> 00:06:08,752
+so you never stop to ask, do I actually need this?
 
 100
-00:05:55,979 --> 00:05:59,919
-so it always feels weaker than it really is. To match what
+00:06:09,352 --> 00:06:12,555
+And the moment you do stop and ask, most of the tricks
 
 101
-00:05:59,919 --> 00:06:03,531
-you felt, you push harder. And so does the other person.
+00:06:12,555 --> 00:06:13,089
+stop working.
 
 102
-00:06:03,911 --> 00:06:07,438
-Which means the next time someone says, you hit me harder! They
+00:06:14,189 --> 00:06:17,831
+So next time, bring a list. Eat before you go. Look at
 
 103
-00:06:07,438 --> 00:06:09,201
-might actually be telling the truth.
+00:06:17,831 --> 00:06:21,473
+the top and bottom shelves. And check the price per unit, not
 
 104
-00:06:10,201 --> 00:06:13,804
-So what happens when this prediction system doesn't work the way it
+00:06:21,473 --> 00:06:22,687
+the big yellow sign.
 
 105
-00:06:13,804 --> 00:06:14,104
-should?
+00:06:23,187 --> 00:06:26,469
+You won't beat every trick. But now, at least, you'll see them
 
 106
-00:06:14,604 --> 00:06:19,474
-In 2000, Blakemore's team worked with people with schizophrenia who hear voices,
+00:06:26,469 --> 00:06:26,743
+coming.
 
 107
-00:06:19,474 --> 00:06:23,938
-or feel like their actions are being controlled by someone else.
+00:06:27,143 --> 00:06:30,092
+And maybe, this time, you'll actually remember the milk.
 
 108
-00:06:24,318 --> 00:06:28,436
-For these patients, their own touch didn't get turned down. It felt
+00:06:30,892 --> 00:06:34,756
+If this changed how you'll walk through the store, subscribe to Randos
 
 109
-00:06:28,436 --> 00:06:31,868
-just as intense, and just as ticklish, as someone else's.
+00:06:34,756 --> 00:06:38,620
+in 60s for more weird stuff about your brain. See you in
 
 110
-00:06:32,368 --> 00:06:36,440
-One leading idea is that when the brain's that-was-me signal gets weaker,
-
-111
-00:06:36,440 --> 00:06:40,512
-your own actions, and even your own inner voice, can start to
-
-112
-00:06:40,512 --> 00:06:42,887
-feel like they're coming from somewhere else.
-
-113
-00:06:43,687 --> 00:06:46,375
-And that reveals the real answer to our mystery.
-
-114
-00:06:46,975 --> 00:06:50,933
-You can't tickle yourself because your brain is constantly sorting the world
-
-115
-00:06:50,933 --> 00:06:54,892
-into two piles. Things I did. And things that happened to me.
-
-116
-00:06:55,272 --> 00:07:00,242
-Everything you cause gets predicted, and quietly muted. Everything you didn't cause
-
-117
-00:07:00,242 --> 00:07:01,899
-gets flagged as important.
-
-118
-00:07:02,279 --> 00:07:05,770
-It's a big part of why you feel like you. A body
-
-119
-00:07:05,770 --> 00:07:09,260
-that's yours. Actions that are yours. A voice in your head that's
-
-120
-00:07:09,260 --> 00:07:09,551
-yours.
-
-121
-00:07:10,151 --> 00:07:14,261
-Tickling is just the moment this hidden system shows itself. Because a
-
-122
-00:07:14,261 --> 00:07:16,658
-tickle only works when it's a surprise.
-
-123
-00:07:17,108 --> 00:07:19,393
-And you can never truly surprise yourself.
-
-124
-00:07:20,593 --> 00:07:24,236
-So the next time someone tickles you and you can't stop laughing,
-
-125
-00:07:24,236 --> 00:07:27,879
-that's not a weakness. That's your brain doing its job, catching the
-
-126
-00:07:27,879 --> 00:07:29,700
-one thing it couldn't see coming.
-
-127
-00:07:30,300 --> 00:07:34,162
-If this rewired your brain a little, subscribe to Randos in 60s
-
-128
-00:07:34,162 --> 00:07:38,023
-for more weird stuff about being you. See you in the next
-
-129
-00:07:38,023 --> 00:07:38,345
-one.
+00:06:38,620 --> 00:06:39,586
+the next one.

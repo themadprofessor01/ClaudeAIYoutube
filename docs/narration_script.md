@@ -1,158 +1,133 @@
-# Narration script — Why Can't You Tickle Yourself?
+# Narration script — How Supermarkets Trick Your Brain Into Spending More
 
-Channel: **Randos in 60s** · Voice: Kokoro `af_heart` at speed 0.93 · Runtime **7:40.94**
+Channel: **Randos in 60s** · Voice: Kokoro `af_heart` at speed 0.93 · Runtime **6:42.19**
 
 Timestamps are measured from the generated voice-over (`assets/audio/narration.wav`).
 Lines with a `say:` note were spelled phonetically for the TTS engine; the on-screen/subtitle text is the line itself.
 
-## Hook  (0:00.00 – 0:22.14)
+## Hook  (0:00.00 – 0:28.80)
 
-**[0:00.50]** Try this. Take one finger and tickle the bottom of your own foot.  
+**[0:00.50]** You walk into a supermarket for one thing. Milk.  
 
-**[0:04.72]** Nothing. Maybe a little itch. Honestly? Kind of boring.  
+**[0:03.96]** Twenty minutes later, you're at the checkout with snacks, a scented candle, two bags of chips, and somehow, no milk.  
 
-**[0:08.36]** But if your friend did the exact same thing, same spot, same pressure, you'd be kicking and screaming.  
+**[0:10.88]** That's not bad luck. And it's not a lack of willpower.  
 
-**[0:14.68]** Same skin. Same touch. Completely different reaction.  
+**[0:14.28]** From the moment you walk in, almost everything around you has been designed to get you to spend more. The music. The smells. Even the numbers on the price tags.  
 
-**[0:18.57]** So what does your friend's finger have that yours doesn't?  
+**[0:24.51]** And most of it works on a part of your brain you don't even notice.  
 
-## The Mystery  (0:22.14 – 0:44.74)
+## The Mystery  (0:28.80 – 0:51.95)
 
-**[0:22.14]** It's one of the strangest little glitches of the human body. Almost everyone can be tickled. And almost no one can tickle themselves.  
+**[0:28.80]** The average American supermarket carries more than thirty thousand different products. Thirty thousand.  
 
-**[0:30.64]** And the answer isn't in your skin. Or your foot. Or your fingers.  
+**[0:35.36]** No brain can carefully think through that many choices. So it doesn't. It switches to autopilot.  
 
-**[0:34.81]** It's in your brain. And it turns out your brain has been quietly editing your reality, every second of your life.  
+**[0:41.81]** And supermarkets have spent decades learning exactly how to steer that autopilot.  
 
-**[0:41.78]** So, why can't you tickle yourself?  
+**[0:47.52]** So, how do supermarkets trick your brain into spending more?  
 
-## The First Big Discovery  (0:44.74 – 2:15.19)
+## The Layout  (0:51.95 – 2:05.11)
 
-**[0:44.74]** Scientists started poking at this question back in 1971. A team led by Lawrence Weiskrantz tickled people on the soles of their feet, and confirmed what we all suspected.  
-<sub>say: _Scientists started poking at this question back in nineteen seventy-one. A team led by Lawrence Vice-krantz tickled people on the soles of their feet, and confirmed what we all suspected._</sub>  
+**[0:51.95]** Let's start with the thing you're pushing. In 1937, an Oklahoma grocery store owner named Sylvan Goldman introduced one of the first shopping carts.  
+<sub>say: _Let's start with the thing you're pushing. In nineteen thirty-seven, an Oklahoma grocery store owner named Sylvan Goldman introduced one of the first shopping carts._</sub>  
 
-**[0:56.76]** It really is less ticklish when you do it yourself.  
+**[1:02.65]** And at first, nobody wanted to use it. Women said it felt like pushing a baby carriage. Men thought it looked unmanly.  
 
-**[0:59.70]** Scientists even have two words for it. Knismesis is the light, feathery, itchy kind. Gargalesis is the heavy, poke-in-the-ribs kind that makes you howl with laughter.  
-<sub>say: _Scientists even have two words for it. Niz-mee-sis is the light, feathery, itchy kind. Gar-ga-lee-sis is the heavy, poke-in-the-ribs kind that makes you howl with laughter._</sub>  
+**[1:10.22]** So Goldman hired people to pretend to shop with the carts, until real customers started copying them.  
 
-**[1:11.65]** And it's that laughing kind that's nearly impossible to give yourself.  
+**[1:16.64]** It worked. And it showed something stores have used ever since. When your hands are free and your basket is bigger, you tend to buy more.  
 
-**[1:16.15]** But nobody could explain why. Not until 1998, when Sarah-Jayne Blakemore and her colleagues in London took the question inside a brain scanner.  
-<sub>say: _But nobody could explain why. Not until nineteen ninety-eight, when Sarah-Jayne Blakemore and her colleagues in London took the question inside a brain scanner._</sub>  
+**[1:25.18]** Now look at where things are. Milk, eggs, and bread, the stuff almost everyone needs, are usually at the back of the store.  
 
-**[1:26.22]** Volunteers lay in the scanner while a soft tickling device brushed across the palm of their hand.  
+**[1:32.89]** Part of that is practical, since the fridges and deliveries are in the back. But it also means that to grab one carton of milk, you walk past thousands of other things.  
 
-**[1:32.08]** Sometimes the experimenter moved it. Sometimes the volunteers moved it themselves.  
+**[1:43.48]** Then there's the entrance. Shoppers barely register the first few steps inside the door. Retailers call it the decompression zone.  
 
-**[1:37.76]** When someone else did the tickling, the parts of the brain that process touch lit up.  
+**[1:52.00]** So that's often where stores put something beautiful. Bright fruit, fresh flowers, the smell of baking bread. It's meant to slow you down and put you in a good mood, before you've even grabbed a basket.  
 
-**[1:42.45]** But when the volunteers tickled themselves, those same areas were much quieter.  
+## Your Senses and the Shelves  (2:05.11 – 3:17.68)
 
-**[1:47.26]** Same touch on the skin. But the brain was barely listening.  
+**[2:05.11]** Once you've slowed down, the store goes to work on your senses.  
 
-**[1:51.30]** And there was another clue. A region at the back of the brain, called the cerebellum, behaved differently when people tickled themselves.  
+**[2:08.97]** In a classic 1982 study, researcher Ronald Milliman played slow or fast music in a supermarket.  
+<sub>say: _In a classic nineteen eighty-two study, researcher Ronald Milliman played slow or fast music in a supermarket._</sub>  
 
-**[1:59.28]** The cerebellum is famous for coordinating movement. It's the reason you can walk, type, and catch a ball without thinking about it.  
+**[2:16.25]** With slow music, shoppers walked more slowly, and the store sold about thirty-eight percent more than on fast music days.  
 
-**[2:07.67]** But the scientists suspected it was doing something else too. Something sneaky.  
+**[2:23.96]** Even the style of music matters. In 1997, British psychologists played French or German music next to a wine display.  
+<sub>say: _Even the style of music matters. In nineteen ninety-seven, British psychologists played French or German music next to a wine display._</sub>  
 
-**[2:12.67]** It was predicting the future.  
+**[2:32.96]** On French music days, French wine outsold German wine by about five to one. On German music days, German wine won.  
 
-## Go Deeper  (2:15.19 – 3:50.09)
+**[2:41.49]** And when shoppers were asked, they seemed to have no idea the music had anything to do with their choice.  
 
-**[2:15.19]** Here's how it works. Every time you decide to move, your brain sends a command to your muscles. Lift. Move left. Press down.  
+**[2:47.68]** Then come the shelves. The products at eye level are often the ones the store most wants you to buy, and brands can pay for that space.  
 
-**[2:23.52]** But it also keeps a copy of that command. Scientists call it an efference copy. Think of it like the carbon copy of an email you just sent.  
+**[2:56.16]** Cheaper store brands are often hiding up high, or down near the floor. Meanwhile, the sugary cereals sit right where a kid's eyes are.  
 
-**[2:32.67]** Your brain uses that copy to run a quick simulation. If I do this, here's exactly what I should feel.  
+**[3:05.07]** And the ends of the aisles, called end caps, are prime real estate. Products there tend to sell much more, even when the price isn't any lower, because a big display feels like a deal.  
 
-**[2:39.48]** Then the real sensation arrives, and the brain compares the two. Prediction, versus reality.  
+## The Numbers and You  (3:17.68 – 5:18.16)
 
-**[2:45.91]** If they match, the brain basically says, that was just me, nothing to see here. And it turns the volume down.  
+**[3:17.68]** But some of the sneakiest tricks aren't on the shelves. They're in the numbers.  
 
-**[2:52.86]** If they don't match, that's a surprise. And surprises get the brain's full attention.  
+**[3:21.98]** Why does everything cost two ninety-nine instead of three dollars? Because your brain reads prices from left to right, and it latches onto that first digit.  
 
-**[2:58.33]** A tickle from someone else is pure surprise. You can't predict exactly where their fingers will go next, how hard, or how fast.  
+**[3:31.51]** Two ninety-nine just feels closer to two than to three.  
 
-**[3:06.55]** But your own fingers? Your brain knows the plan before your hand even moves. There's no surprise left to feel.  
+**[3:35.04]** In one famous experiment, researchers changed the price of a dress in a clothing catalog. At thirty-four dollars, it sold. At thirty-nine dollars, it sold about a third more.  
 
-**[3:13.91]** And the researchers proved it, with robots.  
+**[3:46.86]** A higher price, ending in nine, beat a lower one.  
 
-**[3:16.72]** Volunteers moved a robot arm with one hand, and a second robot brushed the palm of their other hand. Normally, this felt pretty dull.  
+**[3:50.25]** Then there's the crossed-out price. Was ten dollars, now six. That first number works like an anchor. Once your brain has seen ten, six feels like a win, whether or not anyone ever paid ten.  
 
-**[3:25.15]** But then the scientists secretly added a delay. Just a tenth of a second. Then two tenths.  
+**[4:03.14]** The same researchers found that a simple sale sign can boost sales, sometimes even without much of a price cut, because most of us don't actually know what things should cost.  
 
-**[3:31.10]** And suddenly, the volunteers' own touch started feeling tickly.  
+**[4:14.34]** Then there are deals like two for five dollars. Lots of people automatically grab two, even when one would cost the same per item.  
 
-**[3:35.12]** They also twisted the direction, so the robot moved a little differently from the hand. Same result. The bigger the mismatch, the more ticklish it felt.  
+**[4:22.96]** And then there's shrinkflation. Instead of raising the price, a company makes the package a little smaller. Same price. Same bag. Less inside.  
 
-**[3:44.75]** So it's not about who is touching you. It's about whether your brain saw it coming.  
+**[4:32.14]** Your brain checks the price. It rarely checks the grams.  
 
-## The Unexpected Twist  (3:50.09 – 6:10.20)
+**[4:36.09]** And then there's you. Your own body can work against your wallet.  
 
-**[3:50.09]** Now here's where it gets weird. This prediction system isn't just for tickling. It's running all the time, on almost everything you do.  
+**[4:39.92]** A 2015 study found that hungry people didn't just want more food. They grabbed more non-food things too, and hungry shoppers in a department store spent more than shoppers who had just eaten.  
+<sub>say: _A twenty fifteen study found that hungry people didn't just want more food. They grabbed more non-food things too, and hungry shoppers in a department store spent more than shoppers who had just eaten._</sub>  
 
-**[3:58.66]** Right now, your eyes are jumping around this screen several times a second. Every jump should make the whole world lurch. But it doesn't.  
+**[4:52.27]** Hunger seems to flip your brain into a general get-more-stuff mode.  
 
-**[4:06.80]** Your brain predicts each eye movement, and cancels out the motion before you ever notice it.  
+**[4:56.88]** Meanwhile, your loyalty card is quietly taking notes. In 2012, the New York Times reported that Target had built a pregnancy prediction score, using purchases like unscented lotion and vitamin supplements to guess which shoppers were expecting a baby.  
+<sub>say: _Meanwhile, your loyalty card is quietly taking notes. In twenty twelve, the New York Times reported that Target had built a pregnancy prediction score, using purchases like unscented lotion and vitamin supplements to guess which shoppers were expecting a baby._</sub>  
 
-**[4:12.24]** It's not just humans, either. A cricket's chirp is incredibly loud. Loud enough to overwhelm its own sensitive ears.  
+**[5:14.01]** So the store isn't just reading the room. It's reading you.  
 
-**[4:19.94]** So every time it chirps, a single nerve cell sends a signal that dials down its own hearing, perfectly timed to each chirp.  
+## The Big Payoff  (5:18.16 – 6:14.19)
 
-**[4:28.02]** Even your own voice gets this treatment. When you talk, your brain turns down its response to the sound of you.  
+**[5:18.16]** And finally, after all that walking, deciding, and resisting, you reach the checkout.  
 
-**[4:35.00]** Which raises a fun question. Why are we ticklish in the first place? Honestly, nobody knows for sure.  
+**[5:23.65]** You're tired. You're waiting in line. And right at hand height are candy bars, gum, and cold drinks.  
 
-**[4:41.78]** Some of the most ticklish spots, like your neck, your ribs, and the soles of your feet, are also some of the most vulnerable. So one idea is that tickling is an alarm, tuned to anything crawling or poking where it shouldn't.  
+**[5:30.25]** That's no accident. After dozens of small decisions, a quick, easy treat is a lot harder to say no to.  
 
-**[4:55.56]** Another idea is that it's social. Tickling is one of the very first games parents play with babies.  
+**[5:37.55]** In fact, this spot works so well that in 2022, England made it illegal for larger stores to put junk food at checkouts, entrances, and the ends of aisles.  
+<sub>say: _In fact, this spot works so well that in twenty twenty-two, England made it illegal for larger stores to put junk food at checkouts, entrances, and the ends of aisles._</sub>  
 
-**[5:02.16]** And it's not just us. When scientists tickle rats, they let out chirps too high-pitched for us to hear. Some researchers think it's a kind of laughter. The rats even chase the hand, asking for more.  
+**[5:48.81]** So here's the real secret.  
 
-**[5:14.96]** Alarm or game, a tickle only works when it comes from the outside world. Which is exactly why your brain filters out the inside.  
+**[5:50.91]** Supermarkets don't force you to buy things you don't want. They make buying feel automatic.  
 
-**[5:23.97]** But all this cancelling has a hidden cost. And a 2003 experiment revealed it in a very relatable way.  
-<sub>say: _But all this cancelling has a hidden cost. And a two thousand three experiment revealed it in a very relatable way._</sub>  
+**[5:56.48]** The long walk, the slow music, the eye-level shelf, the price ending in nine. Every trick is designed to keep your brain on autopilot, so you never stop to ask, do I actually need this?  
 
-**[5:31.52]** Researchers sat pairs of people across from each other. One person pressed down on the other's finger. Then the second person had to press back with exactly the same force.  
+**[6:09.35]** And the moment you do stop and ask, most of the tricks stop working.  
 
-**[5:42.39]** Back and forth they went. Everyone was trying to be fair.  
+## Memorable Ending  (6:14.19 – 6:42.19)
 
-**[5:45.88]** But the force kept climbing. On average, about thirty-eight percent harder, every single turn.  
+**[6:14.19]** So next time, bring a list. Eat before you go. Look at the top and bottom shelves. And check the price per unit, not the big yellow sign.  
 
-**[5:52.04]** Nobody was cheating. Your brain dampens the feeling of your own push, so it always feels weaker than it really is. To match what you felt, you push harder. And so does the other person.  
+**[6:23.19]** You won't beat every trick. But now, at least, you'll see them coming.  
 
-**[6:03.91]** Which means the next time someone says, you hit me harder! They might actually be telling the truth.  
+**[6:27.14]** And maybe, this time, you'll actually remember the milk.  
 
-## The Big Payoff  (6:10.20 – 7:20.59)
-
-**[6:10.20]** So what happens when this prediction system doesn't work the way it should?  
-
-**[6:14.60]** In 2000, Blakemore's team worked with people with schizophrenia who hear voices, or feel like their actions are being controlled by someone else.  
-<sub>say: _In two thousand, Blakemore's team worked with people with schizophrenia who hear voices, or feel like their actions are being controlled by someone else._</sub>  
-
-**[6:24.32]** For these patients, their own touch didn't get turned down. It felt just as intense, and just as ticklish, as someone else's.  
-
-**[6:32.37]** One leading idea is that when the brain's that-was-me signal gets weaker, your own actions, and even your own inner voice, can start to feel like they're coming from somewhere else.  
-
-**[6:43.69]** And that reveals the real answer to our mystery.  
-
-**[6:46.98]** You can't tickle yourself because your brain is constantly sorting the world into two piles. Things I did. And things that happened to me.  
-
-**[6:55.27]** Everything you cause gets predicted, and quietly muted. Everything you didn't cause gets flagged as important.  
-
-**[7:02.28]** It's a big part of why you feel like you. A body that's yours. Actions that are yours. A voice in your head that's yours.  
-
-**[7:10.15]** Tickling is just the moment this hidden system shows itself. Because a tickle only works when it's a surprise.  
-
-**[7:17.11]** And you can never truly surprise yourself.  
-
-## Memorable Ending  (7:20.59 – 7:40.94)
-
-**[7:20.59]** So the next time someone tickles you and you can't stop laughing, that's not a weakness. That's your brain doing its job, catching the one thing it couldn't see coming.  
-
-**[7:30.30]** If this rewired your brain a little, subscribe to Randos in 60s for more weird stuff about being you. See you in the next one.  
-<sub>say: _If this rewired your brain a little, subscribe to Randos in sixty seconds for more weird stuff about being you. See you in the next one._</sub>  
+**[6:30.89]** If this changed how you'll walk through the store, subscribe to Randos in 60s for more weird stuff about your brain. See you in the next one.  
+<sub>say: _If this changed how you'll walk through the store, subscribe to Randos in sixty seconds for more weird stuff about your brain. See you in the next one._</sub>  

@@ -541,6 +541,104 @@
     path("M-70,-30 Q0,-44 70,-30", "none", 10, C.ink)),
     at(x, y, s));
 
+
+  // ---------- supermarket props ----------
+  // shopping cart, wheels on the floor at (0,0); handle at left
+  P.cart = (id, x, y, s = 1, flip = 1) => g(null, g(id, g(null,
+    path("M-250,-300 L-210,-300 L-170,-60 L170,-60 L210,-250 L-200,-250", "none", 10) +
+    path("M-196,-250 L196,-250 L166,-80 L-166,-80 Z", "rgba(200,220,235,.35)", 0) +
+    Array.from({ length: 7 }, (_, i) => line(-170 + i * 56, -246, -150 + i * 50, -80, 4, "#8A97A3")).join("") +
+    line(-190, -190, 200, -190, 4, "#8A97A3") + line(-180, -130, 190, -130, 4, "#8A97A3") +
+    line(-170, -60, -150, -10, 8) + line(170, -60, 150, -10, 8) + line(-150, -10, 150, -10, 8) +
+    `<g id="${id}-load"></g>` +
+    circ(-130, 18, 22, "#3A3A3A", 6) + circ(130, 18, 22, "#3A3A3A", 6), flip === -1 ? "scale(-1 1)" : "")),
+    at(x, y, s));
+  /** product: kind = box | can | bottle | bag | jar | milk, label text optional */
+  P.product = (id, x, y, s = 1, kind = "box", col = C.red, label = "") => {
+    let d = "";
+    if (kind === "box") d = rect(-45, -140, 90, 140, col, 8, 6) + rect(-30, -110, 60, 50, C.white, 6, 0) + (label ? text(0, -86, label, 26) : "");
+    else if (kind === "can") d = rect(-34, -90, 68, 90, col, 10, 6) + rect(-34, -64, 68, 34, C.white, 0, 0) + line(-34, -64, 34, -64, 4) + line(-34, -30, 34, -30, 4) + (label ? text(0, -46, label, 22) : "");
+    else if (kind === "bottle") d = path("M-30,0 L-30,-110 Q-30,-140 -12,-150 L-12,-190 L12,-190 L12,-150 Q30,-140 30,-110 L30,0 Z", col, 6) + rect(-24, -100, 48, 44, C.paper, 4, 0) + (label ? text(0, -78, label, 20) : "");
+    else if (kind === "bag") d = path("M-55,0 L-60,-120 L-45,-130 L45,-130 L60,-120 L55,0 Z", col, 6) + path("M-45,-130 L-40,-112 L-30,-130 L-20,-112 L-10,-130 L0,-112 L10,-130 L20,-112 L30,-130 L40,-112 L45,-130", "none", 4) + (label ? text(0, -62, label, 28, C.white) : "");
+    else if (kind === "jar") d = rect(-36, -100, 72, 100, col, 14, 6) + rect(-40, -116, 80, 22, C.gray, 6, 6);
+    else if (kind === "milk") d = path("M-50,0 L-50,-150 L-20,-190 L50,-190 L50,0 Z", C.white, 6) + path("M-50,-150 L20,-150 L50,-190 M20,-150 L20,0", "none", 5) + rect(-40, -110, 52, 60, C.blue, 6, 0) + text(-14, -78, "MILK", 18, C.white);
+    return g(null, g(id, d), at(x, y, s));
+  };
+  /** shelf unit: rows of products. rows = array of {y, items:[[kind,col,label]...]} */
+  P.shelf = (id, x, y, w, h, rows = 4, seed = 1, colors = null) => {
+    const r = rng(seed);
+    const pal = colors || [C.red, C.blue, C.yellow, C.green, C.orange, C.purple, C.teal, C.pink];
+    const kinds = ["box", "can", "bottle", "bag", "jar"];
+    let d = rect(x, y, w, h, "#E7E1D6", 6, 8);
+    for (let i = 0; i < rows; i++) {
+      const sy = y + ((i + 1) * h) / rows;
+      const k = kinds[Math.floor(r() * kinds.length)];
+      const n = Math.floor(w / 110);
+      for (let j = 0; j < n; j++) {
+        const px = x + 60 + j * ((w - 120) / Math.max(1, n - 1));
+        const sc = (h / rows) / 200;
+        d += P.product(null, px, sy - 8, sc, k, pal[Math.floor(r() * pal.length)]);
+      }
+      d += rect(x, sy - 8, w, 18, "#B9AE9C", 3, 6);
+    }
+    return g(id, d);
+  };
+  P.priceTag = (id, x, y, s = 1, price = "$2.99", col = C.yellow, rot = 0) => g(null, g(id,
+    path("M-120,-60 L90,-60 L140,0 L90,60 L-120,60 Z", col, 7) + circ(100, 0, 10, C.white, 5) + text(-14, 6, price, 64)),
+    at(x, y, s, rot));
+  P.storefront = (id, x, y, s = 1) => g(null, g(id,
+    rect(-600, -420, 1200, 440, "#F2E6CF", 10, 9) + rect(-640, -500, 1280, 100, C.red, 14, 9) +
+    text(0, -446, "SUPERMARKET", 72, C.white) +
+    Array.from({ length: 6 }, (_, i) => path(`M${-640 + i * 213},-400 L${-640 + (i + 1) * 213},-400 L${-640 + (i + 1) * 213 - 20},-340 Q${-640 + i * 213 + 106},-310 ${-640 + i * 213 + 20},-340 Z`, i % 2 ? C.white : C.red, 6)).join("") +
+    rect(-170, -280, 340, 300, "#BFE3F1", 6, 8) + line(0, -280, 0, 20, 7) +
+    rect(-540, -280, 300, 200, "#BFE3F1", 6, 8) + rect(240, -280, 300, 200, "#BFE3F1", 6, 8)),
+    at(x, y, s));
+  P.chips = (id, x, y, s = 1, col = C.orange) => P.product(id, x, y, s, "bag", col, "CHIPS");
+  P.candle = (id, x, y, s = 1) => g(null, g(id,
+    rect(-40, -120, 80, 120, "#F3D1E0", 10, 6) + line(0, -120, 0, -146, 5) +
+    path("M0,-192 Q-18,-160 0,-146 Q18,-160 0,-192 Z", C.yellow, 4)), at(x, y, s));
+  P.bread = (id, x, y, s = 1) => g(null, g(id,
+    path("M-110,0 L-110,-60 Q-110,-120 0,-122 Q110,-120 110,-60 L110,0 Z", "#E2A85A", 7) +
+    path("M-60,-100 L-40,-70 M-10,-110 L10,-78 M40,-102 L60,-72", "none", 5, "#B3772F")), at(x, y, s));
+  P.apple = (id, x, y, s = 1, col = C.red) => g(null, g(id,
+    path("M0,-70 Q-60,-90 -66,-30 Q-64,30 0,40 Q64,30 66,-30 Q60,-90 0,-70 Z", col, 6) + line(0, -70, 6, -96, 6) +
+    ell(24, -92, 20, 9, C.green, 4)), at(x, y, s));
+  P.banana = (id, x, y, s = 1) => g(null, g(id,
+    path("M-90,-40 Q0,60 100,-50 Q90,10 0,20 Q-70,10 -90,-40 Z", C.yellow, 6)), at(x, y, s));
+  P.flowers = (id, x, y, s = 1) => g(null, g(id,
+    path("M-40,0 L40,0 L30,-80 L-30,-80 Z", C.teal, 6) +
+    [[-40, -170, C.pink], [0, -200, C.red], [40, -165, C.yellow], [-10, -140, C.purple]].map(([a, b, c]) =>
+      line(0, -80, a, b, 4, "#3E7A3A") + circ(a, b, 22, c, 5) + circ(a, b, 7, C.yellow, 0)).join("")), at(x, y, s));
+  P.wine = (id, x, y, s = 1, col = "#7A1E3A", label = "") => P.product(id, x, y, s, "bottle", col, label);
+  P.note = (id, x, y, s = 1, col = C.ink) => g(null, g(id,
+    ell(-14, 30, 22, 16, col, 0) + line(6, 30, 6, -50, 7, col) + path("M6,-50 Q40,-40 34,-10", "none", 7, col)), at(x, y, s));
+  P.card = (id, x, y, s = 1, col = C.teal, label = "LOYALTY") => g(null, g(id,
+    rect(-160, -100, 320, 200, col, 20, 7) + rect(-160, -60, 320, 34, C.ink, 0, 0) + text(-60, 50, label, 40, C.white) +
+    rect(70, 20, 60, 44, C.yellow, 8, 4)), at(x, y, s));
+  P.dress = (id, x, y, s = 1, col = C.purple) => g(null, g(id,
+    path("M-40,-200 L-60,-130 L-40,-100 L-110,60 Q0,90 110,60 L40,-100 L60,-130 L40,-200 Q0,-170 -40,-200 Z", col, 7) +
+    path("M-40,-200 L-60,-240 M40,-200 L60,-240", "none", 5)), at(x, y, s));
+  P.receipt = (id, x, y, s = 1, lines = 10, total = "") => {
+    let d = path(`M-110,-${lines * 34 + 60} L110,-${lines * 34 + 60} L110,0 L90,20 L70,0 L50,20 L30,0 L10,20 L-10,0 L-30,20 L-50,0 L-70,20 L-90,0 L-110,20 Z`, C.white, 6);
+    for (let i = 0; i < lines; i++) d += line(-80, -lines * 34 - 20 + i * 34, 30 + ((i * 37) % 50), -lines * 34 - 20 + i * 34, 5, C.gray) + line(60, -lines * 34 - 20 + i * 34, 85, -lines * 34 - 20 + i * 34, 5, C.gray);
+    if (total) d += text(0, -24, total, 40, C.red);
+    return g(null, g(id, d), at(x, y, s));
+  };
+  P.candy = (id, x, y, s = 1, col = C.red) => g(null, g(id,
+    rect(-70, -26, 140, 52, col, 8, 6) + path("M-70,-26 L-96,-38 L-96,38 L-70,26 M70,-26 L96,-38 L96,38 L70,26", C.gray2, 5) + text(0, 4, "YUM", 28, C.white)), at(x, y, s));
+  P.list = (id, x, y, s = 1, items = ["milk"]) => g(null, g(id,
+    rect(-150, -220, 300, 440, "#FFF8D6", 10, 7) + path("M-150,-170 L150,-170", "none", 3, C.red) +
+    items.map((t, i) => text(-110, -120 + i * 70, "□ " + t, 50, C.ink, "start", "", FONT2)).join("")), at(x, y, s));
+  P.checkout = (id, x, y, s = 1) => g(null, g(id,
+    rect(-420, -160, 840, 160, "#A9B8C4", 10, 8) + rect(-420, -190, 840, 40, "#56627A", 8, 8) +
+    rect(160, -330, 200, 150, "#56627A", 12, 8) + rect(180, -310, 160, 90, "#7CF0E0", 6, 0) + text(260, -264, "$47.83", 44) +
+    line(-300, -190, -300, -230, 6)), at(x, y, s));
+  P.pilotCap = (id, x, y, s = 1) => g(null, g(id,
+    path("M-110,10 Q-110,-90 0,-96 Q110,-90 110,10 Z", "#2D3460", 7) + path("M-130,10 L130,10 L150,34 L-150,34 Z", C.ink, 0) +
+    circ(0, -50, 20, C.yellow, 5)), at(x, y, s));
+  P.scaleWeight = (id, x, y, s = 1, label = "500 g") => g(null, g(id,
+    rect(-130, -40, 260, 60, C.gray2, 12, 7) + rect(-90, -90, 180, 50, "#1E2633", 8, 6) + text(0, -64, label, 40, "#7CF0E0")), at(x, y, s));
+
   // ---------- backgrounds ----------
   const BG = {};
   BG.paper = (id = "") => `<rect ${id ? `id="${id}"` : ""} x="-200" y="-200" width="2320" height="1480" fill="${C.paper}"/>`;
@@ -567,6 +665,10 @@
     }).join("");
   BG.lab = (o = {}) => BG.room({ wall: o.wall || "#DCEBEE", floor: o.floor || "#9FB3BD", fy: o.fy || 800 }) +
     Array.from({ length: 6 }, (_, i) => rect(80 + i * 300, 120, 200, 120, "rgba(255,255,255,.35)", 8, 0)).join("");
+
+
+  BG.store = (o = {}) => BG.room({ wall: o.wall || "#EEF2F4", floor: o.floor || "#D9D4C7", fy: o.fy || 820 }) +
+    Array.from({ length: 5 }, (_, i) => rect(120 + i * 380, 70, 220, 26, "#FFFFFF", 12, 4, "#C9D3DC")).join("");
 
   // ---------- motion helpers ----------
   function pop(tl, el, t, d = 0.45, from = 0) {

@@ -13,7 +13,7 @@
       <div id="s05" data-composition-id="s05" data-width="1920" data-height="1080"></div>
       <script>
         (function () {
-          /*CUES*/ const CUES = {"L36":[0,8.194,"Now here's where it gets weird. This prediction system isn't just for tickling. It's running all the time, on almost everything you do."],"L37":[8.574,16.311,"Right now, your eyes are jumping around this screen several times a second. Every jump should make the whole world lurch. But it doesn't."],"L38":[16.711,21.767,"Your brain predicts each eye movement, and cancels out the motion before you ever notice it."],"L39":[22.147,29.467,"It's not just humans, either. A cricket's chirp is incredibly loud. Loud enough to overwhelm its own sensitive ears."],"L40":[29.847,37.435,"So every time it chirps, a single nerve cell sends a signal that dials down its own hearing, perfectly timed to each chirp."],"L41":[37.935,44.309,"Even your own voice gets this treatment. When you talk, your brain turns down its response to the sound of you."],"L41a":[44.909,51.242,"Which raises a fun question. Why are we ticklish in the first place? Honestly, nobody knows for sure."],"L41b":[51.692,65.092,"Some of the most ticklish spots, like your neck, your ribs, and the soles of your feet, are also some of the most vulnerable. So one idea is that tickling is an alarm, tuned to anything crawling or poking where it shouldn't."],"L41c":[65.472,71.691,"Another idea is that it's social. Tickling is one of the very first games parents play with babies."],"L41d":[72.071,84.375,"And it's not just us. When scientists tickle rats, they let out chirps too high-pitched for us to hear. Some researchers think it's a kind of laughter. The rats even chase the hand, asking for more."],"L41e":[84.875,93.181,"Alarm or game, a tickle only works when it comes from the outside world. Which is exactly why your brain filters out the inside."],"L42":[93.881,100.936,"But all this cancelling has a hidden cost. And a 2003 experiment revealed it in a very relatable way."],"L43":[101.436,111.922,"Researchers sat pairs of people across from each other. One person pressed down on the other's finger. Then the second person had to press back with exactly the same force."],"L44":[112.302,115.391,"Back and forth they went. Everyone was trying to be fair."],"L45":[115.791,121.351,"But the force kept climbing. On average, about thirty-eight percent harder, every single turn."],"L46":[121.951,133.443,"Nobody was cheating. Your brain dampens the feeling of your own push, so it always feels weaker than it really is. To match what you felt, you push harder. And so does the other person."],"L47":[133.823,139.113,"Which means the next time someone says, you hit me harder! They might actually be telling the truth."]}; const DUR = 140.113; /*ENDCUES*/
+          /*CUES*/ const CUES = {"L27":[0,3.8,"But some of the sneakiest tricks aren't on the shelves. They're in the numbers."],"L28":[4.3,13.447,"Why does everything cost two ninety-nine instead of three dollars? Because your brain reads prices from left to right, and it latches onto that first digit."],"L29":[13.827,16.857,"Two ninety-nine just feels closer to two than to three."],"L30":[17.357,28.777,"In one famous experiment, researchers changed the price of a dress in a clothing catalog. At thirty-four dollars, it sold. At thirty-nine dollars, it sold about a third more."],"L31":[29.177,31.971,"A higher price, ending in nine, beat a lower one."],"L31a":[32.571,45.075,"Then there's the crossed-out price. Was ten dollars, now six. That first number works like an anchor. Once your brain has seen ten, six feels like a win, whether or not anyone ever paid ten."],"L31b":[45.455,56.058,"The same researchers found that a simple sale sign can boost sales, sometimes even without much of a price cut, because most of us don't actually know what things should cost."],"L32":[56.658,64.683,"Then there are deals like two for five dollars. Lots of people automatically grab two, even when one would cost the same per item."],"L32a":[65.283,74.075,"And then there's shrinkflation. Instead of raising the price, a company makes the package a little smaller. Same price. Same bag. Less inside."],"L32b":[74.455,77.706,"Your brain checks the price. It rarely checks the grams."],"L33":[78.406,81.835,"And then there's you. Your own body can work against your wallet."],"L34":[82.235,94.21,"A 2015 study found that hungry people didn't just want more food. They grabbed more non-food things too, and hungry shoppers in a department store spent more than shoppers who had just eaten."],"L35":[94.59,98.601,"Hunger seems to flip your brain into a general get-more-stuff mode."],"L36":[99.201,115.952,"Meanwhile, your loyalty card is quietly taking notes. In 2012, the New York Times reported that Target had built a pregnancy prediction score, using purchases like unscented lotion and vitamin supplements to guess which shoppers were expecting a baby."],"L37":[116.332,119.482,"So the store isn't just reading the room. It's reading you."]}; const DUR = 120.482; /*ENDCUES*/
           const { C, P, BG, person, text, path, rect, line, circ, ell, g, at } = R;
           const q = R.cue(CUES);
           const S = R.scene("s05");
@@ -21,358 +21,265 @@
           const W = (id, inner, tr) => g(null, g(id, inner), tr);
           const lbl = (id, x, y, w, s, fill = C.white, col = C.ink, size = 56) =>
             W(id, rect(-w / 2, -48, w, 96, fill, 22, 7) + text(0, 4, s, size, col), at(x, y));
+          const bigTag = (id, x, y, s, price, col = C.yellow) => W(id, path("M-300,-150 L220,-150 L340,0 L220,150 L-300,150 Z", col, 10) + circ(250, 0, 22, C.white, 7) + text(-40, 14, price, 200), at(x, y, s));
 
-          // a1 — it gets weird
-          let spiral = "M960,540";
-          for (let i = 0; i < 260; i++) { const a = i * 0.18, r = 6 + i * 4.6; spiral += ` L${960 + Math.cos(a) * r},${540 + Math.sin(a) * r}`; }
-          S.add("a1",
-            BG.flat("#6B4FA0") + W("s05-a1-sp", path(spiral, "none", 34, "#8E6BC8")) +
-            person("s05w", { x: 960, y: 820, s: 1.3, mouth: "O" }),
-            `<div class="ttl" id="s05-a1-t" style="top:80px;font-size:120px;color:#FBF8F1">it gets weird</div>`);
+          // a — the numbers
+          const r1 = R.rng(5);
+          S.add("a",
+            BG.flat("#FFF1C4") +
+            W("s05-a-rain", Array.from({ length: 16 }, (_, i) => P.priceTag(null, r1() * 1920, -300 - r1() * 900, 0.6 + r1() * 0.5, ["$2.99", "$4.99", "$0.99", "$9.99"][i % 4], [C.yellow, C.white, "#FFD0C4"][i % 3], (r1() - 0.5) * 40)).join("")),
+            `<div class="ttl" id="s05-a-t" style="top:400px;font-size:150px">it's in the numbers</div>`);
 
-          // a2 — always on
-          const orbit = [
-            P.eyeBig(null, 0, 0, 0.16), P.speaker(null, 0, 0, 0.6), P.hand(null, 0, 0, 0.45), P.bubble(null, 0, 0, 160, 90, text(0, 2, "blah", 40), "left"),
-          ];
-          S.add("a2",
-            BG.flat("#EDE6F7") +
-            W("s05-a2-orb", orbit.map((o, i) => { const a = (i / 4) * Math.PI * 2; return W(`s05-a2-o${i}`, o, at(Math.cos(a) * 380, Math.sin(a) * 300)); }).join(""), at(960, 560)) +
-            P.brain("s05-a2b", 960, 560, 0.9, { face: true }) +
-            lbl("s05-a2-l", 960, 960, 460, "ALWAYS ON", C.yellow, C.ink, 70));
-
-          // b — eyes darting, world lurching
-          const mini = (id) => g(id, rect(1040, 230, 760, 520, C.sky, 20, 8) + path("M1040,600 Q1300,560 1420,610 T1800,590 L1800,750 L1040,750 Z", C.grass, 6) +
-            rect(1180, 470, 170, 150, C.wall, 4, 6) + path("M1160,480 L1265,400 L1370,480 Z", C.red, 6) + P.sun(null, 1680, 320, 0.5) + P.cloud(null, 1450, 320, 0.6));
+          // b — left digit
           S.add("b",
             BG.paper() +
-            P.eyeBig("s05-b-eye", 480, 520, 0.85) +
-            `<clipPath id="s05-b-clip"><rect x="1040" y="230" width="760" height="520" rx="20"/></clipPath>` +
-            `<g clip-path="url(#s05-b-clip)">${W("s05-b-world", mini(null))}</g>` + rect(1040, 230, 760, 520, "none", 20, 8) +
-            lbl("s05-b-l1", 1420, 860, 600, "WITHOUT PREDICTION", "#FFE1DC", C.red) +
-            lbl("s05-b-l2", 1420, 860, 560, "WHAT YOU SEE", "#E3F3E1", C.green));
+            bigTag("s05-b-tag", 960, 520, 1.3, "$2.99") +
+            W("s05-b-arrow", P.arrow(null, 0, 0, 760, 0, 14, C.purple), at(560, 820)) + text(940, 900, "your brain reads left → right", 52, C.purple) +
+            W("s05-b-ring", ell(0, 0, 110, 150, "none", 12, C.red), at(790, 530)));
 
-          // c — the cancellation equation
+          // c — number line
           S.add("c",
             BG.paper() +
-            W("s05-c-1", P.eyeBig(null, 0, 0, 0.32) + P.arrow(null, -120, 150, 120, 150, 10), at(330, 470)) + text(330, 760, "EYE MOVES", 54) +
-            W("s05-c-plus", text(0, 0, "+", 160), at(640, 480)) +
-            W("s05-c-2", P.brain(null, 0, 0, 0.6, { face: true }) + P.arrow(null, 120, 150, -120, 150, 10, C.purple), at(960, 450)) + text(960, 760, "BRAIN CANCELS IT", 54) +
-            W("s05-c-eq", text(0, 0, "=", 160), at(1280, 480)) +
-            W("s05-c-3", rect(-170, -120, 340, 240, C.sky, 16, 7) + rect(-60, -10, 120, 100, C.wall, 4, 6) + path("M-80,0 L0,-60 L80,0Z", C.red, 6), at(1590, 460)) + text(1590, 760, "STEADY WORLD", 54) +
-            P.check("s05-c-ok", 1590, 260, 1));
+            line(260, 600, 1660, 600, 10) + line(360, 560, 360, 640, 10) + line(1560, 560, 1560, 640, 10) +
+            text(360, 700, "$2", 90) + text(1560, 700, "$3", 90) +
+            W("s05-c-real", line(0, -60, 0, 60, 10, C.green) + text(0, -110, "real: $2.99", 54, C.green), at(1548, 600)) +
+            W("s05-c-feel", circ(0, 0, 40, C.red, 8) + text(0, -90, "feels like", 54, C.red), at(560, 600)));
 
-          // d — cricket at night
+          // d — the dress catalog
           S.add("d",
-            BG.night() + circ(1640, 200, 90, "#FFF3C4", 0) + circ(1610, 185, 90, C.night, 0) +
-            path("M-100,900 Q600,760 1100,880 T2100,820 L2100,1300 L-100,1300 Z", "#2C4A2E", 0) +
-            path("M500,840 Q900,600 1400,780 Q900,760 500,840 Z", "#4F8A3A", 7) +
-            W("s05-d-waves", [1, 2, 3].map((k) => path(`M${560 - k * 70},${520 - k * 90} Q${460 - k * 110},${640} ${560 - k * 70},${760 + k * 90}`, "none", 10, "#FFE27A")).join("")) +
-            W("s05-d-cr", P.cricket("s05-dc", 0, 0, 1.6), at(960, 640)) +
-            W("s05-d-chirp", text(0, 0, "CHIRP!", 130, "#FFE27A"), at(420, 300, 1, -8)) +
-            W("s05-d-ear", P.arrow(null, 520, 1000, 800, 760, 7, C.white, -40) + text(400, 1020, "its ears are on its legs!", 48, C.white)));
+            BG.flat("#E9E4F2") +
+            rect(260, 120, 700, 860, C.white, 10, 8) + text(610, 190, "CATALOG", 60) + P.dress("s05-d-dress", 610, 700, 1.6) +
+            W("s05-d-p34", text(0, 0, "$34", 110), at(610, 920)) + W("s05-d-p39", text(0, 0, "$39", 110, C.red), at(610, 920)) +
+            line(1100, 860, 1760, 860, 7) +
+            W("s05-d-b1", rect(1160, 460, 220, 400, C.gray, 8, 7)) + W("s05-d-b2", rect(1480, 330, 220, 530, C.red, 8, 7)) +
+            text(1270, 920, "$34", 56) + text(1590, 920, "$39", 56) + text(1430, 200, "SALES", 60) +
+            lbl("s05-d-l", 1590, 270, 320, "+⅓", C.yellow, C.ink, 70));
 
-          // e — one nerve cell dials down hearing
+          // e — higher beat lower
           S.add("e",
-            BG.flat("#E7F2E3") +
-            P.neuron("s05-e-n", 760, 300, 1.4) + text(760, 150, "ONE NERVE CELL", 60) +
-            text(250, 600, "CHIRP", 52, C.ink, "start") + text(250, 800, "HEARING", 52, C.ink, "start") +
-            line(500, 640, 1760, 640, 4, C.gray) + line(500, 820, 1760, 820, 4, C.gray) +
-            W("s05-e-ch", [0, 1, 2, 3, 4].map((i) => rect(560 + i * 240, 560, 90, 80, C.green, 8, 5)).join("")) +
-            W("s05-e-hr", path("M500,760 " + [0, 1, 2, 3, 4].map((i) => `L${560 + i * 240},760 L${575 + i * 240},810 L${635 + i * 240},810 L${650 + i * 240},760`).join(" ") + " L1760,760", "none", 8, C.purple)) +
-            W("s05-e-head", rect(480, 520, 50, 360, "rgba(228,72,59,.25)", 10, 0)));
+            BG.paper() +
+            W("s05-e-39", rect(-200, -120, 400, 240, C.yellow, 30, 9) + text(0, 10, "$39", 160), at(620, 560)) +
+            W("s05-e-34", rect(-200, -120, 400, 240, C.gray2, 30, 9) + text(0, 10, "$34", 160, "#8a8478"), at(1300, 560)) +
+            W("s05-e-gt", text(0, 0, ">", 180), at(960, 560)) +
+            W("s05-e-crown", path("M-90,40 L-90,-40 L-45,0 L0,-60 L45,0 L90,-40 L90,40 Z", C.yellow, 8), at(620, 380)));
 
-          // f — your own voice
+          // f — anchor
           S.add("f",
-            BG.room({ wall: "#F3E3C9" }) +
-            person("s05f", { x: 560, y: 680, s: 1.4, mouth: "o" }) +
-            W("s05-f-w", [1, 2, 3].map((k) => path(`M${700 + k * 50},${330 - k * 30} Q${760 + k * 70},${380} ${700 + k * 50},${430 + k * 30}`, "none", 9, C.orange)).join("")) +
-            P.thought("s05-f-th", 1320, 360, 640, 400, P.brain(null, -140, 20, 0.45, { face: true }) + P.knob(null, 150, 0, 0.6, "")) +
-            lbl("s05-f-l", 1320, 800, 600, "YOUR VOICE: TURNED DOWN", C.white, C.ink, 50));
+            BG.flat("#DDF0F7") +
+            W("s05-f-tag", rect(-360, -220, 720, 440, C.white, 30, 9) + text(-120, -60, "WAS", 70, "#6b665d") + text(120, -60, "$10", 130, "#6b665d") +
+              text(-120, 120, "NOW", 70) + text(120, 120, "$6", 170, C.red), at(700, 540)) +
+            W("s05-f-strike", line(-110, 0, 110, 0, 14, C.red), at(820, 480)) +
+            W("s05-f-anchor", circ(0, -150, 30, "none", 12) + line(0, -120, 0, 120, 14) + path("M-110,40 Q-100,140 0,150 Q100,140 110,40", "none", 14) + line(-60, -60, 60, -60, 14), at(1500, 560)) +
+            P.brain("s05-fb", 1500, 900, 0.45, { face: true }) +
+            P.bubble("s05-f-win", 1640, 760, 260, 110, text(0, 4, "a win!", 54, C.green), "left"));
 
-          // g — why ticklish?
+          // g — sale signs
           S.add("g",
-            BG.paper() +
-            person("s05g", { x: 960, y: 740, s: 1.3, mouth: "wavy" }) +
-            P.question("s05-g-q1", 620, 380, 0.8) + P.question("s05-g-q2", 1300, 340, 1, C.red) + P.question("s05-g-q3", 1420, 600, 0.6),
-            `<div class="ttl" id="s05-g-t" style="top:60px;font-size:110px">why are we ticklish?</div>` +
-            `<div class="ttl" id="s05-g-s" style="top:960px;font-size:56px;color:#6b665d">honestly? nobody knows for sure</div>`);
+            BG.store() + P.shelf(null, 200, 150, 1520, 680, 3, 171) +
+            W("s05-g-sale", rect(-250, -110, 500, 220, C.red, 20, 9) + text(0, 10, "SALE!", 130, C.white), at(960, 420, 1, -6)) +
+            P.priceTag("s05-g-tag", 960, 680, 1.0, "$4.29") +
+            P.brain("s05-gb", 1640, 880, 0.45, { face: true }) + P.question("s05-g-q", 1750, 720, 0.5, C.purple) +
+            W("s05-g-up", P.arrow(null, 0, 100, 0, -160, 16, C.green), at(380, 900)));
 
-          // h — vulnerable spots
-          const spot = (id, x, y) => W(id, circ(0, 0, 46, "rgba(228,72,59,.35)", 6, C.red), at(x, y));
+          // h — 2 for $5
           S.add("h",
-            BG.flat("#FFF1E0") +
-            person("s05h", { x: 760, y: 600, s: 1.55, mouth: "flat", shirt: C.yellow }) +
-            spot("s05-h-s1", 760, 360) + spot("s05-h-s2", 715, 470) + spot("s05-h-s3", 805, 470) + spot("s05-h-s4", 718, 868) + spot("s05-h-s5", 802, 868) +
-            lbl("s05-h-l1", 1240, 360, 240, "NECK") + lbl("s05-h-l2", 1240, 480, 240, "RIBS") + lbl("s05-h-l3", 1240, 860, 260, "FEET") +
-            W("s05-h-sp", P.spider(null, 0, 0, 1.2) + line(0, -30, 0, -500, 3), at(1560, 520)) +
-            W("s05-h-al", path("M-80,40 Q-80,-90 0,-90 Q80,-90 80,40 Z", C.red, 8) + rect(-110, 40, 220, 40, C.gray, 10, 7), at(300, 280)));
+            BG.store() + rect(360, 340, 1200, 480, "#F7E9C2", 14, 8) +
+            Array.from({ length: 6 }, (_, i) => P.product(null, 500 + i * 180, 760, 1.4, "can", C.orange, "BEANS")).join("") +
+            W("s05-h-sign", rect(-280, -100, 560, 200, C.yellow, 20, 9) + text(0, 10, "2 FOR $5", 110), at(960, 230)) +
+            W("s05-h-each", rect(-260, -60, 520, 120, C.white, 20, 7) + text(0, 6, "= $2.50 each anyway", 50), at(960, 950)) +
+            person("s05h", { x: 1700, y: 700, s: 1.1, mouth: "grin", flip: -1 }));
 
-          // i — parent + baby
+          // i — shrinkflation
+          const bag = (x, s, yr, g_) => g(null, P.chips(null, 0, 0, s, C.orange) + text(0, 70, yr, 46) + text(0, 120, g_, 46, "#6b665d"), at(x, 760));
           S.add("i",
-            BG.room({ wall: "#FCE4EC", floor: "#D9A6B5" }) +
-            person("s05p", { x: 760, y: 640, s: 1.4, hair: "ponytail", hairColor: "#7A4A2A", shirt: C.teal, mouth: "grin" }) +
-            P.baby("s05-ib", 1130, 640, 1.5) +
-            g("s05-i-h", P.heart(null, 1100, 300, 0.9) + P.heart(null, 1300, 380, 0.7) + P.heart(null, 960, 260, 0.6)) +
-            text(1130, 900, "one of the first games", 56, "#6b665d"));
+            BG.paper() +
+            W("s05-i-b1", bag(0, 2.0, "2015", "300 g"), at(420, 0)) + W("s05-i-b2", bag(0, 1.75, "2020", "260 g"), at(960, 0)) + W("s05-i-b3", bag(0, 1.5, "NOW", "225 g"), at(1500, 0)) +
+            P.priceTag(null, 420, 330, 0.7, "$3.99") + P.priceTag(null, 960, 330, 0.7, "$3.99") + P.priceTag(null, 1500, 330, 0.7, "$3.99"),
+            `<div class="ttl" id="s05-i-t" style="top:50px;font-size:110px">shrinkflation</div>`);
 
-          // j — rats laugh
+          // j — brain checks price, not grams
           S.add("j",
-            BG.flat("#E9F1F6") +
-            W("s05-j-rat", P.rat("s05-jr", 0, 0, 1.6), at(820, 640)) +
-            W("s05-j-hand", rect(60, -40, 160, 80, C.purple, 16, 7) + P.hand(null, 0, 0, 0.8, 180), at(1260, 600)) +
-            W("s05-j-us", path("M420,360 q20,-20 40,0 t40,0 t40,0 t40,0 M380,300 q20,-20 40,0 t40,0 t40,0", "none", 7, C.purple) +
-              text(470, 230, "chirp chirp", 54, C.purple)) +
-            lbl("s05-j-l", 960, 950, 760, "TOO HIGH-PITCHED FOR HUMANS", C.white, C.ink, 50) +
-            W("s05-j-more", P.bubble(null, 0, 0, 300, 120, text(0, 4, "more!", 64), "left"), at(1100, 300)));
+            BG.flat("#FFF1E0") +
+            P.brain("s05-jb", 520, 560, 0.95, { face: true }) +
+            P.priceTag("s05-j-tag", 1320, 380, 1.2, "$3.99") +
+            W("s05-j-grams", rect(-200, -70, 400, 140, C.white, 20, 7) + text(0, 6, "225 g", 80, "#8a8478"), at(1320, 760)) +
+            P.check("s05-j-ok", 1680, 380, 1.1) + P.cross("s05-j-no", 1640, 760, 1.0, "#9a948a"));
 
-          // k — outside vs inside
+          // k — and then there's you
           S.add("k",
-            BG.paper() +
-            circ(960, 560, 280, "#FFF3C4", 9) + person("s05k", { x: 960, y: 640, s: 0.9, mouth: "smile" }) + text(960, 900, "YOU", 52) +
-            W("s05-k-out", [[-1, -1], [1, -1], [-1, 1], [1, 1]].map(([dx, dy]) => P.arrow(null, 960 + dx * 760, 560 + dy * 380, 960 + dx * 330, 560 + dy * 170, 12, C.red)).join("")) +
-            W("s05-k-in", P.arrow(null, 960, 520, 1140, 450, 10, C.gray) + P.mute(null, 1170, 420, 0.4)) +
-            lbl("s05-k-l1", 330, 160, 460, "OUTSIDE = LOUD", "#FFE1DC", C.red) + lbl("s05-k-l2", 1590, 160, 460, "INSIDE = QUIET", C.gray2, C.ink));
+            BG.flat("#2B2552") + path("M760,-100 L1160,-100 L1460,960 L460,960 Z", "rgba(255,240,180,.16)", 0) + ell(960, 960, 520, 80, "#3A4270", 0) +
+            person("s05y", { x: 960, y: 760, s: 1.4, mouth: "o" }) +
+            W("s05-k-wallet", rect(-90, -60, 180, 120, "#7A5236", 16, 7) + line(-90, -10, 90, -10, 5) + line(-30, 60, -50, 110, 7) + line(30, 60, 50, 110, 7), at(1360, 840)));
 
-          // l — the hidden cost, 2003
+          // l — hungry shopping
           S.add("l",
-            BG.flat("#FFF4D6") +
-            W("s05-l-tag", line(0, -260, 0, -170, 5) + path("M-160,-170 L160,-170 L200,-90 L200,200 L-200,200 L-200,-90 Z", C.yellow, 8) + circ(0, -120, 18, C.white, 6) +
-              text(0, 20, "HIDDEN", 70) + text(0, 110, "COST", 70), at(760, 520)) +
-            P.calendar("s05-l-cal", 1380, 560, 1.1, "2003"));
+            BG.store({ wall: "#F4EEF8" }) +
+            P.calendar("s05-l-cal", 1700, 200, 0.55, "2015") +
+            person("s05l", { x: 560, y: 700, s: 1.3, mouth: "wavy" }) +
+            W("s05-l-growl", path("M470,620 q20,-15 40,0 t40,0 M480,660 q20,-15 40,0 t40,0", "none", 7, C.red) + text(380, 700, "grrr", 46, C.red)) +
+            P.cart("s05-l-cart", 1000, 900, 1.0) +
+            W("s05-l-items", g(null, P.candle(null, -120, -260, 0.9) + P.product(null, -20, -250, 0.8, "box", C.blue, "SOCKS") + P.product(null, 80, -250, 0.8, "jar", C.green) + P.product(null, 160, -240, 0.7, "box", C.purple, "PENS"), at(1000, 900))) +
+            W("s05-l-rcpt", P.receipt(null, 0, 0, 0.9, 12), at(1560, 980)) + text(1560, 380 - 60, "", 40));
 
-          // m/n — the finger-pressing experiment
+          // m — get-more-stuff mode
           S.add("m",
-            BG.room({ wall: "#E3ECF4", floor: "#8FA3B6", fy: 760 }) +
-            person("s05pa", { x: 520, y: 640, s: 1.3, shirt: C.blue, hair: "side", hairColor: C.brown, mouth: "smile" }) +
-            person("s05pb", { x: 1400, y: 640, s: 1.3, shirt: C.red, hair: "curly", hairColor: C.ink, mouth: "smile", flip: -1 }) +
-            P.table("s05-m-tab", 960, 700, 1200) +
-            W("s05-m-pad", rect(-90, -40, 180, 40, C.gray2, 10, 6) + P.hand(null, 30, -60, 0.45, 180) , at(960, 700)) +
-            W("s05-m-push", P.arrow(null, 0, -320, 0, -150, 12, C.red), at(960, 640)) +
-            P.scale("s05-m-sc", 960, 380, 0.7) +
-            W("s05-m-fair", text(0, 0, "FAIR?", 70), at(960, 90)));
+            BG.flat("#FBE0DC") + P.brain("s05-mb", 760, 580, 1.1, { face: true }) +
+            W("s05-m-sw", rect(-260, -110, 520, 220, C.white, 30, 8) + text(0, -150, "GET-MORE-STUFF MODE", 48, C.red) +
+              rect(-150, -40, 300, 80, C.gray2, 40, 6) + `<g id="s05-m-knob">${circ(-100, 0, 46, C.gray, 7)}</g>`, at(1440, 600)));
 
-          // o — the escalation chart
-          const bars = Array.from({ length: 8 }, (_, i) => Math.pow(1.38, i));
-          const bmax = bars[7];
+          // n — loyalty card + pregnancy score
+          S.add("n",
+            BG.store() + P.checkout(null, 760, 920, 1.0) +
+            W("s05-n-card", P.card(null, 0, 0, 0.8), at(560, 640)) +
+            path("M900,560 C1100,400 1200,700 1400,520", "none", 8, C.purple, `id="s05-n-wire" stroke-dasharray="14 12"`) +
+            P.monitor("s05-n-mon", 1520, 440, 0.95,
+              text(0, -120, "GUEST #48151", 36, "#7CF0E0") + text(0, -60, "unscented lotion ✓", 34, "#BFE8F6") + text(0, -10, "vitamins ✓", 34, "#BFE8F6") +
+              text(0, 50, "PREGNANCY SCORE", 34, C.yellow) + rect(-170, 80, 340, 30, "#333E52", 15, 0) + `<g id="s05-n-bar">${rect(-170, 80, 340, 30, C.pink, 15, 0)}</g>`) +
+            W("s05-n-nyt", rect(-170, -110, 340, 220, C.white, 6, 7) + text(0, -60, "NEWS · 2012", 40) + line(-130, -10, 130, -10, 6, C.gray) + line(-130, 30, 130, 30, 6, C.gray) + line(-130, 70, 60, 70, 6, C.gray), at(320, 260, 1, -6)));
+
+          // o — reading you
           S.add("o",
-            BG.paper() +
-            line(260, 900, 1700, 900, 8) + line(260, 900, 260, 160, 8) +
-            text(150, 530, "FORCE", 56, C.ink, "middle", `transform="rotate(-90 150 530)"`) +
-            bars.map((b, i) => W(`s05-o-b${i}`, rect(320 + i * 170, 900 - (b / bmax) * 700, 120, (b / bmax) * 700, i % 2 ? C.red : C.blue, 8, 6))).join("") +
-            bars.map((_, i) => text(380 + i * 170, 950, `${i + 1}`, 44)).join("") + text(980, 1020, "TURN", 44) +
-            lbl("s05-o-l", 700, 200, 640, "≈ +38% EVERY TURN", "#FFE1DC", C.red, 64));
-
-          // p — why: push vs feel
-          const arr = (id, x, y, len, col, label) => W(id, rect(0, -36, len, 72, col, 14, 7) + path(`M${len},-70 L${len + 90},0 L${len},70 Z`, col, 7) + text(-30, 0, label, 52, C.ink, "end"), at(x, y));
-          S.add("p",
-            BG.paper() +
-            arr("s05-p-a1", 760, 300, 820, C.blue, "WHAT YOU PUSH") +
-            arr("s05-p-a2", 760, 540, 380, "#9EBCE5", "WHAT YOU FEEL") +
-            arr("s05-p-a3", 760, 780, 820, C.red, "WHAT THEY FEEL") +
-            W("s05-p-muff", P.brain(null, 0, 0, 0.32, { face: true }) + P.mute(null, 120, -10, 0.45), at(1420, 540)));
-
-          // q — the backseat
-          S.add("q",
-            BG.flat("#BFE3F1") + rect(-200, 820, 2320, 400, "#9AA79A", 0, 0) +
-            W("s05-q-car", `<g transform="translate(-960,-700)">${person("s05k1", { x: 750, y: 520, s: 0.8, shirt: C.yellow, mouth: "yell" })}${person("s05k2", { x: 1150, y: 520, s: 0.8, shirt: C.teal, hair: "messy", hairColor: C.brown, mouth: "frown", flip: -1 })}</g>` + P.car(null, 0, 0, 1.9), at(960, 700)) +
-            P.bubble("s05-q-b", 520, 200, 720, 170, text(0, 4, "YOU HIT ME HARDER!", 70, C.red), "right") +
-            W("s05-q-halo", ell(1130, 230, 70, 18, "none", 10, C.yellow)),
-            `<div class="ttl" id="s05-q-t" style="top:930px;font-size:80px">...they might be right</div>`);
+            BG.store() +
+            person("s05o", { x: 960, y: 760, s: 1.4, mouth: "flat" }) +
+            W("s05-o-beam", path("M960,-20 L700,940 L1220,940 Z", "rgba(76,139,214,.22)", 0) + rect(880, -40, 160, 70, "#56627A", 12, 7) + circ(960, 30, 22, C.red, 0)) +
+            W("s05-o-scan", line(640, 0, 1280, 0, 8, C.blue), at(0, 320)),
+            `<div class="ttl" id="s05-o-t" style="top:880px;font-size:84px">it's reading you</div>`);
 
           S.mount();
           const tl = gsap.timeline({ paused: true });
-          const t = { a1: 0, a2: q("L36", "This prediction"), b: q("L37"), c: q("L38"), d: q("L39"), e: q("L40"), f: q("L41"),
-            g: q("L41a"), h: q("L41b"), i: q("L41c"), j: q("L41d"), k: q("L41e"), l: q("L42"), m: q("L43"), o: q("L45"), p: q("L46"), qq: q("L47") };
-          R.shots(tl, [["#s05-a1", 0], ["#s05-a2", t.a2, "pop"], ["#s05-b", t.b, "whipL"], ["#s05-c", t.c, "pop"], ["#s05-d", t.d, "fade"], ["#s05-e", t.e, "whipL"],
-            ["#s05-f", t.f, "whipL"], ["#s05-g", t.g, "pop"], ["#s05-h", t.h, "whipL"], ["#s05-i", t.i, "whipL"], ["#s05-j", t.j, "whipL"], ["#s05-k", t.k, "pop"],
-            ["#s05-l", t.l, "up"], ["#s05-m", t.m, "whipL"], ["#s05-o", t.o, "pop"], ["#s05-p", t.p, "whipL"], ["#s05-q", t.qq, "whipL"]], DUR);
+          const t = { a: 0, b: q("L28"), c: q("L29"), d: q("L30"), e: q("L31"), f: q("L31a"), gg: q("L31b"), h: q("L32"), i: q("L32a"), j: q("L32b"),
+            k: q("L33"), l: q("L34"), m: q("L35"), n: q("L36"), o: q("L37") };
+          R.shots(tl, [["#s05-a", 0], ["#s05-b", t.b, "pop"], ["#s05-c", t.c, "whipL"], ["#s05-d", t.d, "whipL"], ["#s05-e", t.e, "pop"],
+            ["#s05-f", t.f, "whipL"], ["#s05-g", t.gg, "whipL"], ["#s05-h", t.h, "whipL"], ["#s05-i", t.i, "pop"], ["#s05-j", t.j, "pop"],
+            ["#s05-k", t.k, "fade"], ["#s05-l", t.l, "whipL"], ["#s05-m", t.m, "pop"], ["#s05-n", t.n, "whipL"], ["#s05-o", t.o, "fade"]], DUR);
           R.boil(tl, "#s05-cam .boil", "s05", 0, DUR);
 
-          // a1 — weird
-          sfx("glitch", 0); sfx("boing", 0.3, 0.6);
-          tl.fromTo("#s05-a1-sp", { rotation: 0, svgOrigin: "960 540" }, { rotation: 200, svgOrigin: "960 540", duration: t.a2, ease: "none" }, 0);
-          R.words(tl, "#s05-a1-t", 0.1, 0.1, { rot: 12 });
-          R.expr(tl, "s05w", { brows: "up", look: [0, -8] }, 0);
-          R.wiggle(tl, "#s05w-head", 0.5, t.a2 - 0.6, 10, 0.2, "50% 100%");
-          R.push(tl, "#s05-a1", 0, t.a2, 1, 1.1);
+          // a
+          tl.fromTo("#s05-a-rain", { y: 0 }, { y: 1800, duration: t.b, ease: "none" }, 0);
+          R.words(tl, "#s05-a-t", q("L27", "numbers") - 0.6, 0.08, { y: 80 }); sfx("impact", q("L27", "numbers"), 0.6);
+          sfx("whoosh", 0.1, 0.4);
 
-          // a2 — always on
-          tl.fromTo("#s05-a2-orb", { rotation: 0, svgOrigin: "0 0" }, { rotation: 120, svgOrigin: "0 0", duration: t.b - t.a2, ease: "none" }, t.a2);
-          [0, 1, 2, 3].forEach((i) => tl.fromTo(`#s05-a2-o${i}`, { rotation: 0, transformOrigin: "50% 50%" }, { rotation: -120, transformOrigin: "50% 50%", duration: t.b - t.a2, ease: "none" }, t.a2));
-          gsap.set("#s05-a2-l", { opacity: 0 });
-          R.pop(tl, "#s05-a2-l", q("L36", "all the time")); sfx("ding", q("L36", "all the time"), 0.5);
-          R.push(tl, "#s05-a2", t.a2, t.b - t.a2, 1, 1.06);
+          // b
+          gsap.set(["#s05-b-ring", "#s05-b-arrow"], { opacity: 0 });
+          R.pop(tl, "#s05-b-tag", t.b + 0.1, 0.4); sfx("pop", t.b + 0.1, 0.6);
+          tl.fromTo("#s05-b-arrow", { opacity: 0, scaleX: 0, transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, duration: 0.6 }, q("L28", "left to right") - 0.3);
+          sfx("swish", q("L28", "left to right") - 0.3, 0.5);
+          R.pop(tl, "#s05-b-ring", q("L28", "first digit") - 0.2); sfx("ding", q("L28", "first digit"), 0.5);
+          R.draw(tl, "#s05-b-ring ellipse", q("L28", "first digit") - 0.2, 0.4);
+          R.push(tl, "#s05-b", t.b, t.c - t.b, 1, 1.08);
 
-          // b — saccades
-          const sac = [[0, 0], [120, -60], [-100, 40], [80, 70], [-130, -50], [60, -20], [-40, 80], [110, 10]];
-          const bs = t.b + 0.3, lurch = q("L37", "Every jump"), stable = q("L37", "But it doesn't");
-          gsap.set(["#s05-b-l1", "#s05-b-l2"], { opacity: 0 });
-          for (let i = 0; i < 18; i++) {
-            const [x, y] = sac[i % sac.length];
-            const tt = bs + i * 0.42;
-            if (tt > t.c - 0.2) break;
-            tl.to("#s05-b-eye-iris", { x, y, duration: 0.05, ease: "power4.out" }, tt);
-            if (tt >= lurch && tt < stable) {
-              tl.to("#s05-b-world", { x: -x * 1.4, y: -y * 1.4, duration: 0.05, ease: "power4.out" }, tt);
-              sfx("click", tt, 0.4);
-            } else if (tt >= stable) tl.to("#s05-b-world", { x: 0, y: 0, duration: 0.05 }, tt);
-          }
-          R.pop(tl, "#s05-b-l1", lurch); sfx("buzz", lurch, 0.3);
-          tl.to("#s05-b-l1", { opacity: 0, duration: 0.1 }, stable);
-          R.pop(tl, "#s05-b-l2", stable); sfx("ding", stable, 0.5);
-          R.push(tl, "#s05-b", t.b, t.c - t.b, 1, 1.04);
-
-          // c — equation
-          ["#s05-c-1", "#s05-c-plus", "#s05-c-2", "#s05-c-eq", "#s05-c-3", "#s05-c-ok"].forEach((s, i) => {
-            gsap.set(s, { opacity: 0 });
-            R.pop(tl, s, t.c + 0.2 + i * 0.55); sfx("pop", t.c + 0.2 + i * 0.55, 0.4);
-          });
-          sfx("ding", t.c + 0.2 + 5 * 0.55, 0.5);
+          // c
+          gsap.set(["#s05-c-real", "#s05-c-feel"], { opacity: 0 });
+          R.pop(tl, "#s05-c-real", t.c + 0.2); sfx("pop", t.c + 0.2, 0.5);
+          tl.fromTo("#s05-c-feel", { x: 990, opacity: 1 }, { x: 0, opacity: 1, duration: 0.9, ease: "power3.inOut" }, q("L29", "closer") - 0.4);
+          sfx("whoosh", q("L29", "closer") - 0.4, 0.5);
           R.push(tl, "#s05-c", t.c, t.d - t.c, 1, 1.05);
 
-          // d — cricket
-          gsap.set(["#s05-d-chirp", "#s05-d-ear"], { opacity: 0 });
-          const ch = q("L39", "A cricket");
-          for (let i = 0; i < 6; i++) {
-            const tt = ch + i * 0.9;
-            tl.fromTo("#s05-d-waves", { opacity: 1, scale: 0.7, transformOrigin: "100% 50%" }, { opacity: 0, scale: 1.3, duration: 0.6, ease: "power1.out" }, tt);
-            R.wiggle(tl, "#s05-dc-wings", tt, 0.4, 6, 0.05);
-            sfx("chirp", tt, 0.8);
-          }
-          R.pop(tl, "#s05-d-chirp", q("L39", "incredibly loud")); R.shake(tl, "#s05-d-chirp", q("L39", "incredibly loud") + 0.3, 0.5, 10);
-          R.fadeIn(tl, "#s05-d-ear", q("L39", "Loud enough"));
-          R.push(tl, "#s05-d", t.d, t.e - t.d, 1.0, 1.1, 0, 0, 0, 20);
+          // d — dress experiment
+          gsap.set(["#s05-d-p39", "#s05-d-b1", "#s05-d-b2", "#s05-d-l"], { opacity: 0 });
+          R.wiggle(tl, "#s05-d-dress", t.d + 0.3, 1.2, 4, 0.2);
+          tl.fromTo("#s05-d-b1", { scaleY: 0, opacity: 1, transformOrigin: "50% 100%" }, { scaleY: 1, opacity: 1, duration: 0.6, ease: "back.out(1.3)" }, q("L30", "thirty-four"));
+          const p39 = q("L30", "thirty-nine");
+          tl.to("#s05-d-p34", { opacity: 0, y: -40, duration: 0.2 }, p39 - 0.2);
+          tl.fromTo("#s05-d-p39", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.25, ease: "back.out(2)" }, p39);
+          sfx("swish", p39, 0.5);
+          tl.fromTo("#s05-d-b2", { scaleY: 0, opacity: 1, transformOrigin: "50% 100%" }, { scaleY: 1, opacity: 1, duration: 0.7, ease: "back.out(1.3)" }, p39 + 0.4);
+          R.pop(tl, "#s05-d-l", q("L30", "a third more")); sfx("up", p39 + 0.4, 0.5); sfx("ding", q("L30", "a third more"), 0.5);
+          R.push(tl, "#s05-d", t.d, t.e - t.d, 1, 1.05);
 
-          // e — neuron + sync graph
-          tl.fromTo("#s05-e-n-pulse", { x: 0 }, { x: 320, duration: 0.6, ease: "none", repeat: 8 }, t.e + 0.4);
-          tl.fromTo("#s05-e-head", { x: 0 }, { x: 1260, duration: q("L40", "end") - t.e - 0.5, ease: "none" }, t.e + 0.6);
-          R.draw(tl, "#s05-e-hr path", t.e + 0.6, q("L40", "end") - t.e - 0.5, "none");
-          tl.fromTo("#s05-e-ch rect", { opacity: 0.15 }, { opacity: 1, duration: 0.2, stagger: (q("L40", "end") - t.e - 0.5) / 5.2 }, t.e + 0.9);
-          for (let i = 0; i < 5; i++) sfx("chirp", t.e + 0.9 + i * (q("L40", "end") - t.e - 0.5) / 5.2, 0.4);
-          R.push(tl, "#s05-e", t.e, t.f - t.e, 1, 1.05);
+          // e — 39 > 34
+          ["#s05-e-39", "#s05-e-gt", "#s05-e-34"].forEach((s, i) => { R.pop(tl, s, t.e + 0.1 + i * 0.3); sfx("pop", t.e + 0.1 + i * 0.3, 0.4); });
+          tl.fromTo("#s05-e-crown", { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "bounce.out" }, q("L31", "beat") - 0.2);
+          sfx("sparkle", q("L31", "beat"), 0.5);
+          R.push(tl, "#s05-e", t.e, t.f - t.e, 1, 1.06);
 
-          // f — own voice
-          R.talk(tl, "s05f", t.f + 0.2, t.g - t.f - 0.6);
-          tl.fromTo("#s05-f-w path", { opacity: 0 }, { opacity: 1, duration: 0.2, stagger: 0.15, repeat: 6, yoyo: true }, t.f + 0.3);
-          gsap.set(["#s05-f-th", "#s05-f-l"], { opacity: 0 });
-          R.pop(tl, "#s05-f-th", q("L41", "When you talk")); sfx("pop", q("L41", "When you talk"), 0.5);
-          R.pop(tl, "#s05-f-l", q("L41", "turns down")); sfx("down", q("L41", "turns down"), 0.6);
-          R.push(tl, "#s05-f", t.f, t.g - t.f, 1, 1.06);
+          // f — anchor
+          gsap.set(["#s05-f-strike", "#s05-f-anchor", "#s05-f-win"], { opacity: 0 });
+          R.pop(tl, "#s05-f-tag", t.f + 0.1);
+          tl.fromTo("#s05-f-strike", { scaleX: 0, opacity: 1, transformOrigin: "0% 50%" }, { scaleX: 1, opacity: 1, duration: 0.25 }, q("L31a", "now six"));
+          sfx("swish", q("L31a", "now six"), 0.5);
+          tl.fromTo("#s05-f-anchor", { y: -700, opacity: 1 }, { y: 0, opacity: 1, duration: 0.6, ease: "bounce.out" }, q("L31a", "anchor") - 0.4);
+          sfx("thud", q("L31a", "anchor") + 0.1, 0.8);
+          R.pop(tl, "#s05-f-win", q("L31a", "feels like a win")); sfx("ding", q("L31a", "feels like a win"), 0.5);
+          tl.set("#s05-fb-m-smile", { opacity: 1 }, t.f);
+          R.push(tl, "#s05-f", t.f, t.gg - t.f, 1, 1.05);
 
-          // g — why ticklish?
-          R.words(tl, "#s05-g-t", t.g + 0.1, 0.08);
-          R.pose(tl, "s05g", { armL: 50, foreL: 90, armR: 50, foreR: 90 }, t.g + 0.3, 0.3);
-          R.expr(tl, "s05g", { brows: "worried" }, t.g + 0.3);
-          ["#s05-g-q1", "#s05-g-q2", "#s05-g-q3"].forEach((s, i) => { gsap.set(s, { opacity: 0 }); R.pop(tl, s, t.g + 0.6 + i * 0.3); sfx("pop", t.g + 0.6 + i * 0.3, 0.4); });
-          gsap.set("#s05-g-s", { opacity: 0 });
-          R.fadeIn(tl, "#s05-g-s", q("L41a", "nobody knows"));
-          R.push(tl, "#s05-g", t.g, t.h - t.g, 1, 1.06);
+          // g — sale sign
+          gsap.set(["#s05-g-sale", "#s05-g-q", "#s05-g-up"], { opacity: 0 });
+          tl.fromTo("#s05-g-sale", { scale: 2.5, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.25, ease: "power4.in" }, q("L31b", "sale sign") - 0.2);
+          sfx("stamp", q("L31b", "sale sign") + 0.05);
+          R.pop(tl, "#s05-g-up", q("L31b", "boost")); sfx("up", q("L31b", "boost"), 0.5);
+          R.pop(tl, "#s05-g-q", q("L31b", "don't actually know")); sfx("pop", q("L31b", "don't actually know"), 0.4);
+          tl.set("#s05-gb-m-smile", { opacity: 0 }, t.gg).set("#s05-gb-m-o", { opacity: 1 }, t.gg);
+          R.push(tl, "#s05-g", t.gg, t.h - t.gg, 1, 1.05);
 
-          // h — vulnerable spots, spider, alarm
-          const sp = [["s1", "neck"], ["s2", "ribs"], ["s3", "ribs"], ["s4", "soles"], ["s5", "soles"]];
-          sp.forEach(([k, w], i) => { gsap.set(`#s05-h-${k}`, { opacity: 0 }); R.pop(tl, `#s05-h-${k}`, q("L41b", w) + (i % 2) * 0.1); });
-          [["l1", "neck"], ["l2", "ribs"], ["l3", "soles"]].forEach(([k, w]) => { gsap.set(`#s05-h-${k}`, { opacity: 0 }); R.pop(tl, `#s05-h-${k}`, q("L41b", w)); sfx("pop", q("L41b", w), 0.5); });
-          tl.fromTo("#s05-h-sp", { y: -700 }, { y: 0, duration: 1.4, ease: "power1.out" }, q("L41b", "vulnerable"));
-          tl.to("#s05-h-sp", { x: -500, y: 120, duration: 2.5, ease: "sine.inOut" }, q("L41b", "So one idea"));
-          gsap.set("#s05-h-al", { opacity: 0 });
-          R.pop(tl, "#s05-h-al", q("L41b", "alarm")); R.wiggle(tl, "#s05-h-al", q("L41b", "alarm"), 1.4, 12, 0.1); sfx("alarm", q("L41b", "alarm"), 0.4);
-          R.expr(tl, "s05h", { mouth: "O", brows: "up", look: [10, 0], sweat: 1 }, q("L41b", "alarm"));
-          R.push(tl, "#s05-h", t.h, t.i - t.h, 1, 1.06);
+          // h — 2 for $5
+          gsap.set(["#s05-h-sign", "#s05-h-each"], { opacity: 0 });
+          R.pop(tl, "#s05-h-sign", t.h + 0.2); sfx("impact", t.h + 0.2, 0.4);
+          R.pose(tl, "s05h", { armR: 90, foreR: 10, armL: 90, foreL: 10 }, q("L32", "automatically grab"), 0.3);
+          R.expr(tl, "s05h", { look: [-12, 4] }, q("L32", "automatically grab"));
+          sfx("pop", q("L32", "grab two"), 0.4); sfx("pop", q("L32", "grab two") + 0.2, 0.4);
+          R.pop(tl, "#s05-h-each", q("L32", "same per item") - 0.3); sfx("ding", q("L32", "same per item"), 0.4);
+          R.push(tl, "#s05-h", t.h, t.i - t.h, 1, 1.05);
 
-          // i — parent & baby
-          R.pose(tl, "s05p", { armR: 75, foreR: 20 }, t.i + 0.2, 0.3);
-          for (let k = 0; k < 14; k++) R.pose(tl, "s05p", { foreR: k % 2 ? 5 : 35 }, t.i + 0.5 + k * 0.15, 0.13);
-          for (let k = 0; k < 10; k++) tl.to("#s05-ib-m", { scaleY: k % 2 ? 0.6 : 1.1, transformOrigin: "50% 0%", duration: 0.14 }, t.i + 0.5 + k * 0.16);
-          R.wiggle(tl, "#s05-ib", t.i + 0.5, 2.0, 5, 0.12);
-          tl.fromTo("#s05-i-h > g > g", { y: 60, opacity: 0 }, { y: -40, opacity: 1, duration: 1.0, stagger: 0.3 }, t.i + 0.8);
-          sfx("tickle", t.i + 0.5, 0.6); sfx("sparkle", t.i + 0.9, 0.4);
-          R.push(tl, "#s05-i", t.i, t.j - t.i, 1, 1.06);
+          // i — shrinkflation
+          R.words(tl, "#s05-i-t", t.i + 0.1, 0.1);
+          ["#s05-i-b1", "#s05-i-b2", "#s05-i-b3"].forEach((s, i) => { gsap.set(s, { opacity: 0 }); R.pop(tl, s, t.i + 0.6 + i * 0.9); sfx("down", t.i + 0.6 + i * 0.9, 0.3 + i * 0.1); });
+          R.push(tl, "#s05-i", t.i, t.j - t.i, 1, 1.05);
 
-          // j — rats
-          gsap.set(["#s05-j-us", "#s05-j-l", "#s05-j-more"], { opacity: 0 });
-          R.slideIn(tl, "#s05-j-hand", t.j + 0.5, 400, 0, 0.4);
-          const rk = q("L41d", "tickle rats");
-          for (let k = 0; k < 10; k++) tl.to("#s05-j-hand", { x: k % 2 ? -30 : -80, y: k % 2 ? -10 : 20, duration: 0.14 }, rk + k * 0.15);
-          R.wiggle(tl, "#s05-j-rat", rk + 0.2, 1.5, 6, 0.1);
-          R.pop(tl, "#s05-j-us", q("L41d", "chirps")); sfx("squeak", q("L41d", "chirps"), 0.5); sfx("squeak", q("L41d", "chirps") + 0.3, 0.4);
-          R.pop(tl, "#s05-j-l", q("L41d", "too high"));
-          const ch2 = q("L41d", "chase");
-          tl.to("#s05-j-hand", { x: 500, duration: 1.0, ease: "power2.in" }, ch2 - 0.4);
-          tl.to("#s05-j-rat", { x: 360, duration: 1.2, ease: "power2.inOut" }, ch2);
-          R.pop(tl, "#s05-j-more", q("L41d", "asking")); sfx("squeak", q("L41d", "asking"), 0.6);
-          R.push(tl, "#s05-j", t.j, t.k - t.j, 1, 1.06);
+          // j — checks price, not grams
+          gsap.set(["#s05-j-ok", "#s05-j-no"], { opacity: 0 });
+          tl.to("#s05-jb-pupils", { x: 16, y: -10, duration: 0.2 }, t.j + 0.2);
+          R.pop(tl, "#s05-j-ok", q("L32b", "checks the price")); sfx("ding", q("L32b", "checks the price"), 0.4);
+          tl.to("#s05-jb-pupils", { x: 16, y: 10, duration: 0.2 }, q("L32b", "rarely") - 0.1);
+          tl.to("#s05-jb-pupils", { x: 16, y: -10, duration: 0.15 }, q("L32b", "rarely") + 0.3);
+          R.pop(tl, "#s05-j-no", q("L32b", "grams")); sfx("buzz", q("L32b", "grams"), 0.4);
+          R.push(tl, "#s05-j", t.j, t.k - t.j, 1, 1.05);
 
-          // k — outside vs inside
-          gsap.set(["#s05-k-l1", "#s05-k-l2", "#s05-k-in"], { opacity: 0 });
-          tl.fromTo("#s05-k-out", { opacity: 0, scale: 1.3, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.5 }, q("L41e", "outside world") - 0.2);
-          R.pop(tl, "#s05-k-l1", q("L41e", "outside world")); sfx("whoosh", q("L41e", "outside world") - 0.2, 0.5);
-          R.pop(tl, "#s05-k-in", q("L41e", "filters")); R.pop(tl, "#s05-k-l2", q("L41e", "inside")); sfx("down", q("L41e", "filters"), 0.6);
-          R.push(tl, "#s05-k", t.k, t.l - t.k, 1, 1.05);
+          // k — and then there's you
+          R.expr(tl, "s05y", { brows: "up", look: [0, -4] }, t.k);
+          tl.fromTo("#s05-k-wallet", { x: 0 }, { x: 600, duration: 1.8, ease: "power1.in" }, q("L33", "work against"));
+          sfx("boing", q("L33", "work against"), 0.4);
+          R.push(tl, "#s05-k", t.k, t.l - t.k, 1, 1.08);
 
-          // l — hidden cost
-          tl.fromTo("#s05-l-tag", { rotation: -25, transformOrigin: "50% 0%" }, { rotation: 0, transformOrigin: "50% 0%", duration: 1.4, ease: "elastic.out(1,0.3)" }, t.l + 0.1);
-          sfx("swish", t.l + 0.1, 0.5);
-          gsap.set("#s05-l-cal", { opacity: 0 });
-          R.pop(tl, "#s05-l-cal", q("L42", "2003")); sfx("stamp", q("L42", "2003"));
-          R.push(tl, "#s05-l", t.l, t.m - t.l, 1, 1.06);
+          // l — hungry
+          gsap.set(["#s05-l-cal", "#s05-l-items", "#s05-l-rcpt"], { opacity: 0 });
+          R.pop(tl, "#s05-l-cal", t.l + 0.1); sfx("page", t.l + 0.1, 0.5);
+          tl.fromTo("#s05-l-growl", { opacity: 0 }, { opacity: 1, duration: 0.15, yoyo: true, repeat: 5 }, q("L34", "hungry people"));
+          sfx("heartbeat", q("L34", "hungry people"), 0.4);
+          R.expr(tl, "s05l", { brows: "worried", sweat: 1 }, q("L34", "hungry people"));
+          tl.fromTo("#s05-l-items > g > g > g", { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, stagger: 0.25, ease: "bounce.out" }, q("L34", "non-food"));
+          tl.set("#s05-l-items", { opacity: 1 }, q("L34", "non-food"));
+          sfx("pop", q("L34", "non-food"), 0.4); sfx("pop", q("L34", "non-food") + 0.25, 0.4); sfx("pop", q("L34", "non-food") + 0.5, 0.4);
+          tl.fromTo("#s05-l-rcpt", { opacity: 1, scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, opacity: 1, duration: 1.0, ease: "power2.out" }, q("L34", "spent more"));
+          sfx("typing", q("L34", "spent more"), 0.4);
+          R.push(tl, "#s05-l", t.l, t.m - t.l, 1, 1.05);
 
-          // m — pressing back and forth (L43 + L44)
-          R.idle(tl, "s05pa", t.m, t.o, 51); R.idle(tl, "s05pb", t.m, t.o, 52);
-          R.pose(tl, "s05pa", { armR: 70, foreR: 20 }, t.m + 0.3, 0.3);
-          R.pose(tl, "s05pb", { armR: 70, foreR: 20 }, t.m + 0.3, 0.3);
-          gsap.set(["#s05-m-push", "#s05-m-fair"], { opacity: 0 });
-          const press = (tt, who, k) => {
-            const sgn = who === "a" ? -1 : 1;
-            tl.set("#s05-m-push", { opacity: 1, x: sgn * 120 }, tt);
-            tl.fromTo("#s05-m-push", { y: -40 }, { y: 0, duration: 0.25, ease: "power2.in" }, tt);
-            tl.set("#s05-m-push", { opacity: 0 }, tt + 0.6);
-            tl.to("#s05-m-sc-beam", { rotation: sgn * 10 * k, svgOrigin: "0 -260", duration: 0.3, ease: "back.out(2)" }, tt);
-            tl.to("#s05-m-sc-panL", { rotation: -sgn * 10 * k, svgOrigin: "-220 -260", duration: 0.3 }, tt);
-            tl.to("#s05-m-sc-panR", { rotation: -sgn * 10 * k, svgOrigin: "220 -260", duration: 0.3 }, tt);
-            R.pose(tl, who === "a" ? "s05pa" : "s05pb", { armR: 55, foreR: 35 }, tt, 0.2);
-            R.pose(tl, who === "a" ? "s05pa" : "s05pb", { armR: 70, foreR: 20 }, tt + 0.4, 0.2);
-            sfx("thud", tt, 0.4 + 0.08 * k);
-          };
-          press(q("L43", "One person"), "a", 0.5);
-          press(q("L43", "Then the second"), "b", 0.5);
-          const bf = q("L44");
-          for (let k = 0; k < 4; k++) press(bf + k * 0.7, k % 2 ? "b" : "a", 0.6);
-          R.pop(tl, "#s05-m-fair", q("L44", "fair") - 0.2); sfx("ding", q("L44", "fair"), 0.4);
-          R.push(tl, "#s05-m", t.m, t.o - t.m, 1, 1.08);
+          // m — mode switch
+          const mm = q("L35", "get-more-stuff");
+          tl.to("#s05-m-knob", { x: 200, duration: 0.25, ease: "back.out(2)" }, mm - 0.3);
+          tl.to("#s05-m-knob circle", { attr: { fill: C.red }, duration: 0.1 }, mm - 0.2);
+          sfx("click", mm - 0.3, 0.9); sfx("alarm", mm, 0.3);
+          tl.set("#s05-mb-m-smile", { opacity: 0 }, mm).set("#s05-mb-m-o", { opacity: 1 }, mm);
+          R.wiggle(tl, "#s05-mb", mm, 1.4, 5, 0.08);
+          R.push(tl, "#s05-m", t.m, t.n - t.m, 1, 1.06);
 
-          // o — escalation
-          const bt = (t.p - t.o - 1.2) / 8;
-          for (let i = 0; i < 8; i++) {
-            gsap.set(`#s05-o-b${i}`, { opacity: 0 });
-            tl.fromTo(`#s05-o-b${i}`, { scaleY: 0, opacity: 1, transformOrigin: "50% 100%" }, { scaleY: 1, opacity: 1, duration: 0.35, ease: "back.out(1.6)" }, t.o + 0.3 + i * bt);
-            sfx("pop", t.o + 0.3 + i * bt, 0.3 + i * 0.07);
-          }
-          gsap.set("#s05-o-l", { opacity: 0 });
-          R.pop(tl, "#s05-o-l", q("L45", "thirty-eight")); sfx("impact", q("L45", "thirty-eight"), 0.6);
-          R.push(tl, "#s05-o", t.o, t.p - t.o, 1, 1.06);
+          // n — loyalty data
+          gsap.set(["#s05-n-nyt"], { opacity: 0 });
+          tl.fromTo("#s05-n-card", { x: -300, rotation: -20 }, { x: 0, rotation: 0, duration: 0.5, ease: "back.out(1.5)" }, t.n + 0.2);
+          sfx("beep", t.n + 0.8, 0.6);
+          R.draw(tl, "#s05-n-wire", t.n + 0.8, 0.8);
+          R.pop(tl, "#s05-n-nyt", q("L36", "New York Times") - 0.2); sfx("page", q("L36", "New York Times") - 0.2, 0.5);
+          tl.fromTo("#s05-n-bar", { scaleX: 0.05, transformOrigin: "0% 50%" }, { scaleX: 0.9, duration: 2.5, ease: "power2.inOut" }, q("L36", "unscented"));
+          sfx("up", q("L36", "unscented"), 0.4); sfx("typing", q("L36", "unscented"), 0.3);
+          R.push(tl, "#s05-n", t.n, t.o - t.n, 1, 1.06);
 
-          // p — push vs feel
-          ["#s05-p-a1", "#s05-p-a2", "#s05-p-a3"].forEach((s) => gsap.set(s, { opacity: 0 }));
-          const pa = [q("L46", "dampens"), q("L46", "feels weaker"), q("L46", "And so does")];
-          tl.fromTo("#s05-p-a1", { scaleX: 0, opacity: 1, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, pa[0] - 0.6);
-          tl.fromTo("#s05-p-a2", { scaleX: 0, opacity: 1, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, pa[1] - 0.4);
-          tl.fromTo("#s05-p-a3", { scaleX: 0, opacity: 1, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, pa[2] - 0.6);
-          sfx("whoosh", pa[0] - 0.6, 0.4); sfx("whoosh", pa[1] - 0.4, 0.3); sfx("whoosh", pa[2] - 0.6, 0.5);
-          gsap.set("#s05-p-muff", { opacity: 0 });
-          R.pop(tl, "#s05-p-muff", pa[1]);
-          R.push(tl, "#s05-p", t.p, t.qq - t.p, 1, 1.05);
-
-          // q — backseat
-          gsap.set(["#s05-q-b", "#s05-q-halo", "#s05-q-t"], { opacity: 0 });
-          R.pose(tl, "s05k1", { armR: 80, foreR: 10 }, t.qq + 0.2, 0.2);
-          R.expr(tl, "s05k1", { brows: "angry" }, t.qq + 0.2);
-          R.expr(tl, "s05k2", { brows: "worried" }, t.qq + 0.2);
-          R.pop(tl, "#s05-q-b", q("L47", "you hit")); sfx("impact", q("L47", "you hit"), 0.5);
-          R.shake(tl, "#s05-q-car", q("L47", "you hit"), 0.4, 8);
-          R.pop(tl, "#s05-q-halo", q("L47", "They might")); sfx("sparkle", q("L47", "They might"), 0.5);
-          R.expr(tl, "s05k2", { mouth: "smirk", brows: "sly" }, q("L47", "They might"));
-          R.fadeIn(tl, "#s05-q-t", q("L47", "They might"));
-          R.push(tl, "#s05-q", t.qq, DUR - t.qq, 1, 1.08);
+          // o — reading you
+          tl.fromTo("#s05-o-scan", { y: 320 }, { y: 900, duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: 3 }, t.o + 0.2);
+          sfx("beep", t.o + 0.2, 0.4); sfx("beep", t.o + 1.0, 0.4);
+          R.expr(tl, "s05o", { brows: "worried", look: [0, -10], sweat: 1 }, t.o + 0.3);
+          R.words(tl, "#s05-o-t", q("L37", "reading you") - 0.2, 0.1);
+          R.push(tl, "#s05-o", t.o, DUR - t.o, 1, 1.08);
 
           window.__timelines["s05"] = tl;
         })();

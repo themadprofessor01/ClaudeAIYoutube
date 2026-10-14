@@ -13,352 +13,206 @@
       <div id="s03" data-composition-id="s03" data-width="1920" data-height="1080"></div>
       <script>
         (function () {
-          /*CUES*/ const CUES = {"L10":[0,11.636,"Scientists started poking at this question back in 1971. A team led by Lawrence Weiskrantz tickled people on the soles of their feet, and confirmed what we all suspected."],"L11":[12.016,14.451,"It really is less ticklish when you do it yourself."],"L11a":[14.951,26.526,"Scientists even have two words for it. Knismesis is the light, feathery, itchy kind. Gargalesis is the heavy, poke-in-the-ribs kind that makes you howl with laughter."],"L11b":[26.906,30.908,"And it's that laughing kind that's nearly impossible to give yourself."],"L12":[31.408,41.099,"But nobody could explain why. Not until 1998, when Sarah-Jayne Blakemore and her colleagues in London took the question inside a brain scanner."],"L13":[41.479,46.95,"Volunteers lay in the scanner while a soft tickling device brushed across the palm of their hand."],"L14":[47.33,52.561,"Sometimes the experimenter moved it. Sometimes the volunteers moved it themselves."],"L15":[53.011,57.328,"When someone else did the tickling, the parts of the brain that process touch lit up."],"L16":[57.709,62.067,"But when the volunteers tickled themselves, those same areas were much quieter."],"L17":[62.517,65.959,"Same touch on the skin. But the brain was barely listening."],"L18":[66.559,74.154,"And there was another clue. A region at the back of the brain, called the cerebellum, behaved differently when people tickled themselves."],"L19":[74.534,82.548,"The cerebellum is famous for coordinating movement. It's the reason you can walk, type, and catch a ball without thinking about it."],"L20":[82.928,87.221,"But the scientists suspected it was doing something else too. Something sneaky."],"L21":[87.921,89.442,"It was predicting the future."]}; const DUR = 90.442; /*ENDCUES*/
+          /*CUES*/ const CUES = {"L10":[0,10.315,"Let's start with the thing you're pushing. In 1937, an Oklahoma grocery store owner named Sylvan Goldman introduced one of the first shopping carts."],"L11":[10.695,17.816,"And at first, nobody wanted to use it. Women said it felt like pushing a baby carriage. Men thought it looked unmanly."],"L12":[18.266,24.237,"So Goldman hired people to pretend to shop with the carts, until real customers started copying them."],"L13":[24.686,32.634,"It worked. And it showed something stores have used ever since. When your hands are free and your basket is bigger, you tend to buy more."],"L14":[33.234,40.557,"Now look at where things are. Milk, eggs, and bread, the stuff almost everyone needs, are usually at the back of the store."],"L15":[40.937,51.027,"Part of that is practical, since the fridges and deliveries are in the back. But it also means that to grab one carton of milk, you walk past thousands of other things."],"L16":[51.527,59.67,"Then there's the entrance. Shoppers barely register the first few steps inside the door. Retailers call it the decompression zone."],"L17":[60.05,72.258,"So that's often where stores put something beautiful. Bright fruit, fresh flowers, the smell of baking bread. It's meant to slow you down and put you in a good mood, before you've even grabbed a basket."]}; const DUR = 73.158; /*ENDCUES*/
           const { C, P, BG, person, text, path, rect, line, circ, ell, g, at } = R;
           const q = R.cue(CUES);
           const S = R.scene("s03");
           const sfx = (n, t, gn) => R.sfx("s03", n, t, gn);
-          const W = (id, inner, tr) => g(null, g(id, inner), tr); // animatable wrapper
+          const W = (id, inner, tr) => g(null, g(id, inner), tr);
+          const lbl = (id, x, y, w, s, fill = C.white, col = C.ink, size = 56) =>
+            W(id, rect(-w / 2, -48, w, 96, fill, 22, 7) + text(0, 4, s, size, col), at(x, y));
+          // Goldman's original: two wire baskets on a folding frame with wheels
+          const oldCart = (id, x, y, s = 1) => W(id,
+            line(-90, 0, -70, -330, 8) + line(90, 0, 70, -330, 8) + line(-70, -330, 70, -330, 8) +
+            rect(-120, -300, 240, 90, "rgba(200,220,235,.4)", 8, 6) + rect(-120, -170, 240, 90, "rgba(200,220,235,.4)", 8, 6) +
+            Array.from({ length: 5 }, (_, i) => line(-100 + i * 50, -300, -100 + i * 50, -210, 3, "#8A97A3") + line(-100 + i * 50, -170, -100 + i * 50, -80, 3, "#8A97A3")).join("") +
+            circ(-90, 10, 20, "#3A3A3A", 6) + circ(90, 10, 20, "#3A3A3A", 6), at(x, y, s));
+          const sepia = "#EAD9B8";
 
-          // a — rewind to 1971
-          S.add("a",
-            BG.paper() +
-            P.calendar("s03-a-cal", 960, 560, 1.5, "") +
-            ["2026", "2010", "1995", "1983", "1971"].map((y, i) => `<g id="s03-a-y${i}" opacity="0">${text(960, 620, y, 180)}</g>`).join("") +
+          // a — rewind to 1937
+          S.add("a", BG.paper() + P.calendar("s03-a-cal", 960, 560, 1.5, "") +
+            ["2025", "1990", "1965", "1937"].map((y, i) => `<g id="s03-a-y${i}" opacity="0">${text(960, 620, y, 180)}</g>`).join("") +
             P.clock("s03-a-clk", 1500, 330, 0.9) +
-            W("s03-a-rw", path("M380,330 Q300,420 380,520", "none", 10) + path("M350,320 L385,328 L372,362", "none", 10) +
-              text(420, 430, "REWIND", 64, C.ink, "start")));
+            W("s03-a-rw", path("M380,330 Q300,420 380,520", "none", 10) + path("M350,320 L385,328 L372,362", "none", 10) + text(420, 430, "REWIND", 64, C.ink, "start")));
 
-          // b — Weiskrantz's 1971 lab: a foot through a curtain
+          // b — Goldman and his cart
           S.add("b",
-            BG.room({ wall: "#E7B77E", floor: "#7E5A3C", fy: 800 }) +
-            Array.from({ length: 7 }, (_, i) => rect(i * 300 - 40, 0, 120, 800, "rgba(255,255,255,.12)", 0, 0)).join("") +
-            text(1720, 110, "1971", 90, C.ink) +
-            // curtain screen
-            rect(980, 200, 700, 620, "#C8574A", 14, 8) +
-            Array.from({ length: 6 }, (_, i) => line(1040 + i * 110, 210, 1040 + i * 110, 810, 5, "rgba(0,0,0,.18)")).join("") +
-            line(940, 190, 1720, 190, 12) +
-            W("s03-b-foot", P.foot(null, 0, 0, 0.75, -90), at(950, 650)) +
-            person("s03w", { x: 520, y: 640, s: 1.25, shirt: "#8A6A4A", hair: "sideburns", hairColor: "#4A3220", coat: true, glasses: true, mouth: "smirk" }) +
-            W("s03-b-feather", P.feather(null, 0, 0, 0.55, 70, C.teal), at(780, 560)) +
-            W("s03-b-tag", rect(150, 860, 700, 110, C.white, 20, 7) + text(500, 915, "LAWRENCE WEISKRANTZ", 56)) +
-            P.bubble("s03-b-ha", 1400, 330, 260, 130, text(0, 4, "HAHA!", 70, C.red), "left"));
+            BG.room({ wall: sepia, floor: "#A98559", fy: 800 }) +
+            Array.from({ length: 3 }, (_, i) => P.shelf(null, 980 + i * 300, 160, 280, 560, 4, 60 + i, ["#C46A4A", "#7F9A6A", "#C9A24A", "#8A6A9A"])).join("") +
+            text(220, 110, "OKLAHOMA CITY, 1937", 56, "#6b5a3e", "start") +
+            person("s03g", { x: 460, y: 640, s: 1.3, shirt: "#6E6A64", hair: "side", hairColor: "#3B2A1E", glasses: true, mouth: "grin" }) +
+            oldCart("s03-b-cart", 780, 820, 1.2) +
+            lbl("s03-b-tag", 460, 960, 560, "SYLVAN GOLDMAN"));
 
-          // c — tickliness chart
+          // c — nobody wants it
           S.add("c",
-            BG.paper() +
-            line(420, 860, 1500, 860, 8) + line(420, 860, 420, 220, 8) +
-            text(260, 540, "TICKLINESS", 60, C.ink, "middle", `transform="rotate(-90 260 540)"`) +
-            W("s03-c-b1", rect(560, 300, 300, 560, C.red, 10, 8), "") +
-            W("s03-c-b2", rect(1060, 700, 300, 160, C.gray, 10, 8), "") +
-            text(710, 930, "SOMEONE ELSE", 56) + text(1210, 930, "YOURSELF", 56));
+            BG.room({ wall: sepia, floor: "#A98559", fy: 800 }) +
+            oldCart("s03-c-cart", 960, 820, 1.1) +
+            person("s03w", { x: 420, y: 640, s: 1.25, dress: "#B5536B", hair: "bun", hairColor: "#6B3A1E", mouth: "frown" }) +
+            person("s03m", { x: 1500, y: 640, s: 1.25, shirt: "#5A6E8C", hair: "side", hairColor: "#3B2A1E", mouth: "flat", flip: -1 }) +
+            P.thought("s03-c-t1", 420, 190, 380, 220,
+              ell(0, 10, 100, 50, "#BFE3F1", 7) + path("M-100,10 Q-100,-70 0,-70", "none", 7) + circ(-60, 70, 18, "#3A3A3A", 5) + circ(60, 70, 18, "#3A3A3A", 5)) +
+            P.bubble("s03-c-b2", 1480, 190, 380, 150, text(0, 4, "unmanly.", 70), "right"));
 
-          // d — knismesis
+          // d — paid "shoppers"
           S.add("d",
-            BG.flat("#DCEFF6") +
-            W("s03-d-arm", rect(220, 560, 1500, 220, "#FFE9D6", 110, 8) +
-              Array.from({ length: 22 }, (_, i) => circ(320 + i * 60, 620 + (i % 3) * 40, 4, "#D9A889", 0)).join("")) +
-            W("s03-d-fe", P.feather(null, 0, 0, 0.8, 60, C.purple), at(760, 420)) +
-            g("s03-d-sq", path("M600,500 q10,-20 20,0 t20,0 t20,0 M1000,480 q10,-20 20,0 t20,0 t20,0 M1300,510 q10,-20 20,0 t20,0", "none", 6, C.ink)),
-            `<div class="ttl" id="s03-d-t" style="top:90px;font-size:130px">Knismesis</div>` +
-            `<div class="ttl" id="s03-d-s" style="top:250px;font-size:56px;color:#5d5850">light · feathery · itchy</div>`);
+            BG.room({ wall: sepia, floor: "#A98559", fy: 780 }) +
+            Array.from({ length: 4 }, (_, i) => P.shelf(null, 60 + i * 470, 140, 420, 420, 3, 70 + i, ["#C46A4A", "#7F9A6A", "#C9A24A", "#8A6A9A"])).join("") +
+            W("s03-d-p1", person("s03p1", { x: 0, y: 0, s: 0.95, shirt: C.teal, hair: "ponytail", hairColor: "#C9902A", mouth: "grin" }) + oldCart(null, 170, 170, 0.8), at(300, 700)) +
+            W("s03-d-p2", person("s03p2", { x: 0, y: 0, s: 0.95, shirt: C.purple, hair: "side", hairColor: C.ink, mouth: "grin" }) + oldCart(null, 170, 170, 0.8), at(900, 700)) +
+            W("s03-d-real", person("s03p3", { x: 0, y: 0, s: 0.95, dress: "#B5536B", hair: "bun", hairColor: "#6B3A1E", mouth: "o" }), at(1620, 700)) +
+            lbl("s03-d-tag", 600, 90, 700, "HIRED \"SHOPPERS\" (SHH!)", C.yellow, C.ink, 56));
 
-          // e — gargalesis
+          // e — bigger basket, free hands
           S.add("e",
-            BG.flat("#FFE3CF") +
-            person("s03r", { x: 820, y: 720, s: 1.35, mouth: "laugh" }) +
-            person("s03f", { x: 1140, y: 720, s: 1.35, shirt: C.teal, hair: "messy", hairColor: C.brown, mouth: "grin", flip: -1 }) +
-            g("s03-e-ha", text(420, 380, "HA", 110, C.red) + text(1500, 330, "HAHA", 96, C.orange)),
-            `<div class="ttl" id="s03-e-t" style="top:70px;font-size:130px;left:0;right:auto;width:100%">Gargalesis</div>`);
+            BG.paper() +
+            W("s03-e-basket", path("M-140,-40 L140,-40 L110,120 L-110,120 Z", "#E8B04A", 8) + path("M-100,-40 Q0,-180 100,-40", "none", 10), at(420, 560)) +
+            W("s03-e-arrow", P.arrow(null, -150, 0, 150, 0, 14, C.ink), at(860, 560)) +
+            W("s03-e-cart", P.cart(null, 0, 0, 1.3) + `<g id="s03-e-fill">` +
+              [[-150, C.red, "box"], [-80, C.blue, "can"], [-10, C.green, "bag"], [60, C.orange, "box"], [130, C.purple, "bottle"]].map(([x, c, k], i) =>
+                P.product(`s03-e-i${i}`, x, -90, 0.9, k, c)).join("") + `</g>`, at(1380, 800)) +
+            text(420, 820, "HANDS FULL", 60) + text(1380, 960, "HANDS FREE", 60),
+            `<div class="ttl" id="s03-e-t" style="top:70px;font-size:100px">bigger basket = more stuff</div>`);
 
-          // f — can't do it to yourself
+          // f — floor plan: essentials at the back
           S.add("f",
-            BG.paper() +
-            person("s03r2", { x: 760, y: 700, s: 1.5, mouth: "flat" }) +
-            P.bubble("s03-f-b", 1300, 360, 380, 160, text(0, 4, "...nope.", 72), "left") +
-            W("s03-f-tag", rect(1060, 640, 520, 110, "#FFE1DC", 22, 7) + text(1290, 696, "SELF-GARGALESIS", 52, C.red) + P.cross(null, 1610, 694, 0.6)));
+            BG.flat("#2E5E8C") +
+            Array.from({ length: 20 }, (_, i) => line(i * 100, 0, i * 100, 1080, 2, "rgba(255,255,255,.12)")).join("") +
+            rect(260, 160, 1400, 800, "none", 8, 10, "#DDEBFA") +
+            Array.from({ length: 6 }, (_, i) => rect(420 + i * 190, 400, 80, 380, "rgba(221,235,250,.25)", 6, 6, "#DDEBFA")).join("") +
+            text(960, 1010, "ENTRANCE ↑", 46, "#DDEBFA") +
+            W("s03-f-back", rect(300, 190, 1320, 130, "rgba(246,199,68,.3)", 10, 6, C.yellow) +
+              P.product(null, 620, 305, 0.42, "milk") + text(700, 255, "MILK", 34, "#DDEBFA", "start") +
+              g(null, ell(0, 0, 30, 38, C.white, 5) + ell(50, 4, 30, 38, C.white, 5), at(960, 260)) + text(985, 210, "EGGS", 34, "#DDEBFA") +
+              P.bread(null, 1300, 300, 0.6) + text(1300, 210, "BREAD", 34, "#DDEBFA")),
+            `<div class="ttl" id="s03-f-t" style="top:40px;font-size:80px;color:#DDEBFA">the essentials live at the back</div>`);
 
-          // g — nobody could explain why
+          // g — the long walk past everything
           S.add("g",
-            BG.lab() +
-            person("s03s1", { x: 520, y: 680, s: 1.1, coat: true, glasses: true, hair: "bald", shirt: C.blue, mouth: "frown" }) +
-            person("s03s2", { x: 960, y: 680, s: 1.1, coat: true, hair: "bun", hairColor: C.gray, shirt: C.red, mouth: "wavy" }) +
-            person("s03s3", { x: 1400, y: 680, s: 1.1, coat: true, glasses: true, hair: "curly", hairColor: C.ink, shirt: C.green, mouth: "o" }) +
-            P.question("s03-g-q1", 520, 230, 0.7) + P.question("s03-g-q2", 960, 210, 0.8, C.red) + P.question("s03-g-q3", 1400, 230, 0.7));
+            BG.store() +
+            W("s03-g-wall", Array.from({ length: 6 }, (_, i) => P.shelf(null, i * 700, 170, 680, 600, 4, 80 + i)).join("") +
+              W(null, rect(4200, 160, 700, 620, "#DDEFF7", 10, 8) + Array.from({ length: 6 }, (_, k) => P.product(null, 4290 + k * 105, 520, 1.0, "milk")).join("") +
+                text(4550, 220, "DAIRY", 70), "")) +
+            person("s03r", { x: 520, y: 700, s: 1.15, mouth: "smile" }) +
+            P.cart(null, 820, 900, 0.8) +
+            W("s03-g-ex", P.exclaim(null, 0, 0, 0.5, C.red), at(860, 360)) +
+            W("s03-g-steps", rect(-170, -50, 340, 100, C.white, 20, 6) + `<g id="s03-g-cnt"></g>`, at(1700, 110)));
 
-          // h — London, 1998
+          // h — decompression zone
           S.add("h",
-            BG.outdoor({ sky: "#C7DDE8", ground: "#9AA79A", hy: 820 }) +
-            P.cloud(null, 400, 200, 1.1, "#EEF3F6") + P.cloud(null, 1450, 160, 0.9, "#EEF3F6") +
-            W("s03-h-ben", P.big_ben(null, 0, 0, 1.6), at(560, 700)) +
-            Array.from({ length: 6 }, (_, i) => rect(900 + i * 170, 560 - (i % 3) * 60, 140, 300 + (i % 3) * 60, ["#D8CBB5", "#C9B79C", "#E2D6C2"][i % 3], 6, 7)).join("") +
-            W("s03-h-tag", rect(1110, 140, 560, 160, C.white, 24, 8) + text(1390, 222, "LONDON, 1998", 76)));
+            BG.store({ wall: "#F4F1EA" }) +
+            rect(-200, 820, 900, 460, "rgba(246,199,68,.35)", 0, 0) +
+            path("M700,820 L700,1100", "none", 8, C.orange, `stroke-dasharray="20 14"`) +
+            rect(40, 260, 280, 560, "#BFE3F1", 6, 8) + line(180, 260, 180, 820, 7) + text(180, 220, "DOOR", 44) +
+            person("s03d", { x: 470, y: 690, s: 1.1, mouth: "flat" }) +
+            P.shelf(null, 960, 180, 860, 600, 4, 91) +
+            lbl("s03-h-tag", 1300, 930, 760, "THE DECOMPRESSION ZONE", C.yellow, C.ink, 56));
 
-          // i — Blakemore + brain scanner
+          // i — beautiful entrance: fruit, flowers, bread
           S.add("i",
-            BG.lab({ wall: "#E3EEF2" }) +
-            W("s03-i-mri", P.mri(null, 0, 0, 1.15), at(1250, 560)) +
-            person("s03b", { x: 480, y: 660, s: 1.35, coat: true, hair: "ponytail", hairColor: "#6B3A1E", shirt: C.purple, mouth: "smile" }) +
-            W("s03-i-tag", rect(150, 890, 700, 110, C.white, 20, 7) + text(500, 945, "SARAH-JAYNE BLAKEMORE", 54)) +
-            W("s03-i-lbl", rect(1050, 110, 520, 100, C.yellow, 20, 7) + text(1310, 160, "BRAIN SCANNER", 60)));
-
-          // j — palm + soft tickling device
-          S.add("j",
-            BG.flat("#E6E0F5") +
-            P.palm("s03-j-palm", 760, 560, 1.4, "#FFE9D6", C.gray) +
-            W("s03-j-stick", P.foamStick(null, 0, 0, 1.2, 35), at(980, 520)) +
-            g("s03-j-sw", path("M1040,330 q30,-20 60,0 M1060,700 q30,-20 60,0", "none", 6)),
-            `<div class="ttl" style="top:60px;font-size:70px;text-align:right;padding-right:120px">soft tickling device</div>`);
-
-          // k — who moves it?
-          const panel = (x, label, col, id) =>
-            g(id, rect(x - 400, 180, 800, 760, C.white, 30, 8) + P.palm(null, x - 120, 690, 0.8, "#FFE9D6", C.gray) +
-              W(`${id}-st`, P.foamStick(null, 0, 0, 0.75, 35) + rect(70, 140, 120, 90, col, 30, 7), at(x + 20, 560)) +
-              text(x, 250, label, 56));
-          S.add("k",
-            BG.paper() + panel(500, "EXPERIMENTER MOVES IT", C.white, "s03-k-p1") + panel(1420, "VOLUNTEER MOVES IT", C.yellow, "s03-k-p2") +
-            W("s03-k-hl", rect(80, 160, 840, 800, "none", 36, 14, C.orange)));
-
-          // l — brain monitor: touch areas light up / stay quiet
-          S.add("l",
-            BG.lab({ wall: "#D7E6EC" }) +
-            P.monitor("s03-l-mon", 960, 520, 1.9, P.brainSide("s03-l-br", 0, 0, 0.55)) +
-            W("s03-l-tagA", rect(1340, 840, 520, 100, C.red, 20, 7) + text(1600, 890, "SOMEONE ELSE", 56, C.white)) +
-            W("s03-l-tagB", rect(1340, 840, 520, 100, C.gray, 20, 7) + text(1600, 890, "YOURSELF", 56, C.white)) +
-            W("s03-l-lbl", rect(90, 400, 360, 90, C.white, 18, 6) + text(270, 446, "TOUCH AREAS", 52) + P.arrow(null, 450, 450, 880, 470, 7)));
-
-          // m — brain not listening
-          S.add("m",
-            BG.flat("#FCE9B8") +
-            P.brain("s03-mb", 760, 560, 1.2, { face: true }) +
-            g("s03-m-muffs", path("M560,540 Q760,180 960,540", "none", 18, C.ink) + circ(560, 560, 70, C.red, 8) + circ(960, 560, 70, C.red, 8)) +
-            W("s03-m-hand", P.hand(null, 0, 0, 0.9, 180), at(1560, 760)) +
-            P.bubble("s03-m-b", 1460, 380, 420, 150, text(0, 4, "hellooo?", 70), "right"));
-
-          // n — the cerebellum
-          S.add("n",
-            BG.paper() +
-            P.brainSide("s03-n-br", 900, 520, 2.0) +
-            W("s03-n-ring", ell(1150, 720, 260, 170, "none", 12, C.orange)) +
-            W("s03-n-lbl", P.arrow(null, 1500, 300, 1320, 600, 8, C.ink, 60) + text(1560, 250, "CEREBELLUM", 80)) +
-            W("s03-n-sub", text(1560, 330, "(latin for \"little brain\")", 44, "#6b665d")));
-
-          // p1/p2/p3 — walk, type, catch
-          S.add("p1", BG.outdoor() + P.cloud(null, 500, 200) + P.cloud(null, 1500, 240, 0.8) +
-            P.plant(null, 300, 760, 1.4) + person("s03w1", { x: 300, y: 680, s: 1.2 }) +
-            text(960, 120, "WALK", 110));
-          S.add("p2", BG.room({ wall: "#DCEAF6" }) +
-            person("s03w2", { x: 960, y: 620, s: 1.25, mouth: "smile" }) + P.table(null, 960, 690, 900) + W("s03-p2-lap", P.laptop(null, 0, 0, 1.1), at(960, 690)) +
-            text(960, 120, "TYPE", 110));
-          S.add("p3", BG.outdoor({ sky: "#BFE3F1" }) + person("s03w3", { x: 1200, y: 690, s: 1.25, mouth: "grin" }) +
-            W("s03-p3-ball", P.ball(null, 0, 0, 1.2), at(200, 700)) + text(960, 120, "CATCH", 110));
-
-          // q — something sneaky
-          S.add("q",
-            BG.flat("#1F2440") +
-            W("s03-q-spot", ell(960, 960, 520, 90, "#3A4270", 0) + path("M760,-100 L1160,-100 L1480,960 L440,960 Z", "rgba(255,240,180,.18)", 0)) +
-            W("s03-q-cb", P.brain("s03-qb", 0, 0, 0.9, { face: true, col: "#E78F9F" }) + P.hat(null, 0, -150, 1.5), at(960, 680)) +
-            g("s03-q-steps", text(560, 900, "tip", 50, "#9aa3d6") + text(700, 930, "toe", 50, "#9aa3d6")));
-
-          // r — predicting the future
-          S.add("r",
-            BG.flat("#2B2552") +
-            Array.from({ length: 30 }, (_, i) => { const r = R.rng(i + 90); return circ(r() * 1920, r() * 1080, 2 + r() * 3, "#FFF3C4", 0); }).join("") +
-            P.crystal("s03-r-ball", 960, 560, 1.5) +
-            W("s03-r-cb", P.brain("s03-rb", 0, 0, 0.5, { face: true, col: "#E78F9F" }), at(960, 550)) +
-            g("s03-r-st", P.star(null, 620, 300, 0.8) + P.star(null, 1320, 280, 1) + P.star(null, 1400, 820, 0.7) + P.star(null, 500, 780, 0.6)),
-            `<div class="ttl" id="s03-r-t" style="top:880px;font-size:110px;color:#FBF8F1">predicting the future</div>`);
+            BG.store({ wall: "#FFF4E2", floor: "#E2CFAE" }) +
+            rect(80, 620, 760, 200, "#B98A55", 12, 8) +
+            Array.from({ length: 9 }, (_, i) => P.apple(null, 150 + i * 80, 640, 0.6, i % 3 === 1 ? C.green : C.red)).join("") +
+            P.banana(null, 300, 590, 0.9) + P.banana(null, 600, 585, 0.8) +
+            P.flowers("s03-i-fl", 980, 820, 1.5) +
+            P.bread(null, 1250, 640, 0.9) + P.bread(null, 1420, 650, 0.8) + rect(1150, 640, 380, 180, "#C08A55", 10, 8) +
+            W("s03-i-smell", path("M1260,520 q-20,-40 0,-80 t0,-80 M1340,520 q-20,-40 0,-80 t0,-80 M1420,520 q-20,-40 0,-80 t0,-80", "none", 9, "#C9A06A")) +
+            person("s03i", { x: 1700, y: 680, s: 1.15, mouth: "smile", flip: -1 }) +
+            W("s03-i-mood", P.meter("s03-i-mm", 0, 0, 300, "MOOD", C.green), at(1830, 900)));
 
           S.mount();
+          // step counter text layers
+          document.getElementById("s03-g-cnt").innerHTML = ["0", "250", "600", "1,100", "2,000+"].map((n, i) => `<g id="s03-g-c${i}" opacity="0">${text(0, 6, n + " items", 48)}</g>`).join("");
+
           const tl = gsap.timeline({ paused: true });
-          const t = {
-            a: 0, b: q("L10", "A team"), c: q("L11"), d: q("L11a"), e: q("L11a", "Gargalesis"), f: q("L11b"),
-            g: q("L12"), h: q("L12", "Not until"), i: q("L12", "took the question"), j: q("L13"), k: q("L14"),
-            l: q("L15"), m: q("L17"), n: q("L18"), p1: q("L19", "It's the reason"), p2: q("L19", "type"), p3: q("L19", "catch"),
-            q: q("L20"), r: q("L21"),
-          };
-          t.n0 = q("L18");
-          R.shots(tl, [["#s03-a", 0], ["#s03-b", t.b, "whipL"], ["#s03-c", t.c, "pop"], ["#s03-d", t.d, "up"], ["#s03-e", t.e, "whipL"],
-            ["#s03-f", t.f, "pop"], ["#s03-g", t.g, "whipL"], ["#s03-h", t.h, "fade"], ["#s03-i", t.i, "whipL"], ["#s03-j", t.j],
-            ["#s03-k", t.k, "pop"], ["#s03-l", t.l, "whipL"], ["#s03-m", t.m, "pop"], ["#s03-n", t.n, "whipL"],
-            ["#s03-p1", q("L19")], ["#s03-p2", t.p2], ["#s03-p3", t.p3], ["#s03-q", t.q, "fade"], ["#s03-r", t.r, "pop"]], DUR);
+          const t = { b: q("L10", "an Oklahoma"), c: q("L11"), d: q("L12"), e: q("L13"), f: q("L14"), gg: q("L15", "But it also"), h: q("L16"), i: q("L17") };
+          R.shots(tl, [["#s03-a", 0], ["#s03-b", t.b, "whipL"], ["#s03-c", t.c, "pop"], ["#s03-d", t.d, "whipL"], ["#s03-e", t.e, "pop"],
+            ["#s03-f", t.f, "fade"], ["#s03-g", t.gg, "whipL"], ["#s03-h", t.h, "whipL"], ["#s03-i", t.i, "fade"]], DUR);
           R.boil(tl, "#s03-cam .boil", "s03", 0, DUR);
 
-          // a — rewind
-          const yrs = ["2026", "2010", "1995", "1983", "1971"];
-          sfx("rewind", 0.1);
-          yrs.forEach((y, i) => {
-            const tt = 0.15 + i * 0.32;
+          // a
+          sfx("rewind", 0.05);
+          [0, 1, 2, 3].forEach((i) => {
+            const tt = 0.15 + i * 0.35;
             tl.fromTo(`#s03-a-y${i}`, { y: -40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.15 }, tt);
-            if (i < yrs.length - 1) tl.to(`#s03-a-y${i}`, { opacity: 0, duration: 0.05 }, tt + 0.3);
+            if (i < 3) tl.to(`#s03-a-y${i}`, { opacity: 0, duration: 0.05 }, tt + 0.32);
           });
-          sfx("stamp", 0.15 + 4 * 0.32 + 0.05);
-          R.punch(tl, "#s03-a-cal", 0.15 + 4 * 0.32, 1.08, 0.2);
+          sfx("stamp", 0.15 + 3 * 0.35 + 0.05);
           tl.to("#s03-a-clk-min", { rotation: -1440, svgOrigin: "0 0", duration: 1.6, ease: "power2.out" }, 0);
-          tl.to("#s03-a-clk-hr", { rotation: -240, svgOrigin: "0 0", duration: 1.6, ease: "power2.out" }, 0);
           R.slideIn(tl, "#s03-a-rw", 0.05, -200, 0, 0.4);
           R.push(tl, "#s03-a", 0, t.b, 1, 1.06);
 
-          // b — the tickle lab
-          R.idle(tl, "s03w", t.b, t.c, 4);
-          R.pose(tl, "s03w", { armR: 60, foreR: 20 }, t.b, 0.4);
-          R.slideIn(tl, "#s03-b-foot", t.b + 0.3, 200, 0, 0.5); sfx("whoosh", t.b + 0.3, 0.6);
-          const tk = q("L10", "tickled");
-          for (let i = 0; i < 16; i++) tl.to("#s03-b-feather", { y: i % 2 ? 40 : -20, rotation: i % 2 ? 8 : -8, duration: 0.14, ease: "sine.inOut" }, tk + i * 0.15);
-          R.wiggle(tl, "#s03-b-foot", tk + 0.3, 2.0, 5, 0.08);
-          sfx("tickle", tk);
-          gsap.set(["#s03-b-tag", "#s03-b-ha"], { opacity: 0 });
-          R.pop(tl, "#s03-b-tag", q("L10", "Lawrence")); sfx("pop", q("L10", "Lawrence"), 0.5);
-          R.pop(tl, "#s03-b-ha", q("L10", "confirmed")); sfx("boing", q("L10", "confirmed"), 0.6);
-          R.expr(tl, "s03w", { mouth: "grin", brows: "up" }, q("L10", "confirmed"));
-          R.push(tl, "#s03-b", t.b, t.c - t.b, 1, 1.08, 0, 30);
+          // b
+          R.idle(tl, "s03g", t.b, t.c, 11);
+          R.pose(tl, "s03g", { armR: 80, foreR: 10 }, t.b + 0.3, 0.3);
+          tl.fromTo("#s03-b-cart", { x: 600, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "back.out(1.3)" }, q("L10", "introduced") - 0.3);
+          sfx("sparkle", q("L10", "introduced"), 0.5);
+          gsap.set("#s03-b-tag", { opacity: 0 });
+          R.pop(tl, "#s03-b-tag", q("L10", "Sylvan")); sfx("pop", q("L10", "Sylvan"), 0.5);
+          R.push(tl, "#s03-b", t.b, t.c - t.b, 1, 1.06);
 
-          // c — chart
-          tl.fromTo("#s03-c-b1", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.8, ease: "back.out(1.3)" }, t.c + 0.2);
-          tl.fromTo("#s03-c-b2", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.8, ease: "back.out(1.3)" }, q("L11", "yourself") - 0.3);
-          sfx("up", t.c + 0.2, 0.6); sfx("down", q("L11", "yourself") - 0.3, 0.6);
+          // c
+          gsap.set(["#s03-c-t1", "#s03-c-b2"], { opacity: 0 });
+          R.pop(tl, "#s03-c-t1", q("L11", "baby carriage") - 0.3); sfx("pop", q("L11", "baby carriage") - 0.3, 0.5);
+          R.flutter(tl, "s03w", "head", 0, q("L11", "Women"), 1.2, 10, 0.2);
+          R.pose(tl, "s03m", { armL: 30, foreL: -120, armR: 30, foreR: -120 }, q("L11", "Men") - 0.2, 0.3);
+          R.pop(tl, "#s03-c-b2", q("L11", "unmanly") - 0.2); sfx("buzz", q("L11", "unmanly"), 0.5);
+          R.expr(tl, "s03m", { brows: "angry" }, q("L11", "Men"));
           R.push(tl, "#s03-c", t.c, t.d - t.c, 1, 1.05);
 
-          // d — knismesis
-          R.words(tl, "#s03-d-t", t.d + 0.2, 0.1); sfx("pop", t.d + 0.2, 0.5);
-          R.fadeIn(tl, "#s03-d-s", q("L11a", "Knismesis") + 0.6);
-          tl.fromTo("#s03-d-fe", { x: -300 }, { x: 600, duration: 3.2, ease: "sine.inOut", yoyo: true, repeat: 1 }, t.d + 0.4);
-          R.wiggle(tl, "#s03-d-fe", t.d + 0.4, 6.0, 10, 0.15);
-          gsap.set("#s03-d-sq", { opacity: 0 });
-          R.pop(tl, "#s03-d-sq", q("L11a", "itchy")); sfx("tickle", q("L11a", "light"), 0.4);
-          R.push(tl, "#s03-d", t.d, t.e - t.d, 1, 1.06);
+          // d — paid shoppers circling, real customer joins
+          gsap.set("#s03-d-tag", { opacity: 0 });
+          tl.fromTo("#s03-d-p1", { x: -700 }, { x: 300, duration: t.e - t.d, ease: "none" }, t.d);
+          tl.fromTo("#s03-d-p2", { x: -700 }, { x: 300, duration: t.e - t.d, ease: "none" }, t.d);
+          R.walk(tl, "s03p1", t.d, t.e - t.d - 0.1, 0.3, 20); R.walk(tl, "s03p2", t.d + 0.15, t.e - t.d - 0.3, 0.3, 20);
+          R.pop(tl, "#s03-d-tag", q("L12", "pretend") - 0.2); sfx("pop", q("L12", "pretend") - 0.2, 0.5);
+          const cp = q("L12", "copying");
+          R.expr(tl, "s03p3", { mouth: "smile", look: [-12, 0] }, cp - 0.6);
+          tl.to("#s03-d-real", { x: -260, duration: 1.4, ease: "power1.inOut" }, cp - 0.3);
+          R.walk(tl, "s03p3", cp - 0.3, 1.4, 0.3, 20);
+          sfx("ding", cp, 0.5);
+          R.push(tl, "#s03-d", t.d, t.e - t.d, 1, 1.05);
 
-          // e — gargalesis
-          R.words(tl, "#s03-e-t", t.e + 0.1, 0.1); sfx("impact", t.e + 0.1, 0.5);
-          R.pose(tl, "s03f", { armL: 30, foreL: 60, armR: 85, foreR: 10 }, t.e, 0.2);
-          for (let i = 0; i < 16; i++) R.pose(tl, "s03f", { armR: i % 2 ? 78 : 92, foreR: i % 2 ? 0 : 25 }, t.e + 0.3 + i * 0.16, 0.14);
-          R.laugh(tl, "s03r", t.e + 0.3, t.f - t.e - 0.5, 1.2);
-          for (let i = 0; i < Math.floor((t.f - t.e - 0.4) / 0.22); i++)
-            R.pose(tl, "s03r", { armL: 140 + (i % 2) * 30, armR: 130 - (i % 2) * 30, foreL: 30, foreR: -30 }, t.e + 0.3 + i * 0.22, 0.2);
-          tl.fromTo("#s03-e-ha text", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(3)", stagger: 0.3 }, t.e + 0.5);
-          sfx("tickle", t.e + 0.3); sfx("boing", t.e + 0.5, 0.6);
-          R.shake(tl, "#s03-e-art", q("L11a", "howl"), 0.5, 14);
-          R.push(tl, "#s03-e", t.e, t.f - t.e, 1.02, 1.12);
+          // e — bigger basket
+          R.words(tl, "#s03-e-t", t.e + 0.2, 0.08);
+          gsap.set(["#s03-e-arrow", "#s03-e-cart"], { opacity: 0 });
+          R.pop(tl, "#s03-e-arrow", q("L13", "hands are free") - 0.6);
+          R.pop(tl, "#s03-e-cart", q("L13", "hands are free") - 0.3); sfx("whoosh", q("L13", "hands are free") - 0.3, 0.5);
+          for (let i = 0; i < 5; i++) { gsap.set(`#s03-e-i${i}`, { opacity: 0 }); tl.fromTo(`#s03-e-i${i}`, { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "bounce.out" }, q("L13", "buy more") - 0.8 + i * 0.18); sfx("pop", q("L13", "buy more") - 0.8 + i * 0.18, 0.35); }
+          R.push(tl, "#s03-e", t.e, t.f - t.e, 1, 1.05);
 
-          // f — self = nope
-          R.pose(tl, "s03r2", { armL: 50, foreL: -110, armR: 50, foreR: -110 }, t.f, 0.3);
-          R.flutter(tl, "s03r2", "foreL", -110, t.f + 0.4, 1.4, 12, 0.09);
-          R.flutter(tl, "s03r2", "foreR", -110, t.f + 0.4, 1.4, 12, 0.09);
-          R.expr(tl, "s03r2", { lids: 0.55, brows: "sly" }, t.f + 0.2);
-          gsap.set(["#s03-f-b", "#s03-f-tag"], { opacity: 0 });
-          R.pop(tl, "#s03-f-b", t.f + 1.2); sfx("pop", t.f + 1.2, 0.5);
-          R.pop(tl, "#s03-f-tag", q("L11b", "impossible")); sfx("buzz", q("L11b", "impossible"), 0.5);
-          R.push(tl, "#s03-f", t.f, t.g - t.f, 1, 1.08);
+          // f — floor plan
+          R.words(tl, "#s03-f-t", t.f + 0.2, 0.07);
+          tl.fromTo("#s03-f-back", { opacity: 0 }, { opacity: 1, duration: 0.4 }, q("L14", "Milk") - 0.2);
+          tl.fromTo("#s03-f-back > *", { scale: 0.6, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.35, stagger: 0.12, ease: "back.out(2)" }, q("L14", "Milk"));
+          sfx("ding", q("L14", "back of the store"), 0.5);
+          R.push(tl, "#s03-f", t.f, t.gg - t.f, 1, 1.06);
 
-          // g — nobody could explain
-          ["s03s1", "s03s2", "s03s3"].forEach((id, i) => {
-            R.idle(tl, id, t.g, t.h, 10 + i);
-            R.pose(tl, id, { armL: 40, foreL: 80, armR: 40, foreR: 80 }, t.g + 0.2 + i * 0.1, 0.3);
-          });
-          gsap.set(["#s03-g-q1", "#s03-g-q2", "#s03-g-q3"], { opacity: 0 });
-          [1, 2, 3].forEach((k, i) => { R.pop(tl, `#s03-g-q${k}`, t.g + 0.5 + i * 0.25); sfx("pop", t.g + 0.5 + i * 0.25, 0.4); });
-          R.push(tl, "#s03-g", t.g, t.h - t.g, 1, 1.08);
+          // g — the long walk
+          const gd = t.h - t.gg;
+          tl.fromTo("#s03-g-wall", { x: 0 }, { x: -3700, duration: gd - 0.6, ease: "sine.inOut" }, t.gg);
+          R.walk(tl, "s03r", t.gg, gd - 0.5, 0.3, 24);
+          gsap.set("#s03-g-ex", { opacity: 0 });
+          for (let i = 0; i < 4; i++) { tl.fromTo("#s03-g-ex", { opacity: 0, scale: 0.4, transformOrigin: "50% 100%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(3)" }, t.gg + 0.8 + i * 1.6); tl.to("#s03-g-ex", { opacity: 0, duration: 0.2 }, t.gg + 1.6 + i * 1.6); sfx("blip", t.gg + 0.8 + i * 1.6, 0.4); R.expr(tl, "s03r", { look: [i % 2 ? 10 : -6, -10] }, t.gg + 0.8 + i * 1.6); }
+          [0, 1, 2, 3, 4].forEach((i) => { const tt = t.gg + 0.3 + i * (gd - 1.0) / 5; tl.set(`#s03-g-c${i}`, { opacity: 1 }, tt); if (i < 4) tl.set(`#s03-g-c${i}`, { opacity: 0 }, tt + (gd - 1.0) / 5); });
+          R.expr(tl, "s03r", { mouth: "grin", brows: "up", look: [10, 0] }, t.h - 0.8);
 
-          // h — London 1998
-          sfx("whoosh_big", t.h - 0.1, 0.7);
-          R.slideIn(tl, "#s03-h-ben", t.h, 0, 500, 0.6, "back.out(1.2)");
+          // h — decompression zone
+          R.walk(tl, "s03d", t.h, 3.0, 0.32, 22);
+          tl.fromTo("#s03d", { x: -300 }, { x: 0, duration: 3.0, ease: "none" }, t.h);
+          R.expr(tl, "s03d", { lids: 0.5, look: [0, 4] }, t.h);
           gsap.set("#s03-h-tag", { opacity: 0 });
-          R.pop(tl, "#s03-h-tag", q("L12", "1998")); sfx("stamp", q("L12", "1998"));
-          R.push(tl, "#s03-h", t.h, t.i - t.h, 1, 1.1, 0, 0, 0, 40);
+          R.pop(tl, "#s03-h-tag", q("L16", "decompression") - 0.2); sfx("stamp", q("L16", "decompression") - 0.1, 0.7);
+          R.push(tl, "#s03-h", t.h, t.i - t.h, 1, 1.06);
 
-          // i — Blakemore + scanner
-          R.idle(tl, "s03b", t.i, t.j, 21);
-          R.slideIn(tl, "#s03-i-mri", t.i, 700, 0, 0.6, "power3.out"); sfx("whoosh", t.i, 0.6);
-          R.pose(tl, "s03b", { armR: 75, foreR: 10 }, t.i + 0.4, 0.4);
-          R.talk(tl, "s03b", t.i + 0.5, 1.2);
-          gsap.set(["#s03-i-tag", "#s03-i-lbl"], { opacity: 0 });
-          R.pop(tl, "#s03-i-tag", q("L12", "Sarah") < t.i ? t.i + 0.3 : q("L12", "Sarah"));
-          R.pop(tl, "#s03-i-lbl", q("L12", "brain scanner")); sfx("ding", q("L12", "brain scanner"), 0.5);
-          R.push(tl, "#s03-i", t.i, t.j - t.i, 1, 1.06);
-
-          // j — foam brushing palm
-          tl.fromTo("#s03-j-stick", { x: 500, y: 300 }, { x: 0, y: 0, duration: 0.6, ease: "power3.out" }, t.j + 0.1);
-          for (let i = 0; i < 10; i++) tl.to("#s03-j-stick", { x: i % 2 ? -120 : 40, y: i % 2 ? -60 : 40, duration: 0.42, ease: "sine.inOut" }, t.j + 0.8 + i * 0.44);
-          sfx("swish", t.j + 0.8, 0.3); sfx("swish", t.j + 1.7, 0.3); sfx("swish", t.j + 2.6, 0.3);
-          R.push(tl, "#s03-j", t.j, t.k - t.j, 1.0, 1.1, 0, -60, 0, 20);
-
-          // k — who moves it
-          const k1 = q("L14", "experimenter"), k2 = q("L14", "Sometimes the volunteers");
-          tl.fromTo("#s03-k-hl", { x: 0, opacity: 0 }, { opacity: 1, duration: 0.3 }, k1 - 0.2);
-          tl.to("#s03-k-hl", { x: 920, duration: 0.45, ease: "power3.inOut" }, k2); sfx("swish", k2, 0.5);
-          for (let i = 0; i < 6; i++) tl.to("#s03-k-p1-st", { x: i % 2 ? -50 : 20, y: i % 2 ? -30 : 20, duration: 0.3, ease: "sine.inOut" }, k1 + i * 0.32);
-          for (let i = 0; i < 6; i++) tl.to("#s03-k-p2-st", { x: i % 2 ? -50 : 20, y: i % 2 ? -30 : 20, duration: 0.3, ease: "sine.inOut" }, k2 + 0.2 + i * 0.32);
-          R.push(tl, "#s03-k", t.k, t.l - t.k, 1, 1.05);
-
-          // l — brain lights / quiet
-          gsap.set(["#s03-l-tagA", "#s03-l-tagB", "#s03-l-lbl"], { opacity: 0 });
-          const l1 = q("L15", "lit up") - 0.4;
-          R.pop(tl, "#s03-l-tagA", t.l + 0.3); sfx("pop", t.l + 0.3, 0.5);
-          R.fadeIn(tl, "#s03-l-lbl", q("L15", "parts of the brain"));
-          tl.to("#s03-l-br-strip path", { stroke: "#FF8A2A", duration: 0.25 }, l1);
-          tl.fromTo("#s03-l-br-strip", { scale: 1 }, { scale: 1.04, transformOrigin: "50% 50%", duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, l1);
-          sfx("sparkle", l1, 0.6); sfx("up", l1, 0.5);
-          tl.to("#s03-l-tagA", { opacity: 0, duration: 0.2 }, q("L16"));
-          R.pop(tl, "#s03-l-tagB", q("L16", "volunteers")); sfx("pop", q("L16", "volunteers"), 0.5);
-          tl.to("#s03-l-br-strip path", { stroke: "#C7B9BC", duration: 0.6 }, q("L16", "much quieter") - 0.3);
-          sfx("down", q("L16", "much quieter") - 0.3, 0.7);
-          R.push(tl, "#s03-l", t.l, t.m - t.l, 1, 1.12, 0, 0, 0, 20);
-
-          // m — brain with earmuffs
-          gsap.set(["#s03-m-muffs", "#s03-m-b"], { opacity: 0 });
-          tl.fromTo("#s03-m-muffs", { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "bounce.out" }, t.m + 0.2); sfx("thud", t.m + 0.5, 0.6);
-          tl.set("#s03-mb-m-smile", { opacity: 0 }, t.m).set("#s03-mb-m-flat", { opacity: 1 }, t.m);
-          tl.to("#s03-mb-pupils", { x: -14, y: -6, duration: 0.2 }, t.m + 0.4);
-          R.slideIn(tl, "#s03-m-hand", t.m + 0.6, 400, 0, 0.4);
-          R.wiggle(tl, "#s03-m-hand", t.m + 1.0, 2.0, 14, 0.12);
-          R.pop(tl, "#s03-m-b", q("L17", "barely")); sfx("pop", q("L17", "barely"), 0.5);
-          R.push(tl, "#s03-m", t.m, t.n - t.m, 1, 1.08);
-
-          // n — cerebellum
-          gsap.set(["#s03-n-ring", "#s03-n-lbl", "#s03-n-sub"], { opacity: 0 });
-          const cb = q("L18", "back of the brain");
-          tl.to("#s03-n-br-cereb path:first-child", { fill: "#FF9F57", duration: 0.3 }, cb);
-          tl.fromTo("#s03-n-br-cereb", { scale: 1 }, { scale: 1.08, transformOrigin: "50% 50%", duration: 0.35, yoyo: true, repeat: 7, ease: "sine.inOut" }, cb);
-          R.pop(tl, "#s03-n-ring", cb); sfx("ding", cb, 0.5);
-          R.draw(tl, "#s03-n-ring ellipse", cb, 0.5);
-          R.pop(tl, "#s03-n-lbl", q("L18", "cerebellum") - 0.2); sfx("pop", q("L18", "cerebellum") - 0.2);
-          R.fadeIn(tl, "#s03-n-sub", q("L18", "cerebellum") + 0.6);
-          R.push(tl, "#s03-n", t.n, q("L19") - 2.7 - t.n, 1, 1.08, 0, -40, 0, -10);
-          tl.to("#s03-n", { scale: 1.6, x: -400, y: -250, duration: 2.5, ease: "power2.inOut" }, q("L19") - 2.6);
-
-          // p1/p2/p3
-          const p1 = q("L19");
-          tl.fromTo("#s03w1", { x: 0 }, { x: 1300, duration: t.p2 - p1, ease: "none" }, p1);
-          R.walk(tl, "s03w1", p1, t.p2 - p1, 0.3, 26);
-          R.pose(tl, "s03w2", { armL: 30, foreL: 70, armR: 30, foreR: 70 }, t.p2, 0.2);
-          for (let i = 0; i < 12; i++) R.pose(tl, "s03w2", { foreL: 70 + (i % 2) * 14, foreR: 84 - (i % 2) * 14 }, t.p2 + 0.2 + i * 0.12, 0.1);
-          sfx("typing", t.p2 + 0.1, 0.7);
-          R.expr(tl, "s03w2", { look: [0, 8] }, t.p2);
-          const bt = t.p3 + 0.15;
-          tl.fromTo("#s03-p3-ball", { x: 0, y: 0 }, { x: 860, duration: 1.0, ease: "none" }, bt);
-          tl.fromTo("#s03-p3-ball", { y: 0 }, { y: -380, duration: 0.5, ease: "power2.out", yoyo: true, repeat: 1 }, bt);
-          tl.to("#s03-p3-ball", { y: -220, duration: 0.2 }, bt + 1.0);
-          R.pose(tl, "s03w3", { armL: 110, foreL: 20 }, bt + 0.5, 0.4);
-          R.expr(tl, "s03w3", { look: [-10, -4] }, bt);
-          sfx("whoosh", bt, 0.5); sfx("thud", bt + 1.0, 0.6);
-
-          // q — sneaky
-          tl.fromTo("#s03-q-cb", { x: -700 }, { x: 0, duration: t.r - t.q - 0.8, ease: "steps(10)" }, t.q + 0.2);
-          for (let i = 0; i < 6; i++) tl.to("#s03-qb-pupils", { x: i % 2 ? 16 : -16, duration: 0.15 }, t.q + 0.5 + i * 0.55);
-          tl.set("#s03-qb-m-smile", { opacity: 0 }, t.q).set("#s03-qb-m-flat", { opacity: 1 }, t.q);
-          gsap.set("#s03-q-steps", { opacity: 0 });
-          R.fadeIn(tl, "#s03-q-steps", t.q + 0.8);
-          sfx("tick", t.q + 0.4, 0.4); sfx("tick", t.q + 0.8, 0.4); sfx("tick", t.q + 1.2, 0.4); sfx("tick", t.q + 1.6, 0.4);
-          R.push(tl, "#s03-q", t.q, t.r - t.q, 1, 1.08);
-
-          // r — crystal ball
-          sfx("riser", t.r - 2.0, 0.6); sfx("impact", t.r); sfx("sparkle", t.r + 0.1, 0.7);
-          tl.fromTo("#s03-r-ball-glow", { scale: 0.8, opacity: 0.2, transformOrigin: "50% 50%" }, { scale: 1.15, opacity: 0.8, duration: 0.6, yoyo: true, repeat: 3, ease: "sine.inOut" }, t.r);
-          R.float(tl, "#s03-r-cb", t.r, DUR - t.r, 20, 0.8);
-          tl.set("#s03-rb-m-smile", { opacity: 0 }, t.r).set("#s03-rb-m-o", { opacity: 1 }, t.r);
-          R.words(tl, "#s03-r-t", t.r + 0.2, 0.12);
-          tl.fromTo("#s03-r-st", { opacity: 0, scale: 0.5, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" }, t.r + 0.1);
-          R.push(tl, "#s03-r", t.r, DUR - t.r, 1.1, 1.0);
+          // i — the beautiful entrance
+          R.idle(tl, "s03i", t.i, DUR, 13);
+          tl.fromTo("#s03-i-smell path", { opacity: 0, y: 20 }, { opacity: 1, y: -10, duration: 1.2, stagger: 0.3, repeat: 3, yoyo: true }, q("L17", "smell") - 0.4);
+          R.wiggle(tl, "#s03-i-fl", q("L17", "flowers"), 1.0, 4, 0.2);
+          R.expr(tl, "s03i", { mouth: "grin", blush: 1, eyes: "happy" }, q("L17", "good mood") - 0.3);
+          tl.fromTo("#s03-i-mm-fill", { scaleY: 0.15, transformOrigin: "50% 100%" }, { scaleY: 0.95, duration: 1.4, ease: "power2.out" }, q("L17", "good mood") - 0.4);
+          sfx("swell", q("L17", "good mood") - 0.4, 0.5); sfx("sparkle", q("L17", "good mood"), 0.4);
+          R.push(tl, "#s03-i", t.i, DUR - t.i, 1, 1.08, 0, 0, 0, 20);
 
           window.__timelines["s03"] = tl;
         })();

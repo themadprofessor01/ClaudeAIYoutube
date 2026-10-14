@@ -13,163 +13,105 @@
       <div id="s02" data-composition-id="s02" data-width="1920" data-height="1080"></div>
       <script>
         (function () {
-          /*CUES*/ const CUES = {"L06":[0,8.05,"It's one of the strangest little glitches of the human body. Almost everyone can be tickled. And almost no one can tickle themselves."],"L07":[8.5,12.281,"And the answer isn't in your skin. Or your foot. Or your fingers."],"L08":[12.661,19.033,"It's in your brain. And it turns out your brain has been quietly editing your reality, every second of your life."],"L09":[19.633,21.5,"So, why can't you tickle yourself?"]}; const DUR = 22.6; /*ENDCUES*/
+          /*CUES*/ const CUES = {"L06":[0,6.065,"The average American supermarket carries more than thirty thousand different products. Thirty thousand."],"L07":[6.565,12.637,"No brain can carefully think through that many choices. So it doesn't. It switches to autopilot."],"L08":[13.017,18.126,"And supermarkets have spent decades learning exactly how to steer that autopilot."],"L09":[18.726,22.052,"So, how do supermarkets trick your brain into spending more?"]}; const DUR = 23.152; /*ENDCUES*/
           const { C, P, BG, person, text, path, rect, line, circ, ell, g, at } = R;
           const q = R.cue(CUES);
           const S = R.scene("s02");
           const sfx = (n, t, gn) => R.sfx("s02", n, t, gn);
+          const W = (id, inner, tr) => g(null, g(id, inner), tr);
+          const nums = ["5,000", "12,000", "19,000", "26,000", "30,000+"];
 
-          // a — a glitch in the human body
+          // a — thirty thousand products
           S.add("a",
-            BG.flat("#1F2440") +
-            Array.from({ length: 18 }, (_, i) => line(0, 60 * i, 1920, 60 * i, 2, "rgba(255,255,255,.05)")).join("") +
-            g("s02-a-gr", `<g opacity=".55">${person("s02g1", { x: 960, y: 720, s: 1.6, mouth: "O", shirt: "#ff4d6d", hairColor: "#ff4d6d" })}</g>`) +
-            g("s02-a-gb", `<g opacity=".55">${person("s02g2", { x: 960, y: 720, s: 1.6, mouth: "O", shirt: "#3ad6ff", hairColor: "#3ad6ff" })}</g>`) +
-            person("s02r", { x: 960, y: 720, s: 1.6, mouth: "O" }) +
-            g("s02-a-bars", rect(300, 380, 520, 26, "#3ad6ff", 0, 0) + rect(1150, 560, 420, 20, "#ff4d6d", 0, 0) + rect(560, 840, 700, 14, "#F6C744", 0, 0)),
-            `<div class="ttl" id="s02-a-t" style="top:70px;font-size:96px;color:#FBF8F1">A glitch in the human body</div>`);
+            BG.store() +
+            W("s02-a-wall", Array.from({ length: 5 }, (_, i) => P.shelf(null, -200 + i * 1000, 170, 980, 620, 4, i + 3)).join("")) +
+            person("s02r", { x: 960, y: 760, s: 1.0, mouth: "o" }) +
+            P.cart(null, 1180, 940, 0.7) +
+            W("s02-a-n", rect(-360, -90, 720, 180, C.yellow, 30, 9) +
+              nums.map((n, i) => `<g id="s02-a-n${i}" opacity="0">${text(0, 6, n, 120)}</g>`).join(""), at(960, 120)));
 
-          // b — the crowd
-          const crowd = [
-            { shirt: C.yellow, hair: "beanie", hairColor: C.orange }, { shirt: C.teal, hair: "messy", hairColor: C.brown },
-            { shirt: C.purple, hair: "ponytail", hairColor: "#E0A030" }, { shirt: C.red, hair: "curly", hairColor: C.ink },
-            { shirt: C.blue, hair: "side", hairColor: "#5B3A1E" }, { shirt: C.green, hair: "bun", hairColor: C.gray },
-            { shirt: C.orange, hair: "bald" },
-          ];
+          // b — overwhelmed brain → autopilot
           S.add("b",
-            BG.outdoor() + P.cloud("s02-b-cl1", 300, 180, 1) + P.cloud("s02-b-cl2", 1500, 140, 0.8) + P.sun("s02-b-sun", 1760, 150, 0.8) +
-            crowd.map((o, i) => person(`s02c${i}`, { x: 220 + i * 247, y: 700, s: 0.95, mouth: "smile", ...o })).join("") +
-            g("s02-b-feathers", crowd.map((_, i) => P.feather(`s02-b-f${i}`, 220 + i * 247, 300, 0.45, 30)).join("")) +
-            g("s02-b-l1", rect(560, 900, 800, 110, C.white, 24, 7) + text(900, 958, "ALMOST EVERYONE", 70) + P.check(null, 1280, 955, 0.8)) +
-            g("s02-b-l2", rect(460, 900, 1000, 110, "#FFE1DC", 24, 7) + text(890, 958, "CAN TICKLE THEMSELVES", 66, C.red) + P.cross(null, 1380, 955, 0.7)));
+            BG.flat("#EDE6F7") +
+            P.brain("s02-bb", 700, 560, 1.15, { face: true }) +
+            W("s02-b-cap", P.pilotCap(null, 0, 0, 1.6), at(700, 380)) +
+            g("s02-b-q", P.question(null, 380, 260, 0.6) + P.question(null, 1000, 250, 0.7, C.red) + P.question(null, 1060, 760, 0.5)) +
+            W("s02-b-sw", rect(-210, -110, 420, 220, C.white, 30, 8) + text(-100, -150, "MANUAL", 44) + text(110, -150, "AUTOPILOT", 44, C.purple) +
+              rect(-150, -40, 300, 80, C.gray2, 40, 6) + `<g id="s02-b-knob">${circ(-100, 0, 46, C.red, 7)}</g>`, at(1440, 560)));
 
-          // c — not skin, not foot, not fingers
-          const skin = g(null, rect(-130, -60, 260, 160, "#F6C7A8", 14, 7) + path("M-130,-60 Q-90,-80 -50,-60 T30,-60 T130,-60", "none", 7) +
-            rect(-130, 10, 260, 90, "#F2A68A", 0, 0) + line(-130, 10, 130, 10, 4, "rgba(0,0,0,.2)") +
-            path("M-80,-62 l-6,-34 M-20,-60 l4,-36 M50,-62 l-8,-30", "none", 4), "");
+          // c — the store steers the autopilot
+          const route = "M140,840 C400,640 600,940 860,700 S1240,320 1480,520 S1760,760 1820,300";
           S.add("c",
-            BG.paper() +
-            g("s02-c-i1", g(null, skin, at(420, 520, 1.2)) + text(420, 760, "SKIN", 72)) +
-            g("s02-c-i2", P.foot(null, 960, 480, 0.8, -90) + text(960, 760, "FOOT", 72)) +
-            g("s02-c-i3", P.hand(null, 1500, 520, 0.9, -90) + text(1500, 760, "FINGERS", 72)) +
-            P.cross("s02-c-x1", 420, 520, 2.3) + P.cross("s02-c-x2", 960, 500, 2.3) + P.cross("s02-c-x3", 1500, 500, 2.3));
+            BG.flat("#DDF0F7") +
+            Array.from({ length: 4 }, (_, i) => P.shelf(null, 160 + i * 440, 120, 300, 300, 2, 30 + i)).join("") +
+            path(route, "none", 8, C.purple, `id="s02-c-route" stroke-dasharray="18 16"`) +
+            W("s02-c-brain", P.brain(null, 0, 0, 0.35, { face: true }) + P.pilotCap(null, 0, -50, 0.5), at(140, 840)) +
+            W("s02-c-sign", rect(-230, -60, 460, 120, C.red, 20, 7) + text(0, 4, "THIS WAY →", 60, C.white), at(1500, 900)));
 
-          // d — it's in your brain (x-ray head)
+          // d — title card
           S.add("d",
-            BG.flat("#FCE9B8") +
-            person("s02h", { x: 960, y: 1440, s: 3.1, mouth: "smile" }) +
-            g("s02-d-xray", circ(960, 773, 180, "#DFF3FA", 0) + P.brain("s02-d-brain", 960, 790, 0.82, { face: false })) +
-            g("s02-d-sp", P.star(null, 700, 460, 0.8) + P.star(null, 1230, 420, 0.6) + P.star(null, 1260, 980, 0.7)),
-            `<div class="ttl" id="s02-d-t" style="top:70px;font-size:120px">It’s in your brain</div>`);
-
-          // e — the brain is editing reality
-          S.add("e",
-            BG.room({ wall: "#E9E2F5", floor: "#B79AD0" }) +
-            P.table("s02-e-tab", 960, 700, 1100) +
-            P.clock("s02-e-clock", 1600, 250, 0.9) +
-            g("s02-e-doc", rect(980, 360, 420, 330, C.white, 8, 7) + text(1190, 405, "REALITY", 48) +
-              [0, 1, 2, 3, 4, 5].map((i) => line(1020, 460 + i * 38, 1360 - (i % 2) * 60, 460 + i * 38, 5, C.gray)).join("") +
-              `<g id="s02-e-strikes">${[0, 2, 3, 5].map((i) => path(`M1010,${460 + i * 38} L${1370 - (i % 2) * 60},${458 + i * 38}`, "none", 7, C.red)).join("")}</g>`) +
-            g("s02-e-brainwrap", P.brain("s02-eb", 700, 520, 0.9, { face: true })) +
-            g(null, g("s02-e-pen", g(null, rect(-12, -110, 24, 150, C.red, 8, 5) + path("M-12,40 L0,72 L12,40 Z", C.white, 5), "rotate(30)")), at(1000, 420)));
-
-          // f — title card
-          S.add("f",
             BG.paper() +
-            Array.from({ length: 10 }, (_, i) => circ(140 + i * 190, i % 2 ? 980 : 110, 12, C.gray2, 0)).join("") +
-            P.feather("s02-f-fe", 1690, 560, 0.75, 40, C.teal) +
-            g("s02-f-ul", path("M360,760 Q960,720 1560,760", "none", 14, C.orange)),
-            `<div class="ttl" id="s02-f-t1" style="top:300px;font-size:150px">Why can’t you</div>` +
-            `<div class="ttl" id="s02-f-t2" style="top:480px;font-size:190px;color:#E4483B">tickle yourself?</div>` +
-            `<div class="ttl" id="s02-f-bug" style="top:930px;font-size:44px;color:#8a8478">randos in 60s</div>`);
+            Array.from({ length: 10 }, (_, i) => circ(140 + i * 190, i % 2 ? 990 : 100, 12, C.gray2, 0)).join("") +
+            W("s02-d-cart", P.cart(null, 0, 0, 0.9) + P.chips(null, -60, -200, 0.6) + P.candle(null, 40, -190, 0.6) + P.product(null, 110, -180, 0.5, "box", C.blue), at(1600, 940)) +
+            g("s02-d-ul", path("M300,780 Q960,740 1620,780", "none", 14, C.orange)),
+            `<div class="ttl" id="s02-d-t1" style="top:230px;font-size:130px">how supermarkets</div>` +
+            `<div class="ttl" id="s02-d-t2" style="top:390px;font-size:160px;color:#E4483B">trick your brain</div>` +
+            `<div class="ttl" id="s02-d-t3" style="top:600px;font-size:84px">into spending more</div>` +
+            `<div class="ttl" id="s02-d-bug" style="top:960px;font-size:44px;color:#8a8478">randos in 60s</div>`);
 
           S.mount();
           const tl = gsap.timeline({ paused: true });
-          const t = { b: q("L06", "Almost everyone"), c: q("L07"), d: q("L08"), e: q("L08", "And it turns"), f: q("L09") };
-          R.shots(tl, [["#s02-a", 0], ["#s02-b", t.b, "whipL"], ["#s02-c", t.c, "pop"], ["#s02-d", t.d], ["#s02-e", t.e, "whipL"], ["#s02-f", t.f, "pop"]], DUR);
+          const t = { b: q("L07"), c: q("L08"), d: q("L09") };
+          R.shots(tl, [["#s02-a", 0], ["#s02-b", t.b, "pop"], ["#s02-c", t.c, "whipL"], ["#s02-d", t.d, "pop"]], DUR);
           R.boil(tl, "#s02-cam .boil", "s02", 0, DUR);
 
-          // a — glitch
-          R.words(tl, "#s02-a-t", 0.2, 0.09);
-          sfx("glitch", 0.0); sfx("glitch", q("L06", "glitches") - 0.1);
-          for (let i = 0; i < Math.floor(t.b / 0.11); i++) {
-            const r = R.rng(i + 5);
-            const on = (i % 9) < 3 || (i > 20 && i % 7 < 2);
-            tl.set("#s02-a-gr", { x: on ? -18 - r() * 20 : 0, y: on ? r() * 8 : 0 }, i * 0.11);
-            tl.set("#s02-a-gb", { x: on ? 18 + r() * 20 : 0, y: on ? -r() * 8 : 0 }, i * 0.11);
-            tl.set("#s02-a-bars", { opacity: on ? 1 : 0, y: (r() - 0.5) * 300 }, i * 0.11);
-          }
-          R.expr(tl, "s02r", { brows: "worried", look: [-6, 0] }, 0);
-          R.pose(tl, "s02r", { armL: 30, armR: 30, foreL: 30, foreR: 30 }, 0.2, 0.4);
-          R.push(tl, "#s02-a", 0, t.b, 1, 1.08);
-
-          // b — crowd laughs, then can't tickle self
-          crowd.forEach((_, i) => R.idle(tl, `s02c${i}`, t.b, t.c, i + 3));
-          gsap.set(["#s02-b-l1", "#s02-b-l2"], { opacity: 0 });
-          tl.fromTo("#s02-b-feathers", { y: -400 }, { y: 0, duration: 0.6, ease: "back.out(1.2)" }, t.b + 0.1);
-          crowd.forEach((_, i) => R.wiggle(tl, `#s02-b-f${i}`, t.b + 0.7, q("L06", "And almost no") - t.b - 0.9, 18, 0.12));
-          const tLaugh = q("L06", "can be tickled");
-          crowd.forEach((_, i) => R.laugh(tl, `s02c${i}`, tLaugh + i * 0.05, q("L06", "And almost no") - tLaugh - 0.3, 0.7));
-          R.pop(tl, "#s02-b-l1", tLaugh); sfx("tickle", tLaugh); sfx("ding", tLaugh + 0.1, 0.5);
-          const tNo = q("L06", "And almost no");
-          R.fadeOut(tl, "#s02-b-feathers", tNo, 0.2);
-          R.fadeOut(tl, "#s02-b-l1", tNo, 0.15);
-          crowd.forEach((_, i) => {
-            R.expr(tl, `s02c${i}`, { mouth: "flat", brows: "neutral", blush: 0, eyes: "open", lids: 0.55 }, tNo + 0.2);
-            R.pose(tl, `s02c${i}`, { armL: 40, foreL: -120, armR: 40, foreR: -120 }, tNo + 0.1 + i * 0.04, 0.3);
-            R.flutter(tl, `s02c${i}`, "foreL", -120, tNo + 0.5, 1.2, 10, 0.1);
+          // a — endless shelves + counter
+          tl.fromTo("#s02-a-wall", { x: 0 }, { x: -3000, duration: t.b, ease: "power1.in" }, 0);
+          nums.forEach((n, i) => {
+            const tt = 0.3 + i * 0.45;
+            tl.set(`#s02-a-n${i}`, { opacity: 1 }, tt);
+            if (i < nums.length - 1) tl.set(`#s02-a-n${i}`, { opacity: 0 }, tt + 0.45);
+            sfx("tick", tt, 0.5);
           });
-          R.pop(tl, "#s02-b-l2", q("L06", "tickle themselves")); sfx("buzz", q("L06", "tickle themselves"), 0.6);
-          R.push(tl, "#s02-b", t.b, t.c - t.b, 1, 1.07, 0, 0, 0, 20);
+          R.punch(tl, "#s02-a-n", 0.3 + 4 * 0.45, 1.15, 0.3); sfx("impact", 0.3 + 4 * 0.45, 0.6);
+          R.shake(tl, "#s02-a-n", q("L06", "Thirty thousand."), 0.4, 10); sfx("thud", q("L06", "Thirty thousand."), 0.6);
+          R.expr(tl, "s02r", { brows: "worried", look: [-10, -6] }, 0.4);
+          for (let i = 0; i < 6; i++) R.expr(tl, "s02r", { look: [i % 2 ? 12 : -12, -6] }, 0.8 + i * 0.7);
+          R.push(tl, "#s02-a", 0, t.b, 1, 1.06);
 
-          // c — x x x
-          const ci = [q("L07", "skin"), q("L07", "foot"), q("L07", "fingers")];
-          gsap.set(["#s02-c-i1", "#s02-c-i2", "#s02-c-i3", "#s02-c-x1", "#s02-c-x2", "#s02-c-x3"], { opacity: 0 });
-          ci.forEach((tt, i) => {
-            R.pop(tl, `#s02-c-i${i + 1}`, tt - 0.35); sfx("pop", tt - 0.35, 0.6);
-            R.pop(tl, `#s02-c-x${i + 1}`, tt + 0.25, 0.3); sfx("buzz", tt + 0.25, 0.4);
-            tl.to(`#s02-c-i${i + 1}`, { opacity: 0.4, duration: 0.2 }, tt + 0.4);
-          });
-          R.push(tl, "#s02-c", t.c, t.d - t.c, 1, 1.05);
+          // b — overwhelmed, then autopilot
+          gsap.set(["#s02-b-cap"], { opacity: 0 });
+          tl.set("#s02-bb-m-smile", { opacity: 0 }, t.b).set("#s02-bb-m-o", { opacity: 1 }, t.b);
+          R.wiggle(tl, "#s02-bb", t.b + 0.2, q("L07", "So it doesn't") - t.b, 5, 0.08);
+          tl.fromTo("#s02-b-q", { opacity: 0, scale: 0.5, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.4 }, t.b + 0.3);
+          const ap = q("L07", "autopilot");
+          tl.to("#s02-b-knob", { x: 200, duration: 0.25, ease: "back.out(2)" }, ap - 0.2);
+          tl.to("#s02-b-knob circle", { attr: { fill: C.green }, duration: 0.1 }, ap - 0.1);
+          sfx("click", ap - 0.2, 0.9); sfx("swell", ap, 0.4);
+          tl.to("#s02-b-q", { opacity: 0, duration: 0.3 }, ap);
+          tl.fromTo("#s02-b-cap", { y: -400, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "bounce.out" }, ap + 0.1);
+          tl.set("#s02-bb-m-o", { opacity: 0 }, ap + 0.3).set("#s02-bb-m-smile", { opacity: 1 }, ap + 0.3);
+          R.push(tl, "#s02-b", t.b, t.c - t.b, 1, 1.06);
 
-          // d — x-ray reveal
-          gsap.set(["#s02-d-xray", "#s02-d-sp"], { opacity: 0 });
-          R.expr(tl, "s02h", { look: [0, -8], brows: "up" }, t.d);
-          tl.fromTo("#s02-d-xray", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, q("L08", "brain") - 0.2);
-          R.pop(tl, "#s02-d-sp", q("L08", "brain")); sfx("sparkle", q("L08", "brain") - 0.2); sfx("swell", t.d, 0.6);
-          R.words(tl, "#s02-d-t", t.d + 0.1, 0.1);
-          tl.to("#s02-d-brain", { scale: 1.05, transformOrigin: "50% 50%", duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, q("L08", "brain") + 0.4);
-          R.push(tl, "#s02-d", t.d, t.e - t.d, 1, 1.1, 0, 0, 0, 30);
+          // c — steering
+          R.draw(tl, "#s02-c-route", t.c + 0.2, 1.2);
+          const rp = [[140, 840], [500, 760], [860, 700], [1200, 420], [1480, 520], [1700, 640], [1820, 300]];
+          rp.slice(1).forEach(([x, y], i) => tl.to("#s02-c-brain", { x: x - 140, y: y - 840, duration: 0.6, ease: "sine.inOut" }, t.c + 1.2 + i * 0.6));
+          gsap.set("#s02-c-sign", { opacity: 0 });
+          R.pop(tl, "#s02-c-sign", q("L08", "steer") - 0.3); sfx("pop", q("L08", "steer") - 0.3, 0.6);
+          R.wiggle(tl, "#s02-c-sign", q("L08", "steer"), 1.2, 4, 0.15);
+          sfx("whoosh", t.c + 1.2, 0.4);
+          R.push(tl, "#s02-c", t.c, t.d - t.c, 1, 1.06);
 
-          // e — editing reality
-          R.slideIn(tl, "#s02-e-brainwrap", t.e, -500, 0, 0.5);
-          gsap.set("#s02-e-strikes path", { opacity: 0 });
-          tl.set("#s02-eb-m-smile", { opacity: 0 }, t.e).set("#s02-eb-m-o", { opacity: 0 }, t.e).set("#s02-eb-m-flat", { opacity: 1 }, t.e);
-          tl.to("#s02-eb-pupils", { x: 18, y: 4, duration: 0.2 }, t.e + 0.3);
-          const st = q("L08", "quietly editing");
-          ["#s02-e-strikes path"].forEach(() => {});
-          for (let i = 0; i < 4; i++) {
-            const tt = st + i * 0.55;
-            tl.to("#s02-e-pen", { x: -20 + i * 6, y: [0, 76, 114, 190][i], duration: 0.2, ease: "power2.out" }, tt - 0.2);
-            tl.to("#s02-e-pen", { x: 300, duration: 0.35, ease: "power1.inOut" }, tt);
-            tl.set(`#s02-e-strikes path:nth-child(${i + 1})`, { opacity: 1 }, tt);
-            R.draw(tl, `#s02-e-strikes path:nth-child(${i + 1})`, tt, 0.35);
-            sfx("swish", tt, 0.4);
-          }
-          for (let i = 0; i < 12; i++) tl.to("#s02-e-clock-min", { rotation: (i + 1) * 30, svgOrigin: "0 0", duration: 0.1, ease: "back.out(3)" }, q("L08", "every second") + i * 0.4);
-          sfx("tick", q("L08", "every second")); sfx("tick", q("L08", "every second") + 0.4); sfx("tick", q("L08", "every second") + 0.8);
-          R.push(tl, "#s02-e", t.e, t.f - t.e, 1, 1.08, 0, -40);
-
-          // f — title
-          sfx("riser", t.f - 2.0, 0.5);
-          R.words(tl, "#s02-f-t1", t.f, 0.09); sfx("whoosh", t.f);
-          R.words(tl, "#s02-f-t2", q("L09", "tickle"), 0.12, { y: 80, rot: 8 }); sfx("impact", q("L09", "tickle"));
-          R.draw(tl, "#s02-f-ul path", q("L09", "tickle") + 0.4, 0.5);
-          R.fadeIn(tl, "#s02-f-bug", t.f + 0.8);
-          tl.fromTo("#s02-f-fe", { x: 400, y: -300, rotation: 0 }, { x: 0, y: 0, rotation: -10, transformOrigin: "50% 50%", duration: 0.9, ease: "power2.out" }, t.f + 0.3);
-          R.wiggle(tl, "#s02-f-fe", t.f + 1.2, DUR - t.f - 1.2, 12, 0.14);
-          tl.to("#s02-f-t2", { rotation: 1.5, duration: 0.14, yoyo: true, repeat: Math.max(0, Math.floor((DUR - t.f - 1.4) / 0.14) - 1), ease: "sine.inOut" }, t.f + 1.4);
-          R.push(tl, "#s02-f", t.f, DUR - t.f, 1.0, 1.06);
+          // d — title
+          sfx("riser", t.d - 2.0, 0.4);
+          R.words(tl, "#s02-d-t1", t.d, 0.08); sfx("whoosh", t.d, 0.5);
+          R.words(tl, "#s02-d-t2", q("L09", "trick"), 0.12, { y: 80, rot: 8 }); sfx("impact", q("L09", "trick"));
+          R.words(tl, "#s02-d-t3", q("L09", "spending") - 0.2, 0.08);
+          R.draw(tl, "#s02-d-ul path", q("L09", "spending"), 0.5);
+          R.fadeIn(tl, "#s02-d-bug", t.d + 0.8);
+          tl.fromTo("#s02-d-cart", { x: 500 }, { x: 0, duration: 0.7, ease: "back.out(1.4)" }, t.d + 0.4);
+          R.push(tl, "#s02-d", t.d, DUR - t.d, 1, 1.06);
 
           window.__timelines["s02"] = tl;
         })();

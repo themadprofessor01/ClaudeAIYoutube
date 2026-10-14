@@ -25,11 +25,11 @@ The uploaded reference (`videoplayback_3.mp4`) is 11:12 long, 640×358 H.264 at 
 
 ## How I adapted it (original, not copied)
 
-- **Same visual language, new cast and world.** Rando is a stick figure in an orange beanie, the channel's mascot. Friends, scientists, a brain character, robots, a cricket and a rat are all drawn procedurally as SVG by `assets/lib/rig.js`.
+- **Same visual language, new cast and world.** Rando is a stick figure in an orange beanie, the channel's mascot. Shoppers, a brain with a pilot's cap, shopping carts, stocked shelves, price tags, a checkout, a storefront and a 1930s grocery are all drawn procedurally as SVG by `assets/lib/rig.js`.
 - **Ink plus wobble.** Outlines are a 6–7 px dark ink stroke with round caps. Characters get a "line boil": a displacement filter that cycles through three seeds at 8 fps, giving a hand-drawn shimmer. I limited it to characters so the render stays fast.
 - **Paper cards.** Off-white #FBF8F1 cards with Patrick Hand SC kinetic type (word-by-word pops, write-ons, strike-throughs), plus doodle icons. These serve as chapter beats ("REWIND", "1998 · LONDON", "the real answer").
 - **More movement than the reference.** Characters are fully rigged (shoulders, elbows, hips, knees, head, brows, eyes, 10 mouth shapes), so they walk, laugh, flail, type, poke and wave instead of sitting still. Every shot has a slow camera push, and reveals get punch-ins.
 - **Same diagram grammar.** Split-screen comparisons, ✓/✗ checklists, hand-drawn bar charts, labelled brain diagrams, dotted motion paths, a stopwatch and volume knobs.
 - **Transitions.** Mostly hard cuts and pops, as in the reference. Whip-pans with motion blur mark topic jumps and fades mark tone shifts. No single transition is overused.
-- **Pacing.** 73 shots in 7:41 (about one every 6.3 s), and inside each shot something new happens every 1–3 s (labels, poses, props, camera). It runs faster during the hook and reveals and slows for the explanation diagrams.
-- **Sound.** Narration-first mix. An original procedural score (marimba, plucked bass, pads, light percussion) changes mood per section: curious, tense, bright, weird, warm. It ducks automatically under the voice. 225 synthesized SFX are tied to on-screen beats.
+- **Pacing.** 55 shots in 6:42 (about one every 7.3 s), and inside each shot something new happens every 1–3 s (labels, poses, props, camera). It runs faster during the hook and reveals and slows for the explanation diagrams.
+- **Sound.** Narration-first mix. An original procedural score (marimba, plucked bass, pads, light percussion) changes mood per section: curious, tense, bright, weird, warm. It ducks automatically under the voice. 163 synthesized SFX are tied to on-screen beats.

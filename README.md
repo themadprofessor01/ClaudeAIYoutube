@@ -1,10 +1,10 @@
-# Why Can't You Tickle Yourself? (Randos in 60s)
+# How Supermarkets Trick Your Brain Into Spending More (Randos in 60s)
 
-This is a fully animated YouTube explainer. It runs **7:41** at 1920×1080 and 30 fps. It's built as code with [HyperFrames](https://hyperframes.heygen.com): HTML, SVG and GSAP timelines, rendered to MP4.
+This is a fully animated YouTube explainer. It runs **6:42** at 1920×1080 and 30 fps. It's built as code with [HyperFrames](https://hyperframes.heygen.com): HTML, SVG and GSAP timelines, rendered to MP4.
 
 | Deliverable | Where |
 |---|---|
-| Final video (mastered to −14 LUFS) | `out/why-cant-you-tickle-yourself.mp4` |
+| Final video (mastered to −14 LUFS) | `out/how-supermarkets-trick-your-brain.mp4` |
 | Narration script with timestamps | [`docs/narration_script.md`](docs/narration_script.md) |
 | Subtitles | [`docs/subtitles.srt`](docs/subtitles.srt) |
 | Scene-by-scene breakdown | [`docs/scene_breakdown.md`](docs/scene_breakdown.md) |
@@ -47,7 +47,7 @@ compositions/sXX.html  (animations are keyed to q("L23", "phrase") = when that p
 npx hyperframes render -o out/render_raw.mp4 --quality high --crf 18 --workers 4
    │  bash tools/master.sh                           → loudness-normalised final MP4 (−14 LUFS, −1 dBTP)
    ▼
-out/why-cant-you-tickle-yourself.mp4
+out/how-supermarkets-trick-your-brain.mp4
 ```
 
 All timing comes from the measured voice clips. If you edit a line in `script/script.json` and re-run the chain, every animation, sound effect and section boundary follows the new timing automatically.
@@ -89,4 +89,4 @@ On a 4-core cloud box a full render takes about 60–80 minutes. Use `--quality 
 
 ## Facts and sources
 
-The narration sticks to published findings. Sources are listed in `docs/youtube_package.md`: Weiskrantz et al. 1971; Blakemore et al. 1998, 1999, 2000 (two papers); Shergill et al. 2003 (≈38% escalation per turn across six pairs); Poulet & Hedwig (crickets); Panksepp / Ishiyama & Brecht (rats). Where the science is unsettled, such as *why* we're ticklish or how far the schizophrenia link goes, the script says so ("nobody knows for sure", "one leading idea").
+The narration sticks to published findings. Sources are listed in `docs/youtube_package.md`: Goldman's 1937 shopping cart and hired shoppers; Milliman 1982 (slow music, ≈38% more sales than fast music); North, Hargreaves & McKendrick 1997 (French/German music, ≈5:1 French wine); Anderson & Simester 2003 ($39 beat $34, sale signs); Xu, Schwarz & Wyer 2015 (hunger and non-food purchases); Duhigg 2012 (Target's pregnancy score); England's 2022 placement rules; FMI (≈31,700 items per store). Claims that are weaker or partly practical are hedged in the script, e.g. milk at the back is "partly practical" and products on end caps "tend to" sell more.

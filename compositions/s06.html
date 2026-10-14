@@ -13,7 +13,7 @@
       <div id="s06" data-composition-id="s06" data-width="1920" data-height="1080"></div>
       <script>
         (function () {
-          /*CUES*/ const CUES = {"L48":[0,3.903,"So what happens when this prediction system doesn't work the way it should?"],"L49":[4.403,13.737,"In 2000, Blakemore's team worked with people with schizophrenia who hear voices, or feel like their actions are being controlled by someone else."],"L50":[14.117,21.667,"For these patients, their own touch didn't get turned down. It felt just as intense, and just as ticklish, as someone else's."],"L51":[22.167,32.686,"One leading idea is that when the brain's that-was-me signal gets weaker, your own actions, and even your own inner voice, can start to feel like they're coming from somewhere else."],"L52":[33.486,36.174,"And that reveals the real answer to our mystery."],"L53":[36.774,44.691,"You can't tickle yourself because your brain is constantly sorting the world into two piles. Things I did. And things that happened to me."],"L54":[45.071,51.698,"Everything you cause gets predicted, and quietly muted. Everything you didn't cause gets flagged as important."],"L55":[52.078,59.35,"It's a big part of why you feel like you. A body that's yours. Actions that are yours. A voice in your head that's yours."],"L56":[59.95,66.457,"Tickling is just the moment this hidden system shows itself. Because a tickle only works when it's a surprise."],"L57":[66.907,69.192,"And you can never truly surprise yourself."]}; const DUR = 70.392; /*ENDCUES*/
+          /*CUES*/ const CUES = {"L38":[0,5.092,"And finally, after all that walking, deciding, and resisting, you reach the checkout."],"L39":[5.492,11.591,"You're tired. You're waiting in line. And right at hand height are candy bars, gum, and cold drinks."],"L40":[12.091,19.006,"That's no accident. After dozens of small decisions, a quick, easy treat is a lot harder to say no to."],"L41":[19.386,29.843,"In fact, this spot works so well that in 2022, England made it illegal for larger stores to put junk food at checkouts, entrances, and the ends of aisles."],"L42":[30.643,32.246,"So here's the real secret."],"L43":[32.746,37.934,"Supermarkets don't force you to buy things you don't want. They make buying feel automatic."],"L44":[38.314,50.589,"The long walk, the slow music, the eye-level shelf, the price ending in nine. Every trick is designed to keep your brain on autopilot, so you never stop to ask, do I actually need this?"],"L45":[51.189,54.926,"And the moment you do stop and ask, most of the tricks stop working."]}; const DUR = 56.026; /*ENDCUES*/
           const { C, P, BG, person, text, path, rect, line, circ, ell, g, at } = R;
           const q = R.cue(CUES);
           const S = R.scene("s06");
@@ -21,198 +21,160 @@
           const W = (id, inner, tr) => g(null, g(id, inner), tr);
           const lbl = (id, x, y, w, s, fill = C.white, col = C.ink, size = 56) =>
             W(id, rect(-w / 2, -48, w, 96, fill, 22, 7) + text(0, 4, s, size, col), at(x, y));
-          const gear = (id, x, y, r, teeth, col) => {
-            let d = "";
-            for (let i = 0; i < teeth * 2; i++) {
-              const a = (i / (teeth * 2)) * Math.PI * 2, rr = i % 2 ? r : r + r * 0.18;
-              const a2 = ((i + 1) / (teeth * 2)) * Math.PI * 2;
-              d += `${i ? "L" : "M"}${Math.cos(a) * rr},${Math.sin(a) * rr} L${Math.cos(a2) * rr},${Math.sin(a2) * rr} `;
-            }
-            return W(id, path(d + "Z", col, 7) + circ(0, 0, r * 0.3, C.paper, 6), at(x, y));
-          };
+          const fullCart = (x, y, s) => g(null, P.cart(null, 0, 0, 1) + P.chips(null, -110, -240, 0.9, C.orange) + P.chips(null, -10, -250, 0.9, C.red) +
+            P.candle(null, 90, -240, 0.9) + P.product(null, 150, -200, 0.7, "box", C.purple), at(x, y, s));
+          const rackItems = () => Array.from({ length: 3 }, (_, r) => Array.from({ length: 4 }, (_, k) =>
+            P.candy(null, -150 + k * 100, -120 + r * 90, 0.6, [C.red, C.blue, C.purple, C.green][(k + r) % 4])).join("")).join("");
 
-          // a — the "that was me" sign flickers
+          // a — arrive at checkout
           S.add("a",
-            BG.flat("#141830") +
-            P.brain("s06-ab", 960, 700, 0.9, { face: true }) +
-            W("s06-a-sign", rect(-420, -90, 840, 180, "#1E2240", 30, 8, "#3B4270") +
-              `<g id="s06-a-neon">${text(0, 6, "THAT WAS ME", 110, "#FF7AB6", "middle", `filter="url(#s06-glow)"`)}${text(0, 6, "THAT WAS ME", 110, "#FFD1E6")}</g>`, at(960, 260)));
+            BG.store() + P.checkout(null, 1380, 900, 1.0) +
+            person("s06q1", { x: 1180, y: 680, s: 1.0, shirt: C.purple, hair: "curly", hairColor: C.ink, mouth: "flat", flip: -1 }) +
+            person("s06q2", { x: 940, y: 680, s: 1.0, shirt: C.teal, hair: "bun", hairColor: C.gray, mouth: "flat", flip: -1 }) +
+            W("s06-a-r", person("s06r", { x: 0, y: 0, s: 1.1, mouth: "flat" }) + fullCart(260, 180, 0.8), at(320, 680)));
 
-          // b — 2000: voices + feeling controlled (gentle, respectful)
+          // b — candy at hand height
           S.add("b",
-            BG.flat("#E4E8F2") +
-            P.calendar("s06-b-cal", 1580, 260, 0.75, "2000") +
-            person("s06p", { x: 760, y: 700, s: 1.4, shirt: "#8FA3C8", hair: "side", hairColor: "#5B3A1E", mouth: "flat" }) +
-            W("s06-b-v", [[420, 260], [1080, 330], [380, 520], [1120, 560]].map(([x, y], i) => `<g opacity=".7">${P.bubble(null, x, y, 170, 90, text(0, 4, "...", 50, "#6b7590"), i % 2 ? "left" : "right")}</g>`).join("")) +
-            W("s06-b-str", [-150, 150].map((dx) => line(760 + dx, -20, 760 + dx * 0.55, 600, 4, "#8B6B4A")).join("") + P.puppetBar(null, 760, 40, 1.1)) +
-            lbl("s06-b-l1", 1500, 760, 520, "HEARING VOICES", C.white, C.ink, 52) + lbl("s06-b-l2", 1500, 890, 600, "FEELING CONTROLLED", C.white, C.ink, 52));
+            BG.store() +
+            W("s06-b-rack", rect(-260, -220, 520, 440, "#C9D3DC", 16, 8) + rackItems() +
+              Array.from({ length: 4 }, (_, k) => P.product(null, -180 + k * 120, 200, 0.9, "bottle", [C.red, C.teal, C.orange, C.blue][k])).join(""), at(1220, 560)) +
+            person("s06b", { x: 600, y: 760, s: 1.4, mouth: "flat" }) +
+            P.clock("s06-b-clk", 300, 220, 0.7) +
+            W("s06-b-line", path("M650,560 L960,560", "none", 7, C.orange, `stroke-dasharray="16 12"`) + text(800, 520, "hand height", 44, C.orange)));
 
-          // c — the self-touch bars
+          // c — decision fatigue: battery drains
           S.add("c",
             BG.paper() +
-            line(260, 860, 1680, 860, 8) +
-            text(560, 930, "MOST PEOPLE", 58) + text(1360, 930, "THESE PATIENTS", 58) +
-            W("s06-c-b1", rect(400, 300, 130, 560, C.red, 8, 7)) + W("s06-c-b2", rect(590, 690, 130, 170, C.gray, 8, 7)) +
-            W("s06-c-b3", rect(1200, 300, 130, 560, C.red, 8, 7)) + W("s06-c-b4", rect(1390, 330, 130, 530, C.gray, 8, 7)) +
-            rect(1340, 140, 46, 46, C.red, 8, 5) + text(1400, 166, "someone else", 46, C.ink, "start") +
-            rect(1340, 210, 46, 46, C.gray, 8, 5) + text(1400, 236, "self", 46, C.ink, "start") +
-            text(560, 240, "TICKLY?", 50, "#6b665d"));
+            W("s06-c-q", Array.from({ length: 24 }, (_, i) => text(160 + (i % 8) * 90, 220 + Math.floor(i / 8) * 110, "?", 80, [C.red, C.blue, C.purple, C.orange][i % 4])).join("")) +
+            text(500, 620, "DECISIONS", 60) +
+            W("s06-c-bat", rect(-140, -260, 280, 520, C.white, 26, 9) + rect(-50, -300, 100, 50, C.ink, 10, 0) + `<g id="s06-c-lvl">${rect(-120, -240, 240, 480, C.green, 16, 0)}</g>`, at(1300, 560)) +
+            text(1300, 900, "WILLPOWER", 60) +
+            P.candy("s06-c-candy", 1660, 560, 1.4));
 
-          // d — the "me" tag fades; the inner voice drifts out
+          // d — England 2022
           S.add("d",
-            BG.flat("#EEE8F6") +
-            person("s06d", { x: 760, y: 700, s: 1.5, shirt: "#8FA3C8", hair: "side", hairColor: "#5B3A1E", mouth: "flat" }) +
-            W("s06-d-tag", rect(-90, -40, 180, 80, C.yellow, 16, 6) + text(0, 4, "ME", 56), at(560, 640)) +
-            W("s06-d-voice", P.bubble(null, 0, 0, 200, 100, text(0, 4, "...", 56, C.purple), "left"), at(780, 360)) +
-            P.question("s06-d-q", 1420, 380, 0.8, C.purple));
+            BG.paper() +
+            P.calendar("s06-d-cal", 330, 300, 0.75, "2022") +
+            W("s06-d-gavel", rect(-160, -50, 320, 100, "#8A5A3A", 20, 8) + line(0, 50, 60, 260, 22, "#8A5A3A") + rect(-200, 280, 400, 50, "#6E4A2E", 10, 7), at(330, 680, 1, -20)) +
+            text(1200, 180, "ENGLAND: JUNK FOOD BANNED FROM...", 58) +
+            lbl("s06-d-1", 1200, 380, 560, "CHECKOUTS") + P.cross("s06-d-x1", 1560, 380, 0.8) +
+            lbl("s06-d-2", 1200, 560, 560, "ENTRANCES") + P.cross("s06-d-x2", 1560, 560, 0.8) +
+            lbl("s06-d-3", 1200, 740, 560, "ENDS OF AISLES") + P.cross("s06-d-x3", 1560, 740, 0.8) +
+            text(1200, 900, "(larger stores, from October 2022)", 44, "#6b665d"));
 
-          // e — the real answer
+          // e — the real secret
           S.add("e",
             BG.flat("#2B2552") +
             W("s06-e-rays", Array.from({ length: 16 }, (_, i) => { const a = (i / 16) * Math.PI * 2; return path(`M960,540 L${960 + Math.cos(a) * 1400},${540 + Math.sin(a) * 1400} L${960 + Math.cos(a + 0.12) * 1400},${540 + Math.sin(a + 0.12) * 1400} Z`, i % 2 ? "#3A3270" : "#332C62", 0); }).join("")),
-            `<div class="ttl" id="s06-e-t" style="top:420px;font-size:170px;color:#FFE27A">the real answer</div>`);
+            `<div class="ttl" id="s06-e-t" style="top:420px;font-size:170px;color:#FFE27A">the real secret</div>`);
 
-          // f/g — two piles
-          const bin = (id, x, label, col) => W(id, path("M-270,-160 L270,-160 L230,200 L-230,200 Z", col, 9) + rect(-300, -200, 600, 60, col, 14, 9) + text(0, 300, label, 56), at(x, 640));
+          // f — buying feels automatic (conveyor)
           S.add("f",
-            BG.paper() +
-            W("s06-f-glow", circ(1380, 600, 380, "#FFE27A", 0, C.ink, `opacity=".45"`)) +
-            bin("s06-f-b1", 540, "THINGS I DID", "#C9D6E8") + bin("s06-f-b2", 1380, "THINGS THAT HAPPENED TO ME", "#F7C9B0") +
-            W("s06-f-i1", P.hand(null, 0, 0, 0.55, -90), at(540, 160)) +
-            W("s06-f-i2", P.feather(null, 0, 0, 0.5, 30, C.teal), at(1380, 120)) +
-            W("s06-f-i3", rect(60, -40, 160, 80, C.teal, 16, 7) + P.hand(null, 0, 0, 0.5, 180), at(1500, 120)) +
-            W("s06-f-i4", P.cloud(null, 0, 0, 0.5, C.gray2), at(1260, 120)) +
-            W("s06-f-mute", P.mute(null, 0, 0, 1.0), at(540, 640)) +
-            W("s06-f-flag", P.flag(null, 0, 0, 1.2), at(1600, 520)));
+            BG.store() +
+            rect(-100, 640, 1400, 60, "#56627A", 30, 8) + Array.from({ length: 14 }, (_, i) => circ(i * 100, 670, 18, C.gray, 5)).join("") +
+            W("s06-f-belt", Array.from({ length: 10 }, (_, i) => P.product(null, i * 260 - 1500, 640, 1.0, ["box", "bag", "can", "bottle", "jar"][i % 5], [C.red, C.orange, C.blue, C.green, C.purple][i % 5])).join("")) +
+            P.cart(null, 1500, 920, 1.1) +
+            person("s06f", { x: 1760, y: 700, s: 1.1, mouth: "smile", flip: -1 }) +
+            lbl("s06-f-l", 640, 180, 560, "AUTOMATIC", C.yellow, C.ink, 80));
 
-          // h — what makes you, you
+          // g — recap montage + the question
+          const tile = (id, x, inner, label) => W(id, rect(-180, -180, 360, 360, C.white, 30, 8) + inner + text(0, 230, label, 46), at(x, 420));
+          S.add("g",
+            BG.flat("#EDE6F7") +
+            tile("s06-g-1", 300, path("M-120,100 L-120,-60 L60,-60 L60,60 L120,60", "none", 10, C.orange, `stroke-dasharray="18 14"`), "LONG WALK") +
+            tile("s06-g-2", 740, P.note(null, -20, 0, 2.2, C.purple), "SLOW MUSIC") +
+            tile("s06-g-3", 1180, rect(-140, -40, 280, 80, "rgba(246,199,68,.5)", 10, 6, C.orange) + P.product(null, -60, 30, 0.5, "box", C.red) + P.product(null, 60, 30, 0.5, "box", C.blue), "EYE LEVEL") +
+            tile("s06-g-4", 1620, P.priceTag(null, 0, 0, 0.9, "$.99"), "ENDS IN 9") +
+            W("s06-g-q", rect(-620, -80, 1240, 160, C.yellow, 30, 9) + text(0, 8, "do I actually need this?", 84), at(960, 900)));
+
+          // h — stop and ask
           S.add("h",
-            BG.flat("#FFF4D6") +
-            circ(960, 540, 360, "#FFE7A3", 0) +
-            person("s06h", { x: 960, y: 700, s: 1.6, mouth: "smile" }) +
-            lbl("s06-h-l1", 460, 340, 440, "A BODY ✓", C.white) + lbl("s06-h-l2", 1460, 340, 440, "ACTIONS ✓", C.white) + lbl("s06-h-l3", 1460, 760, 440, "A VOICE ✓", C.white) +
-            W("s06-h-yours", text(0, 0, "...that’s yours", 80, C.orange), at(460, 760)));
-
-          // i — the curtain opens
-          S.add("i",
-            BG.flat("#3B2A3F") +
-            gear("s06-i-g1", 820, 500, 170, 10, "#E8B04A") + gear("s06-i-g2", 1120, 640, 120, 8, "#7FB8C9") + gear("s06-i-g3", 1060, 330, 90, 7, "#E6889A") +
-            P.brain("s06-ib", 820, 500, 0.32, { face: true }) +
-            W("s06-i-cL", path("M-200,-100 L980,-100 Q900,500 980,1200 L-200,1200 Z", "#B3263A", 0) + Array.from({ length: 8 }, (_, i) => line(i * 130, -100, i * 130 + 30, 1200, 8, "#8E1B2D")).join("")) +
-            W("s06-i-cR", path("M940,-100 L2120,-100 L2120,1200 L940,1200 Q1020,500 940,-100 Z", "#B3263A", 0) + Array.from({ length: 8 }, (_, i) => line(1000 + i * 130, -100, 1030 + i * 130, 1200, 8, "#8E1B2D")).join("")) +
-            rect(-200, -100, 2320, 120, "#8E1B2D", 0, 0) +
-            W("s06-i-fe", P.feather(null, 0, 0, 0.7, -30, C.teal), at(960, 600)));
-
-          // j — you can't surprise yourself
-          S.add("j",
-            BG.room({ wall: "#E4F0EA", floor: "#B79A7A" }) +
-            P.mirror("s06-j-mir", 1360, 520, 420, 680) +
-            `<g clip-path="url(#s06-j-clip)">${person("s06m", { x: 1360, y: 660, s: 1.25, mouth: "flat", flip: -1 })}</g>` +
-            `<clipPath id="s06-j-clip"><rect x="1150" y="180" width="420" height="680" rx="14"/></clipPath>` +
-            P.box("s06-j-box", 560, 760, 300, 220, "") +
-            person("s06r", { x: 560, y: 700, s: 1.25, mouth: "yell" }) +
-            P.box("s06-j-box2", 560, 760, 300, 220, "") +
-            W("s06-j-boo", text(0, 0, "BOO!", 150, C.red), at(560, 190, 1, -6)) +
-            P.bubble("s06-j-meh", 1680, 140, 200, 110, text(0, 4, "meh.", 56), "left"));
+            BG.store() +
+            person("s06h", { x: 760, y: 720, s: 1.45, mouth: "smile" }) +
+            W("s06-h-stop", path("M-90,-217 L90,-217 L217,-90 L217,90 L90,217 L-90,217 L-217,90 L-217,-90 Z", C.red, 10) + text(0, 10, "STOP", 120, C.white), at(1360, 420, 0.8)) +
+            W("s06-h-cap", P.pilotCap(null, 0, 0, 0.8), at(760, 290)) +
+            W("s06-h-tricks", P.note(null, 1200, 860, 1.2, C.purple) + P.priceTag(null, 1500, 880, 0.6, "$2.99") + P.candy(null, 1760, 880, 0.9)));
 
           S.mount();
           const tl = gsap.timeline({ paused: true });
-          const t = { a: 0, b: q("L49"), c: q("L50"), d: q("L51"), e: q("L52"), f: q("L53"), h: q("L55"), i: q("L56"), j: q("L57") };
-          R.shots(tl, [["#s06-a", 0], ["#s06-b", t.b, "fade"], ["#s06-c", t.c, "pop"], ["#s06-d", t.d, "fade"], ["#s06-e", t.e, "pop"],
-            ["#s06-f", t.f, "whipL"], ["#s06-h", t.h, "pop"], ["#s06-i", t.i, "fade"], ["#s06-j", t.j, "whipL"]], DUR);
+          const t = { a: 0, b: q("L39"), c: q("L40"), d: q("L41"), e: q("L42"), f: q("L43"), gg: q("L44"), h: q("L45") };
+          R.shots(tl, [["#s06-a", 0], ["#s06-b", t.b, "whipL"], ["#s06-c", t.c, "pop"], ["#s06-d", t.d, "whipL"], ["#s06-e", t.e, "pop"],
+            ["#s06-f", t.f, "whipL"], ["#s06-g", t.gg, "pop"], ["#s06-h", t.h, "whipL"]], DUR);
           R.boil(tl, "#s06-cam .boil", "s06", 0, DUR);
 
-          // a — flicker
-          const fl = [0.2, 0.35, 0.42, 0.9, 1.0, 1.6, 1.7, 1.75, 2.4, 2.9, 3.0];
-          gsap.set("#s06-a-neon", { opacity: 1 });
-          fl.forEach((tt, i) => tl.set("#s06-a-neon", { opacity: i % 2 ? 1 : 0.15 }, tt));
-          sfx("glitch", 0.2, 0.5); sfx("glitch", 1.6, 0.4);
-          tl.set("#s06-ab-m-smile", { opacity: 0 }, 0.1).set("#s06-ab-m-o", { opacity: 1 }, 0.1);
-          tl.to("#s06-ab-pupils", { y: -14, duration: 0.3 }, 0.4);
-          R.push(tl, "#s06-a", 0, t.b, 1, 1.08);
+          // a — arrive
+          tl.fromTo("#s06-a-r", { x: -700 }, { x: 0, duration: 2.0, ease: "power1.out" }, 0.1);
+          R.walk(tl, "s06r", 0.1, 2.0, 0.3, 22);
+          R.pose(tl, "s06r", { armR: 70, foreR: 10 }, 2.2, 0.2);
+          R.expr(tl, "s06r", { lids: 0.55, sweat: 1 }, q("L38", "resisting"));
+          sfx("whoosh", 0.1, 0.3); sfx("beep", q("L38", "checkout"), 0.5);
+          R.idle(tl, "s06q1", 0, t.b, 61); R.idle(tl, "s06q2", 0, t.b, 62);
+          R.push(tl, "#s06-a", 0, t.b, 1, 1.06);
 
-          // b — gentle
-          R.idle(tl, "s06p", t.b, t.c, 61);
-          gsap.set(["#s06-b-v", "#s06-b-str", "#s06-b-l1", "#s06-b-l2", "#s06-b-cal"], { opacity: 0 });
-          R.pop(tl, "#s06-b-cal", t.b + 0.2); sfx("page", t.b + 0.2, 0.6);
-          tl.fromTo("#s06-b-v", { opacity: 0 }, { opacity: 1, duration: 1.0 }, q("L49", "hear voices") - 0.3);
-          R.float(tl, "#s06-b-v", q("L49", "hear voices"), t.c - q("L49", "hear voices"), 16, 1.6);
-          R.pop(tl, "#s06-b-l1", q("L49", "hear voices"));
-          tl.fromTo("#s06-b-str", { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: "power2.out" }, q("L49", "controlled") - 0.4);
-          R.pose(tl, "s06p", { armL: 40, armR: 40, foreL: -20, foreR: -20 }, q("L49", "controlled"), 0.6);
-          R.pop(tl, "#s06-b-l2", q("L49", "controlled"));
-          R.expr(tl, "s06p", { brows: "worried", look: [0, -6] }, q("L49", "controlled"));
-          R.push(tl, "#s06-b", t.b, t.c - t.b, 1, 1.05);
+          // b — candy at hand height
+          R.expr(tl, "s06b", { lids: 0.5, look: [10, 6] }, t.b);
+          R.idle(tl, "s06b", t.b, t.c, 63);
+          for (let i = 0; i < 8; i++) tl.to("#s06-b-clk-min", { rotation: (i + 1) * 45, svgOrigin: "0 0", duration: 0.1, ease: "back.out(3)" }, t.b + 0.3 + i * 0.6);
+          sfx("tick", t.b + 0.3, 0.4); sfx("tick", t.b + 0.9, 0.4); sfx("tick", t.b + 1.5, 0.4);
+          gsap.set("#s06-b-line", { opacity: 0 });
+          R.fadeIn(tl, "#s06-b-line", q("L39", "hand height") - 0.2);
+          R.draw(tl, "#s06-b-line path", q("L39", "hand height") - 0.2, 0.4);
+          tl.fromTo("#s06-b-rack", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.06, duration: 0.3, yoyo: true, repeat: 1 }, q("L39", "candy"));
+          sfx("sparkle", q("L39", "candy"), 0.4);
+          R.push(tl, "#s06-b", t.b, t.c - t.b, 1, 1.07);
 
-          // c — bars
-          ["b1", "b2", "b3", "b4"].forEach((k, i) => tl.fromTo(`#s06-c-${k}`, { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.6, ease: "back.out(1.4)" }, (i < 2 ? t.c + 0.3 : q("L50", "It felt") - 0.2) + (i % 2) * 0.25));
-          sfx("up", t.c + 0.3, 0.4); sfx("up", q("L50", "It felt") - 0.2, 0.5);
+          // c — decisions drain willpower
+          tl.fromTo("#s06-c-q text", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, stagger: 0.12, ease: "back.out(3)" }, t.c + 0.2);
+          for (let i = 0; i < 8; i++) sfx("pop", t.c + 0.2 + i * 0.36, 0.25);
+          tl.fromTo("#s06-c-lvl", { scaleY: 1, transformOrigin: "50% 100%" }, { scaleY: 0.12, duration: 3.2, ease: "power1.in" }, t.c + 0.4);
+          tl.to("#s06-c-lvl rect", { attr: { fill: C.red }, duration: 1.0 }, t.c + 2.6);
+          sfx("down", t.c + 2.8, 0.5);
+          gsap.set("#s06-c-candy", { opacity: 0 });
+          R.pop(tl, "#s06-c-candy", q("L40", "quick, easy treat") - 0.2); sfx("sparkle", q("L40", "quick, easy treat"), 0.4);
+          R.wiggle(tl, "#s06-c-candy", q("L40", "harder"), 1.2, 8, 0.1);
           R.push(tl, "#s06-c", t.c, t.d - t.c, 1, 1.05);
 
-          // d — signal weakens
-          R.idle(tl, "s06d", t.d, t.e, 62);
-          tl.to("#s06-d-tag", { opacity: 0.15, rotation: 25, y: 60, transformOrigin: "0% 0%", duration: 1.2 }, q("L51", "gets weaker") - 0.3);
-          sfx("down", q("L51", "gets weaker") - 0.3, 0.5);
-          R.pose(tl, "s06d", { armL: 30, foreL: 30 }, q("L51", "own actions"), 0.5);
-          tl.to("#s06-d-voice", { x: 620, y: 20, duration: 2.0, ease: "power1.inOut" }, q("L51", "inner voice"));
-          gsap.set("#s06-d-q", { opacity: 0 });
-          R.pop(tl, "#s06-d-q", q("L51", "somewhere else")); sfx("pop", q("L51", "somewhere else"), 0.4);
-          R.expr(tl, "s06d", { look: [14, -4], brows: "worried" }, q("L51", "inner voice") + 0.5);
-          R.push(tl, "#s06-d", t.d, t.e - t.d, 1, 1.07);
+          // d — England
+          ["#s06-d-1", "#s06-d-2", "#s06-d-3", "#s06-d-x1", "#s06-d-x2", "#s06-d-x3"].forEach((s) => gsap.set(s, { opacity: 0 }));
+          R.pop(tl, "#s06-d-cal", q("L41", "2022") - 0.2); sfx("page", q("L41", "2022") - 0.2, 0.5);
+          tl.fromTo("#s06-d-gavel", { rotation: -40, transformOrigin: "50% 100%" }, { rotation: 0, duration: 0.2, ease: "power4.in" }, q("L41", "illegal") - 0.2);
+          sfx("stamp", q("L41", "illegal"), 0.9);
+          [["1", "checkouts"], ["2", "entrances"], ["3", "ends of aisles"]].forEach(([k, w]) => {
+            R.pop(tl, `#s06-d-${k}`, q("L41", w) - 0.3); R.pop(tl, `#s06-d-x${k}`, q("L41", w) + 0.2); sfx("buzz", q("L41", w) + 0.2, 0.4);
+          });
+          R.push(tl, "#s06-d", t.d, t.e - t.d, 1, 1.05);
 
-          // e — reveal
-          sfx("drumroll", t.e - 1.2, 0.6); sfx("impact", t.e + 0.1); sfx("swell", t.e, 0.5);
-          tl.fromTo("#s06-e-rays", { rotation: 0, svgOrigin: "960 540" }, { rotation: 40, svgOrigin: "960 540", duration: t.f - t.e, ease: "none" }, t.e);
+          // e — the real secret
+          sfx("drumroll", t.e - 1.2, 0.5); sfx("impact", t.e + 0.1, 0.8); sfx("swell", t.e, 0.4);
+          tl.fromTo("#s06-e-rays", { rotation: 0, svgOrigin: "960 540" }, { rotation: 30, svgOrigin: "960 540", duration: t.f - t.e, ease: "none" }, t.e);
           R.words(tl, "#s06-e-t", t.e + 0.1, 0.12, { y: 100 });
           R.push(tl, "#s06-e", t.e, t.f - t.e, 1.1, 1.0);
 
-          // f/g — two piles
-          gsap.set(["#s06-f-mute", "#s06-f-flag", "#s06-f-glow"], { opacity: 0 });
-          const dropIn = (sel, tt) => { tl.fromTo(sel, { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3 }, tt); tl.to(sel, { y: 420, scale: 0.5, opacity: 0, duration: 0.45, ease: "power2.in" }, tt + 0.5); sfx("whoosh", tt + 0.5, 0.4); sfx("thud", tt + 0.95, 0.4); };
-          dropIn("#s06-f-i1", q("L53", "Things I did") - 0.2);
-          dropIn("#s06-f-i2", q("L53", "things that happened"));
-          dropIn("#s06-f-i3", q("L53", "things that happened") + 0.6);
-          dropIn("#s06-f-i4", q("L53", "things that happened") + 1.2);
-          R.pop(tl, "#s06-f-mute", q("L54", "quietly muted")); sfx("down", q("L54", "quietly muted"), 0.6);
-          tl.to("#s06-f-b1", { opacity: 0.5, duration: 0.4 }, q("L54", "quietly muted"));
-          R.pop(tl, "#s06-f-flag", q("L54", "flagged")); sfx("ding", q("L54", "flagged"), 0.6);
-          tl.fromTo("#s06-f-glow", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.6 }, q("L54", "important") - 0.3);
-          R.push(tl, "#s06-f", t.f, t.h - t.f, 1, 1.05);
+          // f — automatic conveyor
+          tl.fromTo("#s06-f-belt", { x: 0 }, { x: 2400, duration: t.gg - t.f, ease: "none" }, t.f);
+          sfx("robot", t.f + 0.4, 0.2);
+          gsap.set("#s06-f-l", { opacity: 0 });
+          R.pop(tl, "#s06-f-l", q("L43", "automatic") - 0.2); sfx("ding", q("L43", "automatic"), 0.5);
+          R.expr(tl, "s06f", { lids: 0.6 }, t.f);
+          R.push(tl, "#s06-f", t.f, t.gg - t.f, 1, 1.05);
 
-          // h — you
-          R.idle(tl, "s06h", t.h, t.i, 63);
-          [["l1", "A body"], ["l2", "Actions"], ["l3", "A voice"]].forEach(([k, w]) => { gsap.set(`#s06-h-${k}`, { opacity: 0 }); R.pop(tl, `#s06-h-${k}`, q("L55", w)); sfx("pop", q("L55", w), 0.5); });
-          gsap.set("#s06-h-yours", { opacity: 0 });
-          R.pop(tl, "#s06-h-yours", q("L55", "that's yours") - 0.1);
-          R.expr(tl, "s06h", { mouth: "grin", blush: 1 }, q("L55", "A body"));
-          R.push(tl, "#s06-h", t.h, t.i - t.h, 1, 1.08);
+          // g — recap + question
+          [["1", "long walk"], ["2", "slow music"], ["3", "eye-level"], ["4", "ending in nine"]].forEach(([k, w]) => { gsap.set(`#s06-g-${k}`, { opacity: 0 }); R.pop(tl, `#s06-g-${k}`, q("L44", w) - 0.2); sfx("pop", q("L44", w) - 0.2, 0.5); });
+          gsap.set("#s06-g-q", { opacity: 0 });
+          R.pop(tl, "#s06-g-q", q("L44", "do I actually") - 0.2); sfx("impact", q("L44", "do I actually") - 0.2, 0.6);
+          R.wiggle(tl, "#s06-g-q", q("L44", "need this") , 1.0, 3, 0.15);
+          R.push(tl, "#s06-g", t.gg, t.h - t.gg, 1, 1.06);
 
-          // i — curtain
-          tl.fromTo("#s06-i-fe", { x: 700, y: 300 }, { x: 0, y: 0, duration: 0.8, ease: "power2.out" }, t.i + 0.1);
-          R.wiggle(tl, "#s06-i-fe", t.i + 0.9, 1.6, 16, 0.1);
-          sfx("tickle", t.i + 0.9, 0.5);
-          const op = q("L56", "shows itself") - 0.4;
-          tl.to("#s06-i-cL", { x: -900, duration: 1.4, ease: "power2.inOut" }, op);
-          tl.to("#s06-i-cR", { x: 900, duration: 1.4, ease: "power2.inOut" }, op);
-          tl.to("#s06-i-fe", { opacity: 0, duration: 0.3 }, op);
-          sfx("whoosh_big", op, 0.6); sfx("sparkle", op + 0.8, 0.5);
-          tl.fromTo("#s06-i-g1", { rotation: 0, transformOrigin: "50% 50%" }, { rotation: 180, transformOrigin: "50% 50%", duration: t.j - t.i, ease: "none" }, t.i);
-          tl.fromTo("#s06-i-g2", { rotation: 0, transformOrigin: "50% 50%" }, { rotation: -240, transformOrigin: "50% 50%", duration: t.j - t.i, ease: "none" }, t.i);
-          tl.fromTo("#s06-i-g3", { rotation: 0, transformOrigin: "50% 50%" }, { rotation: -300, transformOrigin: "50% 50%", duration: t.j - t.i, ease: "none" }, t.i);
-          R.push(tl, "#s06-i", t.i, t.j - t.i, 1, 1.08);
-
-          // j — BOO at the mirror
-          gsap.set(["#s06-j-boo", "#s06-j-meh"], { opacity: 0 });
-          tl.fromTo("#s06r", { y: 300 }, { y: 0, duration: 0.3, ease: "back.out(2)" }, t.j + 0.1);
-          R.pose(tl, "s06r", { armL: 150, armR: 150, foreL: 20, foreR: 20 }, t.j + 0.1, 0.2);
-          R.expr(tl, "s06r", { brows: "angry" }, t.j + 0.1);
-          R.pop(tl, "#s06-j-boo", t.j + 0.2); sfx("impact", t.j + 0.2, 0.6); sfx("boing", t.j + 0.25, 0.5);
-          R.pose(tl, "s06m", { armL: 10, armR: 10 }, t.j, 0);
-          R.expr(tl, "s06m", { lids: 0.5, brows: "sly" }, t.j + 0.5);
-          R.pop(tl, "#s06-j-meh", t.j + 1.1); sfx("pop", t.j + 1.1, 0.4);
-          R.expr(tl, "s06r", { mouth: "frown", brows: "worried" }, t.j + 1.6);
-          R.pose(tl, "s06r", { armL: 10, armR: 10, foreL: 0, foreR: 0 }, t.j + 1.6, 0.4);
-          R.push(tl, "#s06-j", t.j, DUR - t.j, 1, 1.06);
+          // h — stop and ask
+          gsap.set("#s06-h-stop", { opacity: 0 });
+          R.pose(tl, "s06h", { armR: 100, foreR: 70 }, t.h + 0.1, 0.3);
+          R.expr(tl, "s06h", { brows: "angry", mouth: "smirk" }, t.h + 0.1);
+          R.pop(tl, "#s06-h-stop", q("L45", "stop and ask") - 0.2); sfx("impact", q("L45", "stop and ask") - 0.2, 0.6);
+          tl.to("#s06-h-cap", { y: -600, rotation: 40, duration: 0.8, ease: "power2.in" }, q("L45", "stop and ask") + 0.2);
+          sfx("whoosh", q("L45", "stop and ask") + 0.2, 0.5);
+          tl.to("#s06-h-tricks", { y: 300, opacity: 0, duration: 0.8, ease: "power2.in" }, q("L45", "stop working") - 0.1);
+          sfx("thud", q("L45", "stop working") + 0.5, 0.6);
+          R.push(tl, "#s06-h", t.h, DUR - t.h, 1, 1.06);
 
           window.__timelines["s06"] = tl;
         })();

@@ -8,433 +8,325 @@
  {
   "scene": "s01",
   "shot": "b",
-  "transition": "cut",
-  "abs": 1.288
+  "transition": "whipL",
+  "abs": 3.965
  },
  {
   "scene": "s01",
   "shot": "c",
-  "transition": "cut",
-  "abs": 4.723
+  "transition": "pop",
+  "abs": 10.882
  },
  {
   "scene": "s01",
-  "shot": "d1",
-  "transition": "whipL",
-  "abs": 8.361
- },
- {
-  "scene": "s01",
-  "shot": "d2",
-  "transition": "cut",
-  "abs": 12.255
+  "shot": "d",
+  "transition": "fade",
+  "abs": 14.276
  },
  {
   "scene": "s01",
   "shot": "e",
   "transition": "pop",
-  "abs": 14.677
+  "abs": 20.029
  },
  {
   "scene": "s01",
   "shot": "f",
-  "transition": "cut",
-  "abs": 18.575
+  "transition": "fade",
+  "abs": 24.506
  },
  {
   "scene": "s02",
   "shot": "a",
   "transition": "cut",
-  "abs": 22.145
+  "abs": 28.798
  },
  {
   "scene": "s02",
   "shot": "b",
-  "transition": "whipL",
-  "abs": 25.693
+  "transition": "pop",
+  "abs": 35.363
  },
  {
   "scene": "s02",
   "shot": "c",
-  "transition": "pop",
-  "abs": 30.645
+  "transition": "whipL",
+  "abs": 41.815
  },
  {
   "scene": "s02",
   "shot": "d",
-  "transition": "cut",
-  "abs": 34.806
- },
- {
-  "scene": "s02",
-  "shot": "e",
-  "transition": "whipL",
-  "abs": 36.1
- },
- {
-  "scene": "s02",
-  "shot": "f",
   "transition": "pop",
-  "abs": 41.778
+  "abs": 47.524
  },
  {
   "scene": "s03",
   "shot": "a",
   "transition": "cut",
-  "abs": 44.745
+  "abs": 51.95
  },
  {
   "scene": "s03",
   "shot": "b",
   "transition": "whipL",
-  "abs": 48.708
+  "abs": 55.747
  },
  {
   "scene": "s03",
   "shot": "c",
   "transition": "pop",
-  "abs": 56.761
+  "abs": 62.645
  },
  {
   "scene": "s03",
   "shot": "d",
-  "transition": "up",
-  "abs": 59.696
+  "transition": "whipL",
+  "abs": 70.216
  },
  {
   "scene": "s03",
   "shot": "e",
-  "transition": "whipL",
-  "abs": 65.817
+  "transition": "pop",
+  "abs": 76.636
  },
  {
   "scene": "s03",
   "shot": "f",
-  "transition": "pop",
-  "abs": 71.651
+  "transition": "fade",
+  "abs": 85.184
  },
  {
   "scene": "s03",
   "shot": "g",
   "transition": "whipL",
-  "abs": 76.153
+  "abs": 97.523
  },
  {
   "scene": "s03",
   "shot": "h",
-  "transition": "fade",
-  "abs": 78.361
+  "transition": "whipL",
+  "abs": 103.477
  },
  {
   "scene": "s03",
   "shot": "i",
-  "transition": "whipL",
-  "abs": 82.9
- },
- {
-  "scene": "s03",
-  "shot": "j",
-  "transition": "cut",
-  "abs": 86.224
- },
- {
-  "scene": "s03",
-  "shot": "k",
-  "transition": "pop",
-  "abs": 92.075
- },
- {
-  "scene": "s03",
-  "shot": "l",
-  "transition": "whipL",
-  "abs": 97.756
- },
- {
-  "scene": "s03",
-  "shot": "m",
-  "transition": "pop",
-  "abs": 107.262
- },
- {
-  "scene": "s03",
-  "shot": "n",
-  "transition": "whipL",
-  "abs": 111.304
- },
- {
-  "scene": "s03",
-  "shot": "p1",
-  "transition": "cut",
-  "abs": 119.279
- },
- {
-  "scene": "s03",
-  "shot": "p2",
-  "transition": "cut",
-  "abs": 124.152
- },
- {
-  "scene": "s03",
-  "shot": "p3",
-  "transition": "cut",
-  "abs": 124.802
- },
- {
-  "scene": "s03",
-  "shot": "q",
   "transition": "fade",
-  "abs": 127.673
- },
- {
-  "scene": "s03",
-  "shot": "r",
-  "transition": "pop",
-  "abs": 132.666
+  "abs": 112
  },
  {
   "scene": "s04",
   "shot": "a",
   "transition": "cut",
-  "abs": 135.187
+  "abs": 125.108
  },
  {
   "scene": "s04",
   "shot": "b",
   "transition": "whipL",
-  "abs": 143.517
+  "abs": 128.974
  },
  {
   "scene": "s04",
   "shot": "c",
   "transition": "pop",
-  "abs": 152.673
+  "abs": 138.984
  },
  {
   "scene": "s04",
   "shot": "d",
   "transition": "whipL",
-  "abs": 159.479
+  "abs": 143.959
  },
  {
   "scene": "s04",
   "shot": "e",
   "transition": "pop",
-  "abs": 165.91
+  "abs": 152.959
  },
  {
   "scene": "s04",
   "shot": "f",
-  "transition": "cut",
-  "abs": 172.856
+  "transition": "whipL",
+  "abs": 161.494
  },
  {
   "scene": "s04",
   "shot": "g",
-  "transition": "whipL",
-  "abs": 178.33
+  "transition": "fade",
+  "abs": 167.677
  },
  {
   "scene": "s04",
   "shot": "h",
-  "transition": "whipR",
-  "abs": 186.549
+  "transition": "whipL",
+  "abs": 176.164
  },
  {
   "scene": "s04",
   "shot": "i",
-  "transition": "pop",
-  "abs": 193.907
- },
- {
-  "scene": "s04",
-  "shot": "j",
   "transition": "whipL",
-  "abs": 196.723
- },
- {
-  "scene": "s04",
-  "shot": "l",
-  "transition": "pop",
-  "abs": 211.096
- },
- {
-  "scene": "s04",
-  "shot": "m",
-  "transition": "whipL",
-  "abs": 215.116
- },
- {
-  "scene": "s04",
-  "shot": "n",
-  "transition": "fade",
-  "abs": 224.748
+  "abs": 185.068
  },
  {
   "scene": "s05",
-  "shot": "a1",
+  "shot": "a",
   "transition": "cut",
-  "abs": 230.088
- },
- {
-  "scene": "s05",
-  "shot": "a2",
-  "transition": "pop",
-  "abs": 232.084
+  "abs": 197.681
  },
  {
   "scene": "s05",
   "shot": "b",
-  "transition": "whipL",
-  "abs": 238.662
+  "transition": "pop",
+  "abs": 201.981
  },
  {
   "scene": "s05",
   "shot": "c",
-  "transition": "pop",
-  "abs": 246.799
+  "transition": "whipL",
+  "abs": 211.508
  },
  {
   "scene": "s05",
   "shot": "d",
-  "transition": "fade",
-  "abs": 252.235
+  "transition": "whipL",
+  "abs": 215.038
  },
  {
   "scene": "s05",
   "shot": "e",
-  "transition": "whipL",
-  "abs": 259.935
+  "transition": "pop",
+  "abs": 226.858
  },
  {
   "scene": "s05",
   "shot": "f",
   "transition": "whipL",
-  "abs": 268.023
+  "abs": 230.252
  },
  {
   "scene": "s05",
   "shot": "g",
-  "transition": "pop",
-  "abs": 274.997
+  "transition": "whipL",
+  "abs": 243.136
  },
  {
   "scene": "s05",
   "shot": "h",
   "transition": "whipL",
-  "abs": 281.78
+  "abs": 254.339
  },
  {
   "scene": "s05",
   "shot": "i",
-  "transition": "whipL",
-  "abs": 295.56
+  "transition": "pop",
+  "abs": 262.964
  },
  {
   "scene": "s05",
   "shot": "j",
-  "transition": "whipL",
-  "abs": 302.159
+  "transition": "pop",
+  "abs": 272.136
  },
  {
   "scene": "s05",
   "shot": "k",
-  "transition": "pop",
-  "abs": 314.963
+  "transition": "fade",
+  "abs": 276.087
  },
  {
   "scene": "s05",
   "shot": "l",
-  "transition": "up",
-  "abs": 323.969
+  "transition": "whipL",
+  "abs": 279.916
  },
  {
   "scene": "s05",
   "shot": "m",
+  "transition": "pop",
+  "abs": 292.271
+ },
+ {
+  "scene": "s05",
+  "shot": "n",
   "transition": "whipL",
-  "abs": 331.524
+  "abs": 296.882
  },
  {
   "scene": "s05",
   "shot": "o",
-  "transition": "pop",
-  "abs": 345.879
- },
- {
-  "scene": "s05",
-  "shot": "p",
-  "transition": "whipL",
-  "abs": 352.039
- },
- {
-  "scene": "s05",
-  "shot": "q",
-  "transition": "whipL",
-  "abs": 363.911
+  "transition": "fade",
+  "abs": 314.013
  },
  {
   "scene": "s06",
   "shot": "a",
   "transition": "cut",
-  "abs": 370.201
+  "abs": 318.163
  },
  {
   "scene": "s06",
   "shot": "b",
-  "transition": "fade",
-  "abs": 374.604
+  "transition": "whipL",
+  "abs": 323.655
  },
  {
   "scene": "s06",
   "shot": "c",
   "transition": "pop",
-  "abs": 384.318
+  "abs": 330.254
  },
  {
   "scene": "s06",
   "shot": "d",
-  "transition": "fade",
-  "abs": 392.368
+  "transition": "whipL",
+  "abs": 337.549
  },
  {
   "scene": "s06",
   "shot": "e",
   "transition": "pop",
-  "abs": 403.687
+  "abs": 348.806
  },
  {
   "scene": "s06",
   "shot": "f",
   "transition": "whipL",
-  "abs": 406.975
+  "abs": 350.909
+ },
+ {
+  "scene": "s06",
+  "shot": "g",
+  "transition": "pop",
+  "abs": 356.477
  },
  {
   "scene": "s06",
   "shot": "h",
-  "transition": "pop",
-  "abs": 422.279
- },
- {
-  "scene": "s06",
-  "shot": "i",
-  "transition": "fade",
-  "abs": 430.151
- },
- {
-  "scene": "s06",
-  "shot": "j",
   "transition": "whipL",
-  "abs": 437.108
+  "abs": 369.352
  },
  {
   "scene": "s07",
   "shot": "a",
   "transition": "cut",
-  "abs": 440.593
+  "abs": 374.189
  },
  {
   "scene": "s07",
   "shot": "b",
+  "transition": "whipL",
+  "abs": 383.187
+ },
+ {
+  "scene": "s07",
+  "shot": "c",
   "transition": "pop",
-  "abs": 450.3
+  "abs": 387.143
+ },
+ {
+  "scene": "s07",
+  "shot": "d",
+  "transition": "pop",
+  "abs": 390.892
  }
 ]

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Loudness-master the rendered video for YouTube (-14 LUFS integrated, -1 dBTP), video stream copied untouched.
-# usage: bash tools/master.sh [in=out/render_raw.mp4] [out=out/why-cant-you-tickle-yourself.mp4]
+# usage: bash tools/master.sh [in=out/render_raw.mp4] [out=out/how-supermarkets-trick-your-brain.mp4]
 set -euo pipefail
 cd "$(dirname "$0")/.."
 IN=${1:-out/render_raw.mp4}
-OUT=${2:-out/why-cant-you-tickle-yourself.mp4}
+OUT=${2:-out/how-supermarkets-trick-your-brain.mp4}
 J=$(ffmpeg -hide_banner -i "$IN" -af loudnorm=I=-14:TP=-1:LRA=11:print_format=json -f null - 2>&1 | sed -n '/^{/,/^}/p')
 get() { echo "$J" | python3 -c "import json,sys;print(json.load(sys.stdin)['$1'])"; }
 ffmpeg -hide_banner -y -i "$IN" -c:v copy \

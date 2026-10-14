@@ -4,442 +4,364 @@
    "id": "s01",
    "name": "Hook",
    "start": 0.0,
-   "end": 22.145
+   "end": 28.798
   },
   {
    "id": "s02",
    "name": "The Mystery",
-   "start": 22.145,
-   "end": 44.745
+   "start": 28.798,
+   "end": 51.95
   },
   {
    "id": "s03",
-   "name": "The First Big Discovery",
-   "start": 44.745,
-   "end": 135.187
+   "name": "The Layout",
+   "start": 51.95,
+   "end": 125.108
   },
   {
    "id": "s04",
-   "name": "Go Deeper",
-   "start": 135.187,
-   "end": 230.088
+   "name": "Your Senses and the Shelves",
+   "start": 125.108,
+   "end": 197.681
   },
   {
    "id": "s05",
-   "name": "The Unexpected Twist",
-   "start": 230.088,
-   "end": 370.201
+   "name": "The Numbers and You",
+   "start": 197.681,
+   "end": 318.163
   },
   {
    "id": "s06",
    "name": "The Big Payoff",
-   "start": 370.201,
-   "end": 440.593
+   "start": 318.163,
+   "end": 374.189
   },
   {
    "id": "s07",
    "name": "Memorable Ending",
-   "start": 440.593,
-   "end": 460.945
+   "start": 374.189,
+   "end": 402.186
   }
  ],
  "lines": {
   "L01": {
    "start": 0.5,
-   "end": 4.343,
+   "end": 3.465,
    "section": "s01",
-   "text": "Try this. Take one finger and tickle the bottom of your own foot."
+   "text": "You walk into a supermarket for one thing. Milk."
   },
   "L02": {
-   "start": 4.723,
-   "end": 7.911,
+   "start": 3.965,
+   "end": 10.282,
    "section": "s01",
-   "text": "Nothing. Maybe a little itch. Honestly? Kind of boring."
+   "text": "Twenty minutes later, you're at the checkout with snacks, a scented candle, two bags of chips, and somehow, no milk."
   },
   "L03": {
-   "start": 8.361,
-   "end": 14.177,
+   "start": 10.882,
+   "end": 13.896,
    "section": "s01",
-   "text": "But if your friend did the exact same thing, same spot, same pressure, you'd be kicking and screaming."
+   "text": "That's not bad luck. And it's not a lack of willpower."
   },
   "L04": {
-   "start": 14.677,
-   "end": 18.195,
+   "start": 14.276,
+   "end": 24.056,
    "section": "s01",
-   "text": "Same skin. Same touch. Completely different reaction."
+   "text": "From the moment you walk in, almost everything around you has been designed to get you to spend more. The music. The smells. Even the numbers on the price tags."
   },
   "L05": {
-   "start": 18.575,
-   "end": 21.345,
+   "start": 24.506,
+   "end": 27.998,
    "section": "s01",
-   "text": "So what does your friend's finger have that yours doesn't?"
+   "text": "And most of it works on a part of your brain you don't even notice."
   },
   "L06": {
-   "start": 22.145,
-   "end": 30.195,
+   "start": 28.798,
+   "end": 34.863,
    "section": "s02",
-   "text": "It's one of the strangest little glitches of the human body. Almost everyone can be tickled. And almost no one can tickle themselves."
+   "text": "The average American supermarket carries more than thirty thousand different products. Thirty thousand."
   },
   "L07": {
-   "start": 30.645,
-   "end": 34.426,
+   "start": 35.363,
+   "end": 41.435,
    "section": "s02",
-   "text": "And the answer isn't in your skin. Or your foot. Or your fingers."
+   "text": "No brain can carefully think through that many choices. So it doesn't. It switches to autopilot."
   },
   "L08": {
-   "start": 34.806,
-   "end": 41.178,
+   "start": 41.815,
+   "end": 46.924,
    "section": "s02",
-   "text": "It's in your brain. And it turns out your brain has been quietly editing your reality, every second of your life."
+   "text": "And supermarkets have spent decades learning exactly how to steer that autopilot."
   },
   "L09": {
-   "start": 41.778,
-   "end": 43.645,
+   "start": 47.524,
+   "end": 50.85,
    "section": "s02",
-   "text": "So, why can't you tickle yourself?"
+   "text": "So, how do supermarkets trick your brain into spending more?"
   },
   "L10": {
-   "start": 44.745,
-   "end": 56.381,
+   "start": 51.95,
+   "end": 62.265,
    "section": "s03",
-   "text": "Scientists started poking at this question back in 1971. A team led by Lawrence Weiskrantz tickled people on the soles of their feet, and confirmed what we all suspected."
+   "text": "Let's start with the thing you're pushing. In 1937, an Oklahoma grocery store owner named Sylvan Goldman introduced one of the first shopping carts."
   },
   "L11": {
-   "start": 56.761,
-   "end": 59.196,
+   "start": 62.645,
+   "end": 69.766,
    "section": "s03",
-   "text": "It really is less ticklish when you do it yourself."
-  },
-  "L11a": {
-   "start": 59.696,
-   "end": 71.271,
-   "section": "s03",
-   "text": "Scientists even have two words for it. Knismesis is the light, feathery, itchy kind. Gargalesis is the heavy, poke-in-the-ribs kind that makes you howl with laughter."
-  },
-  "L11b": {
-   "start": 71.651,
-   "end": 75.653,
-   "section": "s03",
-   "text": "And it's that laughing kind that's nearly impossible to give yourself."
+   "text": "And at first, nobody wanted to use it. Women said it felt like pushing a baby carriage. Men thought it looked unmanly."
   },
   "L12": {
-   "start": 76.153,
-   "end": 85.844,
+   "start": 70.216,
+   "end": 76.187,
    "section": "s03",
-   "text": "But nobody could explain why. Not until 1998, when Sarah-Jayne Blakemore and her colleagues in London took the question inside a brain scanner."
+   "text": "So Goldman hired people to pretend to shop with the carts, until real customers started copying them."
   },
   "L13": {
-   "start": 86.224,
-   "end": 91.695,
+   "start": 76.636,
+   "end": 84.584,
    "section": "s03",
-   "text": "Volunteers lay in the scanner while a soft tickling device brushed across the palm of their hand."
+   "text": "It worked. And it showed something stores have used ever since. When your hands are free and your basket is bigger, you tend to buy more."
   },
   "L14": {
-   "start": 92.075,
-   "end": 97.306,
+   "start": 85.184,
+   "end": 92.507,
    "section": "s03",
-   "text": "Sometimes the experimenter moved it. Sometimes the volunteers moved it themselves."
+   "text": "Now look at where things are. Milk, eggs, and bread, the stuff almost everyone needs, are usually at the back of the store."
   },
   "L15": {
-   "start": 97.756,
-   "end": 102.073,
+   "start": 92.887,
+   "end": 102.977,
    "section": "s03",
-   "text": "When someone else did the tickling, the parts of the brain that process touch lit up."
+   "text": "Part of that is practical, since the fridges and deliveries are in the back. But it also means that to grab one carton of milk, you walk past thousands of other things."
   },
   "L16": {
-   "start": 102.454,
-   "end": 106.812,
+   "start": 103.477,
+   "end": 111.62,
    "section": "s03",
-   "text": "But when the volunteers tickled themselves, those same areas were much quieter."
+   "text": "Then there's the entrance. Shoppers barely register the first few steps inside the door. Retailers call it the decompression zone."
   },
   "L17": {
-   "start": 107.262,
-   "end": 110.704,
+   "start": 112.0,
+   "end": 124.208,
    "section": "s03",
-   "text": "Same touch on the skin. But the brain was barely listening."
+   "text": "So that's often where stores put something beautiful. Bright fruit, fresh flowers, the smell of baking bread. It's meant to slow you down and put you in a good mood, before you've even grabbed a basket."
   },
   "L18": {
-   "start": 111.304,
-   "end": 118.899,
-   "section": "s03",
-   "text": "And there was another clue. A region at the back of the brain, called the cerebellum, behaved differently when people tickled themselves."
+   "start": 125.108,
+   "end": 128.524,
+   "section": "s04",
+   "text": "Once you've slowed down, the store goes to work on your senses."
   },
   "L19": {
-   "start": 119.279,
-   "end": 127.293,
-   "section": "s03",
-   "text": "The cerebellum is famous for coordinating movement. It's the reason you can walk, type, and catch a ball without thinking about it."
+   "start": 128.974,
+   "end": 135.875,
+   "section": "s04",
+   "text": "In a classic 1982 study, researcher Ronald Milliman played slow or fast music in a supermarket."
   },
   "L20": {
-   "start": 127.673,
-   "end": 131.966,
-   "section": "s03",
-   "text": "But the scientists suspected it was doing something else too. Something sneaky."
+   "start": 136.255,
+   "end": 143.459,
+   "section": "s04",
+   "text": "With slow music, shoppers walked more slowly, and the store sold about thirty-eight percent more than on fast music days."
   },
   "L21": {
-   "start": 132.666,
-   "end": 134.187,
-   "section": "s03",
-   "text": "It was predicting the future."
+   "start": 143.959,
+   "end": 152.579,
+   "section": "s04",
+   "text": "Even the style of music matters. In 1997, British psychologists played French or German music next to a wine display."
   },
   "L22": {
-   "start": 135.187,
-   "end": 143.137,
+   "start": 152.959,
+   "end": 161.044,
    "section": "s04",
-   "text": "Here's how it works. Every time you decide to move, your brain sends a command to your muscles. Lift. Move left. Press down."
+   "text": "On French music days, French wine outsold German wine by about five to one. On German music days, German wine won."
   },
   "L23": {
-   "start": 143.517,
-   "end": 152.293,
+   "start": 161.494,
+   "end": 166.977,
    "section": "s04",
-   "text": "But it also keeps a copy of that command. Scientists call it an efference copy. Think of it like the carbon copy of an email you just sent."
+   "text": "And when shoppers were asked, they seemed to have no idea the music had anything to do with their choice."
   },
   "L24": {
-   "start": 152.673,
-   "end": 159.029,
+   "start": 167.677,
+   "end": 175.784,
    "section": "s04",
-   "text": "Your brain uses that copy to run a quick simulation. If I do this, here's exactly what I should feel."
+   "text": "Then come the shelves. The products at eye level are often the ones the store most wants you to buy, and brands can pay for that space."
   },
   "L25": {
-   "start": 159.479,
-   "end": 165.41,
+   "start": 176.164,
+   "end": 184.568,
    "section": "s04",
-   "text": "Then the real sensation arrives, and the brain compares the two. Prediction, versus reality."
+   "text": "Cheaper store brands are often hiding up high, or down near the floor. Meanwhile, the sugary cereals sit right where a kid's eyes are."
   },
   "L26": {
-   "start": 165.91,
-   "end": 172.476,
+   "start": 185.068,
+   "end": 196.681,
    "section": "s04",
-   "text": "If they match, the brain basically says, that was just me, nothing to see here. And it turns the volume down."
+   "text": "And the ends of the aisles, called end caps, are prime real estate. Products there tend to sell much more, even when the price isn't any lower, because a big display feels like a deal."
   },
   "L27": {
-   "start": 172.856,
-   "end": 177.83,
-   "section": "s04",
-   "text": "If they don't match, that's a surprise. And surprises get the brain's full attention."
+   "start": 197.681,
+   "end": 201.481,
+   "section": "s05",
+   "text": "But some of the sneakiest tricks aren't on the shelves. They're in the numbers."
   },
   "L28": {
-   "start": 178.33,
-   "end": 186.169,
-   "section": "s04",
-   "text": "A tickle from someone else is pure surprise. You can't predict exactly where their fingers will go next, how hard, or how fast."
+   "start": 201.981,
+   "end": 211.128,
+   "section": "s05",
+   "text": "Why does everything cost two ninety-nine instead of three dollars? Because your brain reads prices from left to right, and it latches onto that first digit."
   },
   "L29": {
-   "start": 186.549,
-   "end": 193.207,
-   "section": "s04",
-   "text": "But your own fingers? Your brain knows the plan before your hand even moves. There's no surprise left to feel."
+   "start": 211.508,
+   "end": 214.538,
+   "section": "s05",
+   "text": "Two ninety-nine just feels closer to two than to three."
   },
   "L30": {
-   "start": 193.907,
-   "end": 196.343,
-   "section": "s04",
-   "text": "And the researchers proved it, with robots."
+   "start": 215.038,
+   "end": 226.458,
+   "section": "s05",
+   "text": "In one famous experiment, researchers changed the price of a dress in a clothing catalog. At thirty-four dollars, it sold. At thirty-nine dollars, it sold about a third more."
   },
   "L31": {
-   "start": 196.723,
-   "end": 204.772,
-   "section": "s04",
-   "text": "Volunteers moved a robot arm with one hand, and a second robot brushed the palm of their other hand. Normally, this felt pretty dull."
+   "start": 226.858,
+   "end": 229.652,
+   "section": "s05",
+   "text": "A higher price, ending in nine, beat a lower one."
+  },
+  "L31a": {
+   "start": 230.252,
+   "end": 242.756,
+   "section": "s05",
+   "text": "Then there's the crossed-out price. Was ten dollars, now six. That first number works like an anchor. Once your brain has seen ten, six feels like a win, whether or not anyone ever paid ten."
+  },
+  "L31b": {
+   "start": 243.136,
+   "end": 253.739,
+   "section": "s05",
+   "text": "The same researchers found that a simple sale sign can boost sales, sometimes even without much of a price cut, because most of us don't actually know what things should cost."
   },
   "L32": {
-   "start": 205.152,
-   "end": 210.716,
-   "section": "s04",
-   "text": "But then the scientists secretly added a delay. Just a tenth of a second. Then two tenths."
+   "start": 254.339,
+   "end": 262.364,
+   "section": "s05",
+   "text": "Then there are deals like two for five dollars. Lots of people automatically grab two, even when one would cost the same per item."
+  },
+  "L32a": {
+   "start": 262.964,
+   "end": 271.756,
+   "section": "s05",
+   "text": "And then there's shrinkflation. Instead of raising the price, a company makes the package a little smaller. Same price. Same bag. Less inside."
+  },
+  "L32b": {
+   "start": 272.136,
+   "end": 275.387,
+   "section": "s05",
+   "text": "Your brain checks the price. It rarely checks the grams."
   },
   "L33": {
-   "start": 211.096,
-   "end": 214.616,
-   "section": "s04",
-   "text": "And suddenly, the volunteers' own touch started feeling tickly."
+   "start": 276.087,
+   "end": 279.516,
+   "section": "s05",
+   "text": "And then there's you. Your own body can work against your wallet."
   },
   "L34": {
-   "start": 215.116,
-   "end": 224.248,
-   "section": "s04",
-   "text": "They also twisted the direction, so the robot moved a little differently from the hand. Same result. The bigger the mismatch, the more ticklish it felt."
+   "start": 279.916,
+   "end": 291.891,
+   "section": "s05",
+   "text": "A 2015 study found that hungry people didn't just want more food. They grabbed more non-food things too, and hungry shoppers in a department store spent more than shoppers who had just eaten."
   },
   "L35": {
-   "start": 224.748,
-   "end": 229.088,
-   "section": "s04",
-   "text": "So it's not about who is touching you. It's about whether your brain saw it coming."
+   "start": 292.271,
+   "end": 296.282,
+   "section": "s05",
+   "text": "Hunger seems to flip your brain into a general get-more-stuff mode."
   },
   "L36": {
-   "start": 230.088,
-   "end": 238.282,
+   "start": 296.882,
+   "end": 313.633,
    "section": "s05",
-   "text": "Now here's where it gets weird. This prediction system isn't just for tickling. It's running all the time, on almost everything you do."
+   "text": "Meanwhile, your loyalty card is quietly taking notes. In 2012, the New York Times reported that Target had built a pregnancy prediction score, using purchases like unscented lotion and vitamin supplements to guess which shoppers were expecting a baby."
   },
   "L37": {
-   "start": 238.662,
-   "end": 246.399,
+   "start": 314.013,
+   "end": 317.163,
    "section": "s05",
-   "text": "Right now, your eyes are jumping around this screen several times a second. Every jump should make the whole world lurch. But it doesn't."
+   "text": "So the store isn't just reading the room. It's reading you."
   },
   "L38": {
-   "start": 246.799,
-   "end": 251.855,
-   "section": "s05",
-   "text": "Your brain predicts each eye movement, and cancels out the motion before you ever notice it."
+   "start": 318.163,
+   "end": 323.255,
+   "section": "s06",
+   "text": "And finally, after all that walking, deciding, and resisting, you reach the checkout."
   },
   "L39": {
-   "start": 252.235,
-   "end": 259.555,
-   "section": "s05",
-   "text": "It's not just humans, either. A cricket's chirp is incredibly loud. Loud enough to overwhelm its own sensitive ears."
+   "start": 323.655,
+   "end": 329.754,
+   "section": "s06",
+   "text": "You're tired. You're waiting in line. And right at hand height are candy bars, gum, and cold drinks."
   },
   "L40": {
-   "start": 259.935,
-   "end": 267.523,
-   "section": "s05",
-   "text": "So every time it chirps, a single nerve cell sends a signal that dials down its own hearing, perfectly timed to each chirp."
+   "start": 330.254,
+   "end": 337.169,
+   "section": "s06",
+   "text": "That's no accident. After dozens of small decisions, a quick, easy treat is a lot harder to say no to."
   },
   "L41": {
-   "start": 268.023,
-   "end": 274.397,
-   "section": "s05",
-   "text": "Even your own voice gets this treatment. When you talk, your brain turns down its response to the sound of you."
-  },
-  "L41a": {
-   "start": 274.997,
-   "end": 281.33,
-   "section": "s05",
-   "text": "Which raises a fun question. Why are we ticklish in the first place? Honestly, nobody knows for sure."
-  },
-  "L41b": {
-   "start": 281.78,
-   "end": 295.18,
-   "section": "s05",
-   "text": "Some of the most ticklish spots, like your neck, your ribs, and the soles of your feet, are also some of the most vulnerable. So one idea is that tickling is an alarm, tuned to anything crawling or poking where it shouldn't."
-  },
-  "L41c": {
-   "start": 295.56,
-   "end": 301.779,
-   "section": "s05",
-   "text": "Another idea is that it's social. Tickling is one of the very first games parents play with babies."
-  },
-  "L41d": {
-   "start": 302.159,
-   "end": 314.463,
-   "section": "s05",
-   "text": "And it's not just us. When scientists tickle rats, they let out chirps too high-pitched for us to hear. Some researchers think it's a kind of laughter. The rats even chase the hand, asking for more."
-  },
-  "L41e": {
-   "start": 314.963,
-   "end": 323.269,
-   "section": "s05",
-   "text": "Alarm or game, a tickle only works when it comes from the outside world. Which is exactly why your brain filters out the inside."
+   "start": 337.549,
+   "end": 348.006,
+   "section": "s06",
+   "text": "In fact, this spot works so well that in 2022, England made it illegal for larger stores to put junk food at checkouts, entrances, and the ends of aisles."
   },
   "L42": {
-   "start": 323.969,
-   "end": 331.024,
-   "section": "s05",
-   "text": "But all this cancelling has a hidden cost. And a 2003 experiment revealed it in a very relatable way."
+   "start": 348.806,
+   "end": 350.409,
+   "section": "s06",
+   "text": "So here's the real secret."
   },
   "L43": {
-   "start": 331.524,
-   "end": 342.01,
-   "section": "s05",
-   "text": "Researchers sat pairs of people across from each other. One person pressed down on the other's finger. Then the second person had to press back with exactly the same force."
+   "start": 350.909,
+   "end": 356.097,
+   "section": "s06",
+   "text": "Supermarkets don't force you to buy things you don't want. They make buying feel automatic."
   },
   "L44": {
-   "start": 342.39,
-   "end": 345.479,
-   "section": "s05",
-   "text": "Back and forth they went. Everyone was trying to be fair."
+   "start": 356.477,
+   "end": 368.752,
+   "section": "s06",
+   "text": "The long walk, the slow music, the eye-level shelf, the price ending in nine. Every trick is designed to keep your brain on autopilot, so you never stop to ask, do I actually need this?"
   },
   "L45": {
-   "start": 345.879,
-   "end": 351.439,
-   "section": "s05",
-   "text": "But the force kept climbing. On average, about thirty-eight percent harder, every single turn."
+   "start": 369.352,
+   "end": 373.089,
+   "section": "s06",
+   "text": "And the moment you do stop and ask, most of the tricks stop working."
   },
   "L46": {
-   "start": 352.039,
-   "end": 363.531,
-   "section": "s05",
-   "text": "Nobody was cheating. Your brain dampens the feeling of your own push, so it always feels weaker than it really is. To match what you felt, you push harder. And so does the other person."
+   "start": 374.189,
+   "end": 382.687,
+   "section": "s07",
+   "text": "So next time, bring a list. Eat before you go. Look at the top and bottom shelves. And check the price per unit, not the big yellow sign."
   },
   "L47": {
-   "start": 363.911,
-   "end": 369.201,
-   "section": "s05",
-   "text": "Which means the next time someone says, you hit me harder! They might actually be telling the truth."
+   "start": 383.187,
+   "end": 386.743,
+   "section": "s07",
+   "text": "You won't beat every trick. But now, at least, you'll see them coming."
   },
   "L48": {
-   "start": 370.201,
-   "end": 374.104,
-   "section": "s06",
-   "text": "So what happens when this prediction system doesn't work the way it should?"
+   "start": 387.143,
+   "end": 390.092,
+   "section": "s07",
+   "text": "And maybe, this time, you'll actually remember the milk."
   },
   "L49": {
-   "start": 374.604,
-   "end": 383.938,
-   "section": "s06",
-   "text": "In 2000, Blakemore's team worked with people with schizophrenia who hear voices, or feel like their actions are being controlled by someone else."
-  },
-  "L50": {
-   "start": 384.318,
-   "end": 391.868,
-   "section": "s06",
-   "text": "For these patients, their own touch didn't get turned down. It felt just as intense, and just as ticklish, as someone else's."
-  },
-  "L51": {
-   "start": 392.368,
-   "end": 402.887,
-   "section": "s06",
-   "text": "One leading idea is that when the brain's that-was-me signal gets weaker, your own actions, and even your own inner voice, can start to feel like they're coming from somewhere else."
-  },
-  "L52": {
-   "start": 403.687,
-   "end": 406.375,
-   "section": "s06",
-   "text": "And that reveals the real answer to our mystery."
-  },
-  "L53": {
-   "start": 406.975,
-   "end": 414.892,
-   "section": "s06",
-   "text": "You can't tickle yourself because your brain is constantly sorting the world into two piles. Things I did. And things that happened to me."
-  },
-  "L54": {
-   "start": 415.272,
-   "end": 421.899,
-   "section": "s06",
-   "text": "Everything you cause gets predicted, and quietly muted. Everything you didn't cause gets flagged as important."
-  },
-  "L55": {
-   "start": 422.279,
-   "end": 429.551,
-   "section": "s06",
-   "text": "It's a big part of why you feel like you. A body that's yours. Actions that are yours. A voice in your head that's yours."
-  },
-  "L56": {
-   "start": 430.151,
-   "end": 436.658,
-   "section": "s06",
-   "text": "Tickling is just the moment this hidden system shows itself. Because a tickle only works when it's a surprise."
-  },
-  "L57": {
-   "start": 437.108,
-   "end": 439.393,
-   "section": "s06",
-   "text": "And you can never truly surprise yourself."
-  },
-  "L58": {
-   "start": 440.593,
-   "end": 449.7,
+   "start": 390.892,
+   "end": 399.586,
    "section": "s07",
-   "text": "So the next time someone tickles you and you can't stop laughing, that's not a weakness. That's your brain doing its job, catching the one thing it couldn't see coming."
-  },
-  "L59": {
-   "start": 450.3,
-   "end": 458.345,
-   "section": "s07",
-   "text": "If this rewired your brain a little, subscribe to Randos in 60s for more weird stuff about being you. See you in the next one."
+   "text": "If this changed how you'll walk through the store, subscribe to Randos in 60s for more weird stuff about your brain. See you in the next one."
   }
  },
- "duration": 460.945
+ "duration": 402.186
 }

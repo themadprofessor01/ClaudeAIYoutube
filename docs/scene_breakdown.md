@@ -1,125 +1,109 @@
 # Scene-by-scene breakdown
 
-Total runtime **7:40.94** · 1920×1080 · 30 fps · 225 synced sound effects
+Total runtime **6:42.19** · 1920×1080 · 30 fps · 163 synced sound effects
 
 Each section is one HyperFrames sub-composition in `compositions/`. Shot times below are absolute video time.
 
-## S01 · Hook  (0:00.00 – 0:22.14)
+## S01 · Hook  (0:00.00 – 0:28.80)
 
 File: `compositions/s01.html`
 
 | Time | Shot | Narration beat | Visual / motion | Sound |
 |---|---|---|---|---|
-| 0:00.00 | a | L01: “Try this. Take one finger and tickle the bottom of your own …” | Paper card: “TRY THIS.” slams in word by word, orange underline draws on, pointing finger wiggles in. Slow push-in. | double impact, swish |
-| 0:01.29 | b | L01: “Try this. Take one finger and tickle the bottom of your own …” | Close-up: your finger (yellow sleeve) whips in and tickles a giant cartoon foot; tickle marks pop; label “YOUR FINGER”. | whoosh, tickle flutter, pop |
-| 0:04.72 | c | L02: “Nothing. Maybe a little itch. Honestly? Kind of boring.” | Rando stands bored (half-lidded), “…” bubble, “*itch*” scratch, then a tumbleweed rolls through the room. | pop, blip, wind |
-| 0:08.36 | d1 | L03: “But if your friend did the exact same thing, same spot, same…” | Whip-pan to the same foot on teal — now it's your FRIEND's finger; foot starts squirming. | whoosh, tickle |
-| 0:12.26 | d2 | L03: “But if your friend did the exact same thing, same spot, same…” | Pattern interrupt: Rando in full meltdown — flailing limbs, burst background, bouncing “HA! HAHA” letters, screen shake. | impact, boing |
-| 0:14.68 | e | L04: “Same skin. Same touch. Completely different reaction.” | Split screen YOU vs YOUR FRIEND; checklist pops “SAME SKIN ✓ · SAME TOUCH ✓ · DIFFERENT REACTION”. | ding, ding, buzz |
-| 0:18.57 | f | L05: “So what does your friend's finger have that yours doesn't?” | Two fingers on paper, magnifying glass sweeps across, big red “?” floats — the open loop. | whoosh, pop, riser |
+| 0:00.00 | a | L01: “You walk into a supermarket for one thing. Milk.” | Rando walks up to a supermarket; a thought bubble shows a milk carton; “milk.” slams in. | whoosh, pop, impact |
+| 0:03.96 | b | L02: “Twenty minutes later, you're at the checkout with snacks, a …” | “20 MINUTES LATER…” — Rando wheels an overflowing cart (chips, candle, snacks) to the till; the milk bubble gets a red ✗. | whoosh, tick, pops, buzz |
+| 0:10.88 | c | L03: “That's not bad luck. And it's not a lack of willpower.” | Paper card: BAD LUCK ✗ / NO WILLPOWER ✗. | buzz ×2 |
+| 0:14.28 | d | L04: “From the moment you walk in, almost everything around you ha…” | Blueprint floor plan: a dot traces the shopper's route from the entrance, around every aisle, to the dairy at the back. “designed to make you spend”. | swell |
+| 0:20.03 | e | L04: “From the moment you walk in, almost everything around you ha…” | Three icons pop on each word: THE MUSIC · THE SMELLS · THE NUMBERS. | pops |
+| 0:24.51 | f | L05: “And most of it works on a part of your brain you don't even …” | X-ray into Rando's head: a brain wearing a pilot's cap — “autopilot”. | sparkle, riser |
 
-## S02 · The Mystery  (0:22.14 – 0:44.74)
+## S02 · The Mystery  (0:28.80 – 0:51.95)
 
 File: `compositions/s02.html`
 
 | Time | Shot | Narration beat | Visual / motion | Sound |
 |---|---|---|---|---|
-| 0:22.14 | a | L06: “It's one of the strangest little glitches of the human body.…” | Navy glitch card “A glitch in the human body”: Rando with RGB-split jitter and scanline bars. | glitch ×2 |
-| 0:25.69 | b | L06: “It's one of the strangest little glitches of the human body.…” | Crowd of 7 diverse randos under falling feathers all burst out laughing — then all try tickling themselves, flat faces. “CAN TICKLE THEMSELVES ✗”. | tickle, ding, buzz |
-| 0:30.64 | c | L07: “And the answer isn't in your skin. Or your foot. Or your fin…” | Skin / foot / fingers icons pop in and get crossed out one by one on each word. | pop + buzz ×3 |
-| 0:34.81 | d | L08: “It's in your brain. And it turns out your brain has been qui…” | Huge Rando head; X-ray circle reveals the brain inside, sparkles, title “It’s in your brain”. | swell, sparkle |
-| 0:36.10 | e | L08: “It's in your brain. And it turns out your brain has been qui…” | Brain at a desk with a red pen striking lines out of a document titled REALITY; wall clock ticks. | swish ×4, ticks |
-| 0:41.78 | f | L09: “So, why can't you tickle yourself?” | TITLE CARD: “Why can’t you / tickle yourself?” kinetic type, feather swoops in and tickles the title. | riser → whoosh → impact |
+| 0:28.80 | a | L06: “The average American supermarket carries more than thirty th…” | Endless shelves scroll past a tiny overwhelmed Rando while a counter ticks up to “30,000+”. | ticks, impact, thud |
+| 0:35.36 | b | L07: “No brain can carefully think through that many choices. So i…” | The brain shakes among question marks, then a switch flips MANUAL → AUTOPILOT and a pilot cap drops on. | click, swell |
+| 0:41.81 | c | L08: “And supermarkets have spent decades learning exactly how to …” | The autopilot brain flies a dotted route between shelves, steered by a “THIS WAY →” sign. | whoosh, pop |
+| 0:47.52 | d | L09: “So, how do supermarkets trick your brain into spending more?” | TITLE CARD: “how supermarkets / trick your brain / into spending more”, overflowing cart slides in. | riser → whoosh → impact |
 
-## S03 · The First Big Discovery  (0:44.74 – 2:15.19)
+## S03 · The Layout  (0:51.95 – 2:05.11)
 
 File: `compositions/s03.html`
 
 | Time | Shot | Narration beat | Visual / motion | Sound |
 |---|---|---|---|---|
-| 0:44.74 | a | L10: “Scientists started poking at this question back in 1971. A t…” | REWIND: calendar flips 2026 → 1971, clock spins backwards, stamp lands. | rewind, stamp |
-| 0:48.71 | b | L10: “Scientists started poking at this question back in 1971. A t…” | 1971 retro lab: Lawrence Weiskrantz tickles a bare foot poking out of a curtain with a feather; name tag; “HAHA!” from behind. | whoosh, tickle, boing |
-| 0:56.76 | c | L11: “It really is less ticklish when you do it yourself.” | Hand-drawn bar chart: TICKLINESS — someone else (tall) vs yourself (short). | up, down |
-| 0:59.70 | d | L11a: “Scientists even have two words for it. Knismesis is the ligh…” | KNISMESIS: feather glides along a forearm, goosebumps, itchy squiggles. | pop, light tickle |
-| 1:05.82 | e | L11a: “Scientists even have two words for it. Knismesis is the ligh…” | GARGALESIS: friend pokes Rando's ribs; full laugh, HA letters, shake. | impact, tickle, boing |
-| 1:11.65 | f | L11b: “And it's that laughing kind that's nearly impossible to give…” | Rando pokes his own ribs, deadpan; “…nope.” bubble; “SELF-GARGALESIS ✗”. | pop, buzz |
-| 1:16.15 | g | L12: “But nobody could explain why. Not until 1998, when Sarah-Jay…” | Three puzzled scientists shrug as question marks pop. | pops |
-| 1:18.36 | h | L12: “But nobody could explain why. Not until 1998, when Sarah-Jay…” | London skyline rises in, tag “LONDON, 1998”. | big whoosh, stamp |
-| 1:22.90 | i | L12: “But nobody could explain why. Not until 1998, when Sarah-Jay…” | Sarah-Jayne Blakemore presents the MRI brain scanner sliding in. | whoosh, ding |
-| 1:26.22 | j | L13: “Volunteers lay in the scanner while a soft tickling device b…” | Close-up of a palm while a foam-tipped stick brushes back and forth. | soft swishes |
-| 1:32.08 | k | L14: “Sometimes the experimenter moved it. Sometimes the volunteer…” | Two panels — EXPERIMENTER MOVES IT / VOLUNTEER MOVES IT — orange highlight slides between them. | swish |
-| 1:37.76 | l | L15: “When someone else did the tickling, the parts of the brain t…” | Scanner monitor: the brain's touch strip glows orange (someone else) … then fades grey (yourself). | sparkle/up → down |
-| 1:47.26 | m | L17: “Same touch on the skin. But the brain was barely listening.” | Brain drops on earmuffs and ignores a waving hand saying “hellooo?”. | thud, pop |
-| 1:51.30 | n | L18: “And there was another clue. A region at the back of the brai…” | Side-view brain; the cerebellum pulses orange, circled and labelled (“latin for ‘little brain’”); camera dives in. | ding, pop |
-| 1:59.28 | p1–p3 | L19: “The cerebellum is famous for coordinating movement. It's the…” | Quick-fire vignettes: WALK (walk cycle), TYPE (laptop), CATCH (ball arc into hand). | typing, whoosh, thud |
-| 2:07.67 | q | L20: “But the scientists suspected it was doing something else too…” | Spotlight noir: the cerebellum in a detective hat tiptoes across, shifty eyes. | tiptoe ticks |
-| 2:12.67 | r | L21: “It was predicting the future.” | Crystal ball with the cerebellum inside, glowing; “predicting the future”. | riser → impact, sparkle |
+| 0:51.95 | a | L10: “Let's start with the thing you're pushing. In 1937, an Oklah…” | REWIND: calendar flips back to 1937, clock spins backwards. | rewind, stamp |
+| 0:55.75 | b | L10: “Let's start with the thing you're pushing. In 1937, an Oklah…” | Sepia 1930s grocery: Sylvan Goldman unveils his folding two-basket cart. | sparkle, pop |
+| 1:02.65 | c | L11: “And at first, nobody wanted to use it. Women said it felt li…” | A woman thinks “baby carriage”; a man folds his arms: “unmanly.” | pop, buzz |
+| 1:10.22 | d | L12: “So Goldman hired people to pretend to shop with the carts, u…” | HIRED “SHOPPERS” (SHH!) push carts through the store; a real customer starts copying them. | pop, ding |
+| 1:16.64 | e | L13: “It worked. And it showed something stores have used ever sin…” | “bigger basket = more stuff”: hand basket → shopping cart that fills up with products. | whoosh, pops |
+| 1:25.18 | f | L14: “Now look at where things are. Milk, eggs, and bread, the stu…” | Blueprint: MILK, EGGS and BREAD light up along the back wall. | ding |
+| 1:37.52 | g | L15: “Part of that is practical, since the fridges and deliveries …” | Side-scrolling walk to the dairy past shelf after shelf; temptation “!”s pop; counter climbs to “2,000+ items”. | blips |
+| 1:43.48 | h | L16: “Then there's the entrance. Shoppers barely register the firs…” | Rando zones out just inside the door; the floor area is labelled THE DECOMPRESSION ZONE. | stamp |
+| 1:52.00 | i | L17: “So that's often where stores put something beautiful. Bright…” | Entrance display of fruit, flowers and fresh bread with smell lines; Rando's MOOD meter rises. | swell, sparkle |
 
-## S04 · Go Deeper  (2:15.19 – 3:50.09)
+## S04 · Your Senses and the Shelves  (2:05.11 – 3:17.68)
 
 File: `compositions/s04.html`
 
 | Time | Shot | Narration beat | Visual / motion | Sound |
 |---|---|---|---|---|
-| 2:15.19 | a | L22: “Here's how it works. Every time you decide to move, your bra…” | Brain fires an envelope down a dotted nerve to Rando; LIFT / MOVE LEFT / PRESS DOWN commands pop as his arm obeys. | whoosh, clicks |
-| 2:23.52 | b | L23: “But it also keeps a copy of that command. Scientists call it…” | Email window To: MUSCLES, CC: BRAIN (ME); the envelope splits in two; red stamp “EFFERENCE COPY”. | swish, stamp |
-| 2:32.67 | c | L24: “Your brain uses that copy to run a quick simulation. If I do…” | Brain's thought bubble shows the predicted feeling with a “simulating…” progress bar. | pop, beep |
-| 2:39.48 | d | L25: “Then the real sensation arrives, and the brain compares the …” | PREDICTION vs REALITY cards slide in, VS badge, then they slide together and overlap. | whoosh ×2, impact |
-| 2:45.91 | e | L26: “If they match, the brain basically says, that was just me, n…” | Match: green check, “that was just me”, volume knob turns down, speaker waves vanish. | ding, pop, down |
-| 2:52.86 | f | L27: “If they don't match, that's a surprise. And surprises get th…” | Mismatch: red siren flashes, brain gasps, knob cranks up, waves return, shake. | alarm, up |
-| 2:58.33 | g | L28: “A tickle from someone else is pure surprise. You can't predi…” | Friend's hand follows a chaotic dotted path; Rando's eyes chase it; WHERE? HOW HARD? HOW FAST? → laughter. | pops |
-| 3:06.55 | h | L29: “But your own fingers? Your brain knows the plan before your …” | Rando's thought bubble holds THE PLAN; his own hand traces the exact dotted path. “NO SURPRISE”. | pop, buzz |
-| 3:13.91 | i | L30: “And the researchers proved it, with robots.” | “robots!” — two cute robots bounce in waving, stars burst. | robot chirps, sparkle |
-| 3:16.72 | j | L31: “Volunteers moved a robot arm with one hand, and a second rob…” | Two-robot setup: left hand drives robot A, signal pulse travels the cable to robot B whose foam tip brushes the right palm. Stopwatch adds +0.1 s, +0.2 s and the pulse visibly lags. | beep, tick, pops |
-| 3:31.10 | l | L33: “And suddenly, the volunteers' own touch started feeling tick…” | TICKLY-O-METER shoots up; Rando goes from deadpan to giggling. | up, tickle |
-| 3:35.12 | m | L34: “They also twisted the direction, so the robot moved a little…” | Direction mismatch: robot arrow rotates away from the hand's arrow; graph draws MISMATCH → TICKLE curve. | swishes, up |
-| 3:44.75 | n | L35: “So it's not about who is touching you. It's about whether yo…” | Kinetic type: “it’s not about who” (who struck out) → “it’s whether your brain saw it coming”; a big eye glances left-right. | swish, impact |
+| 2:05.11 | a | L18: “Once you've slowed down, the store goes to work on your sens…” | Close-up Rando with labels EARS · NOSE · EYES and floating music notes. | pops |
+| 2:08.97 | b | L19: “In a classic 1982 study, researcher Ronald Milliman played s…” | Split screen: SLOW MUSIC (strolling shopper, lazy notes) vs FAST MUSIC (rushing shopper, bouncing notes); “1982”. | stamp |
+| 2:18.98 | c | L20: “With slow music, shoppers walked more slowly, and the store …” | Bar chart: slow-music days beat fast-music days, “≈ +38%”. | up, impact |
+| 2:23.96 | d | L21: “Even the style of music matters. In 1997, British psychologi…” | Wine display: French wine (flag) vs German wine (flag), a speaker playing between them; “1997”. | stamp |
+| 2:32.96 | e | L22: “On French music days, French wine outsold German wine by abo…” | Two charts: French-music days (French ≈ 5 : 1) and German-music days (German wins). | up, impact, ding |
+| 2:41.49 | f | L23: “And when shoppers were asked, they seemed to have no idea th…” | A shopper holding wine is interviewed: “music? what music?” | whoosh, pop |
+| 2:47.68 | g | L24: “Then come the shelves. The products at eye level are often t…” | Rando's eye line hits a highlighted shelf band: EYE LEVEL = BUY LEVEL; a coin drops (brands pay). | ding, pop, thud |
+| 2:56.16 | h | L25: “Cheaper store brands are often hiding up high, or down near …” | Top and bottom shelves glow STORE BRAND $; cereal boxes sit exactly on a kid's eye line. | pops, sparkle |
+| 3:05.07 | i | L26: “And the ends of the aisles, called end caps, are prime real …” | End cap: a pyramid of soup cans bounces in under a “SPECIAL!” sign — tag: same price as always. | thuds, impact, ding |
 
-## S05 · The Unexpected Twist  (3:50.09 – 6:10.20)
+## S05 · The Numbers and You  (3:17.68 – 5:18.16)
 
 File: `compositions/s05.html`
 
 | Time | Shot | Narration beat | Visual / motion | Sound |
 |---|---|---|---|---|
-| 3:50.09 | a1 | L36: “Now here's where it gets weird. This prediction system isn't…” | Purple spinning spiral, “it gets weird”, Rando's head wobbles. | glitch, boing |
-| 3:52.08 | a2 | L36: “Now here's where it gets weird. This prediction system isn't…” | Brain at the centre of orbiting senses (eye, speaker, hand, speech): “ALWAYS ON”. | ding |
-| 3:58.66 | b | L37: “Right now, your eyes are jumping around this screen several …” | Giant eye makes saccades; a little world panel lurches with every jump (WITHOUT PREDICTION) then stays rock-steady (WHAT YOU SEE). | clicks, buzz, ding |
-| 4:06.80 | c | L38: “Your brain predicts each eye movement, and cancels out the m…” | Equation: EYE MOVES + BRAIN CANCELS IT = STEADY WORLD ✓ (each term pops in). | pops, ding |
-| 4:12.24 | d | L39: “It's not just humans, either. A cricket's chirp is incredibl…” | Night meadow: a cricket chirps huge sound waves, “CHIRP!”, fun fact arrow: “its ears are on its legs!”. | cricket chirps |
-| 4:19.94 | e | L40: “So every time it chirps, a single nerve cell sends a signal …” | One nerve cell fires; a playhead sweeps a timeline showing hearing dipping exactly on every chirp. | chirps |
-| 4:28.02 | f | L41: “Even your own voice gets this treatment. When you talk, your…” | Rando talks (lip flaps + voice waves); thought bubble: brain turning a knob — “YOUR VOICE: TURNED DOWN”. | pop, down |
-| 4:35.00 | g | L41a: “Which raises a fun question. Why are we ticklish in the firs…” | “why are we ticklish?” — Rando shrugs among question marks; “nobody knows for sure”. | pops |
-| 4:41.78 | h | L41b: “Some of the most ticklish spots, like your neck, your ribs, …” | Body map: neck, ribs, feet glow red; a spider drops in and creeps closer; alarm siren; Rando sweats. | pops, alarm |
-| 4:55.56 | i | L41c: “Another idea is that it's social. Tickling is one of the ver…” | Parent tickles a giggling baby; hearts float up. | tickle, sparkle |
-| 5:02.16 | j | L41d: “And it's not just us. When scientists tickle rats, they let …” | Rat gets tickled, ultrasonic chirp squiggles (TOO HIGH-PITCHED FOR HUMANS), then chases the hand: “more!”. | squeaks |
-| 5:14.96 | k | L41e: “Alarm or game, a tickle only works when it comes from the ou…” | Circle of YOU: red arrows from the outside punch in (OUTSIDE = LOUD); an inside arrow gets muted (INSIDE = QUIET). | whoosh, down |
-| 5:23.97 | l | L42: “But all this cancelling has a hidden cost. And a 2003 experi…” | Swinging “HIDDEN COST” price tag, calendar stamps 2003. | swish, stamp |
-| 5:31.52 | m | L43: “Researchers sat pairs of people across from each other. One …” | Two volunteers at a table take turns pressing; a balance scale tips each turn; “FAIR?”. | thuds (growing), ding |
-| 5:45.88 | o | L45: “But the force kept climbing. On average, about thirty-eight …” | Escalation bar chart grows turn by turn; “≈ +38% EVERY TURN”. | rising pops, impact |
-| 5:52.04 | p | L46: “Nobody was cheating. Your brain dampens the feeling of your …” | Arrow diagram: WHAT YOU PUSH (big) → WHAT YOU FEEL (small, muted brain) → WHAT THEY FEEL (big). | whooshes |
-| 6:03.91 | q | L47: “Which means the next time someone says, you hit me harder! T…” | Back seat of a car: “YOU HIT ME HARDER!”; the sibling gets a halo — “…they might be right”. | impact, sparkle |
+| 3:17.68 | a | L27: “But some of the sneakiest tricks aren't on the shelves. They…” | Price tags rain down: “it's in the numbers”. | whoosh, impact |
+| 3:21.98 | b | L28: “Why does everything cost two ninety-nine instead of three do…” | Giant $2.99 tag; an arrow reads left → right and circles the “2”. | pop, swish, ding |
+| 3:31.51 | c | L29: “Two ninety-nine just feels closer to two than to three.” | Number line $2 — $3: the real $2.99 sits by $3, but the “feels like” marker slides to $2. | whoosh |
+| 3:35.04 | d | L30: “In one famous experiment, researchers changed the price of a…” | Catalog dress: price flips $34 → $39 and the $39 sales bar grows a third taller. | swish, up, ding |
+| 3:46.86 | e | L31: “A higher price, ending in nine, beat a lower one.” | $39 > $34 with a crown on the $39. | pops, sparkle |
+| 3:50.25 | f | L31a: “Then there's the crossed-out price. Was ten dollars, now six…” | WAS $10 (struck through) NOW $6; an anchor slams down; the brain cheers “a win!”. | swish, thud, ding |
+| 4:03.14 | g | L31b: “The same researchers found that a simple sale sign can boost…” | A SALE! sign stamps onto a shelf; sales arrow goes up; the brain shrugs “?”. | stamp, up, pop |
+| 4:14.34 | h | L32: “Then there are deals like two for five dollars. Lots of peop…” | “2 FOR $5” sign over cans; Rando grabs two; “= $2.50 each anyway”. | impact, pops, ding |
+| 4:22.96 | i | L32a: “And then there's shrinkflation. Instead of raising the price…” | SHRINKFLATION: the same $3.99 chip bag shrinks 300 g → 260 g → 225 g. | down ×3 |
+| 4:32.14 | j | L32b: “Your brain checks the price. It rarely checks the grams.” | Brain checks the price tag ✓ and skips the grams ✗. | ding, buzz |
+| 4:36.09 | k | L33: “And then there's you. Your own body can work against your wa…” | Spotlight on Rando; his wallet sprouts legs and runs off. | boing |
+| 4:39.92 | l | L34: “A 2015 study found that hungry people didn't just want more …” | Hungry Rando (growling stomach) fills a cart with non-food items; a receipt unrolls; “2015”. | heartbeat, pops, typing |
+| 4:52.27 | m | L35: “Hunger seems to flip your brain into a general get-more-stuf…” | A switch flips the brain into GET-MORE-STUFF MODE. | click, alarm |
+| 4:56.88 | n | L36: “Meanwhile, your loyalty card is quietly taking notes. In 201…” | Loyalty card scanned; data flows to a screen: GUEST #48151, unscented lotion ✓, vitamins ✓, PREGNANCY SCORE bar fills; news clipping 2012. | beep, page, up |
+| 5:14.01 | o | L37: “So the store isn't just reading the room. It's reading you.” | A ceiling scanner beam sweeps over a sweating Rando: “it's reading you”. | beeps |
 
-## S06 · The Big Payoff  (6:10.20 – 7:20.59)
+## S06 · The Big Payoff  (5:18.16 – 6:14.19)
 
 File: `compositions/s06.html`
 
 | Time | Shot | Narration beat | Visual / motion | Sound |
 |---|---|---|---|---|
-| 6:10.20 | a | L48: “So what happens when this prediction system doesn't work the…” | Dark room: a neon “THAT WAS ME” sign flickers above a worried brain. | glitch buzz |
-| 6:14.60 | b | L49: “In 2000, Blakemore's team worked with people with schizophre…” | Gentle, respectful illustration (2000): faint wordless voice bubbles drift; puppet strings lower — HEARING VOICES / FEELING CONTROLLED. | page |
-| 6:24.32 | c | L50: “For these patients, their own touch didn't get turned down. …” | Grouped bars: MOST PEOPLE (self much lower) vs THESE PATIENTS (self ≈ someone else). | up ×2 |
-| 6:32.37 | d | L51: “One leading idea is that when the brain's that-was-me signal…” | The “ME” tag on his hand fades and droops; his inner-voice bubble drifts outside his head; “?”. | down, pop |
-| 6:43.69 | e | L52: “And that reveals the real answer to our mystery.” | Rotating sunburst: “the real answer”. | drumroll → impact, swell |
-| 6:46.98 | f | L53: “You can't tickle yourself because your brain is constantly s…” | Two bins: THINGS I DID / THINGS THAT HAPPENED TO ME; objects drop in. Then I DID gets a mute icon and greys out, HAPPENED gets a flag and a spotlight. | whooshes, thuds, down, ding |
-| 7:02.28 | h | L55: “It's a big part of why you feel like you. A body that's your…” | Rando in a warm glow: A BODY ✓ · ACTIONS ✓ · A VOICE ✓ — “…that’s yours”. | pops |
-| 7:10.15 | i | L56: “Tickling is just the moment this hidden system shows itself.…” | A feather tickles a theatre curtain open, revealing the brain's hidden gears turning. | tickle, big whoosh, sparkle |
-| 7:17.11 | j | L57: “And you can never truly surprise yourself.” | Rando jumps out of a box yelling “BOO!” at his mirror reflection, which replies “meh.” | impact, boing, pop |
+| 5:18.16 | a | L38: “And finally, after all that walking, deciding, and resisting…” | Tired Rando pushes his loaded cart into the checkout queue. | whoosh, beep |
+| 5:23.65 | b | L39: “You're tired. You're waiting in line. And right at hand heig…” | Close-up of the checkout rack: candy, gum and drinks exactly at hand height; clock ticks. | ticks, sparkle |
+| 5:30.25 | c | L40: “That's no accident. After dozens of small decisions, a quick…” | Dozens of “?” decisions pop while a WILLPOWER battery drains to red; a candy bar wiggles. | pops, down, sparkle |
+| 5:37.55 | d | L41: “In fact, this spot works so well that in 2022, England made …” | England 2022: gavel slams; CHECKOUTS ✗ ENTRANCES ✗ ENDS OF AISLES ✗. | stamp, buzz ×3 |
+| 5:48.81 | e | L42: “So here's the real secret.” | Rotating sunburst: “the real secret”. | drumroll → impact |
+| 5:50.91 | f | L43: “Supermarkets don't force you to buy things you don't want. T…” | Products ride a conveyor belt straight into the cart: AUTOMATIC. | ding |
+| 5:56.48 | g | L44: “The long walk, the slow music, the eye-level shelf, the pric…” | Recap tiles pop: LONG WALK · SLOW MUSIC · EYE LEVEL · ENDS IN 9 → banner “do I actually need this?”. | pops, impact |
+| 6:09.35 | h | L45: “And the moment you do stop and ask, most of the tricks stop …” | Rando raises a hand — STOP sign — his pilot cap flies off and the tricks fall away. | impact, whoosh, thud |
 
-## S07 · Memorable Ending  (7:20.59 – 7:40.94)
+## S07 · Memorable Ending  (6:14.19 – 6:42.19)
 
 File: `compositions/s07.html`
 
 | Time | Shot | Narration beat | Visual / motion | Sound |
 |---|---|---|---|---|
-| 7:20.59 | a | L58: “So the next time someone tickles you and you can't stop laug…” | Friend tickles Rando in the sunshine; thought bubble: brain thumbs-up “JUST DOING MY JOB”. | tickle, pop, ding |
-| 7:30.30 | b | L59: “If this rewired your brain a little, subscribe to Randos in …” | End card: “Randos in 60s” logo writes in, Rando waves, cursor clicks SUBSCRIBE → SUBSCRIBED, bell rings, “see you in the next one”. | impact, click, ding, music ring-out |
+| 6:14.19 | a | L46: “So next time, bring a list. Eat before you go. Look at the t…” | Checklist slides in: bring a list ✓ · eat before you go ✓ · look high and low ✓ · check the unit price ✓. | dings |
+| 6:23.19 | b | L47: “You won't beat every trick. But now, at least, you'll see th…” | Rando sweeps a magnifying glass over the shelves; “TRICK!” bubbles pop. | pops |
+| 6:27.14 | c | L48: “And maybe, this time, you'll actually remember the milk.” | Callback: Rando proudly holds up the milk at the till — receipt $1.29, sparkles. | sparkle |
+| 6:30.89 | d | L49: “If this changed how you'll walk through the store, subscribe…” | End card: Randos in 60s logo, cursor clicks SUBSCRIBE → SUBSCRIBED, bell rings, Rando waves. | impact, click, ding |
