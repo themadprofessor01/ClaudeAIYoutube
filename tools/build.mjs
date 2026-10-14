@@ -20,7 +20,7 @@ for (const sec of T.sections) {
   if (fs.existsSync(file)) {
     const cues = {};
     for (const [id, l] of Object.entries(T.lines))
-      if (l.section === sec.id) cues[id] = [f3(l.start - sec.start), f3(l.end - sec.start), l.text];
+      if (l.section === sec.id) cues[id] = [f3(l.start - sec.start), f3(l.end - sec.start), l.text, (l.words || []).map(([w, t]) => [w, f3(t - sec.start)])];
     let src = fs.readFileSync(file, "utf8");
     const block = `/*CUES*/ const CUES = ${JSON.stringify(cues)}; const DUR = ${dur}; /*ENDCUES*/`;
     src = src.replace(/\/\*CUES\*\/[\s\S]*?\/\*ENDCUES\*\//, block);

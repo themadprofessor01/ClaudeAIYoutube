@@ -50,6 +50,8 @@ for (const sec of T.sections) {
   const shotlog = await page.evaluate(() => window.__SHOTLOG || []);
   for (const e of shotlog) shots.push({ scene: sec.id, shot: e.sel.split("-").pop(), transition: e.tr, abs: +(sec.start + e.t).toFixed(3) });
   if (errs.length) console.error(sec.id, "errors:", errs);
+  const miss = await page.evaluate(() => window.__CUEMISS || []);
+  if (miss.length) console.log(sec.id, "cue fallbacks (estimated, no word match):", [...new Set(miss)].join(" | "));
   for (const e of log) events.push({ ...e, abs: +(sec.start + e.t).toFixed(3) });
   console.log(sec.id, log.length, "sfx");
   await page.close();

@@ -1,0 +1,200 @@
+[
+{
+"id": "w0",
+"text": "A",
+"start": 0.252,
+"end": 0.337
+},
+{
+"id": "w1",
+"text": "2015",
+"start": 0.38,
+"end": 1.276
+},
+{
+"id": "w2",
+"text": "study",
+"start": 1.361,
+"end": 1.532
+},
+{
+"id": "w3",
+"text": "found",
+"start": 1.66,
+"end": 1.873
+},
+{
+"id": "w4",
+"text": "that",
+"start": 1.916,
+"end": 2.001
+},
+{
+"id": "w5",
+"text": "hungry",
+"start": 2.044,
+"end": 2.343
+},
+{
+"id": "w6",
+"text": "people",
+"start": 2.428,
+"end": 2.599
+},
+{
+"id": "w7",
+"text": "didn't",
+"start": 2.769,
+"end": 3.111
+},
+{
+"id": "w8",
+"text": "just",
+"start": 3.153,
+"end": 3.239
+},
+{
+"id": "w9",
+"text": "want",
+"start": 3.367,
+"end": 3.495
+},
+{
+"id": "w10",
+"text": "more",
+"start": 3.58,
+"end": 3.708
+},
+{
+"id": "w11",
+"text": "food.",
+"start": 3.793,
+"end": 4.305
+},
+{
+"id": "w12",
+"text": "They",
+"start": 4.561,
+"end": 4.689
+},
+{
+"id": "w13",
+"text": "grabbed",
+"start": 4.732,
+"end": 4.945
+},
+{
+"id": "w14",
+"text": "more",
+"start": 5.031,
+"end": 5.201
+},
+{
+"id": "w15",
+"text": "non-food",
+"start": 5.244,
+"end": 5.756
+},
+{
+"id": "w16",
+"text": "things",
+"start": 5.841,
+"end": 5.969
+},
+{
+"id": "w17",
+"text": "too,",
+"start": 6.097,
+"end": 6.481
+},
+{
+"id": "w18",
+"text": "and",
+"start": 6.695,
+"end": 6.865
+},
+{
+"id": "w19",
+"text": "hungry",
+"start": 6.908,
+"end": 7.164
+},
+{
+"id": "w20",
+"text": "shoppers",
+"start": 7.207,
+"end": 7.591
+},
+{
+"id": "w21",
+"text": "in",
+"start": 7.676,
+"end": 7.719
+},
+{
+"id": "w22",
+"text": "a",
+"start": 7.761,
+"end": 7.847
+},
+{
+"id": "w23",
+"text": "department",
+"start": 7.889,
+"end": 8.273
+},
+{
+"id": "w24",
+"text": "store",
+"start": 8.316,
+"end": 8.529
+},
+{
+"id": "w25",
+"text": "spent",
+"start": 8.615,
+"end": 8.828
+},
+{
+"id": "w26",
+"text": "more",
+"start": 8.871,
+"end": 9.041
+},
+{
+"id": "w27",
+"text": "than",
+"start": 9.084,
+"end": 9.212
+},
+{
+"id": "w28",
+"text": "shoppers",
+"start": 9.255,
+"end": 9.596
+},
+{
+"id": "w29",
+"text": "who",
+"start": 9.681,
+"end": 9.767
+},
+{
+"id": "w30",
+"text": "had",
+"start": 9.809,
+"end": 9.852
+},
+{
+"id": "w31",
+"text": "just",
+"start": 9.895,
+"end": 10.065
+},
+{
+"id": "w32",
+"text": "eaten.",
+"start": 10.151,
+"end": 10.508
+}
+]

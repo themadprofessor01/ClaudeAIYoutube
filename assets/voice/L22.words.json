@@ -1,0 +1,128 @@
+[
+{
+"id": "w0",
+"text": "On",
+"start": 0.256,
+"end": 0.427
+},
+{
+"id": "w1",
+"text": "French",
+"start": 0.469,
+"end": 0.64
+},
+{
+"id": "w2",
+"text": "music",
+"start": 0.768,
+"end": 0.896
+},
+{
+"id": "w3",
+"text": "days,",
+"start": 1.067,
+"end": 1.429
+},
+{
+"id": "w4",
+"text": "French",
+"start": 1.621,
+"end": 1.877
+},
+{
+"id": "w5",
+"text": "wine",
+"start": 1.963,
+"end": 2.176
+},
+{
+"id": "w6",
+"text": "outsold",
+"start": 2.304,
+"end": 2.773
+},
+{
+"id": "w7",
+"text": "German",
+"start": 2.859,
+"end": 3.115
+},
+{
+"id": "w8",
+"text": "wine",
+"start": 3.157,
+"end": 3.371
+},
+{
+"id": "w9",
+"text": "by",
+"start": 3.499,
+"end": 3.627
+},
+{
+"id": "w10",
+"text": "about",
+"start": 3.712,
+"end": 3.84
+},
+{
+"id": "w11",
+"text": "five",
+"start": 3.883,
+"end": 4.096
+},
+{
+"id": "w12",
+"text": "to",
+"start": 4.224,
+"end": 4.309
+},
+{
+"id": "w13",
+"text": "one.",
+"start": 4.352,
+"end": 4.736
+},
+{
+"id": "w14",
+"text": "On",
+"start": 4.949,
+"end": 5.163
+},
+{
+"id": "w15",
+"text": "German",
+"start": 5.248,
+"end": 5.547
+},
+{
+"id": "w16",
+"text": "music",
+"start": 5.589,
+"end": 5.717
+},
+{
+"id": "w17",
+"text": "days,",
+"start": 5.888,
+"end": 6.293
+},
+{
+"id": "w18",
+"text": "German",
+"start": 6.528,
+"end": 6.827
+},
+{
+"id": "w19",
+"text": "wine",
+"start": 6.869,
+"end": 7.083
+},
+{
+"id": "w20",
+"text": "won.",
+"start": 7.168,
+"end": 7.671
+}
+]

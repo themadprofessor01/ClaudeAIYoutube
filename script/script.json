@@ -1,6 +1,9 @@
 {
   "title": "How Supermarkets Trick Your Brain Into Spending More",
   "channel": "Randos in 60s",
+  "provider": "heygen",
+  "heygen_voice": "d21d096b4d684ea0b90a90fcbe8d645b",
+  "heygen_voice_name": "Evan (HeyGen premium)",
   "voice": "af_heart",
   "speed": 0.93,
   "default_gap": 0.38,
@@ -301,7 +304,8 @@
           "id": "L49",
           "text": "If this changed how you'll walk through the store, subscribe to Randos in 60s for more weird stuff about your brain. See you in the next one.",
           "say": "If this changed how you'll walk through the store, subscribe to Randos in sixty seconds for more weird stuff about your brain. See you in the next one.",
-          "gap": 2.6
+          "gap": 2.6,
+          "heygen_say": "If this changed how you'll walk through the store, subscribe to Randos in sixty seconds for more weird stuff about your brain. See you in the next one."
         }
       ]
     }

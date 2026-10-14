@@ -17,21 +17,21 @@ In this animated deep-dive we walk through the store the way a supermarket desig
 
 ⏱️ Chapters
 0:00 You went in for milk
-0:28 30,000 products and an autopilot brain
+0:29 30,000 products and an autopilot brain
 0:51 The shopping cart nobody wanted
-1:25 Why the milk is at the back
-1:43 The decompression zone
-2:05 Music that changes what you buy
-2:47 Eye level is buy level
-3:05 End caps
-3:17 Why prices end in 9
-3:50 Anchors, sale signs and "2 for $5"
-4:22 Shrinkflation
-4:36 Shopping hungry
-4:56 Your loyalty card is taking notes
-5:18 The checkout trap
-5:48 The real secret
-6:14 How to fight back
+1:21 Why the milk is at the back
+1:38 The decompression zone
+1:58 Music that changes what you buy
+2:37 Eye level is buy level
+2:52 End caps
+3:03 Why prices end in 9
+3:36 Anchors, sale signs and "2 for $5"
+4:05 Shrinkflation
+4:18 Shopping hungry
+4:38 Your loyalty card is taking notes
+4:58 The checkout trap
+5:28 The real secret
+5:52 How to fight back
 
 📚 Sources
 • Sylvan Goldman & the first shopping cart (1937), incl. his hired "shoppers" (Goldman's 1977 interview with Charles Kuralt)
@@ -45,7 +45,7 @@ In this animated deep-dive we walk through the store the way a supermarket desig
 • The Food (Promotion and Placement) (England) Regulations 2021 (location rules in force 1 October 2022).
 • FMI – The Food Industry Association, average items carried per supermarket (≈31,700, 2023).
 
-Animation, music and sound effects are original. Voice: Kokoro TTS.
+Animation, music and sound effects are original. Voice: HeyGen "Evan".
 
 #psychology #supermarket #marketing #brain #money
 ```

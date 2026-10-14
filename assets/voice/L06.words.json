@@ -1,0 +1,80 @@
+[
+{
+"id": "w0",
+"text": "The",
+"start": 0.299,
+"end": 0.427
+},
+{
+"id": "w1",
+"text": "average",
+"start": 0.469,
+"end": 0.64
+},
+{
+"id": "w2",
+"text": "American",
+"start": 0.853,
+"end": 1.024
+},
+{
+"id": "w3",
+"text": "supermarket",
+"start": 1.195,
+"end": 1.707
+},
+{
+"id": "w4",
+"text": "carries",
+"start": 1.877,
+"end": 2.133
+},
+{
+"id": "w5",
+"text": "more",
+"start": 2.219,
+"end": 2.347
+},
+{
+"id": "w6",
+"text": "than",
+"start": 2.389,
+"end": 2.475
+},
+{
+"id": "w7",
+"text": "thirty",
+"start": 2.517,
+"end": 2.816
+},
+{
+"id": "w8",
+"text": "thousand",
+"start": 2.944,
+"end": 3.2
+},
+{
+"id": "w9",
+"text": "different",
+"start": 3.413,
+"end": 3.541
+},
+{
+"id": "w10",
+"text": "products.",
+"start": 3.669,
+"end": 4.245
+},
+{
+"id": "w11",
+"text": "Thirty",
+"start": 4.608,
+"end": 4.907
+},
+{
+"id": "w12",
+"text": "thousand.",
+"start": 5.035,
+"end": 5.721
+}
+]

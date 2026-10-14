@@ -1,0 +1,62 @@
+[
+{
+"id": "w0",
+"text": "A",
+"start": 0.256,
+"end": 0.341
+},
+{
+"id": "w1",
+"text": "higher",
+"start": 0.384,
+"end": 0.597
+},
+{
+"id": "w2",
+"text": "price,",
+"start": 0.683,
+"end": 1.216
+},
+{
+"id": "w3",
+"text": "ending",
+"start": 1.493,
+"end": 1.707
+},
+{
+"id": "w4",
+"text": "in",
+"start": 1.877,
+"end": 2.005
+},
+{
+"id": "w5",
+"text": "nine,",
+"start": 2.048,
+"end": 2.603
+},
+{
+"id": "w6",
+"text": "beat",
+"start": 2.987,
+"end": 3.115
+},
+{
+"id": "w7",
+"text": "a",
+"start": 3.157,
+"end": 3.2
+},
+{
+"id": "w8",
+"text": "lower",
+"start": 3.243,
+"end": 3.413
+},
+{
+"id": "w9",
+"text": "one.",
+"start": 3.541,
+"end": 3.886
+}
+]

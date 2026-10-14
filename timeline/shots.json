@@ -9,324 +9,324 @@
   "scene": "s01",
   "shot": "b",
   "transition": "whipL",
-  "abs": 3.965
+  "abs": 4.194
  },
  {
   "scene": "s01",
   "shot": "c",
   "transition": "pop",
-  "abs": 10.882
+  "abs": 12.624
  },
  {
   "scene": "s01",
   "shot": "d",
   "transition": "fade",
-  "abs": 14.276
+  "abs": 16.479
  },
  {
   "scene": "s01",
   "shot": "e",
   "transition": "pop",
-  "abs": 20.029
+  "abs": 22.111
  },
  {
   "scene": "s01",
   "shot": "f",
   "transition": "fade",
-  "abs": 24.506
+  "abs": 25.904
  },
  {
   "scene": "s02",
   "shot": "a",
   "transition": "cut",
-  "abs": 28.798
+  "abs": 29.746
  },
  {
   "scene": "s02",
   "shot": "b",
   "transition": "pop",
-  "abs": 35.363
+  "abs": 35.825
  },
  {
   "scene": "s02",
   "shot": "c",
   "transition": "whipL",
-  "abs": 41.815
+  "abs": 42.017
  },
  {
   "scene": "s02",
   "shot": "d",
   "transition": "pop",
-  "abs": 47.524
+  "abs": 46.787
  },
  {
   "scene": "s03",
   "shot": "a",
   "transition": "cut",
-  "abs": 51.95
+  "abs": 51.24
  },
  {
   "scene": "s03",
   "shot": "b",
   "transition": "whipL",
-  "abs": 55.747
+  "abs": 54.607
  },
  {
   "scene": "s03",
   "shot": "c",
   "transition": "pop",
-  "abs": 62.645
+  "abs": 59.634
  },
  {
   "scene": "s03",
   "shot": "d",
   "transition": "whipL",
-  "abs": 70.216
+  "abs": 67.017
  },
  {
   "scene": "s03",
   "shot": "e",
   "transition": "pop",
-  "abs": 76.636
+  "abs": 73.388
  },
  {
   "scene": "s03",
   "shot": "f",
   "transition": "fade",
-  "abs": 85.184
+  "abs": 81.557
  },
  {
   "scene": "s03",
   "shot": "g",
   "transition": "whipL",
-  "abs": 97.523
+  "abs": 93.533
  },
  {
   "scene": "s03",
   "shot": "h",
   "transition": "whipL",
-  "abs": 103.477
+  "abs": 98.51
  },
  {
   "scene": "s03",
   "shot": "i",
   "transition": "fade",
-  "abs": 112
+  "abs": 105.458
  },
  {
   "scene": "s04",
   "shot": "a",
   "transition": "cut",
-  "abs": 125.108
+  "abs": 118.214
  },
  {
   "scene": "s04",
   "shot": "b",
   "transition": "whipL",
-  "abs": 128.974
+  "abs": 122.091
  },
  {
   "scene": "s04",
   "shot": "c",
   "transition": "pop",
-  "abs": 138.984
+  "abs": 131.355
  },
  {
   "scene": "s04",
   "shot": "d",
   "transition": "whipL",
-  "abs": 143.959
+  "abs": 135.371
  },
  {
   "scene": "s04",
   "shot": "e",
   "transition": "pop",
-  "abs": 152.959
+  "abs": 143.339
  },
  {
   "scene": "s04",
   "shot": "f",
   "transition": "whipL",
-  "abs": 161.494
+  "abs": 151.438
  },
  {
   "scene": "s04",
   "shot": "g",
   "transition": "fade",
-  "abs": 167.677
+  "abs": 157.234
  },
  {
   "scene": "s04",
   "shot": "h",
   "transition": "whipL",
-  "abs": 176.164
+  "abs": 164.976
  },
  {
   "scene": "s04",
   "shot": "i",
   "transition": "whipL",
-  "abs": 185.068
+  "abs": 172.352
  },
  {
   "scene": "s05",
   "shot": "a",
   "transition": "cut",
-  "abs": 197.681
+  "abs": 183.254
  },
  {
   "scene": "s05",
   "shot": "b",
   "transition": "pop",
-  "abs": 201.981
+  "abs": 188.364
  },
  {
   "scene": "s05",
   "shot": "c",
   "transition": "whipL",
-  "abs": 211.508
+  "abs": 197.033
  },
  {
   "scene": "s05",
   "shot": "d",
   "transition": "whipL",
-  "abs": 215.038
+  "abs": 201.738
  },
  {
   "scene": "s05",
   "shot": "e",
   "transition": "pop",
-  "abs": 226.858
+  "abs": 212.369
  },
  {
   "scene": "s05",
   "shot": "f",
   "transition": "whipL",
-  "abs": 230.252
+  "abs": 216.783
  },
  {
   "scene": "s05",
   "shot": "g",
   "transition": "whipL",
-  "abs": 243.136
+  "abs": 228.567
  },
  {
   "scene": "s05",
   "shot": "h",
   "transition": "whipL",
-  "abs": 254.339
+  "abs": 238.146
  },
  {
   "scene": "s05",
   "shot": "i",
   "transition": "pop",
-  "abs": 262.964
+  "abs": 245.859
  },
  {
   "scene": "s05",
   "shot": "j",
   "transition": "pop",
-  "abs": 272.136
+  "abs": 254.608
  },
  {
   "scene": "s05",
   "shot": "k",
   "transition": "fade",
-  "abs": 276.087
+  "abs": 258.999
  },
  {
   "scene": "s05",
   "shot": "l",
   "transition": "whipL",
-  "abs": 279.916
+  "abs": 263.005
  },
  {
   "scene": "s05",
   "shot": "m",
   "transition": "pop",
-  "abs": 292.271
+  "abs": 273.826
  },
  {
   "scene": "s05",
   "shot": "n",
   "transition": "whipL",
-  "abs": 296.882
+  "abs": 278.284
  },
  {
   "scene": "s05",
   "shot": "o",
   "transition": "fade",
-  "abs": 314.013
+  "abs": 292.81
  },
  {
   "scene": "s06",
   "shot": "a",
   "transition": "cut",
-  "abs": 318.163
+  "abs": 298.673
  },
  {
   "scene": "s06",
   "shot": "b",
   "transition": "whipL",
-  "abs": 323.655
+  "abs": 304.031
  },
  {
   "scene": "s06",
   "shot": "c",
   "transition": "pop",
-  "abs": 330.254
+  "abs": 311.268
  },
  {
   "scene": "s06",
   "shot": "d",
   "transition": "whipL",
-  "abs": 337.549
+  "abs": 317.52
  },
  {
   "scene": "s06",
   "shot": "e",
   "transition": "pop",
-  "abs": 348.806
+  "abs": 328.176
  },
  {
   "scene": "s06",
   "shot": "f",
   "transition": "whipL",
-  "abs": 350.909
+  "abs": 331.3
  },
  {
   "scene": "s06",
   "shot": "g",
   "transition": "pop",
-  "abs": 356.477
+  "abs": 336.757
  },
  {
   "scene": "s06",
   "shot": "h",
   "transition": "whipL",
-  "abs": 369.352
+  "abs": 348.463
  },
  {
   "scene": "s07",
   "shot": "a",
   "transition": "cut",
-  "abs": 374.189
+  "abs": 352.967
  },
  {
   "scene": "s07",
   "shot": "b",
   "transition": "whipL",
-  "abs": 383.187
+  "abs": 362.341
  },
  {
   "scene": "s07",
   "shot": "c",
   "transition": "pop",
-  "abs": 387.143
+  "abs": 366.93
  },
  {
   "scene": "s07",
   "shot": "d",
   "transition": "pop",
-  "abs": 390.892
+  "abs": 371.539
  }
 ]

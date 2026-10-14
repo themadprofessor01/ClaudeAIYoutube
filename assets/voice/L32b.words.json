@@ -1,0 +1,62 @@
+[
+{
+"id": "w0",
+"text": "Your",
+"start": 0.295,
+"end": 0.423
+},
+{
+"id": "w1",
+"text": "brain",
+"start": 0.465,
+"end": 0.721
+},
+{
+"id": "w2",
+"text": "checks",
+"start": 0.849,
+"end": 1.063
+},
+{
+"id": "w3",
+"text": "the",
+"start": 1.105,
+"end": 1.191
+},
+{
+"id": "w4",
+"text": "price.",
+"start": 1.233,
+"end": 1.767
+},
+{
+"id": "w5",
+"text": "It",
+"start": 2.129,
+"end": 2.257
+},
+{
+"id": "w6",
+"text": "rarely",
+"start": 2.3,
+"end": 2.599
+},
+{
+"id": "w7",
+"text": "checks",
+"start": 2.684,
+"end": 2.897
+},
+{
+"id": "w8",
+"text": "the",
+"start": 2.983,
+"end": 3.068
+},
+{
+"id": "w9",
+"text": "grams.",
+"start": 3.111,
+"end": 3.836
+}
+]

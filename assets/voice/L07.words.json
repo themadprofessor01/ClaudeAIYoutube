@@ -1,0 +1,98 @@
+[
+{
+"id": "w0",
+"text": "No",
+"start": 0.299,
+"end": 0.469
+},
+{
+"id": "w1",
+"text": "brain",
+"start": 0.512,
+"end": 0.725
+},
+{
+"id": "w2",
+"text": "can",
+"start": 0.811,
+"end": 0.939
+},
+{
+"id": "w3",
+"text": "carefully",
+"start": 0.981,
+"end": 1.28
+},
+{
+"id": "w4",
+"text": "think",
+"start": 1.408,
+"end": 1.579
+},
+{
+"id": "w5",
+"text": "through",
+"start": 1.707,
+"end": 1.835
+},
+{
+"id": "w6",
+"text": "that",
+"start": 1.877,
+"end": 2.005
+},
+{
+"id": "w7",
+"text": "many",
+"start": 2.048,
+"end": 2.133
+},
+{
+"id": "w8",
+"text": "choices.",
+"start": 2.261,
+"end": 2.88
+},
+{
+"id": "w9",
+"text": "So",
+"start": 3.285,
+"end": 3.456
+},
+{
+"id": "w10",
+"text": "it",
+"start": 3.499,
+"end": 3.541
+},
+{
+"id": "w11",
+"text": "doesn't.",
+"start": 3.584,
+"end": 4.181
+},
+{
+"id": "w12",
+"text": "It",
+"start": 4.523,
+"end": 4.608
+},
+{
+"id": "w13",
+"text": "switches",
+"start": 4.651,
+"end": 4.949
+},
+{
+"id": "w14",
+"text": "to",
+"start": 4.992,
+"end": 5.077
+},
+{
+"id": "w15",
+"text": "autopilot.",
+"start": 5.12,
+"end": 5.883
+}
+]

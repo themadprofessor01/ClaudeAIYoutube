@@ -810,6 +810,25 @@
       if (phrase === "end") return c[1] + off;
       const i = c[2].indexOf(phrase);
       if (i < 0) throw new Error(`phrase "${phrase}" not in ${id}`);
+      // exact: word timestamps from the TTS provider (HeyGen) — match the phrase's word sequence
+      if (c[3] && c[3].length) {
+        const norm = (w) => w.toLowerCase().replace(/[^a-z0-9$%']/g, "");
+        const target = phrase.split(/\s+/).map(norm).filter(Boolean);
+        const ws = c[3].map(([w]) => norm(w));
+        // the phrase's position in the text, in words — pick the matching word run closest to it
+        const want = c[2].slice(0, i).split(/\s+/).filter(Boolean).length * (ws.length / Math.max(1, c[2].split(/\s+/).filter(Boolean).length));
+        let best = -1, bestD = 1e9;
+        for (let k = 0; k <= ws.length - target.length; k++) {
+          let ok = true;
+          for (let m = 0; m < target.length; m++) {
+            const a = ws[k + m], b = target[m];
+            if (!(a === b || (m === target.length - 1 && a.startsWith(b)) || (m === 0 && a.endsWith(b)))) { ok = false; break; }
+          }
+          if (ok && Math.abs(k - want) < bestD) { best = k; bestD = Math.abs(k - want); }
+        }
+        if (best >= 0) return c[3][best][1] + off;
+        (window.__CUEMISS = window.__CUEMISS || []).push(id + ": " + phrase);
+      }
       return c[0] + (c[1] - c[0]) * (wlen(c[2].slice(0, i)) / wlen(c[2])) + off;
     };
   }

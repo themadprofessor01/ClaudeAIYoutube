@@ -1,6 +1,6 @@
 # How Supermarkets Trick Your Brain Into Spending More (Randos in 60s)
 
-This is a fully animated YouTube explainer. It runs **6:42** at 1920×1080 and 30 fps. It's built as code with [HyperFrames](https://hyperframes.heygen.com): HTML, SVG and GSAP timelines, rendered to MP4.
+This is a fully animated YouTube explainer. It runs **6:22** at 1920×1080 and 30 fps. It's built as code with [HyperFrames](https://hyperframes.heygen.com): HTML, SVG and GSAP timelines, rendered to MP4.
 
 | Deliverable | Where |
 |---|---|
@@ -35,7 +35,7 @@ docs/                      deliverables
 
 ```
 script/script.json
-   │  python3 tools/tts.py <kokoro_model_dir>      → assets/voice/*.wav, assets/audio/narration.wav, timeline/timing.json
+   │  python3 tools/tts.py (HeyGen Evan, or Kokoro)   → assets/voice/*.wav, assets/audio/narration.wav, timeline/timing.json
    ▼
 timeline/timing.json
    │  node tools/build.mjs                          → index.html + injects each scene's cue table (/*CUES*/ … /*ENDCUES*/)
@@ -61,7 +61,8 @@ pip install kokoro-onnx soundfile numpy scipy
 # Kokoro v1.0 model files (Apache-2.0):
 #   https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
 #   https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
-python3 tools/tts.py /path/to/kokoro            # skip: voice clips are already committed
+npx hyperframes auth login --device             # HeyGen sign-in (premium voice)
+python3 tools/tts.py --force                     # skip: voice clips are already committed
 node tools/build.mjs
 NODE_PATH=$(npm root -g) node tools/collect_sfx.mjs   # needs `playwright` installed (npm i -g playwright)
 python3 tools/audio.py
@@ -82,7 +83,7 @@ On a 4-core cloud box a full render takes about 60–80 minutes. Use `--quality 
 
 ## Audio and licensing
 
-- **Voice:** [Kokoro-82M](https://github.com/hexgrad/kokoro) (Apache-2.0), voice `af_heart`.
+- **Voice:** HeyGen premium voice **Evan** (`d21d096b4d684ea0b90a90fcbe8d645b`), generated with the HyperFrames media-use `heygen-tts.mjs` script, which also returns word timestamps used to sync every animation exactly. Requires `npx hyperframes auth login` (HeyGen account) and network access to `api.heygen.com`, `api2.heygen.com` and `resource2.heygen.ai`. Local fallback: set `"provider": "kokoro"` in `script/script.json` to use [Kokoro-82M](https://github.com/hexgrad/kokoro).
 - **Music and SFX:** generated from code in `tools/audio.py` (additive marimba, Karplus-Strong plucks, filtered noise). No samples, so they're fully original and royalty-free.
 - **Fonts:** Patrick Hand / Patrick Hand SC, SIL Open Font License.
 - **Visuals:** every frame is procedural SVG drawn by this repo's code.
