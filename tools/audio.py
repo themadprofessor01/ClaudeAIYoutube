@@ -388,6 +388,10 @@ def arrange(mood, dur, bpm, seed):
 
 # section → mood. Music drops out for dramatic beats via `holes` (absolute times from cues)
 MOODS = {"s01": "curious", "s02": "tense", "s03": "curious", "s04": "bright", "s05": "weird", "s06": "warm", "s07": "bright"}
+MIN_GAP = 0.6   # only pauses at least this long get music
+FADE = 0.25      # seconds
+MUSIC_DB = -12.0  # music level inside the windows
+UNDER_VOICE_DB = {"s01": -34.0, "s07": -34.0}  # quiet bed under the voice, these sections only
 BPM = {"curious": 100, "bright": 104, "weird": 96, "tense": 80, "warm": 78}
 
 
@@ -444,25 +448,35 @@ def main():
     music = music[:N]
     music = music / (np.abs(music).max() + 1e-9)
 
-    # ---- ducking under narration (envelope follower on the VO)
-    vo, vsr = sf.read(f"{ROOT}/assets/audio/narration.wav", dtype="float32")
-    if vo.ndim > 1:
-        vo = vo.mean(1)
-    # resample VO envelope to 48k timebase
-    win = int(0.05 * vsr)
-    rms = np.sqrt(np.convolve(vo ** 2, np.ones(win) / win, mode="same"))
-    idx = (np.arange(N) * vsr / SR).astype(int).clip(0, len(rms) - 1)
-    act = (rms[idx] > 0.02).astype(float)
-    # smooth: fast attack (60ms) slow release (400ms)
+    # ---- music only where it's needed: never under the narrator.
+    # The bed plays in the intro, in real pauses between lines (section breaks / dramatic beats)
+    # and over the end card. Whenever the voice speaks, the music is fully cut (with short fades).
+    lines = sorted(T["lines"].values(), key=lambda l: l["start"])
+    windows = [(0.0, lines[0]["start"])]
+    for a_, b_ in zip(lines, lines[1:]):
+        if b_["start"] - a_["end"] >= MIN_GAP:
+            windows.append((a_["end"], b_["start"]))
+    windows.append((lines[-1]["end"], total))
+    gate = np.zeros(N)
+    fade = int(FADE * SR)
+    for w0, w1 in windows:
+        i0, i1 = int(w0 * SR), min(N, int(w1 * SR))
+        if i1 - i0 < 2 * fade:
+            continue
+        gate[i0:i1] = 1.0
+        gate[i0:i0 + fade] = np.linspace(0, 1, fade)   # fade in after the voice stops
+        gate[i1 - fade:i1] = np.linspace(1, 0, fade)   # fade out just before the voice returns
+    # a very quiet bed under the voice only in the hook and the outro (energy), silence elsewhere
+    under = np.zeros(N)
+    for sec in T["sections"]:
+        if sec["id"] in UNDER_VOICE_DB:
+            i0, i1 = int(sec["start"] * SR), min(N, int(sec["end"] * SR))
+            under[i0:i1] = 10 ** ((UNDER_VOICE_DB[sec["id"]] - MUSIC_DB) / 20)
     from scipy.signal import lfilter  # type: ignore
-    a_att = np.exp(-1 / (0.06 * SR))
-    sm = lfilter([1 - a_att], [1, -a_att], act)
-    a_rel = np.exp(-1 / (0.45 * SR))
-    sm2 = lfilter([1 - a_rel], [1, -a_rel], sm)
-    duck = np.maximum(sm, sm2).clip(0, 1)
-    base_db, duck_db = -13.0, -22.0  # music level without / under voice (dBFS-ish peak terms)
-    gain_db = base_db + (duck_db - base_db) * duck
-    music *= (10 ** (gain_db / 20))[:, None]
+    a_ = np.exp(-1 / (0.3 * SR))
+    under = lfilter([1 - a_], [1, -a_], under)
+    music *= (np.maximum(gate, under) * 10 ** (MUSIC_DB / 20))[:, None]
+    print("music windows:", len(windows), "| total music time", round(gate.sum() / SR, 1), "s")
     # global fade in/out
     fi = int(0.4 * SR)
     music[:fi] *= np.linspace(0, 1, fi)[:, None]
