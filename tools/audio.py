@@ -468,6 +468,15 @@ def main():
     music[:fi] *= np.linspace(0, 1, fi)[:, None]
     sf.write(f"{ROOT}/assets/audio/music.wav", music.astype(np.float32), SR)
     print("music written", round(total, 2), "s")
+    encode_m4a(["sfx", "music"])
+
+
+def encode_m4a(names):
+    """Compressed copies of the stems (what index.html references; WAVs are local intermediates)."""
+    import subprocess
+    for n in names:
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{ROOT}/assets/audio/{n}.wav", "-c:a", "aac", "-b:a", "256k",
+                        f"{ROOT}/assets/audio/{n}.m4a"], check=True)
 
 
 if __name__ == "__main__":

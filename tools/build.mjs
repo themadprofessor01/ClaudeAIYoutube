@@ -57,9 +57,9 @@ const html = `<!doctype html>
     <div id="root" data-composition-id="root" data-start="0" data-duration="${total}" data-width="1920" data-height="1080">${slots}
 
       <!-- audio stems (built by tools/tts.py and tools/audio.py) -->
-      <audio id="vo" src="assets/audio/narration.wav" data-start="0" data-media-start="${-aStart}" data-duration="${total}" data-track-index="10" data-volume="1"></audio>
-      <audio id="music" src="assets/audio/music.wav" data-start="0" data-media-start="${-aStart}" data-duration="${total}" data-track-index="11" data-volume="1"></audio>
-      <audio id="sfx" src="assets/audio/sfx.wav" data-start="0" data-media-start="${-aStart}" data-duration="${total}" data-track-index="12" data-volume="1"></audio>
+      <audio id="vo" src="assets/audio/narration.m4a" data-start="0" data-media-start="${-aStart}" data-duration="${total}" data-track-index="10" data-volume="1"></audio>
+      <audio id="music" src="assets/audio/music.m4a" data-start="0" data-media-start="${-aStart}" data-duration="${total}" data-track-index="11" data-volume="1"></audio>
+      <audio id="sfx" src="assets/audio/sfx.m4a" data-start="0" data-media-start="${-aStart}" data-duration="${total}" data-track-index="12" data-volume="1"></audio>
     </div>
     <script>
       window.__timelines["root"] = gsap.timeline({ paused: true });

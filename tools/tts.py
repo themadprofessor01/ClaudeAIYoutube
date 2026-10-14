@@ -52,6 +52,9 @@ def build_timing(spec):
         i = int(round(st*SR)); mix[i:i+len(a)] += a
     peak = np.abs(mix).max(); mix *= 0.89/peak
     sf.write(f"{ROOT}/assets/audio/narration.wav", mix[:int(t*SR)], SR)
+    import subprocess
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{ROOT}/assets/audio/narration.wav", "-c:a", "aac", "-b:a", "192k",
+                    f"{ROOT}/assets/audio/narration.m4a"], check=True)
     json.dump(out, open(f"{ROOT}/timeline/timing.json", "w"), indent=1)
     print("duration", round(t, 2), "s =", f"{int(t//60)}:{t%60:05.2f}")
 
