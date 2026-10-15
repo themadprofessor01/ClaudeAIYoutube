@@ -6,3 +6,5 @@ assets/audio/sfx/
 out/render_raw.mp4
 out/*.log
 __pycache__/
+out/work-*/
+out/*.part*
