@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 700; src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 800; src: url("assets/fonts/inter-latin-800-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 400; src: url("assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 500; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+        #s07 .half { position:absolute; top:0; width:960px; height:1080px; overflow:hidden; }
+        #s07 .seam { position:absolute; left:958px; top:0; width:4px; height:1080px; background:#000; }
+        #s07 .w3 { position:absolute; top:800px; font-family:"Inter"; font-weight:700; font-size:54px; letter-spacing:.2em; color:#F2F4F5; text-shadow:0 2px 24px rgba(0,0,0,.7); }
+        #s07 .end { position:absolute; left:0; right:0; text-align:center; font-family:"Inter"; font-weight:700; color:#F2F4F5; letter-spacing:.12em; }
+      </style>
+      <div id="s07" data-composition-id="s07" data-width="1920" data-height="1080"></div>
+      <script>
+        (function () {
+          /*CUES*/ const CUES = {"L54":[0,3.566,"So, why aren't passenger jets electric?",[["So,",0.295],["why",1.276],["aren't",1.831],["passenger",2.172],["jets",2.684],["electric?",3.068]]],"L55":[3.966,10.317,"Not because electric motors are weak. They're brilliant: quiet, simple, incredibly efficient.",[["Not",4.265],["because",4.478],["electric",4.819],["motors",5.161],["are",5.417],["weak.",5.587],["They're",6.398],["brilliant:",6.569],["quiet,",7.55],["simple,",8.361],["incredibly",9.214],["efficient.",9.726]]],"L56":[10.717,23.097,"It's because flight punishes weight like nothing else. And kilogram for kilogram, jet fuel carries roughly twenty times more useful energy than the best batteries we have. And then it gets lighter, while batteries never do.",[["It's",10.973],["because",11.186],["flight",11.485],["punishes",11.784],["weight",12.21],["like",12.637],["nothing",12.85],["else.",13.149],["And",14.045],["kilogram",14.216],["for",14.728],["kilogram,",14.856],["jet",15.709],["fuel",15.965],["carries",16.264],["roughly",16.648],["twenty",16.946],["times",17.288],["more",17.586],["useful",17.8],["energy",18.141],["than",18.61],["the",19.122],["best",19.208],["batteries",19.421],["we",19.89],["have.",20.018],["And",20.829],["then",21],["it",21.128],["gets",21.256],["lighter,",21.426],["while",22.024],["batteries",22.237],["never",22.621],["do.",22.834]]],"L57":[23.497,27.938,"Until that number changes, the biggest planes in the sky will keep burning fuel.",[["Until",23.749],["that",24.09],["number",24.261],["changes,",24.474],["the",25.242],["biggest",25.37],["planes",25.754],["in",26.053],["the",26.138],["sky",26.224],["will",26.736],["keep",26.992],["burning",27.205],["fuel.",27.504]]],"L58":[28.338,30.984,"But every year, the gap gets a little smaller.",[["But",28.637],["every",28.765],["year,",29.021],["the",29.618],["gap",29.746],["gets",30.002],["a",30.215],["little",30.301],["smaller.",30.471]]],"L59":[31.884,37.171,"Because electric flight isn't waiting on a better motor. It's waiting on a better kilogram.",[["Because",32.183],["electric",32.737],["flight",33.377],["isn't",33.761],["waiting",34.06],["on",34.401],["a",34.529],["better",34.657],["motor.",34.871],["It's",35.639],["waiting",35.809],["on",36.108],["a",36.236],["better",36.321],["kilogram.",36.535]]]}; const DUR = 41.071; /*ENDCUES*/
+          const { C, plate, vig, lbl, big, chap, card, gauge, glow, brackets, svg } = D;
+          const q = D.cue(CUES);
+          const S = D.scene("s07");
+          const sfx = (n, t, g) => D.sfx("s07", n, t, g);
+
+          S.add("a", plate("s07-a-p", "a1_tele") + vig(0.6) + chap("s07-ch", "06", "The answer"));
+          S.add("b", plate("s07-b-p", "d8_motor") + vig() +
+            ["QUIET", "SIMPLE", "EFFICIENT"].map((w, i) => `<div class="w3" id="s07-w${i}" style="left:${260 + i * 520}px">${w}</div>`).join(""));
+          S.add("c", plate("s07-c-p", "d4_balanced") + vig());
+          S.add("d", plate("s07-d-p", "d6_columns_wide") + vig() + big("s07-d-n", "≈ 20×", { y: 150, size: 170 }) +
+            `<div class="big" id="s07-d-s" style="top:340px;font-size:30px;font-weight:600;letter-spacing:.24em;color:#C9D2D8">MORE USEFUL ENERGY PER KILOGRAM</div>`);
+          S.add("e", `<div class="half" style="left:0">${plate("s07-eL", "d13_777_fuel_low")}</div><div class="half" style="left:960px">${plate("s07-eR", "d14_777_batt_full")}</div><div class="seam"></div>` + vig(0.4) +
+            big("s07-e-a", "FUEL GETS LIGHTER", { y: 150, size: 54, color: C.amber, style: "left:0;right:960px" }) +
+            big("s07-e-b", "BATTERIES DON'T", { y: 150, size: 54, color: C.cyan, style: "left:960px;right:0" }));
+          S.add("f", plate("s07-f-p", "a3_rotation") + vig());
+          S.add("g", plate("s07-g-p", "f3_meridian_islands") + vig());
+          S.add("h", plate("s07-h-p", "g1_future_cell") + vig(0.5) +
+            `<div class="end" id="s07-h-t" style="top:880px;font-size:46px">WAITING ON A <span style="color:${C.cyan}">BETTER KILOGRAM.</span></div>`);
+          S.mount(`<div class="black" id="s07-blk"></div>`);
+
+          const tl = gsap.timeline({ paused: true });
+          const t = { b: q("L55"), c: q("L56"), d: q("L56", "And kilogram for kilogram"), e: q("L56", "And then it gets"), f: q("L57"), g: q("L58"), h: q("L59") };
+          D.shots(tl, [["#s07-a", 0], ["#s07-b", t.b], ["#s07-c", t.c, "fade"], ["#s07-d", t.d], ["#s07-e", t.e], ["#s07-f", t.f], ["#s07-g", t.g, "fade"], ["#s07-h", t.h, "fade"]], DUR);
+
+          D.push(tl, "#s07-a-p", 0, t.b, 1.0, 1.07);
+          D.chapter(tl, "s07-ch", 0.2, 2.6);
+          sfx("amb_airport", 0, 0.6); sfx("whoosh_big", 0, 0.6);
+          D.push(tl, "#s07-b-p", t.b, t.c - t.b, 1.0, 1.1);
+          ["quiet", "simple", "incredibly efficient"].forEach((ph, i) => {
+            gsap.set(`#s07-w${i}`, { opacity: 0 });
+            tl.fromTo(`#s07-w${i}`, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, q("L55", ph));
+            sfx("hud", q("L55", ph), 0.5);
+          });
+          sfx("motor", t.b, 0.6);
+          D.push(tl, "#s07-c-p", t.c, t.d - t.c, 1.0, 1.06);
+          sfx("ticks", t.c, 0.4);
+          tl.fromTo("#s07-d-p", { scale: 1.3, transformOrigin: "50% 90%" }, { scale: 1.0, duration: 1.0, ease: "expo.out" }, t.d);
+          gsap.set(["#s07-d-n", "#s07-d-s"], { opacity: 0 });
+          D.slam(tl, "#s07-d-n", q("L56", "twenty times"));
+          tl.to("#s07-d-s", { opacity: 1, duration: 0.4 }, q("L56", "twenty times") + 0.3);
+          sfx("boom", q("L56", "twenty times"), 1.0);
+          tl.fromTo("#s07-e .half", { x: (i) => (i ? 960 : -960) }, { x: 0, duration: 0.6, ease: "expo.out" }, t.e);
+          gsap.set(["#s07-e-a", "#s07-e-b"], { opacity: 0 });
+          D.slam(tl, "#s07-e-a", q("L56", "lighter"));
+          D.slam(tl, "#s07-e-b", q("L56", "never do"));
+          sfx("hit_soft", q("L56", "lighter"), 0.6); sfx("hit_dry", q("L56", "never do"), 0.8);
+          D.push(tl, "#s07-f-p", t.f, t.g - t.f, 1.0, 1.1, 0, -40);
+          sfx("roar", t.f, 0.7);
+          D.push(tl, "#s07-g-p", t.g, t.h - t.g + 0.6, 1.0, 1.08, 0, -30);
+          sfx("props_quiet", t.g, 0.6);
+          D.push(tl, "#s07-h-p", t.h, DUR - t.h, 1.0, 1.12, 0, 0, 0, 40);
+          gsap.set("#s07-h-t", { opacity: 0 });
+          tl.fromTo("#s07-h-t", { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: 1.6, ease: "expo.out" }, q("L59", "It's waiting"));
+          sfx("swell", q("L59", "It's waiting") - 1.0, 0.7); sfx("final_note", q("L59", "kilogram") + 0.3, 1.0);
+          tl.to("#s07-blk", { opacity: 1, duration: 1.4 }, DUR - 2.2);
+          sfx("flyover", DUR - 2.4, 0.5);
+
+          window.__timelines["s07"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

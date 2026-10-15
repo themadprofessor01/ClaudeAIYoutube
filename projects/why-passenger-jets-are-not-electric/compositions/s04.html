@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 700; src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 800; src: url("assets/fonts/inter-latin-800-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 400; src: url("assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 500; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+        #s04 .tall { position:absolute; left:0; top:0; width:1920px; height:4320px; }
+        #s04 .tall img { position:absolute; left:0; top:0; width:1920px; height:4320px; display:block; }
+        #s04 .half { position:absolute; top:0; width:960px; height:1080px; overflow:hidden; }
+        #s04 .half .pw > img { object-fit:cover; }
+        #s04 .seam { position:absolute; left:958px; top:0; width:4px; height:1080px; background:#000; box-shadow:0 0 12px rgba(0,0,0,.8); }
+        #s04 .ro { position:absolute; top:90px; font-family:"Mono"; font-weight:500; font-size:62px; color:#F2F4F5; text-shadow:0 2px 20px rgba(0,0,0,.6); }
+        #s04 .roc { position:absolute; top:62px; font-family:"Inter"; font-weight:600; font-size:17px; letter-spacing:.2em; color:#C9D2D8; }
+        #s04 .heat { position:absolute; border-radius:50%; background:radial-gradient(circle, rgba(255,140,40,.55), rgba(255,90,20,0) 70%); mix-blend-mode:screen; }
+        #s04 .car { position:absolute; }
+      </style>
+      <div id="s04" data-composition-id="s04" data-width="1920" data-height="1080"></div>
+      <script>
+        (function () {
+          /*CUES*/ const CUES = {"L19":[0,2.2,"So let's run an experiment.",[["So",0.299],["let's",1.024],["run",1.323],["an",1.451],["experiment.",1.536]]],"L20":[2.6,10.256,"On one side: one kilogram of jet fuel. On the other: one kilogram of the best lithium-ion battery cells you can buy today.",[["On",2.808],["one",3.064],["side:",3.363],["one",4.088],["kilogram",4.302],["of",4.771],["jet",4.856],["fuel.",5.07],["On",5.795],["the",5.966],["other:",6.094],["one",6.904],["kilogram",7.118],["of",7.587],["the",7.672],["best",7.8],["lithium-ion",8.099],["battery",8.824],["cells",9.166],["you",9.464],["can",9.592],["buy",9.678],["today.",9.848]]],"L21":[11.156,15.688,"Same weight. Perfectly balanced. Now… let's look at what's inside.",[["Same",11.455],["weight.",11.796],["Perfectly",12.521],["balanced.",12.948],["Now…",13.844],["let's",14.441],["look",14.697],["at",14.868],["what's",14.953],["inside.",15.209]]],"L22":[16.088,20.001,"That kilogram of jet fuel holds about twelve kilowatt-hours of energy.",[["That",16.383],["kilogram",16.596],["of",17.023],["jet",17.151],["fuel",17.364],["holds",17.705],["about",18.089],["twelve",18.26],["kilowatt-hours",18.772],["of",19.412],["energy.",19.583]]],"L23":[20.401,23.017,"The battery? About a quarter of one.",[["The",20.742],["battery?",20.87],["About",21.809],["a",22.065],["quarter",22.15],["of",22.534],["one.",22.662]]],"L24":[23.917,26.125,"That's around fifty times less.",[["That's",24.258],["around",24.557],["fifty",24.856],["times",25.282],["less.",25.666]]],"L25":[27.025,36.429,"Now, to be fair to the battery, it's not quite that bad. A jet engine loses most of its fuel's energy as heat. Only about a third actually ends up pushing the plane forward.",[["Now,",27.32],["to",27.661],["be",27.746],["fair",27.917],["to",28.173],["the",28.301],["battery,",28.386],["it's",28.941],["not",29.24],["quite",29.41],["that",29.666],["bad.",29.88],["A",30.605],["jet",30.69],["engine",30.946],["loses",31.245],["most",31.544],["of",31.8],["its",31.885],["fuel's",32.013],["energy",32.354],["as",32.738],["heat.",32.866],["Only",33.677],["about",33.933],["a",34.146],["third",34.232],["actually",34.573],["ends",35],["up",35.17],["pushing",35.341],["the",35.64],["plane",35.768],["forward.",35.981]]],"L26":[36.829,41.725,"An electric motor is far better: around ninety percent of the battery's energy becomes motion.",[["An",37.081],["electric",37.294],["motor",37.55],["is",37.849],["far",37.977],["better:",38.19],["around",39.214],["ninety",39.428],["percent",39.684],["of",39.94],["the",40.068],["battery's",40.153],["energy",40.537],["becomes",40.878],["motion.",41.22]]],"L27":[42.125,49.155,"But battery cells can't fly on their own. They need cooling, wiring, casings and protection, and all of that adds weight.",[["But",42.419],["battery",42.589],["cells",42.931],["can't",43.272],["fly",43.528],["on",43.827],["their",43.955],["own.",44.083],["They",44.723],["need",44.893],["cooling,",45.064],["wiring,",45.619],["casings",46.344],["and",46.856],["protection,",46.984],["and",47.752],["all",47.923],["of",48.136],["that",48.264],["adds",48.477],["weight.",48.776]]],"L28":[49.555,56.051,"So when you account for everything, jet fuel still delivers roughly twenty times more useful energy for every kilogram.",[["So",49.853],["when",50.109],["you",50.45],["account",50.621],["for",50.919],["everything,",51.09],["jet",51.815],["fuel",52.071],["still",52.327],["delivers",52.583],["roughly",53.01],["twenty",53.309],["times",53.693],["more",53.991],["useful",54.205],["energy",54.589],["for",54.973],["every",55.143],["kilogram.",55.485]]],"L29":[56.951,62.514,"Twenty times. That one number is the whole story. Let's see what it does to an airplane.",[["Twenty",57.207],["times.",57.548],["That",58.828],["one",59.084],["number",59.383],["is",59.724],["the",59.895],["whole",60.023],["story.",60.279],["Let's",60.962],["see",61.218],["what",61.388],["it",61.516],["does",61.602],["to",61.815],["an",61.943],["airplane.",62.028]]],"L30":[62.914,68.978,"Here's one tonne of jet fuel. About twelve hundred and fifty litres: a cube a little over a metre on each side.",[["Here's",63.213],["one",63.469],["tonne",63.682],["of",63.938],["jet",64.023],["fuel.",64.237],["About",64.834],["twelve",65.133],["hundred",65.431],["and",65.602],["fifty",65.73],["litres:",66.029],["a",66.754],["cube",66.882],["a",67.351],["little",67.479],["over",67.693],["a",67.906],["metre",67.991],["on",68.29],["each",68.418],["side.",68.589]]],"L31":[69.378,74.104,"To match the useful energy in that one cube, you'd need about twenty tonnes of batteries.",[["To",69.719],["match",69.847],["the",70.103],["useful",70.231],["energy",70.615],["in",70.999],["that",71.127],["one",71.255],["cube,",71.511],["you'd",72.109],["need",72.322],["about",72.535],["twenty",72.749],["tonnes",73.133],["of",73.389],["batteries.",73.517]]],"L32":[75.004,79.02,"That's the weight of thirteen cars, to replace one cube of fuel.",[["That's",75.345],["the",75.601],["weight",75.729],["of",76.028],["thirteen",76.156],["cars,",76.583],["to",77.436],["replace",77.564],["one",77.948],["cube",78.247],["of",78.545],["fuel.",78.631]]],"L33":[79.42,82.63,"And there's a second problem, one that's easy to miss.",[["And",79.672],["there's",79.843],["a",80.056],["second",80.141],["problem,",80.44],["one",81.165],["that's",81.421],["easy",81.635],["to",82.019],["miss.",82.147]]],"L34":[83.03,92.981,"On a normal jet, the fuel burns away. Every minute, the plane gets lighter. A long-haul 777 can land about a hundred tonnes lighter than it took off.",[["On",83.281],["a",83.452],["normal",83.58],["jet,",83.878],["the",84.561],["fuel",84.646],["burns",84.945],["away.",85.329],["Every",86.396],["minute,",86.737],["the",87.292],["plane",87.462],["gets",87.718],["lighter.",87.889],["A",88.572],["long-haul",88.87],["seven-seven-seven",89.425],["can",90.449],["land",90.62],["about",90.918],["a",91.089],["hundred",91.174],["tonnes",91.43],["lighter",91.814],["than",92.113],["it",92.284],["took",92.369],["off.",92.582]]],"L35":[93.381,99.502,"A lighter plane needs less thrust, so it burns less fuel. The flight actually gets easier the longer it goes.",[["A",93.632],["lighter",93.76],["plane",94.016],["needs",94.357],["less",94.571],["thrust,",94.784],["so",95.509],["it",95.68],["burns",95.765],["less",96.021],["fuel.",96.192],["The",97.003],["flight",97.131],["actually",97.429],["gets",97.856],["easier",98.069],["the",98.539],["longer",98.624],["it",98.923],["goes.",99.051]]],"L36":[99.902,104.787,"A battery doesn't do that. An empty battery weighs exactly the same as a full one.",[["A",100.154],["battery",100.325],["doesn't",100.666],["do",100.922],["that.",101.05],["An",102.159],["empty",102.287],["battery",102.543],["weighs",102.927],["exactly",103.183],["the",103.695],["same",103.823],["as",104.122],["a",104.207],["full",104.293],["one.",104.506]]],"L37":[105.187,109.59,"The electric plane carries every kilogram, from the runway all the way to the gate.",[["The",105.486],["electric",105.614],["plane",105.955],["carries",106.211],["every",106.552],["kilogram,",106.851],["from",107.576],["the",107.747],["runway",107.875],["all",108.344],["the",108.771],["way",108.899],["to",109.027],["the",109.155],["gate.",109.24]]]}; const DUR = 109.99; /*ENDCUES*/
+          const { C, plate, vig, lbl, big, chap, card, gauge, glow, brackets, svg } = D;
+          const q = D.cue(CUES);
+          const S = D.scene("s04");
+          const sfx = (n, t, g) => D.sfx("s04", n, t, g);
+          const carSVG = (x, y, s) => `<g transform="translate(${x},${y}) scale(${s})" fill="none" stroke="rgba(242,244,245,.55)" stroke-width="2.4">
+            <path d="M0,40 L8,22 Q14,10 30,8 L70,6 Q88,6 100,20 L118,24 Q132,27 134,40 L134,46 L0,46 Z"/><circle cx="28" cy="46" r="11"/><circle cx="104" cy="46" r="11"/></g>`;
+
+          // a — the Energy Lab lights up
+          S.add("a", `<div id="s04-a-l" style="position:absolute;inset:0;filter:brightness(0)">${plate("s04-a-p", "d1_lab_wide")}</div>` + vig(0.5) + chap("s04-ch", "03", "Fuel vs battery"));
+          // b — two macro inserts
+          S.add("b", plate("s04-b-p", "d2_fuel_macro") + vig() + lbl("s04-b-l", 1240, 300, "Jet fuel · 1 kg", { color: C.amber, sub: "≈1.25 litres", to: [960, 560] }));
+          S.add("c", plate("s04-c-p", "d3_cells_macro") + vig() + lbl("s04-c-l", 1240, 300, "Lithium-ion cells · 1 kg", { color: C.cyan, sub: "14 × 21700 cells", to: [960, 600] }));
+          // d — balanced
+          S.add("d", plate("s04-d-p", "d4_balanced") + vig() +
+            `<div class="big mono" id="s04-d-r" style="top:120px;font-size:56px;color:#F2F4F5"><span style="color:${C.amber}">1.000 kg</span> <span style="color:#8A949C">│</span> <span style="color:${C.cyan}">1.000 kg</span></div>`);
+          // e — tall tilt: energy columns rise
+          S.add("e", `<div class="tall" id="s04-tall"><img src="assets/plates/d5_nocol_tall.jpg"><img id="s04-tall-c" src="assets/plates/d5_columns_tall.jpg" style="clip-path:inset(100% 0 0 0)"></div>` + vig(0.4) +
+            `<div class="big mono" id="s04-e-a" style="top:120px;font-size:120px;color:${C.amber}">≈12 kWh</div>` +
+            `<div class="big mono" id="s04-e-c" style="top:120px;font-size:120px;color:${C.cyan}">≈0.25 kWh</div>`);
+          S.add("f", plate("s04-f-p", "d6_columns_wide") + `<div id="s04-f-h" style="position:absolute;inset:0;opacity:0">${plate("s04-f-ph", "d6b_columns_heat")}</div>` + vig() +
+            Array.from({ length: 14 }, (_, i) => `<div class="heat" id="s04-ht${i}" style="left:${760 + (i % 4) * 30}px;top:${200 + (i * 37) % 260}px;width:${120 + (i % 3) * 40}px;height:${120 + (i % 3) * 40}px;opacity:0"></div>`).join("") +
+            big("s04-f-n", "≈ 50×", { y: 380, size: 230 }) +
+            `<div class="big" id="s04-f-s" style="top:640px;font-size:34px;font-weight:600;letter-spacing:.24em;color:#C9D2D8">LESS ENERGY PER KILOGRAM</div>` +
+            lbl("s04-f-l1", 1120, 230, "Lost as heat ≈ 2/3", { color: C.amber, sub: "inside the jet engine" }) +
+            lbl("s04-f-l2", 1120, 560, "Useful ≈ 1/3", { color: C.amber, sub: "≈4 kWh pushes the plane", to: [905, 640] }));
+          S.add("g", plate("s04-g-p", "d8_motor") + vig() + lbl("s04-g-l", 1300, 260, "≈90% becomes motion", { color: C.cyan, sub: "electric motor", to: [1050, 480] }));
+          S.add("h", plate("s04-h-p", "d9_module") + vig() +
+            lbl("s04-h-l1", 1330, 200, "Cooling", { color: C.cyan, to: [1000, 640] }) +
+            lbl("s04-h-l2", 1330, 330, "Wiring", { color: C.cyan, to: [1010, 380] }) +
+            lbl("s04-h-l3", 1330, 460, "Casing", { color: C.cyan, to: [1100, 300] }) +
+            lbl("s04-h-l4", 1330, 590, "Protection", { color: C.cyan, to: [1080, 520] }) +
+            `<div class="big" id="s04-h-w" style="left:auto;right:180px;text-align:right;top:770px;font-size:70px;color:${C.red}">+ WEIGHT</div>`);
+          S.add("i", plate("s04-i-p", "d7_columns_useful") + vig() +
+            `<div class="big mono" id="s04-i-c" style="left:auto;right:170px;text-align:right;top:430px;font-size:110px;color:${C.cyan}">1</div>` +
+            big("s04-i-n", "≈ 20×", { y: 130, size: 170 }) +
+            `<div class="big" id="s04-i-s" style="top:320px;font-size:30px;font-weight:600;letter-spacing:.24em;color:#C9D2D8">MORE USEFUL ENERGY PER KILOGRAM</div>`);
+          S.add("j", `<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%, #0a0f14, #000 70%)"></div>` +
+            big("s04-j-n", "20×", { y: 330, size: 360 }) +
+            `<div class="big" id="s04-j-r" style="top:700px;font-size:360px;transform:scaleY(-1);opacity:.12;filter:blur(6px);-webkit-mask-image:linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,0) 60%)">20×</div>`);
+          S.add("k", plate("s04-k-p", "d10_cube") + vig() +
+            lbl("s04-k-l1", 1280, 250, "1 tonne of jet fuel", { color: C.amber, sub: "≈1,250 litres · ≈1.08 m per side", to: [990, 520] }));
+          const steps = ["01", "03", "06", "10", "15", "20"];
+          S.add("l", steps.map((s, i) => `<div id="s04-pl${i}" style="position:absolute;inset:0;${i ? "visibility:hidden" : ""}">${plate("s04-pl-p" + i, "d11_pallets" + s)}</div>`).join("") + vig() +
+            gauge("s04-gauge", 1700, 160, { h: 560, max: 20, cap: "BATTERY MASS", v0: "1 t" }) +
+            lbl("s04-l-l", 140, 150, "Batteries for the same useful energy", { color: C.cyan, size: 24 }));
+          S.add("m", plate("s04-m-p", "d12_wall_low") + vig(0.6) +
+            svg("s04-cars", Array.from({ length: 13 }, (_, i) => carSVG(200 + (i % 7) * 230, 760 + Math.floor(i / 7) * 110, 1.3)).join("")) +
+            big("s04-m-n", "20 t ≈ 13 CARS", { y: 120, size: 96, color: "#F2F4F5" }) +
+            `<div class="big" id="s04-m-s" style="top:250px;font-size:44px;font-weight:700"><span style="color:${C.amber}">1 CUBE OF FUEL</span> <span style="color:#8A949C">vs</span> <span style="color:${C.cyan}">20 t OF BATTERIES</span></div>`);
+          // split screen
+          S.add("n", `<div class="half" style="left:0"><div id="s04-nL0" style="position:absolute;inset:0">${plate("s04-nL-p0", "d13_777_fuel_full")}</div><div id="s04-nL1" style="position:absolute;inset:0;opacity:0">${plate("s04-nL-p1", "d13_777_fuel_low")}</div><div id="s04-nL2" style="position:absolute;inset:0;opacity:0">${plate("s04-nL-p2", "d15_land_light")}</div></div>` +
+            `<div class="half" style="left:960px"><div id="s04-nR0" style="position:absolute;inset:0">${plate("s04-nR-p0", "d14_777_batt_full")}</div><div id="s04-nR1" style="position:absolute;inset:0;opacity:0">${plate("s04-nR-p1", "d14_777_batt_empty")}</div><div id="s04-nR2" style="position:absolute;inset:0;opacity:0">${plate("s04-nR-p2", "d15_land_heavy")}</div></div>` +
+            `<div class="seam"></div>` + vig(0.4) +
+            `<div class="roc" style="left:80px;color:${C.amber}">FUEL JET · WEIGHT</div><div class="ro mono" id="s04-wl" style="left:80px">351 t</div>` +
+            `<div class="roc" style="left:1040px;color:${C.cyan}">BATTERY JET · WEIGHT</div><div class="ro mono" id="s04-wr" style="left:1040px">351 t <span style="font-size:28px;color:#8A949C" id="s04-lock">🔒︎ LOCKED</span></div>` +
+            `<div class="roc" style="left:1040px;top:170px" id="s04-chg">CHARGE <span class="mono" id="s04-chgv" style="color:${C.cyan};font-size:30px">100%</span></div>` +
+            svg("s04-graph", `<rect x="560" y="800" width="800" height="200" fill="rgba(0,0,0,.45)"/>
+              <text x="580" y="830" font-family="Inter" font-weight="600" font-size="16" letter-spacing="3" fill="#8A949C">WEIGHT DURING THE FLIGHT</text>
+              <path id="s04-gA" d="M600,850 C800,880 1000,930 1320,975" stroke="${C.amber}" stroke-width="4" fill="none"/>
+              <path id="s04-gC" d="M600,850 L1320,850" stroke="${C.cyan}" stroke-width="4" fill="none"/>
+              <text id="s04-gt" x="1340" y="1000" font-family="Mono" font-size="18" fill="#C9D2D8">13 h</text>`) +
+            big("s04-n-b", "≈100 TONNES LIGHTER AT LANDING", { y: 260, size: 34, color: C.amber, style: "left:0;right:960px;font-weight:700;letter-spacing:.06em" }) +
+            big("s04-n-c", "EMPTY = SAME WEIGHT AS FULL", { y: 260, size: 34, color: C.cyan, style: "left:960px;right:0;font-weight:700;letter-spacing:.06em" }) +
+            glow("s04-smk", 1430, 880, 260, "#C9CCD0", 0.0));
+          S.mount(`<div class="flash" id="s04-fl"></div>`);
+
+          const tl = gsap.timeline({ paused: true });
+          const t = {
+            b: q("L20"), c: q("L20", "On the other"), d: q("L21"), e: q("L22"), f: q("L24"), g: q("L26"), h: q("L27"), i: q("L28"),
+            j: q("L29"), k: q("L30"), l: q("L31"), m: q("L32"), n: q("L33", "one that's easy") + 0.3,
+          };
+          D.shots(tl, [["#s04-a", 0], ["#s04-b", t.b], ["#s04-c", t.c], ["#s04-d", t.d], ["#s04-e", t.e], ["#s04-f", t.f], ["#s04-g", t.g, "fade"],
+            ["#s04-h", t.h], ["#s04-i", t.i, "fade"], ["#s04-j", t.j], ["#s04-k", t.k], ["#s04-l", t.l], ["#s04-m", t.m], ["#s04-n", t.n]], DUR);
+
+          // a — lights on, one bank at a time
+          [0.0, 0.45, 0.9].forEach((d, i) => { tl.to("#s04-a-l", { filter: `brightness(${[0.35, 0.7, 1][i]})`, duration: 0.08 }, 0.1 + d); sfx("clunk", 0.1 + d, 0.9); });
+          D.push(tl, "#s04-a-p", 0, t.b, 1.0, 1.1);
+          D.chapter(tl, "s04-ch", 1.0, 2.4);
+          sfx("room", 0, 0.6);
+          // b, c — macro inserts
+          D.push(tl, "#s04-b-p", t.b, t.c - t.b, 1.0, 1.08, 0, -30);
+          D.show(tl, "s04-b-l", q("L20", "one kilogram of jet fuel"));
+          sfx("glass", q("L20", "one kilogram of jet fuel") - 0.3, 0.8); sfx("hud", q("L20", "one kilogram of jet fuel"), 0.5);
+          D.push(tl, "#s04-c-p", t.c, t.d - t.c, 1.0, 1.08, 0, 30);
+          D.show(tl, "s04-c-l", q("L20", "the best"));
+          sfx("clack", t.c + 0.2, 0.8); sfx("hum", t.c + 0.3, 0.4); sfx("hud", q("L20", "the best"), 0.5);
+          // d — the scale settles
+          tl.fromTo("#s04-d-p", { rotation: 1.2, transformOrigin: "50% 40%" }, { rotation: 0, duration: 2.0, ease: "elastic.out(1, 0.35)" }, t.d);
+          D.push(tl, "#s04-d-p", t.d, t.e - t.d, 1.02, 1.08);
+          gsap.set("#s04-d-r", { opacity: 0 });
+          tl.to("#s04-d-r", { opacity: 1, duration: 0.4 }, q("L21", "Perfectly balanced"));
+          sfx("ticks", t.d, 0.6); sfx("hit_soft", q("L21", "Perfectly balanced"), 0.5);
+          // e — amber column erupts, tilt up with it; then down to the cyan stub
+          const tA = q("L22", "holds about") - 0.3, tC = q("L23");
+          gsap.set("#s04-tall", { y: -3240 });
+          tl.to("#s04-tall-c", { clipPath: "inset(0% 0 0 0)", duration: 2.2, ease: "power2.in" }, tA);
+          tl.to("#s04-tall", { y: 0, duration: 2.6, ease: "power2.inOut" }, tA + 0.15);
+          gsap.set(["#s04-e-a", "#s04-e-c"], { opacity: 0 });
+          D.slam(tl, "#s04-e-a", q("L22", "twelve"));
+          tl.to("#s04-e-a", { opacity: 0, duration: 0.3 }, tC - 0.2);
+          tl.to("#s04-tall", { y: -3240, duration: 1.4, ease: "power2.inOut" }, tC - 0.3);
+          D.slam(tl, "#s04-e-c", q("L23", "About a quarter"));
+          sfx("burn_rise", tA, 0.9); sfx("whoosh_up", tA + 0.2, 0.7); sfx("hit_soft", q("L22", "twelve"), 0.6);
+          sfx("whoosh", tC - 0.3, 0.5); sfx("zip", q("L23", "About a quarter") - 0.2, 0.9);
+          // f — pull back: 50×, then the fair-comparison heat loss
+          tl.fromTo("#s04-f-p", { scale: 1.5, transformOrigin: "50% 92%" }, { scale: 1.0, duration: 1.0, ease: "expo.out" }, t.f);
+          gsap.set(["#s04-f-n", "#s04-f-s"], { opacity: 0 });
+          D.slam(tl, "#s04-f-n", q("L24", "fifty"), 0.5);
+          tl.to("#s04-f-s", { opacity: 1, duration: 0.4 }, q("L24", "fifty") + 0.3);
+          tl.to(["#s04-f-n", "#s04-f-s"], { opacity: 0, duration: 0.4 }, q("L25") + 0.4);
+          sfx("boom", q("L24", "fifty"), 1.0);
+          const tH = q("L25", "loses most");
+          tl.to("#s04-f-h", { opacity: 1, duration: 2.0, ease: "power1.inOut" }, tH);
+          for (let i = 0; i < 14; i++) tl.fromTo(`#s04-ht${i}`, { opacity: 0, y: 0, scale: 0.6 }, { opacity: 0.9, y: -180 - (i % 5) * 40, scale: 1.6, duration: 1.8, ease: "power1.out" }, tH + i * 0.12).to(`#s04-ht${i}`, { opacity: 0, duration: 0.8 }, tH + i * 0.12 + 1.4);
+          D.show(tl, "s04-f-l1", tH + 0.4);
+          D.show(tl, "s04-f-l2", q("L25", "Only about a third"));
+          sfx("heat", tH, 0.8);
+          D.push(tl, "#s04-f", q("L25"), t.g - q("L25"), 1.0, 1.04);
+          // g — motor
+          D.push(tl, "#s04-g-p", t.g, t.h - t.g, 1.0, 1.1);
+          D.show(tl, "s04-g-l", q("L26", "ninety percent"));
+          sfx("motor", t.g, 0.8); sfx("hud", q("L26", "ninety percent"), 0.5);
+          // h — module parts
+          D.push(tl, "#s04-h-p", t.h, t.i - t.h, 1.06, 1.0);
+          [["l1", "cooling"], ["l2", "wiring"], ["l3", "casings"], ["l4", "protection"]].forEach(([l, ph]) => { D.show(tl, `s04-h-${l}`, q("L27", ph) - 0.05); sfx("snap", q("L27", ph) - 0.05, 0.8); });
+          gsap.set("#s04-h-w", { opacity: 0 });
+          D.slam(tl, "#s04-h-w", q("L27", "adds weight"));
+          sfx("hit", q("L27", "adds weight"), 0.7);
+          // i — 20 stacked
+          D.push(tl, "#s04-i-p", t.i, t.j - t.i, 1.0, 1.05);
+          D.count(tl, "#s04-i-c", t.i + 0.3, 1, 20, 3.2);
+          for (let k = 0; k < 10; k++) sfx("tick_up", t.i + 0.3 + k * 0.32, 0.4 + k * 0.03);
+          gsap.set(["#s04-i-n", "#s04-i-s"], { opacity: 0 });
+          D.slam(tl, "#s04-i-n", q("L28", "roughly twenty"));
+          tl.to("#s04-i-s", { opacity: 1, duration: 0.4 }, q("L28", "roughly twenty") + 0.4);
+          sfx("boom", q("L28", "roughly twenty"), 1.0);
+          // j — "Twenty times." alone in the dark
+          gsap.set(["#s04-j-n", "#s04-j-r"], { opacity: 0 });
+          D.slam(tl, "#s04-j-n", t.j, 0.8);
+          tl.to("#s04-j-r", { opacity: 0.12, duration: 0.8 }, t.j);
+          tl.to("#s04-j", { scale: 1.06, duration: t.k - t.j, ease: "none" }, t.j);
+          sfx("piano", t.j + 0.1, 0.9);
+          // k — one tonne cube
+          D.push(tl, "#s04-k-p", t.k, t.l - t.k, 1.0, 1.08, 0, 40);
+          D.show(tl, "s04-k-l1", q("L30", "one tonne"));
+          sfx("hangar", t.k, 0.8); sfx("liquid", t.k + 0.3, 0.6); sfx("hud", q("L30", "one tonne"), 0.5);
+          // l — pallets land on the beat, gauge climbs
+          const p0 = t.l + 0.6, p1 = q("L31", "twenty tonnes") + 0.2;
+          const vals = [1, 3, 6, 10, 15, 20];
+          steps.forEach((s, i) => {
+            const ti = p0 + (p1 - p0) * (i / (steps.length - 1));
+            if (i) { tl.set(`#s04-pl${i}`, { visibility: "inherit" }, ti); tl.set(`#s04-pl${i - 1}`, { visibility: "hidden" }, ti); }
+            D.shake(tl, "#s04-l", ti, 0.3, 6 + i);
+            tl.to("#s04-gauge-fill", { height: `${(vals[i] / 20) * 100}%`, duration: 0.25, ease: "power2.out" }, ti);
+            tl.set("#s04-gauge-val", { textContent: `${vals[i]} t` }, ti);
+            sfx("pallet", ti, 0.7 + i * 0.05);
+          });
+          gsap.set("#s04-gauge-fill", { height: "5%" });
+          D.show(tl, "s04-l-l", t.l + 0.2);
+          sfx("hum_build", p0, 0.7); sfx("hit", p1, 0.9);
+          D.push(tl, "#s04-l", t.l, t.m - t.l, 1.0, 1.04);
+          // m — 13 cars
+          tl.fromTo("#s04-m-p", { scale: 1.0 }, { scale: 1.08, duration: t.n - t.m, ease: "none" }, t.m);
+          gsap.set(["#s04-m-n", "#s04-m-s", "#s04-cars"], { opacity: 0 });
+          D.slam(tl, "#s04-m-n", q("L32", "thirteen cars") - 0.1);
+          tl.to("#s04-cars", { opacity: 1, duration: 0.6 }, q("L32", "thirteen cars"));
+          tl.to("#s04-m-s", { opacity: 1, duration: 0.4 }, q("L32", "one cube"));
+          ["one", "cube", "of", "fuel"].forEach((w, i) => sfx("pulse", q("L32", "one cube") + i * 0.32, 0.7));
+          // flash out of the hangar
+          D.flash(tl, "#s04-fl", t.n - 0.25, 0.95, 0.7);
+          sfx("whoosh_big", t.n - 0.4, 0.8);
+          // n — split screen
+          gsap.set(["#s04-n-b", "#s04-n-c", "#s04-lock", "#s04-graph"], { opacity: 0 });
+          tl.fromTo("#s04-n .half", { x: (i) => (i ? 960 : -960) }, { x: 0, duration: 0.6, ease: "expo.out" }, t.n);
+          const tb = q("L34", "the fuel burns away"), tL = q("L34", "A long-haul");
+          tl.to("#s04-nL1", { opacity: 1, duration: q("L35", "end") - tb, ease: "none" }, tb);
+          D.count(tl, "#s04-wl", tb, 351, 251, q("L35", "end") - tb, (v) => `${Math.round(v)} t`);
+          tl.to("#s04-graph", { opacity: 1, duration: 0.5 }, tb);
+          D.draw(tl, "#s04-gA", tb, q("L35", "end") - tb, "none");
+          D.slam(tl, "#s04-n-b", q("L34", "a hundred tonnes lighter"));
+          tl.to("#s04-n-b", { opacity: 0, duration: 0.4 }, q("L36") - 0.2);
+          sfx("drone_l", t.n, 0.7); sfx("drain", tb, 0.6); sfx("hit", q("L34", "a hundred tonnes lighter"), 0.7);
+          const tbat = q("L36", "An empty battery");
+          tl.to("#s04-nR1", { opacity: 1, duration: 2.6, ease: "power1.inOut" }, tbat - 0.8);
+          D.count(tl, "#s04-chgv", tbat - 0.8, 100, 0, 2.6, (v) => `${Math.round(v)}%`);
+          D.draw(tl, "#s04-gC", tbat - 0.8, 2.6, "none");
+          tl.to("#s04-lock", { opacity: 1, duration: 0.3 }, q("L36", "exactly the same"));
+          D.slam(tl, "#s04-n-c", q("L36", "exactly the same"));
+          sfx("hum_down", tbat - 0.8, 0.7); sfx("lock", q("L36", "exactly the same"), 0.8); sfx("hit_dry", q("L36", "full one"), 0.9);
+          // landings
+          const tland = q("L37", "from the runway");
+          tl.to("#s04-nL2", { opacity: 1, duration: 0.3 }, tland - 0.2);
+          tl.to("#s04-nR2", { opacity: 1, duration: 0.3 }, tland - 0.2);
+          tl.to(["#s04-n-c", "#s04-graph", "#s04-chg"], { opacity: 0, duration: 0.3 }, tland - 0.2);
+          tl.set("#s04-wl", { innerHTML: "LANDS 251 t" }, tland);
+          tl.set("#s04-wr", { innerHTML: `<span style="color:${C.red}">LANDS 351 t</span>` }, tland);
+          tl.to("#s04-smk", { opacity: 1, scale: 1.6, duration: 0.5, ease: "power2.out" }, tland + 0.4).to("#s04-smk", { opacity: 0, duration: 1.4 }, tland + 0.9);
+          D.shake(tl, "#s04-nR2", tland + 0.4, 0.5, 10);
+          D.push(tl, "#s04-nL2", tland - 0.2, DUR - tland, 1.0, 1.06);
+          sfx("chirp", tland + 0.3, 0.6); sfx("thud_heavy", tland + 0.4, 1.0); sfx("screech", tland + 0.45, 0.8); sfx("creak", tland + 0.6, 0.7);
+
+          window.__timelines["s04"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

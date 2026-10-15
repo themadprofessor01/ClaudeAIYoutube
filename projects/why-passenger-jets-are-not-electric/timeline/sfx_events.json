@@ -1,0 +1,1542 @@
+[
+ {
+  "scene": "s01",
+  "name": "amb_airport",
+  "t": 0,
+  "gain": 0.8,
+  "abs": 0
+ },
+ {
+  "scene": "s01",
+  "name": "spool",
+  "t": 0.6,
+  "gain": 0.9,
+  "abs": 0.6
+ },
+ {
+  "scene": "s01",
+  "name": "rumble",
+  "t": 2.4,
+  "gain": 0.6,
+  "abs": 2.4
+ },
+ {
+  "scene": "s01",
+  "name": "roar",
+  "t": 3.85,
+  "gain": 1,
+  "abs": 3.85
+ },
+ {
+  "scene": "s01",
+  "name": "sub",
+  "t": 4,
+  "gain": 0.7,
+  "abs": 4
+ },
+ {
+  "scene": "s01",
+  "name": "flyby",
+  "t": 4.6,
+  "gain": 0.8,
+  "abs": 4.6
+ },
+ {
+  "scene": "s01",
+  "name": "hum",
+  "t": 10.986,
+  "gain": 0.35,
+  "abs": 10.986
+ },
+ {
+  "scene": "s01",
+  "name": "charge",
+  "t": 11.994,
+  "gain": 0.55,
+  "abs": 11.994
+ },
+ {
+  "scene": "s01",
+  "name": "charge",
+  "t": 12.89,
+  "gain": 0.6000000000000001,
+  "abs": 12.89
+ },
+ {
+  "scene": "s01",
+  "name": "charge",
+  "t": 13.743,
+  "gain": 0.65,
+  "abs": 13.743
+ },
+ {
+  "scene": "s01",
+  "name": "charge",
+  "t": 14.767,
+  "gain": 0.7000000000000001,
+  "abs": 14.767
+ },
+ {
+  "scene": "s01",
+  "name": "cabin",
+  "t": 16.464,
+  "gain": 0.8,
+  "abs": 16.464
+ },
+ {
+  "scene": "s01",
+  "name": "burn",
+  "t": 22.077,
+  "gain": 0.8,
+  "abs": 22.077
+ },
+ {
+  "scene": "s01",
+  "name": "hud",
+  "t": 24.195,
+  "gain": 0.6,
+  "abs": 24.195
+ },
+ {
+  "scene": "s01",
+  "name": "glitch",
+  "t": 26.752,
+  "gain": 0.7,
+  "abs": 26.752
+ },
+ {
+  "scene": "s01",
+  "name": "hum",
+  "t": 27.052,
+  "gain": 0.6,
+  "abs": 27.052
+ },
+ {
+  "scene": "s01",
+  "name": "riser",
+  "t": 27.055,
+  "gain": 0.8,
+  "abs": 27.055
+ },
+ {
+  "scene": "s01",
+  "name": "creak",
+  "t": 28.275,
+  "gain": 0.9,
+  "abs": 28.275
+ },
+ {
+  "scene": "s01",
+  "name": "boom",
+  "t": 29.255,
+  "gain": 1,
+  "abs": 29.255
+ },
+ {
+  "scene": "s02",
+  "name": "whoosh_big",
+  "t": 0,
+  "gain": 0.7,
+  "abs": 31.642
+ },
+ {
+  "scene": "s02",
+  "name": "birds",
+  "t": 0.2,
+  "gain": 0.6,
+  "abs": 31.842
+ },
+ {
+  "scene": "s02",
+  "name": "prop",
+  "t": 0.4,
+  "gain": 0.5,
+  "abs": 32.042
+ },
+ {
+  "scene": "s02",
+  "name": "hud",
+  "t": 4.143,
+  "gain": 0.6,
+  "abs": 35.785
+ },
+ {
+  "scene": "s02",
+  "name": "click",
+  "t": 5.722,
+  "gain": 0.6,
+  "abs": 37.364
+ },
+ {
+  "scene": "s02",
+  "name": "hum",
+  "t": 6.522,
+  "gain": 0.5,
+  "abs": 38.164
+ },
+ {
+  "scene": "s02",
+  "name": "click",
+  "t": 10.074,
+  "gain": 0.6,
+  "abs": 41.716
+ },
+ {
+  "scene": "s02",
+  "name": "click",
+  "t": 10.927,
+  "gain": 0.6,
+  "abs": 42.569
+ },
+ {
+  "scene": "s02",
+  "name": "water",
+  "t": 12.575,
+  "gain": 0.8,
+  "abs": 44.217
+ },
+ {
+  "scene": "s02",
+  "name": "prop",
+  "t": 12.775,
+  "gain": 0.5,
+  "abs": 44.417
+ },
+ {
+  "scene": "s02",
+  "name": "racer",
+  "t": 17.094,
+  "gain": 0.9,
+  "abs": 48.736
+ },
+ {
+  "scene": "s02",
+  "name": "tick_roll",
+  "t": 19.808,
+  "gain": 0.5,
+  "abs": 51.45
+ },
+ {
+  "scene": "s02",
+  "name": "hit",
+  "t": 22.008,
+  "gain": 0.7,
+  "abs": 53.65
+ },
+ {
+  "scene": "s02",
+  "name": "wind",
+  "t": 23.076,
+  "gain": 0.5,
+  "abs": 54.718
+ },
+ {
+  "scene": "s02",
+  "name": "hud",
+  "t": 26.02,
+  "gain": 0.5,
+  "abs": 57.662
+ },
+ {
+  "scene": "s02",
+  "name": "piano",
+  "t": 29.647,
+  "gain": 0.8,
+  "abs": 61.289
+ },
+ {
+  "scene": "s02",
+  "name": "blip",
+  "t": 31.2,
+  "gain": 0.5,
+  "abs": 62.842
+ },
+ {
+  "scene": "s02",
+  "name": "blip",
+  "t": 31.7,
+  "gain": 0.5,
+  "abs": 63.342
+ },
+ {
+  "scene": "s02",
+  "name": "blip",
+  "t": 32.2,
+  "gain": 0.5,
+  "abs": 63.842
+ },
+ {
+  "scene": "s02",
+  "name": "blip",
+  "t": 32.7,
+  "gain": 0.5,
+  "abs": 64.342
+ },
+ {
+  "scene": "s02",
+  "name": "clunk",
+  "t": 38.117,
+  "gain": 1,
+  "abs": 69.759
+ },
+ {
+  "scene": "s02",
+  "name": "clunk",
+  "t": 38.667,
+  "gain": 1,
+  "abs": 70.309
+ },
+ {
+  "scene": "s02",
+  "name": "hit",
+  "t": 39.355,
+  "gain": 0.8,
+  "abs": 70.997
+ },
+ {
+  "scene": "s02",
+  "name": "hit",
+  "t": 40.763,
+  "gain": 0.8,
+  "abs": 72.405
+ },
+ {
+  "scene": "s02",
+  "name": "riser",
+  "t": 42.157,
+  "gain": 0.6,
+  "abs": 73.799
+ },
+ {
+  "scene": "s02",
+  "name": "hit",
+  "t": 42.427,
+  "gain": 0.8,
+  "abs": 74.069
+ },
+ {
+  "scene": "s02",
+  "name": "whoosh_big",
+  "t": 44.157,
+  "gain": 0.8,
+  "abs": 75.799
+ },
+ {
+  "scene": "s03",
+  "name": "whoosh_big",
+  "t": 0,
+  "gain": 0.7,
+  "abs": 76.199
+ },
+ {
+  "scene": "s03",
+  "name": "liquid",
+  "t": 0.8,
+  "gain": 0.6,
+  "abs": 76.999
+ },
+ {
+  "scene": "s03",
+  "name": "hud",
+  "t": 1.2,
+  "gain": 0.5,
+  "abs": 77.399
+ },
+ {
+  "scene": "s03",
+  "name": "hud",
+  "t": 1.8,
+  "gain": 0.5,
+  "abs": 77.999
+ },
+ {
+  "scene": "s03",
+  "name": "hud",
+  "t": 2.4,
+  "gain": 0.5,
+  "abs": 78.599
+ },
+ {
+  "scene": "s03",
+  "name": "roar",
+  "t": 4.47,
+  "gain": 0.9,
+  "abs": 80.669
+ },
+ {
+  "scene": "s03",
+  "name": "rumble",
+  "t": 5.47,
+  "gain": 0.7,
+  "abs": 81.669
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 7.282,
+  "gain": 0.35,
+  "abs": 83.481
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 8.22,
+  "gain": 0.35,
+  "abs": 84.419
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 9.157,
+  "gain": 0.35,
+  "abs": 85.356
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 10.095,
+  "gain": 0.35,
+  "abs": 86.294
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 11.033,
+  "gain": 0.35,
+  "abs": 87.232
+ },
+ {
+  "scene": "s03",
+  "name": "tick",
+  "t": 11.97,
+  "gain": 0.35,
+  "abs": 88.169
+ },
+ {
+  "scene": "s03",
+  "name": "turbine",
+  "t": 13.108,
+  "gain": 0.6,
+  "abs": 89.307
+ },
+ {
+  "scene": "s03",
+  "name": "mech_open",
+  "t": 13.608,
+  "gain": 0.8,
+  "abs": 89.807
+ },
+ {
+  "scene": "s03",
+  "name": "hud",
+  "t": 14.683,
+  "gain": 0.5,
+  "abs": 90.882
+ },
+ {
+  "scene": "s03",
+  "name": "hud",
+  "t": 16.347,
+  "gain": 0.5,
+  "abs": 92.546
+ },
+ {
+  "scene": "s03",
+  "name": "burn",
+  "t": 18.651,
+  "gain": 0.8,
+  "abs": 94.85
+ },
+ {
+  "scene": "s03",
+  "name": "surge",
+  "t": 24.237,
+  "gain": 0.9,
+  "abs": 100.436
+ },
+ {
+  "scene": "s03",
+  "name": "hit",
+  "t": 24.537,
+  "gain": 0.7,
+  "abs": 100.736
+ },
+ {
+  "scene": "s03",
+  "name": "buzz",
+  "t": 25.86,
+  "gain": 0.5,
+  "abs": 102.059
+ },
+ {
+  "scene": "s03",
+  "name": "climb",
+  "t": 28.193,
+  "gain": 0.8,
+  "abs": 104.392
+ },
+ {
+  "scene": "s03",
+  "name": "whoosh",
+  "t": 29.693,
+  "gain": 0.5,
+  "abs": 105.892
+ },
+ {
+  "scene": "s03",
+  "name": "wind_high",
+  "t": 34.564,
+  "gain": 0.7,
+  "abs": 110.763
+ },
+ {
+  "scene": "s03",
+  "name": "liquid",
+  "t": 40.185,
+  "gain": 0.7,
+  "abs": 116.384
+ },
+ {
+  "scene": "s03",
+  "name": "hit",
+  "t": 43.893,
+  "gain": 0.8,
+  "abs": 120.092
+ },
+ {
+  "scene": "s03",
+  "name": "dominoes",
+  "t": 46.197,
+  "gain": 0.7,
+  "abs": 122.396
+ },
+ {
+  "scene": "s03",
+  "name": "hit",
+  "t": 46.922,
+  "gain": 0.9,
+  "abs": 123.121
+ },
+ {
+  "scene": "s03",
+  "name": "riser",
+  "t": 50.283,
+  "gain": 0.7,
+  "abs": 126.482
+ },
+ {
+  "scene": "s03",
+  "name": "boom",
+  "t": 52.083,
+  "gain": 1,
+  "abs": 128.282
+ },
+ {
+  "scene": "s04",
+  "name": "room",
+  "t": 0,
+  "gain": 0.6,
+  "abs": 129.957
+ },
+ {
+  "scene": "s04",
+  "name": "clunk",
+  "t": 0.1,
+  "gain": 0.9,
+  "abs": 130.057
+ },
+ {
+  "scene": "s04",
+  "name": "clunk",
+  "t": 0.55,
+  "gain": 0.9,
+  "abs": 130.507
+ },
+ {
+  "scene": "s04",
+  "name": "clunk",
+  "t": 1,
+  "gain": 0.9,
+  "abs": 130.957
+ },
+ {
+  "scene": "s04",
+  "name": "glass",
+  "t": 3.788,
+  "gain": 0.8,
+  "abs": 133.745
+ },
+ {
+  "scene": "s04",
+  "name": "hud",
+  "t": 4.088,
+  "gain": 0.5,
+  "abs": 134.045
+ },
+ {
+  "scene": "s04",
+  "name": "clack",
+  "t": 5.995,
+  "gain": 0.8,
+  "abs": 135.952
+ },
+ {
+  "scene": "s04",
+  "name": "hum",
+  "t": 6.095,
+  "gain": 0.4,
+  "abs": 136.052
+ },
+ {
+  "scene": "s04",
+  "name": "hud",
+  "t": 7.672,
+  "gain": 0.5,
+  "abs": 137.629
+ },
+ {
+  "scene": "s04",
+  "name": "ticks",
+  "t": 11.156,
+  "gain": 0.6,
+  "abs": 141.113
+ },
+ {
+  "scene": "s04",
+  "name": "hit_soft",
+  "t": 12.521,
+  "gain": 0.5,
+  "abs": 142.478
+ },
+ {
+  "scene": "s04",
+  "name": "burn_rise",
+  "t": 17.405,
+  "gain": 0.9,
+  "abs": 147.362
+ },
+ {
+  "scene": "s04",
+  "name": "whoosh_up",
+  "t": 17.605,
+  "gain": 0.7,
+  "abs": 147.562
+ },
+ {
+  "scene": "s04",
+  "name": "hit_soft",
+  "t": 18.26,
+  "gain": 0.6,
+  "abs": 148.217
+ },
+ {
+  "scene": "s04",
+  "name": "whoosh",
+  "t": 20.101,
+  "gain": 0.5,
+  "abs": 150.058
+ },
+ {
+  "scene": "s04",
+  "name": "zip",
+  "t": 21.609,
+  "gain": 0.9,
+  "abs": 151.566
+ },
+ {
+  "scene": "s04",
+  "name": "boom",
+  "t": 24.856,
+  "gain": 1,
+  "abs": 154.813
+ },
+ {
+  "scene": "s04",
+  "name": "heat",
+  "t": 31.245,
+  "gain": 0.8,
+  "abs": 161.202
+ },
+ {
+  "scene": "s04",
+  "name": "motor",
+  "t": 36.829,
+  "gain": 0.8,
+  "abs": 166.786
+ },
+ {
+  "scene": "s04",
+  "name": "hud",
+  "t": 39.428,
+  "gain": 0.5,
+  "abs": 169.385
+ },
+ {
+  "scene": "s04",
+  "name": "snap",
+  "t": 45.014,
+  "gain": 0.8,
+  "abs": 174.971
+ },
+ {
+  "scene": "s04",
+  "name": "snap",
+  "t": 45.569,
+  "gain": 0.8,
+  "abs": 175.526
+ },
+ {
+  "scene": "s04",
+  "name": "snap",
+  "t": 46.294,
+  "gain": 0.8,
+  "abs": 176.251
+ },
+ {
+  "scene": "s04",
+  "name": "snap",
+  "t": 46.934,
+  "gain": 0.8,
+  "abs": 176.891
+ },
+ {
+  "scene": "s04",
+  "name": "hit",
+  "t": 48.477,
+  "gain": 0.7,
+  "abs": 178.434
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 49.855,
+  "gain": 0.4,
+  "abs": 179.812
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 50.175,
+  "gain": 0.43000000000000005,
+  "abs": 180.132
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 50.495,
+  "gain": 0.46,
+  "abs": 180.452
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 50.815,
+  "gain": 0.49,
+  "abs": 180.772
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 51.135,
+  "gain": 0.52,
+  "abs": 181.092
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 51.455,
+  "gain": 0.55,
+  "abs": 181.412
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 51.775,
+  "gain": 0.5800000000000001,
+  "abs": 181.732
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 52.095,
+  "gain": 0.61,
+  "abs": 182.052
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 52.415,
+  "gain": 0.64,
+  "abs": 182.372
+ },
+ {
+  "scene": "s04",
+  "name": "tick_up",
+  "t": 52.735,
+  "gain": 0.67,
+  "abs": 182.692
+ },
+ {
+  "scene": "s04",
+  "name": "boom",
+  "t": 53.01,
+  "gain": 1,
+  "abs": 182.967
+ },
+ {
+  "scene": "s04",
+  "name": "piano",
+  "t": 57.051,
+  "gain": 0.9,
+  "abs": 187.008
+ },
+ {
+  "scene": "s04",
+  "name": "hangar",
+  "t": 62.914,
+  "gain": 0.8,
+  "abs": 192.871
+ },
+ {
+  "scene": "s04",
+  "name": "liquid",
+  "t": 63.214,
+  "gain": 0.6,
+  "abs": 193.171
+ },
+ {
+  "scene": "s04",
+  "name": "hud",
+  "t": 63.469,
+  "gain": 0.5,
+  "abs": 193.426
+ },
+ {
+  "scene": "s04",
+  "name": "pallet",
+  "t": 69.978,
+  "gain": 0.7,
+  "abs": 199.935
+ },
+ {
+  "scene": "s04",
+  "name": "hum_build",
+  "t": 69.978,
+  "gain": 0.7,
+  "abs": 199.935
+ },
+ {
+  "scene": "s04",
+  "name": "pallet",
+  "t": 70.572,
+  "gain": 0.75,
+  "abs": 200.529
+ },
+ {
+  "scene": "s04",
+  "name": "pallet",
+  "t": 71.166,
+  "gain": 0.7999999999999999,
+  "abs": 201.123
+ },
+ {
+  "scene": "s04",
+  "name": "pallet",
+  "t": 71.761,
+  "gain": 0.85,
+  "abs": 201.718
+ },
+ {
+  "scene": "s04",
+  "name": "pallet",
+  "t": 72.355,
+  "gain": 0.8999999999999999,
+  "abs": 202.312
+ },
+ {
+  "scene": "s04",
+  "name": "pallet",
+  "t": 72.949,
+  "gain": 0.95,
+  "abs": 202.906
+ },
+ {
+  "scene": "s04",
+  "name": "hit",
+  "t": 72.949,
+  "gain": 0.9,
+  "abs": 202.906
+ },
+ {
+  "scene": "s04",
+  "name": "pulse",
+  "t": 77.948,
+  "gain": 0.7,
+  "abs": 207.905
+ },
+ {
+  "scene": "s04",
+  "name": "pulse",
+  "t": 78.268,
+  "gain": 0.7,
+  "abs": 208.225
+ },
+ {
+  "scene": "s04",
+  "name": "pulse",
+  "t": 78.588,
+  "gain": 0.7,
+  "abs": 208.545
+ },
+ {
+  "scene": "s04",
+  "name": "pulse",
+  "t": 78.908,
+  "gain": 0.7,
+  "abs": 208.865
+ },
+ {
+  "scene": "s04",
+  "name": "whoosh_big",
+  "t": 81.065,
+  "gain": 0.8,
+  "abs": 211.022
+ },
+ {
+  "scene": "s04",
+  "name": "drone_l",
+  "t": 81.465,
+  "gain": 0.7,
+  "abs": 211.422
+ },
+ {
+  "scene": "s04",
+  "name": "drain",
+  "t": 84.561,
+  "gain": 0.6,
+  "abs": 214.518
+ },
+ {
+  "scene": "s04",
+  "name": "hit",
+  "t": 91.089,
+  "gain": 0.7,
+  "abs": 221.046
+ },
+ {
+  "scene": "s04",
+  "name": "hum_down",
+  "t": 101.359,
+  "gain": 0.7,
+  "abs": 231.316
+ },
+ {
+  "scene": "s04",
+  "name": "lock",
+  "t": 103.183,
+  "gain": 0.8,
+  "abs": 233.14
+ },
+ {
+  "scene": "s04",
+  "name": "hit_dry",
+  "t": 104.293,
+  "gain": 0.9,
+  "abs": 234.25
+ },
+ {
+  "scene": "s04",
+  "name": "chirp",
+  "t": 107.876,
+  "gain": 0.6,
+  "abs": 237.833
+ },
+ {
+  "scene": "s04",
+  "name": "thud_heavy",
+  "t": 107.976,
+  "gain": 1,
+  "abs": 237.933
+ },
+ {
+  "scene": "s04",
+  "name": "screech",
+  "t": 108.026,
+  "gain": 0.8,
+  "abs": 237.983
+ },
+ {
+  "scene": "s04",
+  "name": "creak",
+  "t": 108.176,
+  "gain": 0.7,
+  "abs": 238.133
+ },
+ {
+  "scene": "s05",
+  "name": "whoosh_big",
+  "t": 0,
+  "gain": 0.6,
+  "abs": 239.947
+ },
+ {
+  "scene": "s05",
+  "name": "hangar",
+  "t": 0.1,
+  "gain": 0.8,
+  "abs": 240.047
+ },
+ {
+  "scene": "s05",
+  "name": "wrench",
+  "t": 0.9,
+  "gain": 0.5,
+  "abs": 240.847
+ },
+ {
+  "scene": "s05",
+  "name": "draw",
+  "t": 2.477,
+  "gain": 0.5,
+  "abs": 242.424
+ },
+ {
+  "scene": "s05",
+  "name": "radar",
+  "t": 8.45,
+  "gain": 0.6,
+  "abs": 248.397
+ },
+ {
+  "scene": "s05",
+  "name": "hit_soft",
+  "t": 10.2,
+  "gain": 0.7,
+  "abs": 250.147
+ },
+ {
+  "scene": "s05",
+  "name": "riser",
+  "t": 11.376,
+  "gain": 0.8,
+  "abs": 251.323
+ },
+ {
+  "scene": "s05",
+  "name": "pallet",
+  "t": 14.547,
+  "gain": 0.5,
+  "abs": 254.494
+ },
+ {
+  "scene": "s05",
+  "name": "pallet",
+  "t": 14.877,
+  "gain": 0.56,
+  "abs": 254.824
+ },
+ {
+  "scene": "s05",
+  "name": "boom",
+  "t": 14.946,
+  "gain": 1,
+  "abs": 254.893
+ },
+ {
+  "scene": "s05",
+  "name": "pallet",
+  "t": 15.207,
+  "gain": 0.62,
+  "abs": 255.154
+ },
+ {
+  "scene": "s05",
+  "name": "pallet",
+  "t": 15.537,
+  "gain": 0.6799999999999999,
+  "abs": 255.484
+ },
+ {
+  "scene": "s05",
+  "name": "pallet",
+  "t": 15.867,
+  "gain": 0.74,
+  "abs": 255.814
+ },
+ {
+  "scene": "s05",
+  "name": "pallet",
+  "t": 16.197,
+  "gain": 0.8,
+  "abs": 256.144
+ },
+ {
+  "scene": "s05",
+  "name": "pallet",
+  "t": 16.527,
+  "gain": 0.86,
+  "abs": 256.474
+ },
+ {
+  "scene": "s05",
+  "name": "hum_build",
+  "t": 17.376,
+  "gain": 0.5,
+  "abs": 257.323
+ },
+ {
+  "scene": "s05",
+  "name": "creak",
+  "t": 17.576,
+  "gain": 0.5,
+  "abs": 257.523
+ },
+ {
+  "scene": "s05",
+  "name": "hum_build",
+  "t": 20.344,
+  "gain": 0.5,
+  "abs": 260.291
+ },
+ {
+  "scene": "s05",
+  "name": "caution",
+  "t": 20.344,
+  "gain": 0.8,
+  "abs": 260.291
+ },
+ {
+  "scene": "s05",
+  "name": "creak",
+  "t": 20.544,
+  "gain": 0.5,
+  "abs": 260.491
+ },
+ {
+  "scene": "s05",
+  "name": "hum_build",
+  "t": 21.923,
+  "gain": 0.5,
+  "abs": 261.87
+ },
+ {
+  "scene": "s05",
+  "name": "creak",
+  "t": 22.123,
+  "gain": 0.5,
+  "abs": 262.07
+ },
+ {
+  "scene": "s05",
+  "name": "strain",
+  "t": 23.8,
+  "gain": 0.9,
+  "abs": 263.747
+ },
+ {
+  "scene": "s05",
+  "name": "shepard",
+  "t": 27.305,
+  "gain": 0.7,
+  "abs": 267.252
+ },
+ {
+  "scene": "s05",
+  "name": "node",
+  "t": 28.796,
+  "gain": 0.5,
+  "abs": 268.743
+ },
+ {
+  "scene": "s05",
+  "name": "node",
+  "t": 29.777,
+  "gain": 0.5,
+  "abs": 269.724
+ },
+ {
+  "scene": "s05",
+  "name": "node",
+  "t": 31.91,
+  "gain": 0.5,
+  "abs": 271.857
+ },
+ {
+  "scene": "s05",
+  "name": "node",
+  "t": 32.764,
+  "gain": 0.5,
+  "abs": 272.711
+ },
+ {
+  "scene": "s05",
+  "name": "node",
+  "t": 33.617,
+  "gain": 0.5,
+  "abs": 273.564
+ },
+ {
+  "scene": "s05",
+  "name": "hit",
+  "t": 36.789,
+  "gain": 0.8,
+  "abs": 276.736
+ },
+ {
+  "scene": "s05",
+  "name": "cut",
+  "t": 41.685,
+  "gain": 0.8,
+  "abs": 281.632
+ },
+ {
+  "scene": "s05",
+  "name": "buzz",
+  "t": 42.296,
+  "gain": 0.6,
+  "abs": 282.243
+ },
+ {
+  "scene": "s05",
+  "name": "pump",
+  "t": 47.629,
+  "gain": 0.6,
+  "abs": 287.576
+ },
+ {
+  "scene": "s05",
+  "name": "eerie",
+  "t": 49.929,
+  "gain": 0.7,
+  "abs": 289.876
+ },
+ {
+  "scene": "s05",
+  "name": "deflate",
+  "t": 57.592,
+  "gain": 0.8,
+  "abs": 297.539
+ },
+ {
+  "scene": "s05",
+  "name": "rumble",
+  "t": 60.252,
+  "gain": 0.8,
+  "abs": 300.199
+ },
+ {
+  "scene": "s05",
+  "name": "boom",
+  "t": 66.307,
+  "gain": 1,
+  "abs": 306.254
+ },
+ {
+  "scene": "s06",
+  "name": "silence_pad",
+  "t": 0,
+  "gain": 0.6,
+  "abs": 309.413
+ },
+ {
+  "scene": "s06",
+  "name": "click",
+  "t": 0.6,
+  "gain": 0.5,
+  "abs": 310.013
+ },
+ {
+  "scene": "s06",
+  "name": "pad",
+  "t": 6.656,
+  "gain": 0.8,
+  "abs": 316.069
+ },
+ {
+  "scene": "s06",
+  "name": "doors",
+  "t": 7.683,
+  "gain": 0.9,
+  "abs": 317.096
+ },
+ {
+  "scene": "s06",
+  "name": "riser_resolve",
+  "t": 12.364,
+  "gain": 0.6,
+  "abs": 321.777
+ },
+ {
+  "scene": "s06",
+  "name": "props_quiet",
+  "t": 15.217,
+  "gain": 0.8,
+  "abs": 324.63
+ },
+ {
+  "scene": "s06",
+  "name": "hud",
+  "t": 15.617,
+  "gain": 0.5,
+  "abs": 325.03
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 21.514,
+  "gain": 0.35,
+  "abs": 330.927
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 21.794,
+  "gain": 0.35,
+  "abs": 331.207
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 22.074,
+  "gain": 0.35,
+  "abs": 331.487
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 22.354,
+  "gain": 0.35,
+  "abs": 331.767
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 22.634,
+  "gain": 0.35,
+  "abs": 332.047
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 22.914,
+  "gain": 0.35,
+  "abs": 332.327
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 23.194,
+  "gain": 0.35,
+  "abs": 332.607
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 23.474,
+  "gain": 0.35,
+  "abs": 332.887
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 23.754,
+  "gain": 0.35,
+  "abs": 333.167
+ },
+ {
+  "scene": "s06",
+  "name": "blip",
+  "t": 24.034,
+  "gain": 0.35,
+  "abs": 333.447
+ },
+ {
+  "scene": "s06",
+  "name": "hum",
+  "t": 26.768,
+  "gain": 0.4,
+  "abs": 336.181
+ },
+ {
+  "scene": "s06",
+  "name": "turbine",
+  "t": 26.968,
+  "gain": 0.3,
+  "abs": 336.381
+ },
+ {
+  "scene": "s06",
+  "name": "hud",
+  "t": 28.343,
+  "gain": 0.5,
+  "abs": 337.756
+ },
+ {
+  "scene": "s06",
+  "name": "hud",
+  "t": 32.012,
+  "gain": 0.5,
+  "abs": 341.425
+ },
+ {
+  "scene": "s06",
+  "name": "hud",
+  "t": 33.676,
+  "gain": 0.5,
+  "abs": 343.089
+ },
+ {
+  "scene": "s06",
+  "name": "chime",
+  "t": 37.477,
+  "gain": 0.5,
+  "abs": 346.89
+ },
+ {
+  "scene": "s06",
+  "name": "chime",
+  "t": 40.165,
+  "gain": 0.58,
+  "abs": 349.578
+ },
+ {
+  "scene": "s06",
+  "name": "chime",
+  "t": 42.383,
+  "gain": 0.66,
+  "abs": 351.796
+ },
+ {
+  "scene": "s06",
+  "name": "chime",
+  "t": 43.749,
+  "gain": 0.74,
+  "abs": 353.162
+ },
+ {
+  "scene": "s06",
+  "name": "riser_resolve",
+  "t": 48.188,
+  "gain": 0.7,
+  "abs": 357.601
+ },
+ {
+  "scene": "s06",
+  "name": "industrial",
+  "t": 55.431,
+  "gain": 0.6,
+  "abs": 364.844
+ },
+ {
+  "scene": "s06",
+  "name": "cryo",
+  "t": 60.978,
+  "gain": 0.7,
+  "abs": 370.391
+ },
+ {
+  "scene": "s07",
+  "name": "amb_airport",
+  "t": 0,
+  "gain": 0.6,
+  "abs": 373.543
+ },
+ {
+  "scene": "s07",
+  "name": "whoosh_big",
+  "t": 0,
+  "gain": 0.6,
+  "abs": 373.543
+ },
+ {
+  "scene": "s07",
+  "name": "motor",
+  "t": 3.966,
+  "gain": 0.6,
+  "abs": 377.509
+ },
+ {
+  "scene": "s07",
+  "name": "hud",
+  "t": 7.55,
+  "gain": 0.5,
+  "abs": 381.093
+ },
+ {
+  "scene": "s07",
+  "name": "hud",
+  "t": 8.361,
+  "gain": 0.5,
+  "abs": 381.904
+ },
+ {
+  "scene": "s07",
+  "name": "hud",
+  "t": 9.214,
+  "gain": 0.5,
+  "abs": 382.757
+ },
+ {
+  "scene": "s07",
+  "name": "ticks",
+  "t": 10.717,
+  "gain": 0.4,
+  "abs": 384.26
+ },
+ {
+  "scene": "s07",
+  "name": "boom",
+  "t": 16.946,
+  "gain": 1,
+  "abs": 390.489
+ },
+ {
+  "scene": "s07",
+  "name": "hit_soft",
+  "t": 21.426,
+  "gain": 0.6,
+  "abs": 394.969
+ },
+ {
+  "scene": "s07",
+  "name": "hit_dry",
+  "t": 22.621,
+  "gain": 0.8,
+  "abs": 396.164
+ },
+ {
+  "scene": "s07",
+  "name": "roar",
+  "t": 23.497,
+  "gain": 0.7,
+  "abs": 397.04
+ },
+ {
+  "scene": "s07",
+  "name": "props_quiet",
+  "t": 28.338,
+  "gain": 0.6,
+  "abs": 401.881
+ },
+ {
+  "scene": "s07",
+  "name": "swell",
+  "t": 34.639,
+  "gain": 0.7,
+  "abs": 408.182
+ },
+ {
+  "scene": "s07",
+  "name": "final_note",
+  "t": 36.835,
+  "gain": 1,
+  "abs": 410.378
+ },
+ {
+  "scene": "s07",
+  "name": "flyover",
+  "t": 38.671,
+  "gain": 0.5,
+  "abs": 412.214
+ }
+]

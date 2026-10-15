@@ -1,0 +1,404 @@
+[
+ {
+  "scene": "s01",
+  "shot": "a",
+  "transition": "cut",
+  "abs": 0
+ },
+ {
+  "scene": "s01",
+  "shot": "b",
+  "transition": "cut",
+  "abs": 4
+ },
+ {
+  "scene": "s01",
+  "shot": "c",
+  "transition": "fade",
+  "abs": 7.981
+ },
+ {
+  "scene": "s01",
+  "shot": "d",
+  "transition": "cut",
+  "abs": 10.986
+ },
+ {
+  "scene": "s01",
+  "shot": "e",
+  "transition": "cut",
+  "abs": 16.464
+ },
+ {
+  "scene": "s01",
+  "shot": "f",
+  "transition": "fade",
+  "abs": 21.153
+ },
+ {
+  "scene": "s01",
+  "shot": "g",
+  "transition": "cut",
+  "abs": 23.595
+ },
+ {
+  "scene": "s01",
+  "shot": "h",
+  "transition": "cut",
+  "abs": 28.075
+ },
+ {
+  "scene": "s01",
+  "shot": "t",
+  "transition": "cut",
+  "abs": 29.255
+ },
+ {
+  "scene": "s02",
+  "shot": "a",
+  "transition": "cut",
+  "abs": 31.642
+ },
+ {
+  "scene": "s02",
+  "shot": "b",
+  "transition": "fade",
+  "abs": 35.064
+ },
+ {
+  "scene": "s02",
+  "shot": "c",
+  "transition": "cut",
+  "abs": 44.217
+ },
+ {
+  "scene": "s02",
+  "shot": "d",
+  "transition": "cut",
+  "abs": 48.736
+ },
+ {
+  "scene": "s02",
+  "shot": "e",
+  "transition": "fade",
+  "abs": 54.718
+ },
+ {
+  "scene": "s02",
+  "shot": "f",
+  "transition": "cut",
+  "abs": 60.393
+ },
+ {
+  "scene": "s02",
+  "shot": "g",
+  "transition": "fade",
+  "abs": 62.442
+ },
+ {
+  "scene": "s02",
+  "shot": "h",
+  "transition": "cut",
+  "abs": 67.882
+ },
+ {
+  "scene": "s03",
+  "shot": "a",
+  "transition": "cut",
+  "abs": 76.199
+ },
+ {
+  "scene": "s03",
+  "shot": "b",
+  "transition": "cut",
+  "abs": 80.669
+ },
+ {
+  "scene": "s03",
+  "shot": "c",
+  "transition": "cut",
+  "abs": 89.307
+ },
+ {
+  "scene": "s03",
+  "shot": "d",
+  "transition": "fade",
+  "abs": 93.996
+ },
+ {
+  "scene": "s03",
+  "shot": "e",
+  "transition": "blur",
+  "abs": 97.835
+ },
+ {
+  "scene": "s03",
+  "shot": "f",
+  "transition": "cut",
+  "abs": 104.392
+ },
+ {
+  "scene": "s03",
+  "shot": "g",
+  "transition": "fade",
+  "abs": 110.763
+ },
+ {
+  "scene": "s03",
+  "shot": "h",
+  "transition": "cut",
+  "abs": 116.384
+ },
+ {
+  "scene": "s03",
+  "shot": "i",
+  "transition": "cut",
+  "abs": 122.396
+ },
+ {
+  "scene": "s03",
+  "shot": "j",
+  "transition": "fade",
+  "abs": 125.342
+ },
+ {
+  "scene": "s04",
+  "shot": "a",
+  "transition": "cut",
+  "abs": 129.957
+ },
+ {
+  "scene": "s04",
+  "shot": "b",
+  "transition": "cut",
+  "abs": 132.557
+ },
+ {
+  "scene": "s04",
+  "shot": "c",
+  "transition": "cut",
+  "abs": 135.752
+ },
+ {
+  "scene": "s04",
+  "shot": "d",
+  "transition": "cut",
+  "abs": 141.113
+ },
+ {
+  "scene": "s04",
+  "shot": "e",
+  "transition": "cut",
+  "abs": 146.045
+ },
+ {
+  "scene": "s04",
+  "shot": "f",
+  "transition": "cut",
+  "abs": 153.874
+ },
+ {
+  "scene": "s04",
+  "shot": "g",
+  "transition": "fade",
+  "abs": 166.786
+ },
+ {
+  "scene": "s04",
+  "shot": "h",
+  "transition": "cut",
+  "abs": 172.082
+ },
+ {
+  "scene": "s04",
+  "shot": "i",
+  "transition": "fade",
+  "abs": 179.512
+ },
+ {
+  "scene": "s04",
+  "shot": "j",
+  "transition": "cut",
+  "abs": 186.908
+ },
+ {
+  "scene": "s04",
+  "shot": "k",
+  "transition": "cut",
+  "abs": 192.871
+ },
+ {
+  "scene": "s04",
+  "shot": "l",
+  "transition": "cut",
+  "abs": 199.335
+ },
+ {
+  "scene": "s04",
+  "shot": "m",
+  "transition": "cut",
+  "abs": 204.961
+ },
+ {
+  "scene": "s04",
+  "shot": "n",
+  "transition": "cut",
+  "abs": 211.422
+ },
+ {
+  "scene": "s05",
+  "shot": "a",
+  "transition": "cut",
+  "abs": 239.947
+ },
+ {
+  "scene": "s05",
+  "shot": "b",
+  "transition": "fade",
+  "abs": 242.172
+ },
+ {
+  "scene": "s05",
+  "shot": "c",
+  "transition": "cut",
+  "abs": 251.323
+ },
+ {
+  "scene": "s05",
+  "shot": "d",
+  "transition": "cut",
+  "abs": 254.394
+ },
+ {
+  "scene": "s05",
+  "shot": "e",
+  "transition": "cut",
+  "abs": 257.223
+ },
+ {
+  "scene": "s05",
+  "shot": "f",
+  "transition": "blur",
+  "abs": 266.752
+ },
+ {
+  "scene": "s05",
+  "shot": "g",
+  "transition": "cut",
+  "abs": 282.243
+ },
+ {
+  "scene": "s05",
+  "shot": "h",
+  "transition": "cut",
+  "abs": 289.876
+ },
+ {
+  "scene": "s05",
+  "shot": "i",
+  "transition": "fade",
+  "abs": 297.039
+ },
+ {
+  "scene": "s05",
+  "shot": "j",
+  "transition": "cut",
+  "abs": 300.199
+ },
+ {
+  "scene": "s06",
+  "shot": "a",
+  "transition": "cut",
+  "abs": 309.413
+ },
+ {
+  "scene": "s06",
+  "shot": "b",
+  "transition": "fade",
+  "abs": 316.896
+ },
+ {
+  "scene": "s06",
+  "shot": "c",
+  "transition": "cut",
+  "abs": 324.63
+ },
+ {
+  "scene": "s06",
+  "shot": "d",
+  "transition": "fade",
+  "abs": 330.627
+ },
+ {
+  "scene": "s06",
+  "shot": "e",
+  "transition": "cut",
+  "abs": 336.181
+ },
+ {
+  "scene": "s06",
+  "shot": "f",
+  "transition": "fade",
+  "abs": 344.675
+ },
+ {
+  "scene": "s06",
+  "shot": "g",
+  "transition": "cut",
+  "abs": 364.844
+ },
+ {
+  "scene": "s06",
+  "shot": "h",
+  "transition": "fade",
+  "abs": 370.391
+ },
+ {
+  "scene": "s07",
+  "shot": "a",
+  "transition": "cut",
+  "abs": 373.543
+ },
+ {
+  "scene": "s07",
+  "shot": "b",
+  "transition": "cut",
+  "abs": 377.509
+ },
+ {
+  "scene": "s07",
+  "shot": "c",
+  "transition": "fade",
+  "abs": 384.26
+ },
+ {
+  "scene": "s07",
+  "shot": "d",
+  "transition": "cut",
+  "abs": 387.588
+ },
+ {
+  "scene": "s07",
+  "shot": "e",
+  "transition": "cut",
+  "abs": 394.372
+ },
+ {
+  "scene": "s07",
+  "shot": "f",
+  "transition": "cut",
+  "abs": 397.04
+ },
+ {
+  "scene": "s07",
+  "shot": "g",
+  "transition": "fade",
+  "abs": 401.881
+ },
+ {
+  "scene": "s07",
+  "shot": "h",
+  "transition": "fade",
+  "abs": 405.427
+ }
+]

@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 700; src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 800; src: url("assets/fonts/inter-latin-800-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 400; src: url("assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 500; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+        #s05 .bug { position:absolute; left:70px; top:56px; font-family:"Mono"; font-weight:500; font-size:40px; color:#F2F4F5; padding:6px 16px; border:1px solid rgba(255,255,255,.35); background:rgba(0,0,0,.35); z-index:30; }
+        #s05 .bug small { font-family:"Inter"; font-weight:600; font-size:13px; letter-spacing:.18em; color:#8A949C; display:block; }
+        #s05 .stack { position:absolute; left:1460px; top:300px; width:300px; font-family:"Mono"; color:#F2F4F5; }
+        #s05 .seg { position:absolute; left:0; width:120px; }
+        #s05 .segl { position:absolute; left:140px; font-size:24px; white-space:nowrap; }
+        #s05 .caution { position:absolute; left:1380px; top:60px; padding:10px 22px; border:2px solid #FF4B3E; color:#FF4B3E; font-family:"Inter"; font-weight:800; font-size:30px; letter-spacing:.2em; background:rgba(255,75,62,.12); }
+        #s05 .node { font-family:"Inter"; font-weight:700; font-size:22px; letter-spacing:.12em; }
+      </style>
+      <div id="s05" data-composition-id="s05" data-width="1920" data-height="1080"></div>
+      <script>
+        (function () {
+          /*CUES*/ const CUES = {"L38":[0,1.825,"So let's try to build one.",[["So",0.299],["let's",0.683],["try",1.109],["to",1.28],["build",1.365],["one.",1.579]]],"L39":[2.225,10.976,"A thousand-kilometre flight burns around four tonnes of fuel. Add the reserves every airliner must carry, to divert and circle if needed, and you're at about six tonnes.",[["A",2.477],["thousand-kilometre",2.605],["flight",3.416],["burns",3.757],["around",4.141],["four",4.354],["tonnes",4.653],["of",4.952],["fuel.",5.037],["Add",5.848],["the",6.018],["reserves",6.146],["every",6.573],["airliner",6.829],["must",7.256],["carry,",7.512],["to",7.896],["divert",8.024],["and",8.322],["circle",8.45],["if",8.834],["needed,",8.962],["and",9.56],["you're",9.73],["at",9.944],["about",10.029],["six",10.2],["tonnes.",10.498]]],"L40":[11.376,13.647,"Six tonnes, times twenty…",[["Six",11.675],["tonnes,",12.016],["times",12.827],["twenty…",13.211]]],"L41":[14.547,16.876,"a hundred and twenty tonnes of batteries.",[["a",14.846],["hundred",14.974],["and",15.272],["twenty",15.4],["tonnes",15.742],["of",16.126],["batteries.",16.254]]],"L42":[17.276,26.405,"That's more than the entire aircraft is allowed to weigh, fully loaded, before you add the plane itself, a single passenger, or a single suitcase.",[["That's",17.571],["more",17.827],["than",17.997],["the",18.125],["entire",18.296],["aircraft",18.637],["is",19.149],["allowed",19.277],["to",19.533],["weigh,",19.661],["fully",20.344],["loaded,",20.728],["before",21.923],["you",22.307],["add",22.435],["the",22.605],["plane",22.733],["itself,",22.947],["a",23.8],["single",23.928],["passenger,",24.184],["or",24.995],["a",25.123],["single",25.208],["suitcase.",25.507]]],"L43":[26.805,41.896,"And it gets worse. A heavier plane needs a stronger structure and bigger wings. More drag, more energy, more batteries, more weight. Engineers call it the weight spiral. For a jet this size, with today's batteries, it never closes.",[["And",27.061],["it",27.232],["gets",27.317],["worse.",27.445],["A",28.768],["heavier",28.896],["plane",29.28],["needs",29.578],["a",29.792],["stronger",29.877],["structure",30.261],["and",30.773],["bigger",31.029],["wings.",31.285],["More",32.01],["drag,",32.181],["more",32.864],["energy,",33.034],["more",33.717],["batteries,",33.888],["more",34.613],["weight.",34.826],["Engineers",35.68],["call",36.192],["it",36.405],["the",36.618],["weight",36.789],["spiral.",37.045],["For",38.197],["a",38.41],["jet",38.538],["this",38.794],["size,",39.008],["with",39.648],["today's",39.818],["batteries,",40.16],["it",40.885],["never",41.013],["closes.",41.312]]],"L44":[42.296,49.529,"Even takeoff is a problem: pulling tens of megawatts from a battery makes enormous heat, and the cooling to handle it adds even more weight.",[["Even",42.595],["takeoff",42.851],["is",43.363],["a",43.448],["problem:",43.576],["pulling",44.387],["tens",44.685],["of",44.984],["megawatts",45.069],["from",45.539],["a",45.667],["battery",45.795],["makes",46.136],["enormous",46.349],["heat,",46.861],["and",47.373],["the",47.501],["cooling",47.629],["to",47.971],["handle",48.056],["it",48.397],["adds",48.525],["even",48.781],["more",48.995],["weight.",49.208]]],"L45":[49.929,59.852,"So what if you just give up the passengers? Rip out every seat, fill the plane with batteries right up to its weight limit… and you'd barely manage a short hop, with an empty cabin.",[["So",50.223],["what",50.607],["if",50.863],["you",50.948],["just",51.033],["give",51.247],["up",51.417],["the",51.545],["passengers?",51.673],["Rip",52.655],["out",52.996],["every",53.167],["seat,",53.38],["fill",54.532],["the",54.831],["plane",54.959],["with",55.172],["batteries",55.3],["right",55.769],["up",55.983],["to",56.111],["its",56.239],["weight",56.367],["limit…",56.623],["and",57.092],["you'd",57.305],["barely",57.519],["manage",57.775],["a",58.073],["short",58.201],["hop,",58.457],["with",58.969],["an",59.097],["empty",59.183],["cabin.",59.396]]],"L46":[60.252,69.066,"And for a long-haul 777, replacing its fuel would take nearly three thousand tonnes of batteries: the weight of eight fully loaded 777s.",[["And",60.504],["for",60.675],["a",60.845],["long-haul",60.931],["seven-seven-seven,",61.4],["replacing",62.723],["its",63.192],["fuel",63.363],["would",63.661],["take",63.789],["nearly",64.045],["three",64.301],["thousand",64.643],["tonnes",65.027],["of",65.325],["batteries:",65.453],["the",66.307],["weight",66.435],["of",66.733],["eight",66.904],["fully",67.203],["loaded",67.544],["seven-seven-sevens.",67.843]]]}; const DUR = 69.466; /*ENDCUES*/
+          const { C, plate, vig, lbl, big, chap, card, gauge, glow, brackets, svg } = D;
+          const q = D.cue(CUES);
+          const S = D.scene("s05");
+          const sfx = (n, t, g) => D.sfx("s05", n, t, g);
+
+          S.add("a", plate("s05-a-p", "e1_hangar_work") + vig() + chap("s05-ch", "04", "Building an electric airliner"));
+          // b — mission on the map table
+          const A = [620, 640], B = [1180, 430], ALT = [1290, 760];
+          S.add("b", plate("s05-b-p", "m1_map") + vig(0.4) +
+            svg("s05-route", `<path id="s05-r1" d="M${A} Q900,380 ${B}" stroke="${C.amber}" stroke-width="4" fill="none"/>
+              <path id="s05-r2" d="M${B} Q1320,560 ${ALT}" stroke="${C.amber}" stroke-width="3" stroke-dasharray="12 10" fill="none" opacity=".85"/>
+              <rect id="s05-hold" x="${ALT[0] - 70}" y="${ALT[1] - 30}" width="140" height="60" rx="30" stroke="${C.amber}" stroke-width="3" fill="none" stroke-dasharray="8 8"/>
+              ${[A, B, ALT].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="9" fill="#F2F4F5"/>`).join("")}
+              <text x="${(A[0] + B[0]) / 2 - 40}" y="470" font-family="Mono" font-size="26" fill="#F2F4F5">1,000 km</text>
+              <text x="${ALT[0] + 90}" y="${ALT[1] + 8}" font-family="Inter" font-weight="600" font-size="18" letter-spacing="2" fill="#C9D2D8">DIVERT + HOLD</text>`) +
+            `<div class="stack" id="s05-stack"><div class="seg" id="s05-seg1" style="top:${400 - 267}px;height:267px;background:${C.amber};opacity:.9"></div>
+              <div class="seg" id="s05-seg2" style="top:${400 - 400}px;height:133px;background:${C.amber};opacity:.5"></div>
+              <div class="segl" id="s05-sl1" style="top:${400 - 150}px">TRIP ≈4 t</div><div class="segl" id="s05-sl2" style="top:${400 - 345}px">RESERVES ≈2 t</div>
+              <div class="segl" id="s05-sl3" style="top:420px;left:0;font-size:52px;color:${C.amber}">≈6 t</div></div>` +
+            lbl("s05-b-l", 120, 940, "Reserves are required by regulation", { size: 20, color: "#C9D2D8" }));
+          S.add("c", `<div style="position:absolute;inset:0;filter:blur(10px) brightness(.5)">${plate("s05-c-p", "m1_map")}</div>` +
+            `<div class="big mono" id="s05-c-eq" style="top:420px;font-size:150px"><span style="color:${C.amber}">6 t</span> × <span style="color:#F2F4F5">20</span> =</div>`);
+          S.add("d", `<div id="s05-d0" style="position:absolute;inset:0">${plate("s05-d-p0", "e2_hangar_b40")}</div><div id="s05-d1" style="position:absolute;inset:0;opacity:0">${plate("s05-d-p1", "e3_hangar_b120")}</div>` + vig() +
+            big("s05-d-n", "120 t OF BATTERIES", { y: 120, size: 110, color: C.cyan }));
+          S.add("e", ["e4_xray_hold", "e5_xray_cabin", "e6_xray_full"].map((k, i) => `<div id="s05-x${i}" style="position:absolute;inset:0;${i ? "opacity:0" : ""}">${plate("s05-x-p" + i, k)}</div>`).join("") +
+            `<div id="s05-x3" style="position:absolute;inset:0;opacity:0">${plate("s05-x-p3", "e7_gear_strain")}</div>` + vig() +
+            gauge("s05-g", 1700, 170, { h: 560, max: 180, red: 79, cap: "AIRCRAFT WEIGHT", v0: "44 t" }) +
+            `<div class="caution" id="s05-caut">OVERWEIGHT</div>` +
+            lbl("s05-e-l1", 120, 140, "Empty aircraft 44 t + batteries 120 t", { color: "#F2F4F5", sub: "passengers 0 · bags 0" }) +
+            big("s05-e-n", "MORE THAN TWICE ITS MAXIMUM TAKEOFF WEIGHT", { y: 900, size: 38, color: C.red, style: "font-weight:700;letter-spacing:.04em" }));
+          // f — the weight spiral (hologram + 3D-ish loop)
+          const nodes = ["MORE WEIGHT", "STRONGER STRUCTURE", "MORE DRAG", "MORE ENERGY", "MORE BATTERIES"];
+          S.add("f", plate("s05-f-p", "e8_hologram") + vig(0.3) +
+            svg("s05-sp", `<g id="s05-spin" transform-origin="960 540">
+              <ellipse cx="960" cy="540" rx="560" ry="330" fill="none" stroke="rgba(255,75,62,.35)" stroke-width="2"/>
+              <ellipse id="s05-sp-arc" cx="960" cy="540" rx="560" ry="330" fill="none" stroke="${C.red}" stroke-width="5" stroke-dasharray="3200" stroke-dashoffset="3200"/></g>
+              ${nodes.map((n, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / 5; const x = 960 + 600 * Math.cos(a), y = 540 + 360 * Math.sin(a);
+                return `<g id="s05-n${i}" opacity="0"><circle cx="${x}" cy="${y}" r="10" fill="${C.red}"/><text class="node" x="${x}" y="${y + (Math.sin(a) < -0.5 ? -24 : 44)}" text-anchor="middle" fill="#F2F4F5">${n}</text></g>`; }).join("")}`) +
+            big("s05-f-t", "THE WEIGHT SPIRAL", { y: 460, size: 80, color: C.red }) +
+            `<div class="big" id="s05-f-s" style="top:560px;font-size:30px;font-weight:600;letter-spacing:.3em;color:#C9D2D8">IT NEVER CLOSES</div>`);
+          S.add("g", plate("s05-g-p", "e9_thermal0") + `<div id="s05-g-h" style="position:absolute;inset:0;opacity:0">${plate("s05-g-ph", "e9_thermal2")}</div>` + vig() +
+            svg("s05-therm", `<defs><linearGradient id="s05-tg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#1a4dff"/><stop offset=".5" stop-color="#ffc21a"/><stop offset="1" stop-color="#ff3a10"/></linearGradient></defs>
+              <rect x="1780" y="220" width="22" height="560" fill="url(#s05-tg)"/><text x="1770" y="210" text-anchor="end" font-family="Mono" font-size="18" fill="#C9D2D8">HOT</text><text x="1770" y="800" text-anchor="end" font-family="Mono" font-size="18" fill="#C9D2D8">COOL</text>`) +
+            `<div class="big" id="s05-g-t" style="top:110px;font-size:40px;font-weight:700;letter-spacing:.08em">TENS OF MEGAWATTS <span style="color:#8A949C">→</span> <span style="color:${C.red}">HEAT</span> <span style="color:#8A949C">→</span> COOLING <span style="color:#8A949C">→</span> <span style="color:${C.red}">MORE WEIGHT</span></div>`);
+          S.add("h", plate("s05-h-p", "e10_empty_cabin") + vig(0.6) + lbl("s05-h-l", 120, 880, "Seats: 0 · Passengers: 0", { color: C.cyan }));
+          S.add("i", plate("s05-i-p", "m1_map") + vig(0.4) +
+            svg("s05-rng", `<circle id="s05-ring" cx="760" cy="560" r="620" fill="${C.cyan}" fill-opacity=".08" stroke="${C.cyan}" stroke-width="3"/><circle cx="760" cy="560" r="8" fill="#F2F4F5"/>`) +
+            lbl("s05-i-l1", 1150, 170, "Normal range ≈ 6,000 km", { color: "#C9D2D8" }) +
+            lbl("s05-i-l2", 840, 600, "Electric: a short hop", { color: C.cyan }));
+          S.add("j", plate("s05-j-p", "e11_777_mountain") + vig() +
+            big("s05-j-n", "≈ 3,000 t OF BATTERIES", { y: 110, size: 96, color: C.cyan }) +
+            `<div class="big" id="s05-j-s" style="top:230px;font-size:40px;font-weight:700;letter-spacing:.06em">= THE WEIGHT OF 8 FULLY LOADED 777s</div>`);
+          S.mount(`<div class="bug" id="s05-bug"><small>USEFUL ENERGY PER KG</small>JET FUEL ≈20× BATTERY</div><div class="black" id="s05-blk"></div>`);
+
+          const tl = gsap.timeline({ paused: true });
+          const t = { b: q("L39"), c: q("L40"), d: q("L41") - 0.1, e: q("L42"), f: q("L43"), g: q("L44"), h: q("L45"), i: q("L45", "and you'd barely"), j: q("L46") };
+          D.shots(tl, [["#s05-a", 0], ["#s05-b", t.b, "fade"], ["#s05-c", t.c], ["#s05-d", t.d], ["#s05-e", t.e], ["#s05-f", t.f, "blur"], ["#s05-g", t.g], ["#s05-h", t.h], ["#s05-i", t.i, "fade"], ["#s05-j", t.j]], DUR);
+
+          gsap.set("#s05-bug", { opacity: 0 });
+          tl.to("#s05-bug", { opacity: 1, duration: 0.5 }, 0.2);
+          tl.to("#s05-bug", { opacity: 0, duration: 0.5 }, t.j);
+          // a
+          D.push(tl, "#s05-a-p", 0, t.b + 0.6, 1.0, 1.08, 0, -30);
+          D.chapter(tl, "s05-ch", 0.3, 2.4);
+          sfx("whoosh_big", 0, 0.6); sfx("hangar", 0.1, 0.8); sfx("wrench", 0.9, 0.5);
+          // b — mission + reserves
+          D.push(tl, "#s05-b-p", t.b, t.c - t.b + 0.6, 1.0, 1.06);
+          D.draw(tl, "#s05-r1", q("L39", "A thousand"), 1.2);
+          gsap.set(["#s05-r2", "#s05-hold", "#s05-stack", "#s05-seg2", "#s05-sl2", "#s05-sl3"], { opacity: 0 });
+          tl.fromTo("#s05-seg1", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.6, ease: "expo.out" }, q("L39", "four tonnes"));
+          tl.to("#s05-stack", { opacity: 1, duration: 0.3 }, q("L39", "four tonnes") - 0.1);
+          tl.to("#s05-r2", { opacity: 0.85, duration: 0.2 }, q("L39", "Add the reserves"));
+          D.draw(tl, "#s05-r2", q("L39", "Add the reserves"), 0.9);
+          tl.to("#s05-hold", { opacity: 1, duration: 0.4 }, q("L39", "circle"));
+          tl.fromTo("#s05-hold", { rotation: 0, transformOrigin: "50% 50%" }, { rotation: 360, duration: 4, ease: "none" }, q("L39", "circle"));
+          tl.to(["#s05-seg2", "#s05-sl2"], { opacity: 1, duration: 0.4 }, q("L39", "Add the reserves") + 0.4);
+          tl.to("#s05-sl3", { opacity: 1, duration: 0.3 }, q("L39", "six tonnes"));
+          D.show(tl, "s05-b-l", q("L39", "Add the reserves") + 0.6);
+          sfx("draw", q("L39", "A thousand"), 0.5); sfx("radar", q("L39", "circle"), 0.6); sfx("hit_soft", q("L39", "six tonnes"), 0.7);
+          // c — × 20
+          gsap.set("#s05-c-eq", { opacity: 0 });
+          D.slam(tl, "#s05-c-eq", t.c + 0.1);
+          sfx("riser", t.c, 0.8);
+          // d — 120 t rain
+          tl.to("#s05-d1", { opacity: 1, duration: 0.15 }, q("L41", "a hundred and twenty") + 0.1);
+          D.shake(tl, "#s05-d", q("L41", "a hundred and twenty") + 0.1, 0.5, 14);
+          gsap.set("#s05-d-n", { opacity: 0 });
+          D.slam(tl, "#s05-d-n", q("L41", "a hundred and twenty") + 0.1);
+          D.push(tl, "#s05-d", t.d, t.e - t.d, 1.0, 1.06);
+          sfx("boom", q("L41", "a hundred and twenty") + 0.1, 1.0); for (let k = 0; k < 7; k++) sfx("pallet", t.d + 0.1 + k * 0.33, 0.5 + 0.06 * k);
+          // e — x-ray fill + gauge past MTOW
+          const ef = [t.e + 0.1, q("L42", "fully loaded"), q("L42", "before you add")];
+          tl.to("#s05-x1", { opacity: 1, duration: 0.5 }, ef[1]);
+          tl.to("#s05-x2", { opacity: 1, duration: 0.5 }, ef[2]);
+          tl.to("#s05-x3", { opacity: 1, duration: 0.4 }, q("L42", "a single passenger"));
+          D.push(tl, "#s05-e", t.e, t.f - t.e, 1.0, 1.05);
+          gsap.set("#s05-g-fill", { height: `${(44 / 180) * 100}%` });
+          [[ef[0], 84], [ef[1], 124], [ef[2], 164]].forEach(([tt, v]) => {
+            tl.to("#s05-g-fill", { height: `${(v / 180) * 100}%`, duration: 0.8, ease: "power2.out" }, tt);
+            sfx("hum_build", tt, 0.5); sfx("creak", tt + 0.2, 0.5);
+          });
+          D.count(tl, "#s05-g-val", ef[0], 44, 164, ef[2] + 0.8 - ef[0], (v) => `${Math.round(v)} t`);
+          tl.set("#s05-g-fill", { background: C.red, boxShadow: `0 0 18px ${C.red}` }, ef[0] + 0.5);
+          gsap.set(["#s05-caut", "#s05-e-n"], { opacity: 0 });
+          [0, 0.25, 0.5, 0.75].forEach((d, i) => tl.set("#s05-caut", { opacity: i % 2 ? 0.2 : 1 }, ef[1] + d));
+          tl.set("#s05-caut", { opacity: 1 }, ef[1] + 1.0);
+          sfx("caution", ef[1], 0.8);
+          D.show(tl, "s05-e-l1", t.e + 0.4);
+          D.slam(tl, "#s05-e-n", q("L42", "allowed to weigh") - 0.2);
+          D.shake(tl, "#s05-x3", q("L42", "a single passenger") + 0.2, 0.4, 5);
+          sfx("strain", q("L42", "a single passenger"), 0.9);
+          // f — spiral: arc draws faster each lap
+          gsap.set(["#s05-f-t", "#s05-f-s"], { opacity: 0 });
+          let st = t.f + 0.3;
+          nodes.forEach((_, i) => { tl.to(`#s05-n${i}`, { opacity: 1, duration: 0.3 }, q("L43", ["heavier", "stronger", "More drag", "more energy", "more batteries"][i]) - 0.1); sfx("node", q("L43", ["heavier", "stronger", "More drag", "more energy", "more batteries"][i]) - 0.1, 0.5); });
+          const laps = [2.6, 2.0, 1.5, 1.1, 0.8, 0.6, 0.45];
+          laps.forEach((d) => { tl.fromTo("#s05-sp-arc", { attr: { "stroke-dashoffset": 3200 } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease: "none" }, st); st += d; });
+          tl.fromTo("#s05-spin", { rotation: 0 }, { rotation: 40, duration: t.g - t.f, ease: "power1.in" }, t.f);
+          tl.fromTo("#s05-f-p", { scale: 1.0 }, { scale: 1.12, duration: t.g - t.f, ease: "power1.in" }, t.f);
+          D.slam(tl, "#s05-f-t", q("L43", "weight spiral") - 0.1);
+          tl.to("#s05-f-s", { opacity: 1, duration: 0.4 }, q("L43", "it never closes"));
+          sfx("shepard", t.f + 0.5, 0.7); sfx("hit", q("L43", "weight spiral"), 0.8); sfx("cut", q("L43", "it never closes") + 0.8, 0.8);
+          // g — heat
+          D.push(tl, "#s05-g-p", t.g, t.h - t.g, 1.0, 1.08);
+          tl.to("#s05-g-h", { opacity: 1, duration: 2.2 }, q("L44", "makes enormous") - 0.6);
+          gsap.set("#s05-g-t", { opacity: 0 });
+          tl.to("#s05-g-t", { opacity: 1, duration: 0.5 }, q("L44", "pulling"));
+          sfx("buzz", t.g, 0.6); sfx("pump", q("L44", "cooling"), 0.6);
+          // h — empty cabin
+          D.push(tl, "#s05-h-p", t.h, t.i - t.h + 0.6, 1.0, 1.12);
+          D.show(tl, "s05-h-l", q("L45", "Rip out"));
+          sfx("eerie", t.h, 0.7);
+          // i — range collapses
+          tl.fromTo("#s05-ring", { attr: { r: 620 } }, { attr: { r: 26 }, duration: 1.8, ease: "power3.inOut" }, t.i + 0.5);
+          D.show(tl, "s05-i-l1", t.i + 0.1); tl.to("#s05-i-l1", { opacity: 0.35, duration: 0.4 }, t.i + 1.8);
+          D.show(tl, "s05-i-l2", t.i + 2.1);
+          sfx("deflate", t.i + 0.5, 0.8);
+          // j — 777 battery mountain
+          tl.fromTo("#s05-j-p", { scale: 1.12, y: 40 }, { scale: 1.0, y: 0, duration: DUR - t.j, ease: "power1.out" }, t.j);
+          gsap.set(["#s05-j-n", "#s05-j-s"], { opacity: 0 });
+          D.slam(tl, "#s05-j-n", q("L46", "nearly three thousand"));
+          tl.to("#s05-j-s", { opacity: 1, duration: 0.5 }, q("L46", "the weight of eight"));
+          sfx("rumble", t.j, 0.8); sfx("boom", q("L46", "the weight of eight"), 1.0);
+          tl.to("#s05-blk", { opacity: 1, duration: 0.6 }, DUR - 0.7);
+
+          window.__timelines["s05"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

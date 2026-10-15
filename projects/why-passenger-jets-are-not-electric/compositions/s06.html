@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 700; src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 800; src: url("assets/fonts/inter-latin-800-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 400; src: url("assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 500; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+        #s06 .mode { position:absolute; left:120px; top:150px; font-family:"Inter"; font-weight:700; font-size:34px; letter-spacing:.08em; color:#F2F4F5; text-shadow:0 2px 20px rgba(0,0,0,.6); }
+        #s06 .mode small { display:block; font-family:"Mono"; font-weight:400; font-size:20px; color:#8A949C; letter-spacing:.04em; margin-top:8px; }
+      </style>
+      <div id="s06" data-composition-id="s06" data-width="1920" data-height="1080"></div>
+      <script>
+        (function () {
+          /*CUES*/ const CUES = {"L47":[0,7.083,"That's why there are no electric jumbo jets. Not because nobody's tried. Because the physics says no… for now.",[["That's",0.341],["why",0.597],["there",0.896],["are",1.024],["no",1.152],["electric",1.323],["jumbo",1.707],["jets.",2.048],["Not",3.371],["because",3.584],["nobody's",3.84],["tried.",4.181],["Because",4.949],["the",5.163],["physics",5.291],["says",5.717],["no…",5.931],["for",6.656],["now.",6.784]]],"L48":[7.483,14.817,"And \"for now\" matters. Because the future of electric flight probably doesn't start with jumbo jets. It starts small.",[["And",7.735],["\"for",8.14],["now\"",8.546],["matters.",8.802],["Because",9.74],["the",10.039],["future",10.167],["of",10.551],["electric",10.679],["flight",11.02],["probably",11.362],["doesn't",11.831],["start",12.13],["with",12.471],["jumbo",12.599],["jets.",12.983],["It",13.964],["starts",14.092],["small.",14.434]]],"L49":[15.217,26.368,"Short hops are the sweet spot: island links and regional routes of a few hundred kilometres. Several companies are developing nine- to thirty-seat electric and hybrid aircraft for exactly those routes.",[["Short",15.497],["hops",15.795],["are",16.137],["the",16.435],["sweet",16.563],["spot:",16.905],["island",17.673],["links",18.142],["and",18.483],["regional",18.654],["routes",19.038],["of",19.337],["a",19.422],["few",19.55],["hundred",19.721],["kilometres.",19.977],["Several",21.214],["companies",21.641],["are",22.025],["developing",22.153],["nine-",22.579],["to",23.006],["thirty-seat",23.091],["electric",23.646],["and",24.03],["hybrid",24.158],["aircraft",24.499],["for",25.011],["exactly",25.225],["those",25.694],["routes.",25.95]]],"L50":[26.768,34.862,"Hybrids are a bridge: a fuel-burning engine for the heavy lifting and the reserves, electric motors to boost efficiency during takeoff and climb.",[["Hybrids",27.02],["are",27.575],["a",27.788],["bridge:",27.873],["a",28.343],["fuel-burning",28.599],["engine",29.239],["for",29.665],["the",29.879],["heavy",29.964],["lifting",30.177],["and",30.561],["the",30.817],["reserves,",30.988],["electric",32.012],["motors",32.353],["to",32.737],["boost",32.865],["efficiency",33.079],["during",33.676],["takeoff",33.932],["and",34.359],["climb.",34.444]]],"L51":[35.262,46.275,"Then there's the battery itself. Since the early nineties, lithium-ion cells have more than tripled their energy per kilogram, and new chemistries like lithium-sulfur and solid-state could go much further.",[["Then",35.599],["there's",35.855],["the",36.069],["battery",36.154],["itself.",36.538],["Since",37.477],["the",37.733],["early",37.903],["nineties,",38.159],["lithium-ion",38.842],["cells",39.61],["have",39.951],["more",40.165],["than",40.378],["tripled",40.549],["their",40.933],["energy",41.018],["per",41.402],["kilogram,",41.573],["and",42.383],["new",42.597],["chemistries",42.81],["like",43.45],["lithium-sulfur",43.749],["and",44.517],["solid-state",44.645],["could",45.327],["go",45.498],["much",45.669],["further.",45.925]]],"L52":[46.675,55.031,"Studies suggest that if battery packs got around three to four times better than today's, a full-size electric airliner could start to work, on shorter routes.",[["Studies",46.97],["suggest",47.439],["that",47.823],["if",47.951],["battery",48.036],["packs",48.463],["got",48.762],["around",48.932],["three",49.188],["to",49.402],["four",49.53],["times",49.743],["better",50.084],["than",50.34],["today's,",50.511],["a",51.194],["full-size",51.407],["electric",52.047],["airliner",52.388],["could",52.9],["start",53.071],["to",53.327],["work,",53.455],["on",54.052],["shorter",54.223],["routes.",54.607]]],"L53":[55.431,63.73,"And for the long haul, the answer may not be batteries at all, but sustainable aviation fuels, or hydrogen. Each with hard challenges of its own.",[["And",55.73],["for",55.858],["the",56.028],["long",56.114],["haul,",56.37],["the",56.967],["answer",57.095],["may",57.351],["not",57.522],["be",57.65],["batteries",57.778],["at",58.204],["all,",58.29],["but",58.972],["sustainable",59.1],["aviation",59.655],["fuels,",60.167],["or",60.978],["hydrogen.",61.106],["Each",62.13],["with",62.386],["hard",62.514],["challenges",62.727],["of",63.154],["its",63.282],["own.",63.41]]]}; const DUR = 64.13; /*ENDCUES*/
+          const { C, plate, vig, lbl, big, chap, card, gauge, glow, brackets, svg } = D;
+          const q = D.cue(CUES);
+          const S = D.scene("s06");
+          const sfx = (n, t, g) => D.sfx("s06", n, t, g);
+
+          S.add("a", plate("s06-a-p", "f1_hangar_night") + vig(0.5) + big("s06-a-n", "FOR NOW", { y: 820, size: 64, color: C.cyan, style: "letter-spacing:.3em;font-weight:700" }));
+          S.add("b", plate("s06-b-p0", "f2_doors_half") + `<div id="s06-b1" style="position:absolute;inset:0;opacity:0">${plate("s06-b-p1", "f2_doors_open")}</div>` + vig() + chap("s06-ch", "05", "What could work"));
+          S.add("c", plate("s06-c-p", "f3_meridian_islands") + vig() +
+            card("s06-card", 1220, 140, "Sweet spot: short routes", ["9–30 seats", "a few hundred km", "quiet, efficient"]));
+          const routes = [[520, 420, 700, 360], [700, 360, 860, 470], [860, 470, 1010, 410], [1010, 410, 1180, 520], [600, 700, 780, 640], [780, 640, 980, 700], [980, 700, 1120, 620], [1200, 760, 1380, 690], [1380, 690, 1500, 760], [430, 560, 600, 700]];
+          S.add("d", plate("s06-d-p", "m1_map") + vig(0.4) +
+            svg("s06-rt", routes.map(([x1, y1, x2, y2], i) => `<path id="s06-r${i}" d="M${x1},${y1} Q${(x1 + x2) / 2},${Math.min(y1, y2) - 60} ${x2},${y2}" stroke="${C.cyan}" stroke-width="3" fill="none"/><circle cx="${x1}" cy="${y1}" r="6" fill="#F2F4F5"/><circle cx="${x2}" cy="${y2}" r="6" fill="#F2F4F5"/>`).join("")) +
+            lbl("s06-d-l", 120, 900, "Island links · regional routes", { color: C.cyan }));
+          S.add("e", plate("s06-e-p", "f4_meridian_xray") + vig() +
+            `<div class="mode" id="s06-m0">TAKEOFF <span style="color:${C.cyan}">BATTERY</span> + <span style="color:${C.amber}">ENGINE</span><small>both feed the electric motors</small></div>` +
+            `<div class="mode" id="s06-m1">CRUISE <span style="color:${C.amber}">ENGINE</span><small>turbogenerator does the long work</small></div>` +
+            `<div class="mode" id="s06-m2">RESERVES <span style="color:${C.amber}">FUEL</span><small>light, dense, always there</small></div>` +
+            lbl("s06-e-l1", 1330, 760, "Battery packs", { color: C.cyan, to: [980, 640] }) +
+            lbl("s06-e-l2", 1330, 300, "Turbogenerator", { color: C.amber, to: [1390, 470] }));
+          S.add("f", plate("s06-f-p", "f5_cell_history") + vig() +
+            [["1991", "≈80 Wh/kg", 380], ["today", "≈250–300 Wh/kg", 760], ["advanced cells", "400+ Wh/kg", 1150], ["Li-S · solid-state", "?", 1530]].map(([a, b, x], i) =>
+              `<div class="lbl" id="s06-f-t${i}" style="left:${x}px;top:860px;transform:translateX(-50%);text-align:center;font-size:24px">${a}<span class="sub">${b}</span></div>`).join("") +
+            big("s06-f-n", "× 3+ SINCE THE EARLY ’90s", { y: 110, size: 64, color: C.cyan }) +
+            svg("s06-thr", `<line id="s06-thl" x1="200" y1="250" x2="1720" y2="250" stroke="${C.cyan}" stroke-width="3" stroke-dasharray="14 10"/>
+              <text x="1720" y="232" text-anchor="end" font-family="Inter" font-weight="700" font-size="24" letter-spacing="2" fill="${C.cyan}">≈ 3–4× TODAY'S PACKS</text>
+              <text x="1720" y="282" text-anchor="end" font-family="Inter" font-weight="500" font-size="18" letter-spacing="1" fill="#C9D2D8">THRESHOLD FOR A SHORT-RANGE ELECTRIC AIRLINER (STUDY ESTIMATES)</text>`));
+          S.add("g", plate("s06-g-p", "f6_saf_gate") + vig() + lbl("s06-g-l", 120, 860, "Sustainable aviation fuel", { color: C.amber, sub: "challenges: cost & scale" }));
+          S.add("h", plate("s06-h-p", "f7_h2_tank") + vig() + lbl("s06-h-l", 1250, 240, "Hydrogen · −253 °C", { color: "#C9E6FF", sub: "challenges: bulky tanks & infrastructure", to: [1150, 520] }));
+          S.mount();
+
+          const tl = gsap.timeline({ paused: true });
+          const t = { b: q("L48"), c: q("L49"), d: q("L49", "Several companies"), e: q("L50"), f: q("L51"), g: q("L53"), h: q("L53", "or hydrogen") };
+          D.shots(tl, [["#s06-a", 0], ["#s06-b", t.b, "fade"], ["#s06-c", t.c], ["#s06-d", t.d, "fade"], ["#s06-e", t.e], ["#s06-f", t.f, "fade"], ["#s06-g", t.g], ["#s06-h", t.h, "fade"]], DUR);
+
+          // a — for now
+          D.push(tl, "#s06-a-p", 0, t.b + 0.6, 1.0, 1.12);
+          gsap.set("#s06-a-n", { opacity: 0 });
+          tl.fromTo("#s06-a-n", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 1.4, ease: "expo.out" }, q("L47", "for now"));
+          sfx("silence_pad", 0, 0.6); sfx("click", 0.6, 0.5); sfx("pad", q("L47", "for now"), 0.8);
+          // b — doors open on the future
+          tl.to("#s06-b1", { opacity: 1, duration: 2.4, ease: "power1.inOut" }, t.b + 0.5);
+          D.push(tl, "#s06-b", t.b, t.c - t.b, 1.0, 1.1);
+          D.chapter(tl, "s06-ch", t.b + 1.0, 2.8);
+          sfx("doors", t.b + 0.2, 0.9); sfx("riser_resolve", q("L48", "It starts small") - 1.6, 0.6);
+          // c — Meridian over the islands
+          D.push(tl, "#s06-c-p", t.c, t.d - t.c + 0.6, 1.0, 1.08, 0, -40);
+          gsap.set(["#s06-card", "#s06-card-r0", "#s06-card-r1", "#s06-card-r2"], { opacity: 0 });
+          tl.fromTo("#s06-card", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, t.c + 0.4);
+          ["r0", "r1", "r2"].forEach((r, i) => tl.to(`#s06-card-${r}`, { opacity: 1, duration: 0.3 }, t.c + 1.0 + i * 0.6));
+          sfx("props_quiet", t.c, 0.8); sfx("hud", t.c + 0.4, 0.5);
+          // d — routes
+          D.push(tl, "#s06-d-p", t.d, t.e - t.d, 1.06, 1.0);
+          routes.forEach((_, i) => { D.draw(tl, `#s06-r${i}`, t.d + 0.3 + i * 0.28, 0.6); sfx("blip", t.d + 0.3 + i * 0.28, 0.35); });
+          D.show(tl, "s06-d-l", t.d + 0.6);
+          // e — hybrid modes
+          D.push(tl, "#s06-e-p", t.e, t.f - t.e, 1.0, 1.06);
+          gsap.set(["#s06-m0", "#s06-m1", "#s06-m2"], { opacity: 0 });
+          const mt = [q("L50", "a fuel-burning"), q("L50", "electric motors"), q("L50", "during takeoff")];
+          tl.to("#s06-m2", { opacity: 1, duration: 0.4 }, mt[0]); tl.to("#s06-m2", { opacity: 0, duration: 0.3 }, mt[1] - 0.1);
+          tl.to("#s06-m0", { opacity: 1, duration: 0.4 }, mt[1]); tl.to("#s06-m0", { opacity: 0, duration: 0.3 }, t.f - 1.3);
+          tl.to("#s06-m1", { opacity: 1, duration: 0.4 }, t.f - 1.2);
+          D.show(tl, "s06-e-l2", mt[0] + 0.2); D.show(tl, "s06-e-l1", mt[1] + 0.2);
+          sfx("hum", t.e, 0.4); sfx("turbine", t.e + 0.2, 0.3); mt.forEach((x) => sfx("hud", x, 0.5));
+          // f — battery history + threshold
+          D.push(tl, "#s06-f-p", t.f, t.g - t.f, 1.0, 1.06, 0, 0, 0, -10);
+          [q("L51", "Since the early"), q("L51", "more than tripled"), q("L51", "and new chemistries"), q("L51", "lithium-sulfur")].forEach((x, i) => {
+            tl.fromTo(`#s06-f-t${i}`, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, x);
+            sfx("chime", x, 0.5 + i * 0.08);
+          });
+          gsap.set(["#s06-f-n", "#s06-thr"], { opacity: 0 });
+          D.slam(tl, "#s06-f-n", q("L51", "more than tripled"));
+          tl.to("#s06-f-n", { opacity: 0, duration: 0.4 }, q("L52") - 0.3);
+          tl.to("#s06-thr", { opacity: 1, duration: 0.3 }, q("L52", "three to four"));
+          D.draw(tl, "#s06-thl", q("L52", "three to four"), 1.2);
+          sfx("riser_resolve", q("L52", "three to four") - 1.0, 0.7);
+          // g, h — SAF / hydrogen
+          D.push(tl, "#s06-g-p", t.g, t.h - t.g + 0.6, 1.0, 1.08);
+          D.show(tl, "s06-g-l", q("L53", "sustainable"));
+          sfx("industrial", t.g, 0.6);
+          D.push(tl, "#s06-h-p", t.h, DUR - t.h, 1.0, 1.08);
+          D.show(tl, "s06-h-l", t.h + 0.4);
+          sfx("cryo", t.h, 0.7);
+
+          window.__timelines["s06"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 700; src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 800; src: url("assets/fonts/inter-latin-800-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 400; src: url("assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 500; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+        #s01 .win { position:absolute; left:250px; top:40px; width:1420px; height:1000px; border-radius:300px; box-shadow:0 0 0 1400px #D9DCDF, inset 0 0 60px 30px rgba(0,0,0,.55); }
+        #s01 .win2 { position:absolute; left:230px; top:20px; width:1460px; height:1040px; border-radius:310px; border:22px solid #C5C9CD; }
+        #s01 .ttl { position:absolute; left:0; right:0; text-align:center; font-family:"Inter"; font-weight:800; letter-spacing:.04em; color:#F2F4F5; }
+        #s01 .word { position:absolute; top:770px; font-family:"Inter"; font-weight:700; font-size:64px; letter-spacing:.14em; color:#F2F4F5; text-shadow:0 2px 30px rgba(0,0,0,.8); }
+        #s01 .uline { position:absolute; height:4px; background:#39C6F4; box-shadow:0 0 16px #39C6F4; }
+      </style>
+      <div id="s01" data-composition-id="s01" data-width="1920" data-height="1080"></div>
+      <script>
+        (function () {
+          /*CUES*/ const CUES = {"L01":[4,10.586,"Right now, thousands of passenger jets are in the sky above us. And every single one of them is burning fuel.",[["Right",4.256],["now,",4.555],["thousands",4.811],["of",5.323],["passenger",5.451],["jets",5.963],["are",6.261],["in",6.347],["the",6.432],["sky",6.56],["above",6.859],["us.",7.072],["And",8.181],["every",8.309],["single",8.608],["one",8.949],["of",9.12],["them",9.205],["is",9.461],["burning",9.845],["fuel.",10.144]]],"L02":[10.986,15.564,"We've electrified cars. Buses. Scooters. Even trucks.",[["We've",11.269],["electrified",11.525],["cars.",11.994],["Buses.",12.89],["Scooters.",13.743],["Even",14.767],["trucks.",15.066]]],"L03":[16.464,23.195,"So why is it that when you board a plane, the force pushing you back into your seat is still coming from burning kerosene?",[["So",16.759],["why",17.1],["is",17.655],["it",17.783],["that",17.911],["when",18.039],["you",18.167],["board",18.295],["a",18.551],["plane,",18.636],["the",19.233],["force",19.404],["pushing",19.703],["you",20.001],["back",20.129],["into",20.385],["your",20.556],["seat",20.684],["is",21.153],["still",21.452],["coming",21.665],["from",21.964],["burning",22.177],["kerosene?",22.519]]],"L04":[23.595,31.242,"It isn't that engineers haven't tried. It comes down to one brutal number, and once you see it, you'll never look at an airplane the same way.",[["It",23.851],["isn't",24.022],["that",24.235],["engineers",24.406],["haven't",24.832],["tried.",25.088],["It",25.984],["comes",26.112],["down",26.368],["to",26.582],["one",26.752],["brutal",27.094],["number,",27.435],["and",28.075],["once",28.331],["you",28.502],["see",28.63],["it,",28.886],["you'll",29.355],["never",29.526],["look",29.824],["at",29.995],["an",30.08],["airplane",30.166],["the",30.592],["same",30.678],["way.",30.934]]]}; const DUR = 31.642; /*ENDCUES*/
+          const { C, plate, vig, lbl, big, chap, glow, brackets } = D;
+          const q = D.cue(CUES);
+          const S = D.scene("s01");
+          const sfx = (n, t, g) => D.sfx("s01", n, t, g);
+
+          // a — telephoto, heat haze, jet waiting at the far end of the runway
+          S.add("a", `<svg width="0" height="0" style="position:absolute"><filter id="s01-haze"><feTurbulence id="s01-turb" type="fractalNoise" baseFrequency="0.004 0.03" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="9"/></filter></svg>` +
+            plate("s01-a-p", "a1_tele", "filter:url(#s01-haze)") + vig(0.6));
+          // b — ground-level pass-by
+          S.add("b", plate("s01-b-p", "a2_pass") + vig());
+          // c — rotation
+          S.add("c", plate("s01-c-p", "a3_rotation") + vig());
+          // d — electrified: charge port macro + words
+          const words = ["CARS", "BUSES", "SCOOTERS", "TRUCKS"];
+          S.add("d", plate("s01-d-p", "a4_charge") + vig(0.7) +
+            words.map((w, i) => `<div class="word" id="s01-w${i}" style="left:${150 + i * 430}px">${w}</div><div class="uline" id="s01-u${i}" style="left:${150 + i * 430}px;top:850px;width:${w.length * 46}px"></div>`).join(""));
+          // e — cabin window view (window frame built in CSS)
+          S.add("e", `<div id="s01-e-in" style="position:absolute;inset:0">${plate("s01-e-p", "a5_window")}</div><div class="win"></div><div class="win2"></div>`);
+          // f — exhaust core
+          S.add("f", plate("s01-f-p", "a6_exhaust") + glow("s01-f-g", 1300, 560, 380, C.amber, 0.0) + vig());
+          // g — profile → x-ray fuel → x-ray batteries
+          S.add("g", plate("s01-g-p", "a7_profile") + `<div id="s01-g-x" style="position:absolute;inset:0;opacity:0">${plate("s01-g-px", "a8_xray_fuel")}</div>` + brackets("s01-g-br", 300, 330, 1320, 420) + vig());
+          S.add("h", plate("s01-h-p", "a9_xray_batt") + vig() +
+            big("s01-h-n", "≈20×", { y: 120, size: 150, mono: true, color: C.cyan, style: "opacity:.0;filter:blur(18px)" }));
+          // title
+          S.add("t", `<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%, #0b1118 0%, #000 70%)"></div>` +
+            `<div class="ttl" id="s01-t1" style="top:400px;font-size:44px;letter-spacing:.5em;color:#8A949C;font-weight:600">WHY</div>` +
+            `<div class="ttl" id="s01-t2" style="top:470px;font-size:104px"><span style="color:#F2F4F5">PASSENGER </span><span style="color:${C.amber}">JETS</span></div>` +
+            `<div class="ttl" id="s01-t3" style="top:600px;font-size:104px"><span style="color:#F2F4F5">ARE NOT </span><span style="color:${C.cyan}">ELECTRIC</span></div>`);
+          S.mount(`<div class="lb" id="s01-lbT" style="top:0"></div><div class="lb" id="s01-lbB" style="bottom:0"></div><div class="flash" id="s01-fl"></div>`);
+
+          const tl = gsap.timeline({ paused: true });
+          const t = {
+            b: q("L01"), c: q("L01", "And every single") - 0.2, d: q("L02"), e: q("L03"), f: q("L03", "is still coming"),
+            g: q("L04"), x: q("L04", "one brutal number"), h: q("L04", "and once you see it"), T: q("L04", "you'll never look") - 0.1,
+          };
+          D.shots(tl, [["#s01-a", 0], ["#s01-b", t.b], ["#s01-c", t.c, "fade"], ["#s01-d", t.d], ["#s01-e", t.e], ["#s01-f", t.f, "fade"],
+            ["#s01-g", t.g], ["#s01-h", t.h], ["#s01-t", t.T]], DUR);
+
+          // a — heat haze shimmer (seekable: baseFrequency stepped on the timeline) + slow push
+          for (let i = 0; i < 40; i++) tl.set("#s01-turb", { attr: { baseFrequency: `${0.004 + 0.0006 * Math.sin(i * 1.3)} ${0.03 + 0.004 * Math.cos(i * 0.9)}`, seed: 3 + i } }, i * 0.1);
+          D.push(tl, "#s01-a-p", 0, t.b, 1.0, 1.07);
+          sfx("amb_airport", 0, 0.8); sfx("spool", 0.6, 0.9); sfx("rumble", 2.4, 0.6);
+
+          // b — pass-by: fast lateral track, motion blur
+          tl.fromTo("#s01-b-p", { scale: 1.18, x: 260, filter: "blur(2px)" }, { scale: 1.18, x: -260, filter: "blur(0px)", duration: t.c - t.b + 0.6, ease: "power1.inOut" }, t.b);
+          sfx("roar", t.b - 0.15, 1.0); sfx("flyby", t.b + 0.6, 0.8); sfx("sub", t.b, 0.7);
+          // c — rotation push
+          D.push(tl, "#s01-c-p", t.c, t.d - t.c + 0.6, 1.04, 1.12, 0, -40, 0, 20);
+
+          // d — four vignettes compressed into one macro, words on cue
+          D.push(tl, "#s01-d-p", t.d, t.e - t.d, 1.0, 1.15);
+          const wt = [q("L02", "cars"), q("L02", "Buses"), q("L02", "Scooters"), q("L02", "Even trucks")];
+          words.forEach((w, i) => {
+            gsap.set([`#s01-w${i}`, `#s01-u${i}`], { opacity: 0 });
+            tl.fromTo(`#s01-w${i}`, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, wt[i]);
+            tl.fromTo(`#s01-u${i}`, { opacity: 1, scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.4, ease: "expo.out" }, wt[i] + 0.05);
+            sfx("charge", wt[i], 0.55 + i * 0.05);
+          });
+          sfx("hum", t.d, 0.35);
+
+          // e — cabin: vibration
+          for (let i = 0; i < Math.floor((t.f - t.e) / 0.06); i++) tl.to("#s01-e-in", { x: ((i * 7) % 5) - 2, y: ((i * 3) % 5) - 2, duration: 0.06, ease: "none" }, t.e + i * 0.06);
+          D.push(tl, "#s01-e-p", t.e, t.f - t.e, 1.05, 1.1, 0, -60);
+          sfx("cabin", t.e, 0.8);
+          // f — exhaust: amber glow builds on "burning kerosene"
+          D.push(tl, "#s01-f-p", t.f, t.g - t.f, 1.0, 1.12);
+          tl.to("#s01-f-g", { opacity: 1, duration: 1.2 }, q("L03", "burning kerosene") - 0.2);
+          sfx("burn", q("L03", "burning kerosene") - 0.1, 0.8);
+
+          // g — profile, HUD brackets, then x-ray flicker on the "brutal number"
+          D.push(tl, "#s01-g-p", t.g, t.h - t.g, 1.0, 1.05);
+          tl.fromTo("#s01-g-br", { opacity: 0, scale: 1.08, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, t.g + 0.6);
+          sfx("hud", t.g + 0.6, 0.6);
+          [0, 0.12, 0.2, 0.4].forEach((d, i) => tl.set("#s01-g-x", { opacity: i % 2 ? 0 : 1 }, t.x + d));
+          tl.set("#s01-g-x", { opacity: 1 }, t.x + 0.55);
+          sfx("glitch", t.x, 0.7); sfx("hum", t.x + 0.3, 0.6);
+          // h — batteries flood in, aircraft sags; teaser number out of focus
+          D.push(tl, "#s01-h-p", t.h, t.T - t.h, 1.06, 1.0, 0, 0, -20, 30);
+          tl.to("#s01-h-n", { opacity: 0.55, duration: 0.6 }, t.h + 0.6);
+          sfx("creak", t.h + 0.2, 0.9); sfx("riser", t.T - 2.2, 0.8);
+
+          // title + letterbox open
+          D.flash(tl, "#s01-fl", t.T, 0.6, 0.6);
+          sfx("boom", t.T, 1.0);
+          tl.fromTo("#s01-t1", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 1.2, ease: "expo.out" }, t.T + 0.1);
+          tl.fromTo("#s01-t2", { opacity: 0, y: 30, filter: "blur(12px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.9, ease: "expo.out" }, t.T + 0.25);
+          tl.fromTo("#s01-t3", { opacity: 0, y: 30, filter: "blur(12px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.9, ease: "expo.out" }, t.T + 0.5);
+          tl.to("#s01-t", { scale: 1.04, duration: DUR - t.T, ease: "none" }, t.T);
+          tl.to("#s01-lbT", { y: -132, duration: 1.0, ease: "power2.inOut" }, t.T + 0.4);
+          tl.to("#s01-lbB", { y: 132, duration: 1.0, ease: "power2.inOut" }, t.T + 0.4);
+
+          window.__timelines["s01"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

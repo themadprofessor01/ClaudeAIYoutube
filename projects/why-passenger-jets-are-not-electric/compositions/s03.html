@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 700; src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 800; src: url("assets/fonts/inter-latin-800-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 400; src: url("assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 500; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+        #s03 .tape { position:absolute; font-family:"Mono"; color:#F2F4F5; }
+        #s03 .hudrow { position:absolute; left:0; right:0; bottom:0; height:150px; background:linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0,0)); }
+        #s03 .hudv { position:absolute; bottom:46px; font-family:"Mono"; font-weight:500; font-size:56px; color:#F2F4F5; }
+        #s03 .hudc { position:absolute; bottom:112px; font-family:"Inter"; font-weight:600; font-size:17px; letter-spacing:.2em; color:#8A949C; }
+        #s03 .bar { position:absolute; height:6px; background:rgba(255,255,255,.15); }
+        #s03 .bar i { position:absolute; left:0; top:0; bottom:0; width:0; background:#F2A33A; box-shadow:0 0 14px #F2A33A; }
+      </style>
+      <div id="s03" data-composition-id="s03" data-width="1920" data-height="1080"></div>
+      <script>
+        (function () {
+          /*CUES*/ const CUES = {"L11":[0,4.07,"To understand the problem, you have to see what an airliner is actually doing.",[["To",0.299],["understand",0.469],["the",0.896],["problem,",0.981],["you",1.664],["have",1.877],["to",2.048],["see",2.176],["what",2.389],["an",2.517],["airliner",2.603],["is",3.115],["actually",3.243],["doing.",3.712]]],"L12":[4.47,12.708,"Seventy-nine tonnes at the start of the runway. In about thirty seconds, two engines have to drag all of that to roughly two hundred and seventy kilometres an hour.",[["Seventy-nine",4.765],["tonnes",5.447],["at",5.831],["the",5.959],["start",6.045],["of",6.258],["the",6.386],["runway.",6.471],["In",7.282],["about",7.453],["thirty",7.581],["seconds,",7.879],["two",8.69],["engines",8.903],["have",9.287],["to",9.458],["drag",9.586],["all",9.885],["of",10.141],["that",10.226],["to",10.482],["roughly",10.61],["two",10.909],["hundred",11.122],["and",11.335],["seventy",11.506],["kilometres",11.805],["an",12.274],["hour.",12.402]]],"L13":[13.108,21.236,"Inside each engine, a fan almost two metres across is spun by a turbine, sitting just behind a flame burning at well over a thousand degrees.",[["Inside",13.36],["each",13.787],["engine,",13.957],["a",14.469],["fan",14.683],["almost",14.981],["two",15.323],["metres",15.493],["across",15.835],["is",16.219],["spun",16.347],["by",16.688],["a",16.859],["turbine,",16.944],["sitting",17.797],["just",18.096],["behind",18.395],["a",18.651],["flame",18.779],["burning",19.205],["at",19.547],["well",19.675],["over",19.931],["a",20.101],["thousand",20.229],["degrees.",20.613]]],"L14":[21.636,27.793,"At full takeoff thrust, the two engines together deliver tens of megawatts: roughly the power a small town uses.",[["At",21.892],["full",22.063],["takeoff",22.276],["thrust,",22.66],["the",23.257],["two",23.385],["engines",23.556],["together",23.897],["deliver",24.196],["tens",24.537],["of",24.879],["megawatts:",24.964],["roughly",25.86],["the",26.244],["power",26.372],["a",26.671],["small",26.799],["town",27.055],["uses.",27.311]]],"L15":[28.193,34.164,"Then comes the climb: lifting the entire aircraft eleven kilometres straight up, against gravity.",[["Then",28.488],["comes",28.786],["the",29.042],["climb:",29.17],["lifting",29.981],["the",30.365],["entire",30.536],["aircraft",30.92],["eleven",31.474],["kilometres",31.858],["straight",32.413],["up,",32.669],["against",33.309],["gravity.",33.693]]],"L16":[34.564,39.785,"And then the cruise: hour after hour, fighting drag at eight hundred kilometres an hour.",[["And",34.82],["then",35.033],["the",35.161],["cruise:",35.289],["hour",36.015],["after",36.399],["hour,",36.783],["fighting",37.423],["drag",37.807],["at",38.191],["eight",38.319],["hundred",38.489],["kilometres",38.788],["an",39.343],["hour.",39.471]]],"L17":[40.185,48.743,"Fill this plane's tanks and you're carrying about nineteen tonnes of fuel: over two hundred megawatt-hours of energy. About the same as three thousand electric-car batteries.",[["Fill",40.437],["this",40.693],["plane's",40.864],["tanks",41.205],["and",41.589],["you're",41.674],["carrying",41.845],["about",42.229],["nineteen",42.442],["tonnes",42.954],["of",43.253],["fuel:",43.381],["over",43.893],["two",44.192],["hundred",44.49],["megawatt-hours",44.746],["of",45.472],["energy.",45.6],["About",46.197],["the",46.453],["same",46.581],["as",46.837],["three",46.922],["thousand",47.221],["electric-car",47.648],["batteries.",48.202]]],"L18":[49.143,53.358,"And a long-haul Boeing 777 carries more than seven times that.",[["And",49.395],["a",49.566],["long-haul",49.651],["Boeing",50.078],["seven-seven-seven",50.59],["carries",51.742],["more",52.083],["than",52.254],["seven",52.382],["times",52.766],["that.",53.064]]]}; const DUR = 53.758; /*ENDCUES*/
+          const { C, plate, vig, lbl, big, chap, card, glow, brackets, svg } = D;
+          const q = D.cue(CUES);
+          const S = D.scene("s03");
+          const sfx = (n, t, g) => D.sfx("s03", n, t, g);
+
+          S.add("a", plate("s03-a-p", "c1_xray_runway") + vig() + chap("s03-ch", "02", "The energy problem") +
+            lbl("s03-a-l1", 1250, 300, "Wing tanks", { color: C.amber, to: [1060, 590] }) +
+            lbl("s03-a-l2", 560, 300, "Centre tank", { color: C.amber, anchor: "r", to: [860, 640] }) +
+            lbl("s03-a-l3", 1250, 820, "Fuel lines → engines", { color: C.amber, to: [1000, 700] }));
+          S.add("b", plate("s03-b-p", "c2_chase") + vig() + `<div class="hudrow"></div>` +
+            `<div class="hudc" style="left:120px">SPEED</div><div class="hudv" id="s03-spd" style="left:120px">0<span style="font-size:26px;color:#8A949C"> KM/H</span></div>` +
+            `<div class="hudc" style="left:560px">TIME</div><div class="hudv" id="s03-tim" style="left:560px">0.0 s</div>` +
+            `<div class="hudc" style="left:900px">WEIGHT</div><div class="hudv" style="left:900px">79 t</div>` +
+            `<div class="hudc" style="left:1240px">THRUST</div><div class="bar" style="left:1240px;bottom:72px;width:520px"><i id="s03-thr"></i></div>`);
+          S.add("c", `<div id="s03-c0" style="position:absolute;inset:0">${plate("s03-c-p0", "c3_engine_stand")}</div>` +
+            `<div id="s03-c1" style="position:absolute;inset:0;opacity:0">${plate("s03-c-p1", "c4_engine_cut")}</div>` + vig() +
+            lbl("s03-c-l1", 240, 200, "Fan ≈ 2 m", { to: [560, 470] }) +
+            lbl("s03-c-l2", 900, 180, "Compressor", { to: [930, 470] }) +
+            lbl("s03-c-l3", 1460, 220, "Turbine", { to: [1330, 500] }) +
+            lbl("s03-c-l4", 1160, 860, "Turbine spins the fan", { sub: "one shaft runs the length of the engine", color: "#C9D2D8", size: 22 }));
+          S.add("d", plate("s03-d-p", "c5_engine_macro") + glow("s03-d-g", 980, 560, 520, C.amber, 0.0) + vig() +
+            lbl("s03-d-l", 1250, 230, "Combustor > 1,000 °C", { color: C.amber, to: [1020, 520] }));
+          S.add("e", `<div id="s03-e0" style="position:absolute;inset:0">${plate("s03-e-p0", "c6_town_off")}</div>` +
+            `<div id="s03-e1" style="position:absolute;inset:0;clip-path:circle(0% at 50% 60%)">${plate("s03-e-p1", "c7_town_on")}</div>` + vig(0.4) +
+            big("s03-e-n", "TENS OF MEGAWATTS", { y: 160, size: 84, color: C.amber }) +
+            `<div class="big" id="s03-e-s" style="top:270px;font-size:30px;font-weight:600;letter-spacing:.2em;color:#C9D2D8">TAKEOFF POWER ≈ A SMALL TOWN</div>`);
+          S.add("f", plate("s03-f-p", "c8_climb") + vig() +
+            svg("s03-alt", `<line x1="1720" y1="900" x2="1720" y2="160" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+              ${Array.from({ length: 12 }, (_, k) => `<line x1="${k % 5 === 0 ? 1696 : 1706}" y1="${900 - k * 67.3}" x2="1720" y2="${900 - k * 67.3}" stroke="rgba(255,255,255,.5)" stroke-width="2"/>`).join("")}
+              <rect id="s03-alt-bar" x="1714" y="900" width="12" height="0" fill="${C.amber}"/>
+              <text x="1690" y="${900 - 8.85 * 67.3 + 6}" text-anchor="end" font-family="Inter" font-weight="600" font-size="18" fill="#C9D2D8" letter-spacing="2">EVEREST 8.8 km</text>
+              <line x1="1600" y1="${900 - 8.85 * 67.3}" x2="1720" y2="${900 - 8.85 * 67.3}" stroke="#C9D2D8" stroke-dasharray="6 6"/>`) +
+            `<div class="big mono" id="s03-altv" style="left:auto;right:240px;text-align:right;top:110px;font-size:64px">0.0 km</div>` +
+            lbl("s03-f-l", 120, 860, "Lifting ≈75 t to 11 km", { sub: "≈2.2 MWh against gravity alone" }));
+          S.add("g", plate("s03-g-p", "c9_cruise") + vig() +
+            svg("s03-td", `<g id="s03-thrust"><path d="M760,560 L520,560" stroke="${C.amber}" stroke-width="6"/><path d="M520,560 l26,-14 l0,28 z" fill="${C.amber}"/>
+              <text x="640" y="535" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" letter-spacing="3" fill="${C.amber}">THRUST</text></g>
+              <g id="s03-drag"><path d="M1260,560 L1500,560" stroke="#C9D2D8" stroke-width="6"/><path d="M1500,560 l-26,-14 l0,28 z" fill="#C9D2D8"/>
+              <text x="1380" y="535" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" letter-spacing="3" fill="#C9D2D8">DRAG</text></g>`) +
+            `<div class="big mono" id="s03-dist" style="top:860px;font-size:48px;color:#C9D2D8">0 km</div>`);
+          S.add("h", plate("s03-h-p", "c10_tanks_xray") + vig() +
+            `<div class="big" id="s03-h-a" style="top:130px;font-size:74px;color:${C.amber}">FULL TANKS ≈ 19 t OF FUEL</div>` +
+            `<div class="big mono" id="s03-h-b" style="top:830px;font-size:96px;color:${C.amber}">&gt; 200 MWh</div>`);
+          S.add("i", `<div id="s03-i0" style="position:absolute;inset:0">${plate("s03-i-p0", "c11_grid_low")}</div>` +
+            `<div id="s03-i1" style="position:absolute;inset:0;opacity:0">${plate("s03-i-p1", "c12_grid_high")}</div>` + vig(0.5) +
+            `<div class="big mono" id="s03-i-n" style="top:120px;font-size:150px;color:${C.cyan}">0</div>` +
+            `<div class="big" style="top:290px;font-size:32px;font-weight:600;letter-spacing:.2em;color:#C9D2D8" id="s03-i-s">ELECTRIC-CAR BATTERIES · SAME ENERGY</div>`);
+          S.add("j", plate("s03-j-p", "c13_grid_777") + vig(0.5) + big("s03-j-n", "LONG-HAUL 777 × 7", { y: 130, size: 92, color: C.amber }));
+          S.mount(`<div class="black" id="s03-blk"></div>`);
+
+          const tl = gsap.timeline({ paused: true });
+          const t = { b: q("L12"), c: q("L13"), d: q("L13", "sitting just behind"), e: q("L14"), f: q("L15"), g: q("L16"), h: q("L17"), i: q("L17", "About the same"), j: q("L18") };
+          D.shots(tl, [["#s03-a", 0], ["#s03-b", t.b], ["#s03-c", t.c], ["#s03-d", t.d, "fade"], ["#s03-e", t.e, "blur"], ["#s03-f", t.f], ["#s03-g", t.g, "fade"], ["#s03-h", t.h], ["#s03-i", t.i], ["#s03-j", t.j, "fade"]], DUR);
+
+          // a — x-ray anatomy
+          D.chapter(tl, "s03-ch", 0.2, 3.0);
+          D.push(tl, "#s03-a-p", 0, t.b, 1.0, 1.06);
+          D.show(tl, "s03-a-l1", 1.2); D.show(tl, "s03-a-l2", 1.8, { dx: 24 }); D.show(tl, "s03-a-l3", 2.4);
+          sfx("whoosh_big", 0, 0.7); sfx("hud", 1.2, 0.5); sfx("hud", 1.8, 0.5); sfx("hud", 2.4, 0.5); sfx("liquid", 0.8, 0.6);
+          // b — takeoff roll HUD
+          tl.fromTo("#s03-b-p", { scale: 1.04, y: 0 }, { scale: 1.12, y: -14, duration: t.c - t.b, ease: "power1.in" }, t.b);
+          const r0 = q("L12", "In about thirty seconds"), r1 = t.c - 0.2;
+          D.count(tl, "#s03-spd", r0, 0, 270, r1 - r0, (v) => `${Math.round(v)}<span style="font-size:26px;color:#8A949C"> KM/H</span>`);
+          D.count(tl, "#s03-tim", r0, 0, 30, r1 - r0, (v) => `${v.toFixed(1)} s`);
+          tl.fromTo("#s03-thr", { width: "0%" }, { width: "100%", duration: 0.8, ease: "expo.out" }, t.b + 0.2);
+          sfx("roar", t.b, 0.9); sfx("rumble", t.b + 1, 0.7);
+          for (let k = 0; k < 6; k++) sfx("tick", r0 + k * (r1 - r0) / 6, 0.35);
+          // c — engine: closed → cutaway (nacelle opens), labels
+          D.push(tl, "#s03-c", t.c, t.d - t.c, 1.0, 1.06);
+          tl.to("#s03-c1", { opacity: 1, duration: 0.7, ease: "power2.inOut" }, t.c + 0.6);
+          sfx("mech_open", t.c + 0.5, 0.8); sfx("turbine", t.c, 0.6);
+          D.show(tl, "s03-c-l1", q("L13", "a fan almost"));
+          D.show(tl, "s03-c-l3", q("L13", "spun by a turbine"));
+          D.show(tl, "s03-c-l2", q("L13", "spun by a turbine") + 0.5);
+          D.show(tl, "s03-c-l4", q("L13", "spun by a turbine") + 1.0, { dx: 0 });
+          ["fan almost", "spun by a turbine"].forEach((ph) => sfx("hud", q("L13", ph), 0.5));
+          // d — combustor macro
+          D.push(tl, "#s03-d-p", t.d, t.e - t.d, 1.0, 1.1);
+          tl.to("#s03-d-g", { opacity: 1, duration: 1.0 }, q("L13", "a flame burning") - 0.2);
+          D.show(tl, "s03-d-l", q("L13", "a flame burning"));
+          sfx("burn", q("L13", "a flame burning"), 0.8);
+          // e — power lights a town
+          D.push(tl, "#s03-e", t.e, t.f - t.e, 1.0, 1.06);
+          tl.to("#s03-e1", { clipPath: "circle(120% at 50% 60%)", duration: 2.6, ease: "power2.in" }, q("L14", "tens of megawatts") - 0.4);
+          gsap.set(["#s03-e-n", "#s03-e-s"], { opacity: 0 });
+          D.slam(tl, "#s03-e-n", q("L14", "tens of megawatts"));
+          tl.to("#s03-e-s", { opacity: 1, duration: 0.4 }, q("L14", "roughly the power"));
+          sfx("surge", q("L14", "tens of megawatts") - 0.3, 0.9); sfx("hit", q("L14", "tens of megawatts"), 0.7); sfx("buzz", q("L14", "roughly the power"), 0.5);
+          // f — climb + altitude ruler
+          D.push(tl, "#s03-f-p", t.f, t.g - t.f, 1.0, 1.08, 0, 0, 30, -30);
+          tl.fromTo("#s03-alt-bar", { attr: { y: 900, height: 0 } }, { attr: { y: 900 - 11 * 67.3, height: 11 * 67.3 }, duration: 3.6, ease: "power1.inOut" }, q("L15", "lifting"));
+          D.count(tl, "#s03-altv", q("L15", "lifting"), 0, 11, 3.6, (v) => `${v.toFixed(1)} km`);
+          D.show(tl, "s03-f-l", q("L15", "lifting") + 1.4);
+          sfx("climb", t.f, 0.8); sfx("whoosh", t.f + 1.5, 0.5);
+          // g — cruise
+          D.push(tl, "#s03-g-p", t.g, t.h - t.g, 1.0, 1.05);
+          tl.fromTo("#s03-thrust", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.6, ease: "expo.out" }, q("L16", "fighting drag") - 0.6);
+          tl.fromTo("#s03-drag", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.6, ease: "expo.out" }, q("L16", "fighting drag"));
+          D.count(tl, "#s03-dist", t.g + 0.3, 0, 2400, t.h - t.g - 0.3, (v) => `${Math.round(v).toLocaleString("en-US")} km`);
+          sfx("wind_high", t.g, 0.7);
+          // h — full tanks → MWh
+          D.push(tl, "#s03-h-p", t.h, t.i - t.h, 1.0, 1.06);
+          gsap.set(["#s03-h-a", "#s03-h-b"], { opacity: 0 });
+          D.slam(tl, "#s03-h-a", q("L17", "nineteen tonnes") - 0.3);
+          D.slam(tl, "#s03-h-b", q("L17", "over two hundred"));
+          sfx("liquid", t.h, 0.7); sfx("hit", q("L17", "over two hundred"), 0.8);
+          // i — 3,000 EV batteries
+          D.count(tl, "#s03-i-n", t.i, 0, 3000, 2.4);
+          tl.to("#s03-i1", { opacity: 1, duration: 1.6, ease: "power2.inOut" }, t.i + 0.6);
+          D.push(tl, "#s03-i", t.i, t.j - t.i + 0.6, 1.0, 1.08);
+          gsap.set("#s03-i-s", { opacity: 0 });
+          tl.to("#s03-i-s", { opacity: 1, duration: 0.5 }, t.i + 0.4);
+          sfx("dominoes", t.i, 0.7); sfx("hit", q("L17", "three thousand"), 0.9);
+          // j — ×7 and a hard silence into the lab
+          D.push(tl, "#s03-j-p", t.j, DUR - t.j, 1.0, 1.1);
+          gsap.set("#s03-j-n", { opacity: 0 });
+          D.slam(tl, "#s03-j-n", q("L18", "more than seven"));
+          sfx("riser", q("L18", "more than seven") - 1.8, 0.7); sfx("boom", q("L18", "more than seven"), 1.0);
+          tl.to("#s03-blk", { opacity: 1, duration: 0.35 }, DUR - 0.45);
+
+          window.__timelines["s03"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

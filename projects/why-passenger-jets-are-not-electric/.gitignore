@@ -1,0 +1,7 @@
+renders/
+renders_draft/
+.hyperframes/
+assets/audio/*.wav
+assets/audio/sfx/
+out/render_raw.mp4
+out/*.log

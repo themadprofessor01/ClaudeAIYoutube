@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 700; src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 800; src: url("assets/fonts/inter-latin-800-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 400; src: url("assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Mono"; font-weight: 500; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+        #s02 .stat { position:absolute; left:120px; font-family:"Inter"; font-weight:800; font-size:92px; letter-spacing:-.01em; color:#F2F4F5; text-shadow:0 4px 30px rgba(0,0,0,.7); }
+        #s02 .stat small { font-family:"Mono"; font-weight:400; font-size:28px; letter-spacing:.08em; color:#B8C2C8; margin-left:18px; }
+      </style>
+      <div id="s02" data-composition-id="s02" data-width="1920" data-height="1080"></div>
+      <script>
+        (function () {
+          /*CUES*/ const CUES = {"L05":[0,3.022,"First, electric planes are real.",[["First,",0.299],["electric",1.109],["planes",1.451],["are",1.963],["real.",2.56]]],"L06":[3.422,12.175,"This is the Pipistrel Velis Electro, the first fully electric aircraft to earn full type certification, back in twenty-twenty. Two seats. About fifty minutes in the air.",[["This",3.717],["is",3.887],["the",4.015],["Pipistrel",4.143],["Velis",4.655],["Electro,",4.997],["the",5.722],["first",5.85],["fully",6.149],["electric",6.405],["aircraft",6.746],["to",7.258],["earn",7.343],["full",7.557],["type",7.77],["certification,",8.026],["back",8.751],["in",8.965],["twenty-twenty.",9.05],["Two",10.074],["seats.",10.287],["About",10.927],["fifty",11.183],["minutes",11.482],["in",11.738],["the",11.823],["air.",11.951]]],"L07":[12.575,22.676,"In Canada, a converted electric seaplane has taken off from the water. In twenty-twenty-one, an all-electric Rolls-Royce racer hit more than five hundred and fifty kilometres an hour.",[["In",12.827],["Canada,",12.998],["a",13.723],["converted",13.851],["electric",14.32],["seaplane",14.662],["has",15.131],["taken",15.259],["off",15.558],["from",15.771],["the",15.856],["water.",15.984],["In",17.094],["twenty-twenty-one,",17.264],["an",18.374],["all-electric",18.587],["Rolls-Royce",19.312],["racer",19.867],["hit",20.208],["more",20.422],["than",20.592],["five",20.72],["hundred",21.062],["and",21.275],["fifty",21.446],["kilometres",21.702],["an",22.256],["hour.",22.384]]],"L08":[23.076,30.4,"A solar-powered plane has even flown around the world, with wings wider than a Boeing 747… carrying exactly one pilot.",[["A",23.332],["solar-powered",23.46],["plane",24.1],["has",24.399],["even",24.527],["flown",24.783],["around",25.124],["the",25.295],["world,",25.423],["with",26.02],["wings",26.191],["wider",26.489],["than",26.916],["a",27.044],["Boeing",27.172],["seven-four-seven…",27.471],["carrying",28.751],["exactly",29.177],["one",29.647],["pilot.",29.903]]],"L09":[30.8,35.34,"So the question isn't whether electricity can fly. It clearly can.",[["So",31.098],["the",31.268],["question",31.354],["isn't",31.695],["whether",32.036],["electricity",32.335],["can",32.932],["fly.",33.06],["It",34.383],["clearly",34.554],["can.",34.938]]],"L10":[36.24,44.157,"The question is: can it fly this? Seventy-nine tonnes. A hundred and eighty people. Eight hundred kilometres an hour.",[["The",36.581],["question",36.667],["is:",37.008],["can",38.117],["it",38.288],["fly",38.416],["this?",38.715],["Seventy-nine",39.355],["tonnes.",40.037],["A",40.763],["hundred",40.848],["and",41.147],["eighty",41.275],["people.",41.531],["Eight",42.427],["hundred",42.683],["kilometres",42.981],["an",43.536],["hour.",43.664]]]}; const DUR = 44.557; /*ENDCUES*/
+          const { C, plate, vig, lbl, big, chap, card, glow, brackets, svg } = D;
+          const q = D.cue(CUES);
+          const S = D.scene("s02");
+          const sfx = (n, t, g) => D.sfx("s02", n, t, g);
+
+          S.add("a", plate("s02-a-p", "b1_trainer_field") + vig() + chap("s02-ch", "01", "Electric flight is real"));
+          S.add("b", plate("s02-b-p", "b2_trainer_air") + `<div id="s02-b-x" style="position:absolute;inset:0;opacity:0">${plate("s02-b-px", "b3_trainer_xray")}</div>` + vig() +
+            card("s02-card", 1180, 150, "Pipistrel Velis Electro", ["First type-certified electric aircraft · 2020", "2 seats", "≈50 min flight"]) +
+            svg("s02-ring", `<circle cx="1640" cy="760" r="92" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="10"/>
+              <circle id="s02-ring-c" cx="1640" cy="760" r="92" fill="none" stroke="${C.cyan}" stroke-width="10" stroke-linecap="round" transform="rotate(-90 1640 760)" stroke-dasharray="578" stroke-dashoffset="578"/>
+              <text x="1640" y="772" text-anchor="middle" font-family="Mono" font-size="40" fill="#F2F4F5" id="s02-ring-t">0</text>
+              <text x="1640" y="812" text-anchor="middle" font-family="Inter" font-weight="600" font-size="16" letter-spacing="3" fill="#8A949C">MINUTES</text>`));
+          S.add("c", plate("s02-c-p", "b4_seaplane") + vig() + lbl("s02-c-l", 120, 860, "Canada", { sub: "converted electric seaplane · first flight 2019" }));
+          S.add("d", plate("s02-d-p", "b5_racer") + vig() +
+            `<div class="big mono" id="s02-spd" style="top:110px;font-size:130px;color:${C.cyan}">0.0</div>` +
+            `<div class="big" style="top:255px;font-size:30px;font-weight:600;letter-spacing:.2em;color:#C9D2D8" id="s02-spdl">KM/H · ALL-ELECTRIC SPEED RECORD · 2021</div>`);
+          S.add("e", plate("s02-e-p", "b6_solar") + vig() +
+            svg("s02-span", `<g id="s02-span-a" stroke="${C.cyan}" stroke-width="2" fill="none"><path d="M240,290 L1680,290"/><path d="M240,272 L240,308 M1680,272 L1680,308"/></g>
+              <g id="s02-span-b" stroke="rgba(255,255,255,.7)" stroke-width="2" fill="none" stroke-dasharray="10 8"><path d="M330,350 L1590,350"/><path d="M330,334 L330,366 M1590,334 L1590,366"/></g>`) +
+            lbl("s02-e-l1", 960, 230, "Solar plane · 72 m wingspan", { anchor: "c", color: C.cyan }) +
+            lbl("s02-e-l2", 960, 372, "Boeing 747-400 · ≈64 m", { anchor: "c", color: "#C9D2D8", size: 22 }));
+          S.add("f", plate("s02-f-p", "b7_solar_pod") + vig() + lbl("s02-f-l", 1180, 760, "Passengers: 0", { sub: "crew: 1", to: [960, 560] }));
+          S.add("g", plate("s02-g-p", "m1_map") + vig(0.4) +
+            svg("s02-map", [[560, 430, 60, "Velis Electro"], [800, 640, 90, "eBeaver"], [1180, 380, 70, "racer"], [1420, 700, 110, "eVTOL / commuter"]].map(([x, y, r, n], i) =>
+              `<g id="s02-rr${i}" opacity="0"><circle cx="${x}" cy="${y}" r="${r}" fill="${C.cyan}" fill-opacity=".10" stroke="${C.cyan}" stroke-width="2"/><circle cx="${x}" cy="${y}" r="6" fill="${C.cyan}"/>
+               <text x="${x}" y="${y + r + 34}" text-anchor="middle" font-family="Inter" font-weight="600" font-size="20" letter-spacing="2" fill="#C9D2D8">${n.toUpperCase()}</text></g>`).join("")));
+          S.add("h", `<div id="s02-h0" style="position:absolute;inset:0">${plate("s02-h-p0", "b8_hangar0")}</div>` +
+            `<div id="s02-h1" style="position:absolute;inset:0;opacity:0">${plate("s02-h-p1", "b8_hangar1")}</div>` +
+            `<div id="s02-h2" style="position:absolute;inset:0;opacity:0">${plate("s02-h-p2", "b8_hangar2")}</div>` + vig(0.5) +
+            `<div class="stat" id="s02-s0" style="top:560px">79<small>TONNES</small></div>` +
+            `<div class="stat" id="s02-s1" style="top:680px">180<small>PEOPLE</small></div>` +
+            `<div class="stat" id="s02-s2" style="top:800px">800<small>KM/H</small></div>`);
+          S.mount();
+
+          const tl = gsap.timeline({ paused: true });
+          const t = { b: q("L06"), c: q("L07"), d: q("L07", "In twenty-twenty-one"), e: q("L08"), f: q("L08", "carrying exactly"), g: q("L09"), h: q("L10") };
+          D.shots(tl, [["#s02-a", 0], ["#s02-b", t.b, "fade"], ["#s02-c", t.c], ["#s02-d", t.d], ["#s02-e", t.e, "fade"], ["#s02-f", t.f], ["#s02-g", t.g, "fade"], ["#s02-h", t.h]], DUR);
+
+          // a
+          D.push(tl, "#s02-a-p", 0, t.b + 0.6, 1.0, 1.08, 0, 30);
+          D.chapter(tl, "s02-ch", 0.3, 2.6);
+          sfx("whoosh_big", 0, 0.7); sfx("birds", 0.2, 0.6); sfx("prop", 0.4, 0.5);
+          // b — Velis spec card + 50-min ring + x-ray
+          D.push(tl, "#s02-b-p", t.b, t.c - t.b, 1.0, 1.06);
+          D.push(tl, "#s02-b-px", t.b, t.c - t.b, 1.0, 1.06);
+          gsap.set(["#s02-card", "#s02-card-r0", "#s02-card-r1", "#s02-card-r2"], { opacity: 0 });
+          tl.fromTo("#s02-card", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, q("L06", "Pipistrel"));
+          sfx("hud", q("L06", "Pipistrel"), 0.6);
+          [["r0", "the first fully"], ["r1", "Two seats"], ["r2", "About fifty"]].forEach(([r, ph]) => {
+            tl.fromTo(`#s02-card-${r}`, { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, q("L06", ph));
+            sfx("click", q("L06", ph), 0.6);
+          });
+          tl.to("#s02-b-x", { opacity: 1, duration: 0.6 }, q("L06", "the first fully") + 0.8);
+          sfx("hum", q("L06", "the first fully") + 0.8, 0.5);
+          gsap.set("#s02-ring", { opacity: 0 });
+          tl.to("#s02-ring", { opacity: 1, duration: 0.3 }, q("L06", "About fifty") - 0.2);
+          tl.to("#s02-ring-c", { attr: { "stroke-dashoffset": 0 }, duration: 1.6, ease: "power2.out" }, q("L06", "About fifty"));
+          D.count(tl, "#s02-ring-t", q("L06", "About fifty"), 0, 50, 1.6);
+          // c — seaplane
+          D.push(tl, "#s02-c-p", t.c, t.d - t.c, 1.04, 1.12, 0, -50);
+          D.show(tl, "s02-c-l", t.c + 0.4);
+          sfx("water", t.c, 0.8); sfx("prop", t.c + 0.2, 0.5);
+          // d — racer: speed counter
+          tl.fromTo("#s02-d-p", { scale: 1.1, x: 120 }, { scale: 1.16, x: -120, duration: t.e - t.d, ease: "none" }, t.d);
+          gsap.set(["#s02-spd", "#s02-spdl"], { opacity: 0 });
+          tl.to(["#s02-spd", "#s02-spdl"], { opacity: 1, duration: 0.3 }, q("L07", "hit more than") - 0.4);
+          D.count(tl, "#s02-spd", q("L07", "hit more than") - 0.4, 0, 555.9, 2.2, (v) => v.toFixed(1));
+          sfx("racer", t.d, 0.9); sfx("tick_roll", q("L07", "hit more than") - 0.4, 0.5); sfx("hit", q("L07", "hit more than") + 1.8, 0.7);
+          // e — solar plane, span comparison
+          D.push(tl, "#s02-e-p", t.e, t.f - t.e, 1.0, 1.06);
+          D.draw(tl, "#s02-span-a path", q("L08", "with wings wider"), 0.8);
+          D.show(tl, "s02-e-l1", q("L08", "with wings wider") + 0.2, { dx: 0 });
+          D.draw(tl, "#s02-span-b path", q("L08", "Boeing") - 0.1, 0.7);
+          D.show(tl, "s02-e-l2", q("L08", "Boeing") + 0.1, { dx: 0 });
+          gsap.set("#s02-span", { opacity: 1 });
+          sfx("wind", t.e, 0.5); sfx("hud", q("L08", "with wings wider"), 0.5);
+          // f — one pilot
+          D.push(tl, "#s02-f-p", t.f, t.g - t.f, 1.0, 1.1);
+          D.show(tl, "s02-f-l", q("L08", "one pilot"));
+          sfx("piano", q("L08", "one pilot"), 0.8);
+          // g — map: small range rings
+          D.push(tl, "#s02-g-p", t.g, t.h - t.g, 1.08, 1.0);
+          [0, 1, 2, 3].forEach((i) => {
+            tl.fromTo(`#s02-rr${i}`, { opacity: 0, scale: 0.4, transformOrigin: "center", transformBox: "fill-box" }, { opacity: 1, scale: 1, duration: 0.6, ease: "expo.out" }, t.g + 0.4 + i * 0.5);
+            sfx("blip", t.g + 0.4 + i * 0.5, 0.5);
+          });
+          // h — hangar lights bang on, stats slam
+          const th = q("L10", "can it fly this");
+          tl.to("#s02-h1", { opacity: 1, duration: 0.12 }, th);
+          tl.to("#s02-h2", { opacity: 1, duration: 0.12 }, th + 0.55);
+          sfx("clunk", th, 1.0); sfx("clunk", th + 0.55, 1.0);
+          D.push(tl, "#s02-h", t.h, DUR - t.h, 1.0, 1.08, 0, 0, 30, -20);
+          [["s0", "Seventy-nine"], ["s1", "A hundred and eighty"], ["s2", "Eight hundred"]].forEach(([s, ph]) => {
+            gsap.set(`#s02-${s}`, { opacity: 0 });
+            D.slam(tl, `#s02-${s}`, q("L10", ph), 0.45);
+            sfx("hit", q("L10", ph), 0.8);
+          });
+          sfx("riser", DUR - 2.4, 0.6); sfx("whoosh_big", DUR - 0.4, 0.8);
+
+          window.__timelines["s02"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
