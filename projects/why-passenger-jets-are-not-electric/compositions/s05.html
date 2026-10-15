@@ -36,7 +36,7 @@
               <rect id="s05-hold" x="${ALT[0] - 70}" y="${ALT[1] - 30}" width="140" height="60" rx="30" stroke="${C.amber}" stroke-width="3" fill="none" stroke-dasharray="8 8"/>
               ${[A, B, ALT].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="9" fill="#F2F4F5"/>`).join("")}
               <text x="${(A[0] + B[0]) / 2 - 40}" y="470" font-family="Mono" font-size="26" fill="#F2F4F5">1,000 km</text>
-              <text x="${ALT[0] + 90}" y="${ALT[1] + 8}" font-family="Inter" font-weight="600" font-size="18" letter-spacing="2" fill="#C9D2D8">DIVERT + HOLD</text>`) +
+              <text x="${ALT[0] - 90}" y="${ALT[1] + 8}" text-anchor="end" font-family="Inter" font-weight="600" font-size="18" letter-spacing="2" fill="#C9D2D8">DIVERT + HOLD</text>`) +
             `<div class="stack" id="s05-stack"><div class="seg" id="s05-seg1" style="top:${400 - 267}px;height:267px;background:${C.amber};opacity:.9"></div>
               <div class="seg" id="s05-seg2" style="top:${400 - 400}px;height:133px;background:${C.amber};opacity:.5"></div>
               <div class="segl" id="s05-sl1" style="top:${400 - 150}px">TRIP ≈4 t</div><div class="segl" id="s05-sl2" style="top:${400 - 345}px">RESERVES ≈2 t</div>

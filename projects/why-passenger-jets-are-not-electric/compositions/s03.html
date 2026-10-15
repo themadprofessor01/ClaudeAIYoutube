@@ -56,11 +56,11 @@
             `<div class="big mono" id="s03-altv" style="left:auto;right:240px;text-align:right;top:110px;font-size:64px">0.0 km</div>` +
             lbl("s03-f-l", 120, 860, "Lifting ≈75 t to 11 km", { sub: "≈2.2 MWh against gravity alone" }));
           S.add("g", plate("s03-g-p", "c9_cruise") + vig() +
-            svg("s03-td", `<g id="s03-thrust"><path d="M760,560 L520,560" stroke="${C.amber}" stroke-width="6"/><path d="M520,560 l26,-14 l0,28 z" fill="${C.amber}"/>
-              <text x="640" y="535" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" letter-spacing="3" fill="${C.amber}">THRUST</text></g>
-              <g id="s03-drag"><path d="M1260,560 L1500,560" stroke="#C9D2D8" stroke-width="6"/><path d="M1500,560 l-26,-14 l0,28 z" fill="#C9D2D8"/>
-              <text x="1380" y="535" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" letter-spacing="3" fill="#C9D2D8">DRAG</text></g>`) +
-            `<div class="big mono" id="s03-dist" style="top:860px;font-size:48px;color:#C9D2D8">0 km</div>`);
+            svg("s03-td", `<g id="s03-thrust"><path d="M760,560 L520,560" stroke="#8a4a00" stroke-width="6"/><path d="M520,560 l26,-14 l0,28 z" fill="#8a4a00"/>
+              <text x="640" y="535" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" letter-spacing="3" fill="#8a4a00">THRUST</text></g>
+              <g id="s03-drag"><path d="M1260,560 L1500,560" stroke="#1b2430" stroke-width="6"/><path d="M1500,560 l-26,-14 l0,28 z" fill="#1b2430"/>
+              <text x="1380" y="535" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" letter-spacing="3" fill="#1b2430" >DRAG</text></g>`) +
+            `<div class="big mono" id="s03-dist" style="top:860px;font-size:48px;color:#1b2430">0 km</div>`);
           S.add("h", plate("s03-h-p", "c10_tanks_xray") + vig() +
             `<div class="big" id="s03-h-a" style="top:130px;font-size:74px;color:${C.amber}">FULL TANKS ≈ 19 t OF FUEL</div>` +
             `<div class="big mono" id="s03-h-b" style="top:830px;font-size:96px;color:${C.amber}">&gt; 200 MWh</div>`);

@@ -813,8 +813,8 @@ def e10_empty_cabin():
 
 @shot(40)
 def e11_777_mountain():
-    light(20, 150, 0.6, 3.5, (1, 0.94, 0.86), 0.00015)
-    apron(6000)
+    light(12, 150, 0.25, 2.2, (1, 0.9, 0.78), 0.00008)
+    apron(6000, color=(0.18, 0.18, 0.18))
     w = airliner("w", "wide")
     w.location = (0, -60, w["ground_offset"])
     # pyramid of pallets (scaled, ~3,000 t ≈ 3,000 units — shown as 1.2×1.0×0.9 m units)
@@ -843,7 +843,7 @@ def e11_777_mountain():
     obj_from_mesh("mountain", V, F, pm, smooth=False)
     obj_from_mesh("mleds", LV, LF, led, smooth=False)
     mannequin("tech", (30, -14, 0), 0.4)
-    camera((-30, -110, 22), (30, 0, 8), lens=28)
+    camera((-20, -95, 14), (28, -10, 10), lens=32)
 
 
 # =================================================================== S6 — FUTURE
