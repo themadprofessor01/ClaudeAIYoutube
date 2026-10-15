@@ -1,5 +1,7 @@
 # How Supermarkets Trick Your Brain Into Spending More (Randos in 60s)
 
+> **Also in this repo:** production bible for *Why Passenger Jets Are Not Electric* (photoreal 3D documentary): [`projects/why-passenger-jets-are-not-electric/`](projects/why-passenger-jets-are-not-electric/README.md)
+
 This is a fully animated YouTube explainer. It runs **6:22** at 1920×1080 and 30 fps. It's built as code with [HyperFrames](https://hyperframes.heygen.com): HTML, SVG and GSAP timelines, rendered to MP4.
 
 | Deliverable | Where |
