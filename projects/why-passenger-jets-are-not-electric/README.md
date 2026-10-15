@@ -11,6 +11,18 @@ A premium, photoreal, documentary-style science explainer for YouTube long-form.
 | **Voice** | **HeyGen premium voice "Evan"** (`d21d096b4d684ea0b90a90fcbe8d645b`) via HyperFrames. Locked in [`script/script.json`](script/script.json) (`"provider": "heygen"`). Same voice as the channel's previous video. |
 | **Look** | Photoreal 3D (Unreal Engine 5 / Blender Cycles) + restrained HUD motion graphics composited *into* the 3D space |
 
+## Final video
+
+`out/why-passenger-jets-are-not-electric_web.mp4` — 6:55, 1920×1080, 30 fps, HeyGen "Evan" narration, mastered to −14 LUFS (repo copy, CRF 25; the full-quality master is rebuilt with `bash tools/master.sh`).
+
+**How it's made:** every shot is a photoreal CG plate rendered in Blender Cycles from code (`blender/jetlib.py`, `blender/props.py`, `blender/shots.py` — 79 plates), composited in HyperFrames (`compositions/s01–s07.html`, `assets/lib/doc.js`) with HUD motion graphics timed to Evan's word timestamps. Sound effects and score are synthesised in `tools/audio.py`.
+
+```bash
+python3 blender/shots.py all && python3 tools/plates.py      # CG plates (pip install bpy)
+node tools/build.mjs && NODE_PATH=$(npm root -g) node tools/collect_sfx.mjs && python3 tools/audio.py
+npx hyperframes@0.8.157 render -o out/render_raw.mp4 --quality high --crf 18 --workers 4 && bash tools/master.sh
+```
+
 ## Deliverables in this folder
 
 | # | Deliverable | File |
