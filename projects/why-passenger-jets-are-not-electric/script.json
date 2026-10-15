@@ -1,0 +1,417 @@
+{
+  "title": "Why Passenger Jets Are Not Electric",
+  "provider": "heygen",
+  "heygen_voice": "d21d096b4d684ea0b90a90fcbe8d645b",
+  "heygen_voice_name": "Evan (HeyGen premium)",
+  "voice": "am_michael",
+  "speed": 0.95,
+  "default_gap": 0.4,
+  "sections": [
+    {
+      "id": "s01",
+      "name": "Hook",
+      "lines": [
+        {
+          "id": "L01",
+          "shot": "S1.2",
+          "target": "0:04",
+          "text": "Right now, thousands of passenger jets are in the sky above us. And every single one of them is burning fuel."
+        },
+        {
+          "id": "L02",
+          "shot": "S1.3",
+          "target": "0:11",
+          "text": "We've electrified cars. Buses. Scooters. Even trucks.",
+          "gap": 0.9
+        },
+        {
+          "id": "L03",
+          "shot": "S1.4",
+          "target": "0:17",
+          "text": "So why is it that when you board a plane, the force pushing you back into your seat is still coming from burning kerosene?"
+        },
+        {
+          "id": "L04",
+          "shot": "S1.5",
+          "target": "0:23",
+          "text": "It isn't that engineers haven't tried. It comes down to one brutal number, and once you see it, you'll never look at an airplane the same way."
+        }
+      ],
+      "lead_in": 4.0
+    },
+    {
+      "id": "s02",
+      "name": "Electric Planes Exist",
+      "lines": [
+        {
+          "id": "L05",
+          "shot": "S2.1",
+          "target": "0:32",
+          "text": "First, electric planes are real."
+        },
+        {
+          "id": "L06",
+          "shot": "S2.2",
+          "target": "0:35",
+          "text": "This is the Pipistrel Velis Electro, the first fully electric aircraft to earn full type certification, back in twenty-twenty. Two seats. About fifty minutes in the air."
+        },
+        {
+          "id": "L07",
+          "shot": "S2.3",
+          "target": "0:45",
+          "text": "In Canada, a converted electric seaplane has taken off from the water. In twenty-twenty-one, an all-electric Rolls-Royce racer hit more than five hundred and fifty kilometres an hour."
+        },
+        {
+          "id": "L08",
+          "shot": "S2.4",
+          "target": "0:55",
+          "text": "A solar-powered plane has even flown around the world, with wings wider than a Boeing 747… carrying exactly one pilot."
+        },
+        {
+          "id": "L09",
+          "shot": "S2.5",
+          "target": "1:04",
+          "text": "So the question isn't whether electricity can fly. It clearly can.",
+          "gap": 0.9
+        },
+        {
+          "id": "L10",
+          "shot": "S2.6",
+          "target": "1:08",
+          "text": "The question is: can it fly this? Seventy-nine tonnes. A hundred and eighty people. Eight hundred kilometres an hour."
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "name": "The Energy Problem",
+      "lines": [
+        {
+          "id": "L11",
+          "shot": "S3.1",
+          "target": "1:16",
+          "text": "To understand the problem, you have to see what an airliner is actually doing."
+        },
+        {
+          "id": "L12",
+          "shot": "S3.2",
+          "target": "1:20",
+          "text": "Seventy-nine tonnes at the start of the runway. In about thirty seconds, two engines have to drag all of that to roughly two hundred and seventy kilometres an hour."
+        },
+        {
+          "id": "L13",
+          "shot": "S3.3",
+          "target": "1:31",
+          "text": "Inside each engine, a fan almost two metres across is spun by a turbine, sitting just behind a flame burning at well over a thousand degrees."
+        },
+        {
+          "id": "L14",
+          "shot": "S3.4",
+          "target": "1:39",
+          "text": "At full takeoff thrust, the two engines together deliver tens of megawatts: roughly the power a small town uses."
+        },
+        {
+          "id": "L15",
+          "shot": "S3.5",
+          "target": "1:46",
+          "text": "Then comes the climb: lifting the entire aircraft eleven kilometres straight up, against gravity."
+        },
+        {
+          "id": "L16",
+          "shot": "S3.6",
+          "target": "1:52",
+          "text": "And then the cruise: hour after hour, fighting drag at eight hundred kilometres an hour."
+        },
+        {
+          "id": "L17",
+          "shot": "S3.7",
+          "target": "2:00",
+          "text": "Fill this plane's tanks and you're carrying about nineteen tonnes of fuel: over two hundred megawatt-hours of energy. About the same as three thousand electric-car batteries."
+        },
+        {
+          "id": "L18",
+          "shot": "S3.8",
+          "target": "2:10",
+          "text": "And a long-haul Boeing 777 carries more than seven times that."
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "name": "Jet Fuel vs Batteries",
+      "lines": [
+        {
+          "id": "L19",
+          "shot": "S4.1",
+          "target": "2:16",
+          "text": "So let's run an experiment."
+        },
+        {
+          "id": "L20",
+          "shot": "S4.2",
+          "target": "2:19",
+          "text": "On one side: one kilogram of jet fuel. On the other: one kilogram of the best lithium-ion battery cells you can buy today.",
+          "gap": 0.9
+        },
+        {
+          "id": "L21",
+          "shot": "S4.3",
+          "target": "2:27",
+          "text": "Same weight. Perfectly balanced. Now… let's look at what's inside."
+        },
+        {
+          "id": "L22",
+          "shot": "S4.4",
+          "target": "2:33",
+          "text": "That kilogram of jet fuel holds about twelve kilowatt-hours of energy."
+        },
+        {
+          "id": "L23",
+          "shot": "S4.5",
+          "target": "2:38",
+          "text": "The battery? About a quarter of one.",
+          "gap": 0.9
+        },
+        {
+          "id": "L24",
+          "shot": "S4.6",
+          "target": "2:43",
+          "text": "That's around fifty times less.",
+          "gap": 0.9
+        },
+        {
+          "id": "L25",
+          "shot": "S4.7",
+          "target": "2:47",
+          "text": "Now, to be fair to the battery, it's not quite that bad. A jet engine loses most of its fuel's energy as heat. Only about a third actually ends up pushing the plane forward."
+        },
+        {
+          "id": "L26",
+          "shot": "S4.8",
+          "target": "2:57",
+          "text": "An electric motor is far better: around ninety percent of the battery's energy becomes motion."
+        },
+        {
+          "id": "L27",
+          "shot": "S4.9",
+          "target": "3:02",
+          "text": "But battery cells can't fly on their own. They need cooling, wiring, casings and protection, and all of that adds weight."
+        },
+        {
+          "id": "L28",
+          "shot": "S4.10",
+          "target": "3:09",
+          "text": "So when you account for everything, jet fuel still delivers roughly twenty times more useful energy for every kilogram.",
+          "gap": 0.9
+        },
+        {
+          "id": "L29",
+          "shot": "S4.11",
+          "target": "3:17",
+          "text": "Twenty times. That one number is the whole story. Let's see what it does to an airplane."
+        },
+        {
+          "id": "L30",
+          "shot": "S4.12",
+          "target": "3:23",
+          "text": "Here's one tonne of jet fuel. About twelve hundred and fifty litres: a cube a little over a metre on each side."
+        },
+        {
+          "id": "L31",
+          "shot": "S4.13",
+          "target": "3:30",
+          "text": "To match the useful energy in that one cube, you'd need about twenty tonnes of batteries.",
+          "gap": 0.9
+        },
+        {
+          "id": "L32",
+          "shot": "S4.14",
+          "target": "3:37",
+          "text": "That's the weight of thirteen cars, to replace one cube of fuel."
+        },
+        {
+          "id": "L33",
+          "shot": "S4.15",
+          "target": "3:43",
+          "text": "And there's a second problem, one that's easy to miss."
+        },
+        {
+          "id": "L34",
+          "shot": "S4.16",
+          "target": "3:46",
+          "text": "On a normal jet, the fuel burns away. Every minute, the plane gets lighter. A long-haul 777 can land about a hundred tonnes lighter than it took off."
+        },
+        {
+          "id": "L35",
+          "shot": "S4.17",
+          "target": "3:56",
+          "text": "A lighter plane needs less thrust, so it burns less fuel. The flight actually gets easier the longer it goes."
+        },
+        {
+          "id": "L36",
+          "shot": "S4.18",
+          "target": "4:02",
+          "text": "A battery doesn't do that. An empty battery weighs exactly the same as a full one."
+        },
+        {
+          "id": "L37",
+          "shot": "S4.19",
+          "target": "4:09",
+          "text": "The electric plane carries every kilogram, from the runway all the way to the gate."
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "name": "Why It Breaks Down",
+      "lines": [
+        {
+          "id": "L38",
+          "shot": "S5.1",
+          "target": "4:15",
+          "text": "So let's try to build one."
+        },
+        {
+          "id": "L39",
+          "shot": "S5.2",
+          "target": "4:18",
+          "text": "A thousand-kilometre flight burns around four tonnes of fuel. Add the reserves every airliner must carry, to divert and circle if needed, and you're at about six tonnes."
+        },
+        {
+          "id": "L40",
+          "shot": "S5.3",
+          "target": "4:31",
+          "text": "Six tonnes, times twenty…",
+          "gap": 0.9
+        },
+        {
+          "id": "L41",
+          "shot": "S5.4",
+          "target": "4:35",
+          "text": "a hundred and twenty tonnes of batteries."
+        },
+        {
+          "id": "L42",
+          "shot": "S5.5",
+          "target": "4:38",
+          "text": "That's more than the entire aircraft is allowed to weigh, fully loaded, before you add the plane itself, a single passenger, or a single suitcase."
+        },
+        {
+          "id": "L43",
+          "shot": "S5.6",
+          "target": "4:47",
+          "text": "And it gets worse. A heavier plane needs a stronger structure and bigger wings. More drag, more energy, more batteries, more weight. Engineers call it the weight spiral. For a jet this size, with today's batteries, it never closes."
+        },
+        {
+          "id": "L44",
+          "shot": "S5.7",
+          "target": "5:02",
+          "text": "Even takeoff is a problem: pulling tens of megawatts from a battery makes enormous heat, and the cooling to handle it adds even more weight."
+        },
+        {
+          "id": "L45",
+          "shot": "S5.8",
+          "target": "5:11",
+          "text": "So what if you just give up the passengers? Rip out every seat, fill the plane with batteries right up to its weight limit… and you'd barely manage a short hop, with an empty cabin."
+        },
+        {
+          "id": "L46",
+          "shot": "S5.9",
+          "target": "5:22",
+          "text": "And for a long-haul 777, replacing its fuel would take nearly three thousand tonnes of batteries: the weight of eight fully loaded 777s."
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "name": "What Could Work",
+      "lines": [
+        {
+          "id": "L47",
+          "shot": "S6.1",
+          "target": "5:31",
+          "text": "That's why there are no electric jumbo jets. Not because nobody's tried. Because the physics says no… for now."
+        },
+        {
+          "id": "L48",
+          "shot": "S6.2",
+          "target": "5:39",
+          "text": "And \"for now\" matters. Because the future of electric flight probably doesn't start with jumbo jets. It starts small."
+        },
+        {
+          "id": "L49",
+          "shot": "S6.3",
+          "target": "5:47",
+          "text": "Short hops are the sweet spot: island links and regional routes of a few hundred kilometres. Several companies are developing nine- to thirty-seat electric and hybrid aircraft for exactly those routes."
+        },
+        {
+          "id": "L50",
+          "shot": "S6.4",
+          "target": "5:59",
+          "text": "Hybrids are a bridge: a fuel-burning engine for the heavy lifting and the reserves, electric motors to boost efficiency during takeoff and climb."
+        },
+        {
+          "id": "L51",
+          "shot": "S6.5",
+          "target": "6:08",
+          "text": "Then there's the battery itself. Since the early nineties, lithium-ion cells have more than tripled their energy per kilogram, and new chemistries like lithium-sulfur and solid-state could go much further."
+        },
+        {
+          "id": "L52",
+          "shot": "S6.6",
+          "target": "6:22",
+          "text": "Studies suggest that if battery packs got around three to four times better than today's, a full-size electric airliner could start to work, on shorter routes."
+        },
+        {
+          "id": "L53",
+          "shot": "S6.7",
+          "target": "6:31",
+          "text": "And for the long haul, the answer may not be batteries at all, but sustainable aviation fuels, or hydrogen. Each with hard challenges of its own."
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "name": "Conclusion",
+      "lines": [
+        {
+          "id": "L54",
+          "shot": "S7.1",
+          "target": "6:45",
+          "text": "So, why aren't passenger jets electric?"
+        },
+        {
+          "id": "L55",
+          "shot": "S7.2",
+          "target": "6:49",
+          "text": "Not because electric motors are weak. They're brilliant: quiet, simple, incredibly efficient."
+        },
+        {
+          "id": "L56",
+          "shot": "S7.3",
+          "target": "6:55",
+          "text": "It's because flight punishes weight like nothing else. And kilogram for kilogram, jet fuel carries roughly twenty times more useful energy than the best batteries we have. And then it gets lighter, while batteries never do."
+        },
+        {
+          "id": "L57",
+          "shot": "S7.4",
+          "target": "7:09",
+          "text": "Until that number changes, the biggest planes in the sky will keep burning fuel."
+        },
+        {
+          "id": "L58",
+          "shot": "S7.5",
+          "target": "7:14",
+          "text": "But every year, the gap gets a little smaller.",
+          "gap": 0.9
+        },
+        {
+          "id": "L59",
+          "shot": "S7.6",
+          "target": "7:18",
+          "text": "Because electric flight isn't waiting on a better motor. It's waiting on a better kilogram."
+        }
+      ]
+    }
+  ]
+}
