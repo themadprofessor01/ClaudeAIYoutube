@@ -65,7 +65,8 @@
           "id": "L08",
           "shot": "S2.4",
           "target": "0:55",
-          "text": "A solar-powered plane has even flown around the world, with wings wider than a Boeing 747… carrying exactly one pilot."
+          "text": "A solar-powered plane has even flown around the world, with wings wider than a Boeing 747… carrying exactly one pilot.",
+          "heygen_say": "A solar-powered plane has even flown around the world, with wings wider than a Boeing seven-four-seven… carrying exactly one pilot."
         },
         {
           "id": "L09",
@@ -132,7 +133,8 @@
           "id": "L18",
           "shot": "S3.8",
           "target": "2:10",
-          "text": "And a long-haul Boeing 777 carries more than seven times that."
+          "text": "And a long-haul Boeing 777 carries more than seven times that.",
+          "heygen_say": "And a long-haul Boeing seven-seven-seven carries more than seven times that."
         }
       ]
     },
@@ -239,7 +241,8 @@
           "id": "L34",
           "shot": "S4.16",
           "target": "3:46",
-          "text": "On a normal jet, the fuel burns away. Every minute, the plane gets lighter. A long-haul 777 can land about a hundred tonnes lighter than it took off."
+          "text": "On a normal jet, the fuel burns away. Every minute, the plane gets lighter. A long-haul 777 can land about a hundred tonnes lighter than it took off.",
+          "heygen_say": "On a normal jet, the fuel burns away. Every minute, the plane gets lighter. A long-haul seven-seven-seven can land about a hundred tonnes lighter than it took off."
         },
         {
           "id": "L35",
@@ -318,7 +321,8 @@
           "id": "L46",
           "shot": "S5.9",
           "target": "5:22",
-          "text": "And for a long-haul 777, replacing its fuel would take nearly three thousand tonnes of batteries: the weight of eight fully loaded 777s."
+          "text": "And for a long-haul 777, replacing its fuel would take nearly three thousand tonnes of batteries: the weight of eight fully loaded 777s.",
+          "heygen_say": "And for a long-haul seven-seven-seven, replacing its fuel would take nearly three thousand tonnes of batteries: the weight of eight fully loaded seven-seven-sevens."
         }
       ]
     },

@@ -1,0 +1,92 @@
+[
+{
+"id": "w0",
+"text": "The",
+"start": 0.299,
+"end": 0.384
+},
+{
+"id": "w1",
+"text": "electric",
+"start": 0.427,
+"end": 0.597
+},
+{
+"id": "w2",
+"text": "plane",
+"start": 0.768,
+"end": 0.981
+},
+{
+"id": "w3",
+"text": "carries",
+"start": 1.024,
+"end": 1.323
+},
+{
+"id": "w4",
+"text": "every",
+"start": 1.365,
+"end": 1.579
+},
+{
+"id": "w5",
+"text": "kilogram,",
+"start": 1.664,
+"end": 2.261
+},
+{
+"id": "w6",
+"text": "from",
+"start": 2.389,
+"end": 2.517
+},
+{
+"id": "w7",
+"text": "the",
+"start": 2.56,
+"end": 2.645
+},
+{
+"id": "w8",
+"text": "runway",
+"start": 2.688,
+"end": 2.987
+},
+{
+"id": "w9",
+"text": "all",
+"start": 3.157,
+"end": 3.541
+},
+{
+"id": "w10",
+"text": "the",
+"start": 3.584,
+"end": 3.669
+},
+{
+"id": "w11",
+"text": "way",
+"start": 3.712,
+"end": 3.797
+},
+{
+"id": "w12",
+"text": "to",
+"start": 3.84,
+"end": 3.925
+},
+{
+"id": "w13",
+"text": "the",
+"start": 3.968,
+"end": 4.011
+},
+{
+"id": "w14",
+"text": "gate.",
+"start": 4.053,
+"end": 4.525
+}
+]

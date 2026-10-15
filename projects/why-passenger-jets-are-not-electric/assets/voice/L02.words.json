@@ -1,0 +1,44 @@
+[
+{
+"id": "w0",
+"text": "We've",
+"start": 0.283,
+"end": 0.496
+},
+{
+"id": "w1",
+"text": "electrified",
+"start": 0.539,
+"end": 0.922
+},
+{
+"id": "w2",
+"text": "cars.",
+"start": 1.008,
+"end": 1.584
+},
+{
+"id": "w3",
+"text": "Buses.",
+"start": 1.904,
+"end": 2.437
+},
+{
+"id": "w4",
+"text": "Scooters.",
+"start": 2.757,
+"end": 3.504
+},
+{
+"id": "w5",
+"text": "Even",
+"start": 3.781,
+"end": 3.909
+},
+{
+"id": "w6",
+"text": "trucks.",
+"start": 4.08,
+"end": 4.651
+}
+]

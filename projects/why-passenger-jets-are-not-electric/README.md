@@ -8,7 +8,7 @@ A premium, photoreal, documentary-style science explainer for YouTube long-form.
 | **Format** | 16:9, 3840×2160 master (1920×1080 deliverable), 24 fps, 2.39:1 letterbox *only* in the cold open, full 16:9 everywhere else |
 | **Audience** | General, curious viewers. No engineering background assumed. |
 | **Narration** | ≈1,100 words at about 150 wpm, with deliberate silent beats for SFX moments |
-| **Voice** | **HeyGen premium voice "Evan"** (`d21d096b4d684ea0b90a90fcbe8d645b`) via HyperFrames. Locked in [`script.json`](script.json) (`"provider": "heygen"`). Same voice as the channel's previous video. |
+| **Voice** | **HeyGen premium voice "Evan"** (`d21d096b4d684ea0b90a90fcbe8d645b`) via HyperFrames. Locked in [`script/script.json`](script/script.json) (`"provider": "heygen"`). Same voice as the channel's previous video. |
 | **Look** | Photoreal 3D (Unreal Engine 5 / Blender Cycles) + restrained HUD motion graphics composited *into* the 3D space |
 
 ## Deliverables in this folder
@@ -17,7 +17,7 @@ A premium, photoreal, documentary-style science explainer for YouTube long-form.
 |---|---|---|
 | 1 | Full video concept + look bible | this file |
 | 2 | Complete narration script (timestamped) | [`01_narration_script.md`](01_narration_script.md) |
-| 2a | TTS-ready script: 59 lines, Evan voice, mapped to storyboard shots | [`script.json`](script.json) |
+| 2a | TTS-ready script: 59 lines, Evan voice, mapped to storyboard shots | [`script/script.json`](script/script.json) |
 | 3–5 | Scene-by-scene storyboard with visual direction and motion graphics for every shot | [`02_storyboard.md`](02_storyboard.md) |
 | 6 | SFX and music design per section, plus cue sheet and mix spec | [`03_sound_and_music.md`](03_sound_and_music.md) |
 | 7 | Editing and pacing notes, retention map, YouTube chapters | [`04_edit_and_pacing.md`](04_edit_and_pacing.md) |

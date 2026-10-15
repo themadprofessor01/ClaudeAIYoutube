@@ -6,13 +6,14 @@ Two providers (script.json "provider"):
             Also returns word timestamps, saved to assets/voice/<id>.words.json.
   kokoro  — local Kokoro-82M (Apache-2.0) fallback; pass the model dir as argv[1].
 
-usage: python3 tools/tts.py [kokoro_model_dir] [--only L01,L02] [--force]
+usage: [PROJECT_ROOT=projects/<name>] python3 tools/tts.py [kokoro_model_dir] [--only L01,L02] [--force]
 Writes assets/voice/<id>.wav (+ .words.json), assets/audio/narration.wav/.m4a, timeline/timing.json
 """
 import json, sys, os, subprocess
 import numpy as np, soundfile as sf
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# PROJECT_ROOT lets one pipeline serve several videos (e.g. projects/<name>); defaults to the repo root.
+ROOT = os.environ.get("PROJECT_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SR = 44100  # narration mix sample rate
 HEYGEN_TTS = os.path.expanduser("~/.claude/skills/media-use/audio/scripts/heygen-tts.mjs")
 

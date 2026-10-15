@@ -3,7 +3,7 @@
 **Runtime:** ≈7:25 (±15 s depending on the read) · **About 1,100 spoken words** · Delivery: about 150 wpm, confident and warm, slightly dramatic. A documentary narrator, not a hype voice.
 
 
-**Voice: HeyGen premium "Evan"** (`d21d096b4d684ea0b90a90fcbe8d645b`), generated through HyperFrames exactly like the previous video. The TTS-ready version of this script is [`script.json`](script.json): one entry per line below (L01–L59), each tagged with its storyboard shot. To generate it, copy it to `script/script.json` at the repo root, then run `npx hyperframes auth login` and `python3 tools/tts.py --force`. The pipeline also returns word timestamps from HeyGen, so animations sync to Evan's actual delivery. Evan's natural pace sets the final timing. The timestamps below are targets.
+**Voice: HeyGen premium "Evan"** (`d21d096b4d684ea0b90a90fcbe8d645b`), generated through HyperFrames exactly like the previous video. The TTS-ready version of this script is [`script/script.json`](script/script.json): one entry per line below (L01–L59), each tagged with its storyboard shot. Generate it from the repo root with `PROJECT_ROOT=projects/why-passenger-jets-are-not-electric python3 tools/tts.py` (after `npx hyperframes auth login`). Clips land in this folder's `assets/voice/`, and timings in `timeline/timing.json`. The pipeline also returns word timestamps from HeyGen, so animations sync to Evan's actual delivery. Evan's natural pace sets the final timing. The timestamps below are targets.
 
 **Conventions**
 - `[…]` = stage direction / beat. Not spoken.

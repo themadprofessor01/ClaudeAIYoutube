@@ -1,0 +1,116 @@
+[
+{
+"id": "w0",
+"text": "At",
+"start": 0.256,
+"end": 0.384
+},
+{
+"id": "w1",
+"text": "full",
+"start": 0.427,
+"end": 0.597
+},
+{
+"id": "w2",
+"text": "takeoff",
+"start": 0.64,
+"end": 0.981
+},
+{
+"id": "w3",
+"text": "thrust,",
+"start": 1.024,
+"end": 1.451
+},
+{
+"id": "w4",
+"text": "the",
+"start": 1.621,
+"end": 1.707
+},
+{
+"id": "w5",
+"text": "two",
+"start": 1.749,
+"end": 1.877
+},
+{
+"id": "w6",
+"text": "engines",
+"start": 1.92,
+"end": 2.133
+},
+{
+"id": "w7",
+"text": "together",
+"start": 2.261,
+"end": 2.432
+},
+{
+"id": "w8",
+"text": "deliver",
+"start": 2.56,
+"end": 2.773
+},
+{
+"id": "w9",
+"text": "tens",
+"start": 2.901,
+"end": 3.115
+},
+{
+"id": "w10",
+"text": "of",
+"start": 3.243,
+"end": 3.285
+},
+{
+"id": "w11",
+"text": "megawatts:",
+"start": 3.328,
+"end": 3.989
+},
+{
+"id": "w12",
+"text": "roughly",
+"start": 4.224,
+"end": 4.523
+},
+{
+"id": "w13",
+"text": "the",
+"start": 4.608,
+"end": 4.693
+},
+{
+"id": "w14",
+"text": "power",
+"start": 4.736,
+"end": 4.907
+},
+{
+"id": "w15",
+"text": "a",
+"start": 5.035,
+"end": 5.12
+},
+{
+"id": "w16",
+"text": "small",
+"start": 5.163,
+"end": 5.333
+},
+{
+"id": "w17",
+"text": "town",
+"start": 5.419,
+"end": 5.589
+},
+{
+"id": "w18",
+"text": "uses.",
+"start": 5.675,
+"end": 6.266
+}
+]

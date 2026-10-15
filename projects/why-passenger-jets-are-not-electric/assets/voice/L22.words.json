@@ -1,0 +1,68 @@
+[
+{
+"id": "w0",
+"text": "That",
+"start": 0.295,
+"end": 0.465
+},
+{
+"id": "w1",
+"text": "kilogram",
+"start": 0.508,
+"end": 0.892
+},
+{
+"id": "w2",
+"text": "of",
+"start": 0.935,
+"end": 1.02
+},
+{
+"id": "w3",
+"text": "jet",
+"start": 1.063,
+"end": 1.233
+},
+{
+"id": "w4",
+"text": "fuel",
+"start": 1.276,
+"end": 1.532
+},
+{
+"id": "w5",
+"text": "holds",
+"start": 1.617,
+"end": 1.873
+},
+{
+"id": "w6",
+"text": "about",
+"start": 2.001,
+"end": 2.129
+},
+{
+"id": "w7",
+"text": "twelve",
+"start": 2.172,
+"end": 2.599
+},
+{
+"id": "w8",
+"text": "kilowatt-hours",
+"start": 2.684,
+"end": 3.196
+},
+{
+"id": "w9",
+"text": "of",
+"start": 3.324,
+"end": 3.452
+},
+{
+"id": "w10",
+"text": "energy.",
+"start": 3.495,
+"end": 4.01
+}
+]

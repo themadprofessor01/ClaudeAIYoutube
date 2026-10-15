@@ -1,0 +1,98 @@
+[
+{
+"id": "w0",
+"text": "A",
+"start": 0.252,
+"end": 0.38
+},
+{
+"id": "w1",
+"text": "battery",
+"start": 0.423,
+"end": 0.679
+},
+{
+"id": "w2",
+"text": "doesn't",
+"start": 0.764,
+"end": 0.977
+},
+{
+"id": "w3",
+"text": "do",
+"start": 1.02,
+"end": 1.105
+},
+{
+"id": "w4",
+"text": "that.",
+"start": 1.148,
+"end": 1.767
+},
+{
+"id": "w5",
+"text": "An",
+"start": 2.257,
+"end": 2.343
+},
+{
+"id": "w6",
+"text": "empty",
+"start": 2.385,
+"end": 2.556
+},
+{
+"id": "w7",
+"text": "battery",
+"start": 2.641,
+"end": 2.94
+},
+{
+"id": "w8",
+"text": "weighs",
+"start": 3.025,
+"end": 3.239
+},
+{
+"id": "w9",
+"text": "exactly",
+"start": 3.281,
+"end": 3.623
+},
+{
+"id": "w10",
+"text": "the",
+"start": 3.793,
+"end": 3.879
+},
+{
+"id": "w11",
+"text": "same",
+"start": 3.921,
+"end": 4.092
+},
+{
+"id": "w12",
+"text": "as",
+"start": 4.22,
+"end": 4.263
+},
+{
+"id": "w13",
+"text": "a",
+"start": 4.305,
+"end": 4.348
+},
+{
+"id": "w14",
+"text": "full",
+"start": 4.391,
+"end": 4.561
+},
+{
+"id": "w15",
+"text": "one.",
+"start": 4.604,
+"end": 5.032
+}
+]

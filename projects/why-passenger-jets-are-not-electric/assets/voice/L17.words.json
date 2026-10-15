@@ -1,0 +1,158 @@
+[
+{
+"id": "w0",
+"text": "Fill",
+"start": 0.252,
+"end": 0.465
+},
+{
+"id": "w1",
+"text": "this",
+"start": 0.508,
+"end": 0.636
+},
+{
+"id": "w2",
+"text": "plane's",
+"start": 0.679,
+"end": 0.977
+},
+{
+"id": "w3",
+"text": "tanks",
+"start": 1.02,
+"end": 1.233
+},
+{
+"id": "w4",
+"text": "and",
+"start": 1.404,
+"end": 1.447
+},
+{
+"id": "w5",
+"text": "you're",
+"start": 1.489,
+"end": 1.617
+},
+{
+"id": "w6",
+"text": "carrying",
+"start": 1.66,
+"end": 1.959
+},
+{
+"id": "w7",
+"text": "about",
+"start": 2.044,
+"end": 2.172
+},
+{
+"id": "w8",
+"text": "nineteen",
+"start": 2.257,
+"end": 2.727
+},
+{
+"id": "w9",
+"text": "tonnes",
+"start": 2.769,
+"end": 3.025
+},
+{
+"id": "w10",
+"text": "of",
+"start": 3.068,
+"end": 3.153
+},
+{
+"id": "w11",
+"text": "fuel:",
+"start": 3.196,
+"end": 3.559
+},
+{
+"id": "w12",
+"text": "over",
+"start": 3.708,
+"end": 3.879
+},
+{
+"id": "w13",
+"text": "two",
+"start": 4.007,
+"end": 4.22
+},
+{
+"id": "w14",
+"text": "hundred",
+"start": 4.305,
+"end": 4.433
+},
+{
+"id": "w15",
+"text": "megawatt-hours",
+"start": 4.561,
+"end": 5.159
+},
+{
+"id": "w16",
+"text": "of",
+"start": 5.287,
+"end": 5.372
+},
+{
+"id": "w17",
+"text": "energy.",
+"start": 5.415,
+"end": 5.799
+},
+{
+"id": "w18",
+"text": "About",
+"start": 6.012,
+"end": 6.225
+},
+{
+"id": "w19",
+"text": "the",
+"start": 6.268,
+"end": 6.353
+},
+{
+"id": "w20",
+"text": "same",
+"start": 6.396,
+"end": 6.567
+},
+{
+"id": "w21",
+"text": "as",
+"start": 6.652,
+"end": 6.695
+},
+{
+"id": "w22",
+"text": "three",
+"start": 6.737,
+"end": 6.951
+},
+{
+"id": "w23",
+"text": "thousand",
+"start": 7.036,
+"end": 7.249
+},
+{
+"id": "w24",
+"text": "electric-car",
+"start": 7.463,
+"end": 7.975
+},
+{
+"id": "w25",
+"text": "batteries.",
+"start": 8.017,
+"end": 8.689
+}
+]

@@ -1,0 +1,44 @@
+[
+{
+"id": "w0",
+"text": "a",
+"start": 0.299,
+"end": 0.384
+},
+{
+"id": "w1",
+"text": "hundred",
+"start": 0.427,
+"end": 0.597
+},
+{
+"id": "w2",
+"text": "and",
+"start": 0.725,
+"end": 0.811
+},
+{
+"id": "w3",
+"text": "twenty",
+"start": 0.853,
+"end": 1.067
+},
+{
+"id": "w4",
+"text": "tonnes",
+"start": 1.195,
+"end": 1.493
+},
+{
+"id": "w5",
+"text": "of",
+"start": 1.579,
+"end": 1.664
+},
+{
+"id": "w6",
+"text": "batteries.",
+"start": 1.707,
+"end": 2.482
+}
+]

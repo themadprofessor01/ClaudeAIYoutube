@@ -10,3 +10,5 @@ out/render.log
 AGENTS.md
 out/work-*/
 out/*.mkv
+
+projects/*/assets/audio/*.wav
