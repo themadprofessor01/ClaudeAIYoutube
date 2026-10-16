@@ -18,7 +18,7 @@
   .cam { position:absolute; inset:0; overflow:hidden; background:#000; }
   .cam .shot { position:absolute; inset:0; visibility:hidden; overflow:hidden; }
   .pw { position:absolute; inset:0; overflow:hidden; }
-  .pw > img { position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; display:block; }
+  .pw > img, .pw > video { position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; display:block; }
   .lbl { position:absolute; font-family:"Inter"; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:${C.text};
          font-size:26px; white-space:nowrap; text-shadow:0 2px 12px rgba(0,0,0,.65); }
   .lbl .sub { display:block; font-family:"Mono"; font-weight:400; letter-spacing:.02em; font-size:20px; color:${C.muted}; text-transform:none; margin-top:6px; }
@@ -54,7 +54,12 @@
   }
 
   // ---------------------------------------------------------------- builders (HTML strings)
-  const plate = (id, key, style = "") => `<div class="pw" id="${id}" style="${style}"><img src="assets/plates/${key}.jpg"></div>`;
+  // A plate is a CG still (assets/plates/<key>.jpg) or, when a GPU-rendered animated clip exists
+  // (listed in window.CLIPS by tools/build.mjs), a video (assets/clips/<key>.mp4). Video timing
+  // (data-start / data-duration) is filled in by shots() once the shot's on-screen window is known.
+  const plate = (id, key, style = "") => (window.CLIPS && window.CLIPS[key])
+    ? `<div class="pw" id="${id}" style="${style}"><video class="clip plate-v" id="${id}-v" data-key="${key}" src="assets/clips/${key}.mp4" muted playsinline data-track-index="5"></video></div>`
+    : `<div class="pw" id="${id}" style="${style}"><img src="assets/plates/${key}.jpg" data-key="${key}"></div>`;
   const vig = (a = 0.55) => `<div class="vig" style="background:radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,${a}) 100%)"></div>`;
   /** label with optional leader line to a point. anchor: 'l' text starts at x; 'r' text ends at x */
   function lbl(id, x, y, text, o = {}) {
@@ -157,6 +162,13 @@
       if (tr === "blur") tl.fromTo(sel, { opacity: 0, filter: "blur(20px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.6, ease: "power2.out" }, t0);
       if (tr === "dip") tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.out" }, t0);
       if (tr === "fade" || tr === "blur") tl.set(sel, { zIndex: 2 }, t0).set(sel, { zIndex: 1 }, t0 + 0.6);
+      // clip timing + plate usage (collected at build time → timeline/plates.json, the GPU render list)
+      const el = document.querySelector(sel);
+      const dur = t1 + (fadeNext ? 0.6 : 0) - t0;
+      if (el) el.querySelectorAll("[data-key]").forEach((m) => {
+        (window.__PLATEUSE = window.__PLATEUSE || []).push({ key: m.dataset.key, dur: +dur.toFixed(3) });
+        if (m.tagName === "VIDEO") { m.setAttribute("data-start", Math.max(0, t0).toFixed(3)); m.setAttribute("data-duration", (dur + 0.05).toFixed(3)); }
+      });
     });
   }
   /** white flash over everything at t */

@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
   const p = path.join(ROOT, decodeURIComponent(req.url.split("?")[0]));
   if (req.url === "/__harness") {
     res.setHeader("content-type", "text/html");
-    return res.end(`<!doctype html><html><head><script src="/assets/lib/gsap.min.js"></script><script src="/assets/lib/doc.js"></script></head><body><script>window.__timelines={};</script></body></html>`);
+    return res.end(`<!doctype html><html><head><script src="/assets/lib/gsap.min.js"></script><script src="/assets/lib/clips.js"></script><script src="/assets/lib/doc.js"></script></head><body><script>window.__timelines={};</script></body></html>`);
   }
   fs.readFile(p, (e, d) => { if (e) { res.statusCode = 404; return res.end(); } res.end(d); });
 });
@@ -29,6 +29,7 @@ const port = server.address().port;
 const exe = process.env.CHROME || "/opt/pw-browsers/chromium-1194/chrome-linux/chrome";
 const browser = await chromium.launch({ executablePath: fs.existsSync(exe) ? exe : undefined });
 const events = [];
+const plateUse = {};
 const shots = [];
 for (const sec of T.sections) {
   const file = path.join(ROOT, "compositions", `${sec.id}.html`);
@@ -48,6 +49,7 @@ for (const sec of T.sections) {
   }, fs.readFileSync(file, "utf8"));
   const log = await page.evaluate(() => window.__SFX || []);
   const shotlog = await page.evaluate(() => window.__SHOTLOG || []);
+  for (const u of await page.evaluate(() => window.__PLATEUSE || [])) plateUse[u.key] = Math.max(plateUse[u.key] || 0, u.dur);
   for (const e of shotlog) shots.push({ scene: sec.id, shot: e.sel.split("-").pop(), transition: e.tr, abs: +(sec.start + e.t).toFixed(3) });
   if (errs.length) console.error(sec.id, "errors:", errs);
   const miss = await page.evaluate(() => window.__CUEMISS || []);
@@ -61,4 +63,6 @@ server.close();
 events.sort((a, b) => a.abs - b.abs);
 fs.writeFileSync(path.join(ROOT, "timeline/sfx_events.json"), JSON.stringify(events, null, 1));
 fs.writeFileSync(path.join(ROOT, "timeline/shots.json"), JSON.stringify(shots, null, 1));
+// longest on-screen time of every plate → how many seconds each animated clip must last
+fs.writeFileSync(path.join(ROOT, "timeline/plates.json"), JSON.stringify(Object.fromEntries(Object.entries(plateUse).sort()), null, 1));
 console.log("total", events.length, "sfx;", shots.length, "shots");
